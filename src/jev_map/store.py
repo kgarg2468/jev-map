@@ -32,6 +32,30 @@ def save(root: Path, data: dict) -> None:
     write_json(directory(root) / "map.json", data)
 
 
+def validate_map(data: object) -> None:
+    """Validate the fields query commands consume, including referenced symbols."""
+    def require(condition):
+        if not condition:
+            raise ValueError("Malformed map; run jev-map refresh")
+
+    require(isinstance(data, dict))
+    require(data.get("schema") == SCHEMA)
+    require(isinstance(data.get("snapshot"), str))
+    require(isinstance(data.get("files"), dict))
+    require(isinstance(data.get("symbols"), dict))
+    require(isinstance(data.get("links"), list))
+    require(isinstance(data.get("diagnostics"), list))
+    for ident, symbol in data["symbols"].items():
+        require(isinstance(symbol, dict))
+        require(symbol.get("id") == ident)
+        require(all(isinstance(symbol.get(key), str) for key in ("name", "kind", "path", "text", "file_sha256")))
+        require(all(type(symbol.get(key)) is int for key in ("start", "end")))
+    for link in data["links"]:
+        require(isinstance(link, dict))
+        require(all(isinstance(link.get(key), str) for key in ("id", "function", "test", "evidence")))
+        require(link["function"] in data["symbols"] and link["test"] in data["symbols"])
+
+
 def load(root: Path) -> dict:
     path = directory(root) / "map.json"
     if path.is_symlink():
@@ -39,8 +63,7 @@ def load(root: Path) -> dict:
     if not path.exists():
         raise ValueError("No map exists. Run jev-map refresh first.")
     data = json.loads(path.read_text())
-    if data.get("schema") != SCHEMA:
-        raise ValueError("Unsupported map schema; refresh the map")
+    validate_map(data)
     hashes, _ = snapshot(root.resolve(strict=True))
     if digest(hashes) != data["snapshot"]:
         raise ValueError("Map is stale: repository Python files changed. Run jev-map refresh.")

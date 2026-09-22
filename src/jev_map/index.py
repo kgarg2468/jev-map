@@ -67,6 +67,8 @@ def module_name(path: str) -> str:
 def imports_in(nodes: list[ast.stmt], module: str, is_package: bool) -> dict[str, str]:
     imports: dict[str, str] = {}
     for node in nodes:
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+            imports.pop(node.name, None)
         if isinstance(node, ast.Import):
             for alias in node.names:
                 imports[alias.asname or alias.name.split(".")[0]] = alias.name if alias.asname else alias.name.split(".")[0]
@@ -160,8 +162,11 @@ def build(root: Path) -> dict:
 
     calls = []
     for ident, (node, imports, module_shadowed, module, is_package) in records.items():
-        descendants = [child for stmt in node.body for child in (stmt, *body_nodes(stmt))
-                       if not isinstance(stmt, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))]
+        descendants = []
+        for stmt in node.body:
+            descendants.append(stmt)
+            if not isinstance(stmt, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+                descendants.extend(body_nodes(stmt))
         local_imports = imports_in(node.body, module, is_package)
         local_shadowed = assigned_names(descendants)
         local_shadowed.update(a.arg for a in node.args.posonlyargs + node.args.args + node.args.kwonlyargs)
