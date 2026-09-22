@@ -73,6 +73,33 @@ class RepositoryTest(unittest.TestCase):
         self.write("test_core.py", "from core import work\n\ndef test_other(value=work()):\n    assert value == 1\n")
         self.assertEqual(build(self.root)["links"], [])
 
+    def test_definition_replaces_import_in_module_order(self):
+        self.write("other.py", "def work():\n    return 'other'\n")
+        self.write("core.py", "from other import work\n\ndef work():\n    return 'local'\n\ndef public():\n    return work()\n")
+        self.write("test_core.py", "from core import public\n\ndef test_public():\n    assert public() == 'local'\n")
+        data = build(self.root)
+        self.assertEqual(len(related_tests(data, "core.py::work")["links"]), 1)
+        self.assertEqual(related_tests(data, "other.py::work")["links"], [])
+        self.write("core.py", "def work():\n    return 'local'\n\nfrom other import work\n\ndef public():\n    return work()\n")
+        data = build(self.root)
+        self.assertEqual(len(related_tests(data, "other.py::work")["links"]), 1)
+
+    def test_nested_definition_shadows_import(self):
+        self.write("core.py", "def work():\n    return 1\n")
+        self.write("test_core.py", "from core import work\n\ndef test_local():\n    def work():\n        return 2\n    assert work() == 2\n")
+        self.assertEqual(build(self.root)["links"], [])
+
+    def test_malformed_map_reports_json_error(self):
+        data = self.fixture()
+        save(self.root, data)
+        for malformed in ([], {"schema": 1}, {**data, "symbols": {"bad": []}},
+                          {**data, "links": [{"id": "x"}]}):
+            with self.subTest(malformed=type(malformed).__name__):
+                (self.root / ".jev-map/map.json").write_text(json.dumps(malformed))
+                run = subprocess.run([sys.executable, "-m", "jev_map", "--repo", str(self.root), "symbols"], capture_output=True, text=True)
+                self.assertEqual(run.returncode, 2)
+                self.assertIn("Malformed map", json.loads(run.stderr)["error"])
+
     def test_symlinks_ignored_and_no_execution(self):
         self.write("core.py", "raise RuntimeError('do not execute')\n\ndef work():\n    pass\n")
         (self.root / "outside.py").symlink_to(Path(__file__))
