@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jev-map"
+version = "0.1.0"
+description = "Evidence-labelled repository maps for coding agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Krish Garg"}]
+
+[project.scripts]
+jev-map = "jev_map.cli:main"
+
+[project.urls]
+Repository = "https://github.com/kgarg2468/jev-map"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jev_map"]
