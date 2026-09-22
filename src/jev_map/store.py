@@ -61,6 +61,8 @@ def related_tests(data: dict, name: str) -> dict:
     ident = resolve(data, name)
     links = [link for link in data["links"] if link["function"] == ident]
     return {"symbol": ident, "snapshot": data["snapshot"], "links": links,
+            "diagnostics": data["diagnostics"],
+            "enrichment": data.get("enrichment", {}).get("stats"),
             "warning": "Links are incomplete. Absence is not evidence that a test can be skipped."}
 
 

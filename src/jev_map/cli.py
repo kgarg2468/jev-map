@@ -7,6 +7,8 @@ from pathlib import Path
 
 from . import __version__
 from .index import build
+from .enrich import enrich
+from .provider import JevClient, MODEL
 from .store import explain_link, load, related_tests, save
 
 
@@ -15,7 +17,13 @@ def main(argv=None) -> int:
     parser.add_argument("--version", action="version", version=__version__)
     parser.add_argument("--repo", type=Path, default=Path.cwd())
     commands = parser.add_subparsers(dest="command", required=True)
-    commands.add_parser("refresh", help="Rebuild the structural map without executing repository code")
+    refresh = commands.add_parser("refresh", help="Rebuild the map without executing repository code")
+    refresh.add_argument("--jev", action="store_true", help="Send candidate source excerpts to TypeSafe for inferred links")
+    refresh.add_argument("--max-calls", type=int, default=20)
+    refresh.add_argument("--candidates", type=int, default=3)
+    refresh.add_argument("--threshold", type=float, default=0.8)
+    refresh.add_argument("--model", default=MODEL)
+    refresh.add_argument("--env-file", type=Path, help="Read TYPESAFE_API_KEY from an explicit private env file")
     commands.add_parser("symbols", help="List stable path::qualified_name identifiers")
     related = commands.add_parser("related-tests")
     related.add_argument("symbol")
@@ -27,9 +35,15 @@ def main(argv=None) -> int:
         root = args.repo.resolve(strict=True)
         if args.command == "refresh":
             data = build(root)
+            if args.jev:
+                data = enrich(root, data, lambda payload: JevClient(env_file=args.env_file)(payload),
+                              model=args.model, threshold=args.threshold,
+                              candidate_limit=args.candidates, max_calls=args.max_calls)
             save(root, data)
             result = {"snapshot": data["snapshot"], "symbols": len(data["symbols"]),
                       "links": len(data["links"]), "diagnostics": data["diagnostics"]}
+            if "enrichment" in data:
+                result["enrichment"] = data["enrichment"]["stats"]
         else:
             data = load(root)
             if args.command == "symbols":
@@ -40,6 +54,8 @@ def main(argv=None) -> int:
             else:
                 result = explain_link(data, args.function, args.test)
         print(json.dumps(result, indent=2))
+        if args.command == "refresh" and result.get("enrichment", {}).get("errors", 0):
+            return 1
         return 0
     except (ValueError, OSError) as exc:
         print(json.dumps({"error": str(exc)}), file=sys.stderr)

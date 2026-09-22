@@ -1,25 +1,15 @@
 import json
 import subprocess
 import sys
-import tempfile
 import unittest
 from pathlib import Path
 
 from jev_map.index import build
 from jev_map.store import explain_link, load, related_tests, save
+from support import TemporaryRepository
 
 
-class RepositoryTest(unittest.TestCase):
-    def setUp(self):
-        self.temp = tempfile.TemporaryDirectory()
-        self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
-
-    def write(self, path, text):
-        target = self.root / path
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(text)
-
+class RepositoryTest(TemporaryRepository):
     def fixture(self):
         self.write("src/pkg/core.py", "def normalize(x):\n    return x.strip()\n\ndef public(x):\n    return normalize(x)\n")
         self.write("tests/test_core.py", "from pkg.core import public as clean\n\ndef test_space():\n    assert clean(' a ') == 'a'\n")

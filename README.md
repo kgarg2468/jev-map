@@ -31,8 +31,39 @@ of execution or useful assertions. Dynamic dispatch, re-exports, nested function
 fixtures, and custom source roots are not fully resolved. Oversized or invalid
 Python files produce visible diagnostics. No link does not mean no relevant test.
 
-Next: optional Jev enrichment with exact request provenance, then an agent
-interface and reproducible benchmark.
+## Optional Jev relationships
+
+```sh
+tokenstash need TYPESAFE_API_KEY
+jev-map --repo /path/to/repo refresh --jev --env-file /path/to/private/.env.local --max-calls 20
+```
+
+Omit `--env-file` if `TYPESAFE_API_KEY` is already in the environment.
+`--jev` explicitly sends selected source excerpts and imports to TypeSafe.
+The default refresh is completely local. Provider calls use a fixed HTTPS
+endpoint, a 30-second timeout, no redirects, and no automatic retry.
+
+Jev examines up to three lexical test candidates per function, excluding pairs
+already connected structurally. Links scoring at least `--threshold 0.8` are
+labelled `inferred`. Scores are provider judgments, not calibrated probabilities
+of correctness. Candidate generation is incomplete, and the threshold has not
+been validated for this new implementation.
+
+Exact requests and responses are stored under `.jev-map/receipts/`. Cache identity
+includes the model, questions, all candidates, and source context. Repeating a
+refresh reuses identical successful requests; changed request context is evaluated
+again. Parsing currently rebuilds the whole structural map. `--max-calls 0`
+replays cached inferences without needing a key. Model defaults to `jev-1.13.0`;
+override with `--model` when deliberately evaluating another model.
+
+Budgets and oversized excerpts leave visible skipped counts. Failed calls retain
+structural results, record sanitized errors, and make the CLI exit 1. Query results
+include enrichment completeness statistics. Missing usage is reported as unknown,
+never zero. Refreshing without `--jev` produces a structural-only map.
+
+Upcoming: agent interface and a reproducible benchmark. The earlier research
+supported adding test relationships, but did not establish improved complete
+agent performance; this new utility needs its own evaluation.
 
 ## Development
 
