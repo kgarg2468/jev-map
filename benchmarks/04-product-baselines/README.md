@@ -1,0 +1,48 @@
+# Graphify and cheap-ranker comparison
+
+Round 01 is a **retrospective, exploratory** comparison using the exact pinned
+Boltons, h11, and Pluggy repositories and execution labels from benchmark 03.
+The 210 eligible pairs were selected for that earlier Jev study: they are the
+top three lexical candidates for each selected function and have **no path in
+jev-map's structural graph by construction**. This sample is unsuitable for a
+general claim that Jev beats Graphify or another product.
+
+The runner builds [Graphify](https://github.com/Graphify-Labs/graphify)
+`graphifyy==0.9.67` in local code-only mode with clustering disabled. It maps
+the exact function and test symbols by Graphify's generated ID, checks their
+source path and label, and follows directed `calls` edges. A second, more
+permissive reading also follows `indirect_call`. Import and generic reference
+edges do not establish execution. A cheap IDF-overlap ranker uses the same
+candidate text already available to jev-map. It emits exactly 39 links, matching
+Jev's frozen 0.8-threshold output count. The test oracle is the earlier isolated
+execution profile; it was **not** collected anew for this comparison.
+
+| Method on this selected sample | Emitted | Execution-observed | Not observed |
+| --- | ---: | ---: | ---: |
+| Graphify `calls` | 1 | 1 | 0 |
+| Graphify `calls` + `indirect_call` | 4 | 4 | 0 |
+| Cheap lexical ranker, top 39 | 39 | 32 | 7 |
+| Jev, score at least 0.8 | 39 | 34 | 5 |
+
+Jev yielded more observed additions than Graphify's directed code-only call
+graph on these selected candidates. Graphify generated a broader graph locally
+with zero model tokens. Jev's gain over the cheap ranker at equal output count
+was only two observed links. This round does not establish lower cost, faster
+agent work, complete-test recall, or superiority over Graphify as a whole.
+
+Reproduce in a fresh output directory with checkouts at the exact commits in
+[`repositories.json`](../03-multi-repo-relationships/repositories.json):
+
+```sh
+uv run --extra benchmark python -m benchmarks.graphify_compare \
+  --repo boltons=/path/to/boltons \
+  --repo h11=/path/to/h11 \
+  --repo pluggy=/path/to/pluggy \
+  --out benchmarks/04-product-baselines/rounds/<new-round>
+```
+
+The [round archive](rounds/round-01-retrospective) contains the full Graphify
+outputs, command logs and timings, pair-by-pair decisions with graph paths,
+summary, and SHA-256 completion manifest. The new prospective benchmark must
+sample functions independently of these products, include structural links,
+and evaluate against all runnable tests before an adoption claim.

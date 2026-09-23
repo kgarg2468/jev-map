@@ -113,6 +113,12 @@ improved complete-agent performance. See the
 [next evaluation steps](docs/ROADMAP.md) and the separate
 [existing-repository indexing pilot](benchmarks/02-repository-index/README.md).
 
+An [exploratory Graphify and lexical-ranker comparison](benchmarks/04-product-baselines/README.md)
+found that Jev yielded more observed nonstructural test links than Graphify's
+code-only directed call graph on the earlier selected sample. At equal output
+count, Jev found 34 observed links and a cheap lexical ranker found 32; this
+does not establish an accuracy or cost advantage over the cheap baseline.
+
 ## Development
 
 ```sh
