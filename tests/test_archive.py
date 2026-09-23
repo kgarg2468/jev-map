@@ -1,7 +1,8 @@
 import hashlib
 import json
+from unittest.mock import patch
 
-from benchmarks.archive import staged_round
+from benchmarks.archive import publish_no_replace, staged_round
 from support import TemporaryRepository
 
 
@@ -38,3 +39,15 @@ class ArchiveTest(TemporaryRepository):
                 (destination / "other.json").write_text("preserve me")
         self.assertEqual((destination / "other.json").read_text(), "preserve me")
         self.assertFalse((destination / "ours.json").exists())
+
+    def test_empty_destination_created_at_publish_is_not_replaced(self):
+        destination = self.root / "round"
+        def concurrent_creation(source, target):
+            target.mkdir()
+            publish_no_replace(source, target)
+        with patch("benchmarks.archive.publish_no_replace", side_effect=concurrent_creation):
+            with self.assertRaises(FileExistsError):
+                with staged_round(destination) as staging:
+                    (staging / "ours.json").write_text("{}\n")
+        self.assertTrue(destination.is_dir())
+        self.assertEqual(list(destination.iterdir()), [])

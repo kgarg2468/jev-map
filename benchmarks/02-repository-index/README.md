@@ -19,3 +19,5 @@ python benchmarks/02-repository-index/run.py \
 The checkout must be unmodified. Each invocation uses a new output directory.
 New rounds publish atomically with a `completion.json` checksum manifest. The
 original round 1 predates that marker and remains unchanged.
+The shared atomic publisher currently supports Linux and Windows; Linux is
+tested in CI. It fails on unsupported platforms/filesystems.

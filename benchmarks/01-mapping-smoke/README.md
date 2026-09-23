@@ -23,3 +23,8 @@ artifact is written. `completion.json` records checksums. Interrupted runs never
 appear at the final path. A complete archive can still describe a failed provider
 request or failed metric: consult its recorded outcomes. Rounds 1 and 2 predate
 this archive marker and are retained unchanged.
+
+Atomic archive publication currently supports Linux (`renameat2` with
+`RENAME_NOREPLACE`) and Windows (non-replacing rename). Unsupported platforms or
+filesystems fail instead of falling back to a replacing rename. Linux is tested
+in CI; this restriction applies to benchmark publication, not the mapping CLI.
