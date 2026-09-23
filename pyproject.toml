@@ -13,6 +13,7 @@ authors = [{name = "Krish Garg"}]
 
 [project.optional-dependencies]
 mcp = ["mcp>=1.12,<2"]
+benchmark = ["pytest>=8,<10"]
 
 [project.scripts]
 jev-map = "jev_map.cli:main"
