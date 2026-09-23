@@ -128,15 +128,36 @@ def reconstruct(config: dict, frozen: dict, roots: dict[str, Path]):
     expected_names = {repo["name"] for repo in config["repositories"]}
     if set(frozen_repos) != expected_names or len(frozen_repos) != len(frozen["repositories"]):
         raise ValueError("Frozen repositories differ from protocol")
+    request_hashes = set()
     for repo in config["repositories"]:
         data = build(roots[repo["name"]])
         expected = frozen_repos[repo["name"]]
+        if expected.get("commit") != repo["commit"]:
+            raise ValueError(f'{repo["name"]} frozen commit differs from protocol')
         if data["snapshot"] != expected["corpus_sha256"] or data["files"] != expected["file_hashes"]:
             raise ValueError(f'{repo["name"]} source differs from freeze')
+        items = expected.get("selected")
+        count = config["functions_per_repository"]
+        if not isinstance(items, list) or len(items) != count:
+            raise ValueError(f'{repo["name"]} freeze must contain exactly {count} functions')
+        functions = [item.get("function") for item in items if isinstance(item, dict)]
+        hashes = [item.get("request_sha256") for item in items if isinstance(item, dict)]
+        if (len(functions) != count or any(not isinstance(value, str) for value in functions)
+                or len(set(functions)) != count):
+            raise ValueError(f'{repo["name"]} frozen functions must be unique')
+        if (len(hashes) != count or any(not isinstance(value, str) for value in hashes)
+                or len(set(hashes)) != count or request_hashes.intersection(hashes)):
+            raise ValueError("Frozen request hashes must be globally unique")
+        request_hashes.update(hashes)
         rows = {function["id"]: (function, peers) for function, peers in selected_rows(config, repo, data)}
         selected = []
-        for item in expected["selected"]:
-            function, peers = rows[item["function"]]
+        for item in items:
+            if len(item.get("tests", [])) != config["candidate_limit"]:
+                raise ValueError(f'Wrong candidate count for {item["function"]}')
+            try:
+                function, peers = rows[item["function"]]
+            except KeyError as exc:
+                raise ValueError(f'Unknown frozen function: {item["function"]}') from exc
             if [peer["id"] for peer in peers] != item["tests"]:
                 raise ValueError(f'Candidate drift for {item["function"]}')
             request = make_request(data, function, peers, config["model"])
@@ -211,6 +232,21 @@ def counts(rows: list[dict]) -> dict:
             "observed_candidate_coverage": accepted_observed / len(observed) if observed else None}
 
 
+def test_eligible(receipt: dict) -> bool:
+    return (receipt["returncode"] == 0 and not receipt["timed_out"]
+            and receipt["call_passed"])
+
+
+def ineligible_reason(receipt: dict) -> str | None:
+    if receipt["timed_out"]:
+        return "timed_out"
+    if receipt["returncode"] != 0:
+        return "failed_or_unselected"
+    if not receipt["call_passed"]:
+        return "no_passing_call_phase"
+    return None
+
+
 def run_study(config: dict, frozen: dict, roots: dict[str, Path], output: Path, env_file: Path):
     reconstructed = reconstruct(config, frozen, roots)
     with staged_round(output) as staging:
@@ -276,8 +312,7 @@ def run_study(config: dict, frozen: dict, roots: dict[str, Path], output: Path, 
                     pairs.append({"repository": name, "function": frozen_item["function"], "test": test_id,
                                   "request_sha256": frozen_item["request_sha256"], "score": score,
                                   "accepted": score is not None and score >= config["threshold"],
-                                  "test_eligible": (test["returncode"] == 0 and not test["timed_out"]
-                                                    and test["call_passed"]),
+                                  "test_eligible": test_eligible(test),
                                   "observed": frozen_item["function"] in test["observed"]})
         per_repo = {name: counts([row for row in pairs if row["repository"] == name])
                     for name in reconstructed}
@@ -290,6 +325,8 @@ def run_study(config: dict, frozen: dict, roots: dict[str, Path], output: Path, 
                                 and (pooled["accepted_observed_wilson_95"] or {}).get("lower", 0) >= 0.65)
         usage = [row.get("response", {}).get("usage", {}).get("input_tokens")
                  for row in provider_rows if row["status"] == "ok"]
+        ineligible_reasons = {reason: sum(ineligible_reason(row) == reason for row in test_rows.values())
+                              for reason in ("timed_out", "failed_or_unselected", "no_passing_call_phase")}
         summary = {"repositories": len(reconstructed),
                    "selected_functions": sum(len(item["selected"]) for item in reconstructed.values()),
                    "candidate_pairs": len(pairs), "unique_tests": len(test_rows),
@@ -297,7 +334,8 @@ def run_study(config: dict, frozen: dict, roots: dict[str, Path], output: Path, 
                    "provider_errors": provider_errors,
                    "known_input_tokens": sum(value for value in usage if type(value) is int),
                    "unknown_usage_requests": sum(type(value) is not int for value in usage),
-                   "ineligible_tests": sum(row["returncode"] != 0 or row["timed_out"] for row in test_rows.values()),
+                   "ineligible_tests": sum(ineligible_reasons.values()),
+                   "ineligible_test_reasons": ineligible_reasons,
                    "pooled": pooled, "per_repository": per_repo,
                    "frozen_capability_rule_supported": capability_supported,
                    "limits": "Execution-blinded source-selected sample. Call observation is not assertion effectiveness; non-observation is not proof of irrelevance; no agent outcomes measured."}

@@ -37,6 +37,43 @@ class MultiRepositoryStudyTest(TemporaryRepository):
         self.assertEqual(result["rejected_observed"], 1)
         self.assertEqual(result["accepted_observed_fraction"], 0.5)
 
+    def test_test_eligibility_and_reason_are_consistent(self):
+        eligible = {"returncode": 0, "timed_out": False, "call_passed": True}
+        skipped = {"returncode": 0, "timed_out": False, "call_passed": False}
+        failed = {"returncode": 1, "timed_out": False, "call_passed": False}
+        timed_out = {"returncode": None, "timed_out": True, "call_passed": False}
+        self.assertTrue(STUDY.test_eligible(eligible))
+        self.assertIsNone(STUDY.ineligible_reason(eligible))
+        self.assertEqual(STUDY.ineligible_reason(skipped), "no_passing_call_phase")
+        self.assertEqual(STUDY.ineligible_reason(failed), "failed_or_unselected")
+        self.assertEqual(STUDY.ineligible_reason(timed_out), "timed_out")
+
+    def test_reconstruct_rejects_truncated_or_duplicate_freeze(self):
+        config = json.loads((STUDY_PATH.parent / "repositories.json").read_text())
+        frozen = json.loads((STUDY_PATH.parent / "freeze.json").read_text())
+        roots = {repo["name"]: self.root for repo in config["repositories"]}
+        original_verify = STUDY.verify_repositories
+        original_build = STUDY.build
+        original_implementation_hash = STUDY.implementation_hash
+        try:
+            STUDY.verify_repositories = lambda _config, _roots: None
+            first = frozen["repositories"][0]
+            STUDY.build = lambda _root: {
+                "snapshot": first["corpus_sha256"], "files": first["file_hashes"],
+            }
+            STUDY.implementation_hash = lambda: frozen["implementation_sha256"]
+            removed = frozen["repositories"][0]["selected"].pop()
+            with self.assertRaisesRegex(ValueError, "exactly 24"):
+                STUDY.reconstruct(config, frozen, roots)
+            frozen["repositories"][0]["selected"].append(removed)
+            frozen["repositories"][0]["selected"][1]["function"] = first["selected"][0]["function"]
+            with self.assertRaisesRegex(ValueError, "functions must be unique"):
+                STUDY.reconstruct(config, frozen, roots)
+        finally:
+            STUDY.verify_repositories = original_verify
+            STUDY.build = original_build
+            STUDY.implementation_hash = original_implementation_hash
+
     def test_profile_plugin_observes_exact_qualified_call(self):
         self.write("pkg.py", "class Cleaner:\n    def compact(self, text):\n        return text.strip()\n")
         self.write("test_pkg.py", "from pkg import Cleaner\ndef test_compact():\n    assert Cleaner().compact(' x ') == 'x'\n")
