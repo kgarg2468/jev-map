@@ -133,6 +133,8 @@ def build(root: Path) -> dict:
         module = module_name(path)
         is_package = Path(path).name == "__init__.py"
         imports = imports_in(tree.body, module, is_package)
+        import_source = "\n".join(ast.get_source_segment(text, n) or "" for n in tree.body
+                                  if isinstance(n, (ast.Import, ast.ImportFrom)))
         # Module assignments can replace imported names/functions; omit uncertain calls.
         module_shadowed = assigned_names(n for stmt in tree.body if not isinstance(
             stmt, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)) for n in ast.walk(stmt))
@@ -150,6 +152,7 @@ def build(root: Path) -> dict:
                     symbol = {"id": ident, "path": path, "name": name, "module": module,
                               "kind": "test" if test_file and node.name.startswith("test") else "function",
                               "start": start, "end": node.end_lineno, "file_sha256": hashes[path],
+                              "imports": import_source,
                               "text": "\n".join(lines[start - 1:node.end_lineno])}
                     symbols[ident] = symbol
                     canonical.setdefault(".".join(filter(None, (module, name))), []).append(ident)
