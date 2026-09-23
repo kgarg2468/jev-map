@@ -96,7 +96,9 @@ currently benchmark evidence, not a supported map-import feature.
 
 The earlier research supported adding test relationships, but did not establish
 improved complete-agent performance. This new implementation needs its own larger
-evaluation; no accuracy or speed improvement is promised.
+evaluation; no accuracy or speed improvement is promised. See the
+[next evaluation steps](docs/ROADMAP.md) and the separate
+[existing-repository indexing pilot](benchmarks/02-repository-index/README.md).
 
 ## Development
 
