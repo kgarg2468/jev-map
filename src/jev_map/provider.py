@@ -64,7 +64,9 @@ class JevClient:
             validate_response(payload, value)
             return value
         except urllib.error.HTTPError as exc:
-            raise ProviderError(f"Jev HTTP {exc.code}; no automatic retry") from None
+            code = exc.code
+            exc.close()
+            raise ProviderError(f"Jev HTTP {code}; no automatic retry") from None
         except (OSError, ValueError) as exc:
             if isinstance(exc, ProviderError):
                 raise
