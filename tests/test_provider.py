@@ -33,6 +33,7 @@ class ProviderTest(TemporaryRepository):
                 JevClient("fixture-secret")(self.payload)
             self.assertEqual(factory.return_value.open.call_count, 1)
         self.assertNotIn("fixture-secret", str(caught.exception))
+        self.assertTrue(error.closed)
 
     def test_malformed_json_and_response_schema(self):
         for body in (b"not json", b"[]", b'{"answers":{"b0":{"noul":true}}}'):
