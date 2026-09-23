@@ -94,6 +94,11 @@ calls. See [rounds and limitations](benchmarks/01-mapping-smoke/README.md).
 This release emits structural and inferred links. Execution-confirmed results are
 currently benchmark evidence, not a supported map-import feature.
 
+Two repeated live Jev smoke rounds completed successfully. In this tiny fixture,
+Jev added the single execution-observed relationship missing from the structural
+map and rejected the other 11 candidates in both runs. This validates the live
+integration path only; it is not a general accuracy or agent-performance claim.
+
 The earlier research supported adding test relationships, but did not establish
 improved complete-agent performance. This new implementation needs its own larger
 evaluation; no accuracy or speed improvement is promised. See the
