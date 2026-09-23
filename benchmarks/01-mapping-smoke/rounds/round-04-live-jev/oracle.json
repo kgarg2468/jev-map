@@ -1,0 +1,55 @@
+{
+  "relationships": [
+    {
+      "function": "text_ops.py::Cleaner.compact",
+      "test": "test_text_ops.py::TextTests.test_compact"
+    },
+    {
+      "function": "text_ops.py::normalize",
+      "test": "test_text_ops.py::TextTests.test_normalize"
+    },
+    {
+      "function": "text_ops.py::parse_port",
+      "test": "test_text_ops.py::TextTests.test_port"
+    },
+    {
+      "function": "text_ops.py::parse_port",
+      "test": "test_text_ops.py::TextTests.test_port_invalid"
+    },
+    {
+      "function": "text_ops.py::normalize",
+      "test": "test_text_ops.py::TextTests.test_slugify"
+    },
+    {
+      "function": "text_ops.py::slugify",
+      "test": "test_text_ops.py::TextTests.test_slugify"
+    }
+  ],
+  "outcomes": [
+    {
+      "test": "test_compact",
+      "passed": true,
+      "runs": 1
+    },
+    {
+      "test": "test_normalize",
+      "passed": true,
+      "runs": 1
+    },
+    {
+      "test": "test_port",
+      "passed": true,
+      "runs": 1
+    },
+    {
+      "test": "test_port_invalid",
+      "passed": true,
+      "runs": 1
+    },
+    {
+      "test": "test_slugify",
+      "passed": true,
+      "runs": 1
+    }
+  ]
+}
