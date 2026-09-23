@@ -1,0 +1,23 @@
+{
+  "mode": "offline-structural",
+  "snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a",
+  "truth_relationships": 6,
+  "structural": {
+    "relationships": 5,
+    "execution_confirmed": 5,
+    "unconfirmed": 0,
+    "missed_observed": 1
+  },
+  "lexical_plus_structural": {
+    "relationships": 17,
+    "execution_confirmed": 6,
+    "unconfirmed": 11,
+    "missed_observed": 0
+  },
+  "jev_plus_structural": null,
+  "structural_seconds": 0.003551931935362518,
+  "structural_contract_passed": true,
+  "enrichment": null,
+  "implementation_sha256": "5d1111c5585c143711978127688e4cd3f566fded840b2808b52af2f793d94291",
+  "limits": "Five original demonstration tests, not independent product-quality evidence. Execution is not assertion effectiveness."
+}

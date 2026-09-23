@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a",
+  "files": {
+    "test_text_ops.py": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+    "text_ops.py": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a"
+  },
+  "symbols": {
+    "test_text_ops.py::TextTests.test_normalize": {
+      "id": "test_text_ops.py::TextTests.test_normalize",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_normalize",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 7,
+      "end": 8,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_normalize(self):\n        self.assertEqual(normalize(\" HELLO \"), \"hello\")"
+    },
+    "test_text_ops.py::TextTests.test_slugify": {
+      "id": "test_text_ops.py::TextTests.test_slugify",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_slugify",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 10,
+      "end": 11,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_slugify(self):\n        self.assertEqual(slugify(\" Hello World \"), \"hello-world\")"
+    },
+    "test_text_ops.py::TextTests.test_port": {
+      "id": "test_text_ops.py::TextTests.test_port",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_port",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 13,
+      "end": 14,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_port(self):\n        self.assertEqual(parse_port(\"8080\"), 8080)"
+    },
+    "test_text_ops.py::TextTests.test_port_invalid": {
+      "id": "test_text_ops.py::TextTests.test_port_invalid",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_port_invalid",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 16,
+      "end": 18,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_port_invalid(self):\n        with self.assertRaises(ValueError):\n            parse_port(\"0\")"
+    },
+    "test_text_ops.py::TextTests.test_compact": {
+      "id": "test_text_ops.py::TextTests.test_compact",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_compact",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 20,
+      "end": 22,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_compact(self):\n        cleaner = Cleaner()\n        self.assertEqual(cleaner.compact(\"too   much space\"), \"too much space\")"
+    },
+    "text_ops.py::normalize": {
+      "id": "text_ops.py::normalize",
+      "path": "text_ops.py",
+      "name": "normalize",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 4,
+      "end": 5,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "def normalize(text):\n    return text.strip().lower()"
+    },
+    "text_ops.py::slugify": {
+      "id": "text_ops.py::slugify",
+      "path": "text_ops.py",
+      "name": "slugify",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 8,
+      "end": 9,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "def slugify(text):\n    return normalize(text).replace(\" \", \"-\")"
+    },
+    "text_ops.py::parse_port": {
+      "id": "text_ops.py::parse_port",
+      "path": "text_ops.py",
+      "name": "parse_port",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 12,
+      "end": 16,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "def parse_port(text):\n    port = int(text)\n    if not 1 <= port <= 65535:\n        raise ValueError(\"invalid port\")\n    return port"
+    },
+    "text_ops.py::Cleaner.compact": {
+      "id": "text_ops.py::Cleaner.compact",
+      "path": "text_ops.py",
+      "name": "Cleaner.compact",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 20,
+      "end": 21,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "    def compact(self, text):\n        return \" \".join(text.split())"
+    }
+  },
+  "calls": [
+    {
+      "source": "test_text_ops.py::TextTests.test_normalize",
+      "target": "text_ops.py::normalize",
+      "line": 8
+    },
+    {
+      "source": "test_text_ops.py::TextTests.test_slugify",
+      "target": "text_ops.py::slugify",
+      "line": 11
+    },
+    {
+      "source": "test_text_ops.py::TextTests.test_port",
+      "target": "text_ops.py::parse_port",
+      "line": 14
+    },
+    {
+      "source": "test_text_ops.py::TextTests.test_port_invalid",
+      "target": "text_ops.py::parse_port",
+      "line": 18
+    },
+    {
+      "source": "text_ops.py::slugify",
+      "target": "text_ops.py::normalize",
+      "line": 9
+    }
+  ],
+  "links": [
+    {
+      "id": "d987e1fe123049f1bc41abf4a36deafd7167484111b122af6a954a603da5d2ce",
+      "function": "text_ops.py::normalize",
+      "test": "test_text_ops.py::TextTests.test_normalize",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_normalize",
+        "text_ops.py::normalize"
+      ]
+    },
+    {
+      "id": "73a0e6024b79bc2d389eee5a0cc03921e157bc9f8924cbe1459728f14e051900",
+      "function": "text_ops.py::slugify",
+      "test": "test_text_ops.py::TextTests.test_slugify",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_slugify",
+        "text_ops.py::slugify"
+      ]
+    },
+    {
+      "id": "7b779c7d7c8f917e00bf7d99b376a13cad8eb0ef5197e0b35250da2b39b7f957",
+      "function": "text_ops.py::normalize",
+      "test": "test_text_ops.py::TextTests.test_slugify",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_slugify",
+        "text_ops.py::slugify",
+        "text_ops.py::normalize"
+      ]
+    },
+    {
+      "id": "dccfe941767b23621d8985061f6a7ca6cf728f650562fb11c180bb5eb193a2c8",
+      "function": "text_ops.py::parse_port",
+      "test": "test_text_ops.py::TextTests.test_port",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_port",
+        "text_ops.py::parse_port"
+      ]
+    },
+    {
+      "id": "7dcfca919547037a2f216df368a1a908fc6400c0c9ef4fbbaeebcbb4983e2a83",
+      "function": "text_ops.py::parse_port",
+      "test": "test_text_ops.py::TextTests.test_port_invalid",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_port_invalid",
+        "text_ops.py::parse_port"
+      ]
+    }
+  ],
+  "diagnostics": []
+}

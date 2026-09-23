@@ -61,9 +61,44 @@ structural results, record sanitized errors, and make the CLI exit 1. Query resu
 include enrichment completeness statistics. Missing usage is reported as unknown,
 never zero. Refreshing without `--jev` produces a structural-only map.
 
-Upcoming: agent interface and a reproducible benchmark. The earlier research
-supported adding test relationships, but did not establish improved complete
-agent performance; this new utility needs its own evaluation.
+## Use from a coding agent
+
+Install the optional [official MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk):
+
+```sh
+python -m pip install '.[mcp]'
+jev-map --repo /absolute/path/to/repo serve
+```
+
+The server speaks Model Context Protocol (MCP) over standard input/output and
+exposes exactly `related_tests(symbol)`, `explain_link(function, test)`, and
+`refresh_map()`. Configure an MCP client with command `jev-map` and arguments
+`["--repo", "/absolute/path/to/repo", "serve"]`. The process stays bound to that
+repository; tools cannot choose another path or request an API key.
+
+Server startup with `serve --jev --max-calls 20 --env-file /private/.env.local`
+explicitly allows source uploads. The call limit applies across **all refreshes
+in that server session**. Read-only queries never call Jev. Refresh is serialized,
+and source changes invalidate queries until refreshed.
+
+## Try the demonstration
+
+```sh
+jev-map --repo examples/mini_repo refresh
+jev-map --repo examples/mini_repo related-tests normalize
+python benchmarks/01-mapping-smoke/run.py --out /tmp/jev-map-round
+```
+
+The benchmark runs five original tests and independently records actual function
+calls. See [rounds and limitations](benchmarks/01-mapping-smoke/README.md).
+This release emits structural and inferred links. Execution-confirmed results are
+currently benchmark evidence, not a supported map-import feature.
+
+The earlier research supported adding test relationships, but did not establish
+improved complete-agent performance. This new implementation needs its own larger
+evaluation; no accuracy or speed improvement is promised. See the
+[next evaluation steps](docs/ROADMAP.md) and the separate
+[existing-repository indexing pilot](benchmarks/02-repository-index/README.md).
 
 ## Development
 

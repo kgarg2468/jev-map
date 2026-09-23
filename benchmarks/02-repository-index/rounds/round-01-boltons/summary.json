@@ -1,0 +1,44 @@
+{
+  "mode": "offline-structural",
+  "source_url": "https://github.com/mahmoud/boltons",
+  "commit": "961dcff3f42e73b245aef65e377fe82763b257bb",
+  "python": "3.14.7",
+  "snapshot": "e5c0af14b4aa2a72aae02a86de48ed7f5861a4a5801bf4132f6f2577f3796f47",
+  "files": 65,
+  "symbols": 1308,
+  "test_symbols": 388,
+  "call_edges": 537,
+  "test_relationships": 239,
+  "diagnostics": [],
+  "build_seconds": 0.23575421900022775,
+  "serialized_map_bytes": 1474879,
+  "sample_queries": [
+    {
+      "symbol": "boltons/cacheutils.py::cached",
+      "links": 3,
+      "seconds": 1.4508026652038097e-05
+    },
+    {
+      "symbol": "boltons/debugutils.py::wrap_trace",
+      "links": 6,
+      "seconds": 7.503898814320564e-06
+    },
+    {
+      "symbol": "boltons/dictutils.py::FrozenDict.fromkeys",
+      "links": 1,
+      "seconds": 5.770940333604813e-06
+    },
+    {
+      "symbol": "boltons/dictutils.py::OneToOne.unique",
+      "links": 1,
+      "seconds": 5.390029400587082e-06
+    },
+    {
+      "symbol": "boltons/dictutils.py::subdict",
+      "links": 2,
+      "seconds": 5.691079422831535e-06
+    }
+  ],
+  "median_in_memory_query_seconds": 5.770940333604813e-06,
+  "limits": "Single local index run. Queries exclude snapshot validation and disk loading. Relationships are not execution-validated. No Jev calls or agent tasks."
+}
