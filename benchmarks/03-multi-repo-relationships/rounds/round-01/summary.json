@@ -1,0 +1,88 @@
+{
+  "candidate_pairs": 216,
+  "frozen_capability_rule_supported": true,
+  "ineligible_test_reasons": {
+    "failed_or_unselected": 3,
+    "no_passing_call_phase": 0,
+    "timed_out": 0
+  },
+  "ineligible_tests": 3,
+  "known_input_tokens": 232502,
+  "limits": "Execution-blinded source-selected sample. Call observation is not assertion effectiveness; non-observation is not proof of irrelevance; no agent outcomes measured.",
+  "per_repository": {
+    "boltons": {
+      "accepted_not_observed": 1,
+      "accepted_observed": 1,
+      "accepted_observed_fraction": 0.5,
+      "accepted_observed_wilson_95": {
+        "lower": 0.09453120573423074,
+        "upper": 0.9054687942657693
+      },
+      "accepted_pairs": 2,
+      "candidate_pairs": 72,
+      "execution_observed_pairs": 10,
+      "observed_candidate_coverage": 0.1,
+      "rejected_observed": 9,
+      "scored_eligible_pairs": 66,
+      "test_eligible_fraction": 0.9166666666666666,
+      "test_eligible_pairs": 66
+    },
+    "h11": {
+      "accepted_not_observed": 1,
+      "accepted_observed": 13,
+      "accepted_observed_fraction": 0.9285714285714286,
+      "accepted_observed_wilson_95": {
+        "lower": 0.6853129557584889,
+        "upper": 0.9872777847521093
+      },
+      "accepted_pairs": 14,
+      "candidate_pairs": 72,
+      "execution_observed_pairs": 41,
+      "observed_candidate_coverage": 0.3170731707317073,
+      "rejected_observed": 28,
+      "scored_eligible_pairs": 72,
+      "test_eligible_fraction": 1.0,
+      "test_eligible_pairs": 72
+    },
+    "pluggy": {
+      "accepted_not_observed": 3,
+      "accepted_observed": 20,
+      "accepted_observed_fraction": 0.8695652173913043,
+      "accepted_observed_wilson_95": {
+        "lower": 0.6787251772990404,
+        "upper": 0.9546234090636876
+      },
+      "accepted_pairs": 23,
+      "candidate_pairs": 72,
+      "execution_observed_pairs": 47,
+      "observed_candidate_coverage": 0.425531914893617,
+      "rejected_observed": 27,
+      "scored_eligible_pairs": 72,
+      "test_eligible_fraction": 1.0,
+      "test_eligible_pairs": 72
+    }
+  },
+  "pooled": {
+    "accepted_not_observed": 5,
+    "accepted_observed": 34,
+    "accepted_observed_fraction": 0.8717948717948718,
+    "accepted_observed_wilson_95": {
+      "lower": 0.7329425662025455,
+      "upper": 0.9439718246302862
+    },
+    "accepted_pairs": 39,
+    "candidate_pairs": 216,
+    "execution_observed_pairs": 98,
+    "observed_candidate_coverage": 0.3469387755102041,
+    "rejected_observed": 64,
+    "scored_eligible_pairs": 210,
+    "test_eligible_fraction": 0.9722222222222222,
+    "test_eligible_pairs": 210
+  },
+  "provider_errors": 0,
+  "provider_requests": 72,
+  "repositories": 3,
+  "selected_functions": 72,
+  "unique_tests": 115,
+  "unknown_usage_requests": 0
+}

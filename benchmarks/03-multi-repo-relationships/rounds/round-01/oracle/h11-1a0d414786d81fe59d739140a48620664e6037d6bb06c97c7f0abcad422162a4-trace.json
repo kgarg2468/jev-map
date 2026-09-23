@@ -1,0 +1,64 @@
+{
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+    "h11/_receivebuffer.py::ReceiveBuffer._extract",
+    "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+    "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+    "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+    "h11/tests/test_receivebuffer.py::test_receivebuffer"
+  ],
+  "pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer",
+      "when": "setup",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer",
+      "when": "call",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer",
+      "when": "teardown",
+      "outcome": "passed",
+      "wasxfail": null
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "call_passed": true,
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen _collections_abc>::_CallableGenericAlias.__new__",
+    "<frozen _collections_abc>::_is_param_expr",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+    "h11/_receivebuffer.py::ReceiveBuffer._extract",
+    "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+    "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter"
+  ],
+  "profile_pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_crlf_delimiter]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_crlf_delimiter]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_crlf_delimiter]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_lf_only_delimiter]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_lf_only_delimiter]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_lf_only_delimiter]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_mixed_crlf_and_lf]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_mixed_crlf_and_lf]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_mixed_crlf_and_lf]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    }
+  ],
+  "repository": "h11",
+  "returncode": 0,
+  "selector": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+  "stderr_tail": "",
+  "stdout_tail": "...                                                                      [100%]\n3 passed in 0.21s\n",
+  "test": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+  "timed_out": false,
+  "wall_seconds": 0.42972236208152026
+}

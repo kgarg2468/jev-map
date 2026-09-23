@@ -1,0 +1,23 @@
+{
+  "boltons": {
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "... [ 27%]\n........................................................................ [ 41%]\n........................................................................ [ 55%]\n........................................................................ [ 69%]\n........................................................................ [ 83%]\n........................................................................ [ 97%]\n...............                                                          [100%]\n=============================== warnings summary ===============================\ntests/test_funcutils_fb_py3.py::test_wraps_async\n  /tmp/jev-map-pilot-boltons/tests/test_funcutils_fb_py3.py:236: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    assert asyncio.iscoroutinefunction(f)\n\ntests/test_funcutils_fb_py3.py::test_wraps_async\n  /tmp/jev-map-pilot-boltons/tests/test_funcutils_fb_py3.py:240: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    assert asyncio.iscoroutinefunction(f2)\n\ntests/test_ioutils.py::TestMultiFileReader::test_open\n  /tmp/jev-map-pilot-boltons/tests/test_ioutils.py:491: DeprecationWarning: codecs.open() is deprecated. Use open() instead.\n    utf8_file_str = codecs.open(CUR_FILE_PATH, encoding='utf8').read()\n\ntests/test_ioutils.py::TestMultiFileReader::test_open\n  /tmp/jev-map-pilot-boltons/tests/test_ioutils.py:492: DeprecationWarning: codecs.open() is deprecated. Use open() instead.\n    f1, f2 = (codecs.open(CUR_FILE_PATH, encoding='utf8'),\n\ntests/test_ioutils.py::TestMultiFileReader::test_open\n  /tmp/jev-map-pilot-boltons/tests/test_ioutils.py:493: DeprecationWarning: codecs.open() is deprecated. Use open() instead.\n    codecs.open(CUR_FILE_PATH, encoding='utf8'))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n519 passed, 5 warnings in 1.95s\n",
+    "timed_out": false,
+    "wall_seconds": 2.195947138010524
+  },
+  "h11": {
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "........................................................................ [ 92%]\n......                                                                   [100%]\n78 passed in 0.11s\n",
+    "timed_out": false,
+    "wall_seconds": 0.32862325909081846
+  },
+  "pluggy": {
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "........................................................................ [ 39%]\n........................................................................ [ 79%]\n.....................................                                    [100%]\n181 passed in 0.16s\n",
+    "timed_out": false,
+    "wall_seconds": 0.38634284399449825
+  }
+}

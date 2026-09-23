@@ -46,8 +46,10 @@ endpoint, a 30-second timeout, no redirects, and no automatic retry.
 Jev examines up to three lexical test candidates per function, excluding pairs
 already connected structurally. Links scoring at least `--threshold 0.8` are
 labelled `inferred`. Scores are provider judgments, not calibrated probabilities
-of correctness. Candidate generation is incomplete, and the threshold has not
-been validated for this new implementation.
+of correctness. Candidate generation is incomplete. In one frozen three-repository
+study, 34 of 39 accepted relationships at the default threshold were observed in
+isolated test execution; this is evidence for conservative map enrichment, not a
+general accuracy guarantee.
 
 Exact requests and responses are stored under `.jev-map/receipts/`. Cache identity
 includes the model, questions, all candidates, and source context. Repeating a
@@ -99,9 +101,15 @@ Jev added the single execution-observed relationship missing from the structural
 map and rejected the other 11 candidates in both runs. This validates the live
 integration path only; it is not a general accuracy or agent-performance claim.
 
-The earlier research supported adding test relationships, but did not establish
-improved complete-agent performance. This new implementation needs its own larger
-evaluation; no accuracy or speed improvement is promised. See the
+The larger execution-blinded study used 72 production functions from pinned
+Boltons, h11, and Pluggy snapshots. At the frozen 0.8 threshold, Jev added 34
+execution-observed relationships among 39 accepted candidates, with at least one
+confirmed addition in every repository. It still missed 64 observed candidates,
+so the map remains additive and cannot safely filter tests. See the
+[protocol, raw data, and findings](benchmarks/03-multi-repo-relationships/FINDINGS.md).
+
+The mapping study supports adding test relationships, but does not establish
+improved complete-agent performance. See the
 [next evaluation steps](docs/ROADMAP.md) and the separate
 [existing-repository indexing pilot](benchmarks/02-repository-index/README.md).
 

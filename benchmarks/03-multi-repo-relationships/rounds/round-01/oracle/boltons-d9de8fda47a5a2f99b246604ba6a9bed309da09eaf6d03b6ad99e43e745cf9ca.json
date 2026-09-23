@@ -1,0 +1,73 @@
+{
+  "call_passed": true,
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen _collections_abc>::_CallableGenericAlias.__new__",
+    "<frozen _collections_abc>::_is_param_expr",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "boltons/funcutils.py::<lambda>",
+    "boltons/funcutils.py::FunctionBuilder.<lambda>",
+    "boltons/funcutils.py::FunctionBuilder.__init__",
+    "boltons/funcutils.py::FunctionBuilder.get_invocation_str",
+    "boltons/funcutils.py::FunctionBuilder.get_sig_str",
+    "boltons/funcutils.py::inspect_formatargspec",
+    "boltons/funcutils.py::inspect_formatargspec.<locals>.formatargandannotation",
+    "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str"
+  ],
+  "profile_pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str[None-args-kwargs-None-a-kwonlydefaults0-*args, a=a, **kwargs-(*args, a, **kwargs)]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str[None-args-kwargs-None-a-kwonlydefaults0-*args, a=a, **kwargs-(*args, a, **kwargs)]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str[None-args-kwargs-None-a-kwonlydefaults0-*args, a=a, **kwargs-(*args, a, **kwargs)]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    }
+  ],
+  "repository": "boltons",
+  "returncode": 0,
+  "selector": "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str",
+  "stderr_tail": "",
+  "stdout_tail": ".                                                                        [100%]\n1 passed in 0.14s\n",
+  "test": "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str",
+  "timed_out": false,
+  "wall_seconds": 0.34405687893740833
+}
