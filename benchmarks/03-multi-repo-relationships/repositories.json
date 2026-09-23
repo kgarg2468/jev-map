@@ -1,0 +1,38 @@
+{
+  "seed": "jev-map-multi-repo-v1",
+  "model": "jev-1.13.0",
+  "threshold": 0.8,
+  "candidate_limit": 3,
+  "functions_per_repository": 24,
+  "test_timeout_seconds": 60,
+  "preflight_timeout_seconds": 180,
+  "repositories": [
+    {
+      "name": "boltons",
+      "url": "https://github.com/mahmoud/boltons",
+      "commit": "961dcff3f42e73b245aef65e377fe82763b257bb",
+      "source_roots": ["boltons"],
+      "source_excludes": [],
+      "pythonpath": ["."],
+      "test_paths": ["tests"]
+    },
+    {
+      "name": "h11",
+      "url": "https://github.com/python-hyper/h11",
+      "commit": "62c5068c971579d61fa1b55373390e12f25fd856",
+      "source_roots": ["h11"],
+      "source_excludes": ["h11/tests"],
+      "pythonpath": ["."],
+      "test_paths": ["h11/tests"]
+    },
+    {
+      "name": "pluggy",
+      "url": "https://github.com/pytest-dev/pluggy",
+      "commit": "87e45202858dbb725c2ea7d6472a11c1a2624518",
+      "source_roots": ["src/pluggy"],
+      "source_excludes": [],
+      "pythonpath": ["src"],
+      "test_paths": ["testing"]
+    }
+  ]
+}
