@@ -28,3 +28,7 @@ python benchmarks/03-multi-repo-relationships/study.py run \
 The run order is fixed in code: repository preflight, every Jev request, then the
 execution oracle. The output directory is published atomically only after all
 artifacts and a checksum manifest have been written.
+
+Round 01 completed the frozen study. Read [`FINDINGS.md`](FINDINGS.md) for the
+decision and limits, then inspect [`rounds/round-01`](rounds/round-01) for all raw
+requests, responses, execution traces, joined pairs, and checksums.
