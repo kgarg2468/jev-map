@@ -1,0 +1,100 @@
+{
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen _collections_abc>::_CallableGenericAlias.__new__",
+    "<frozen _collections_abc>::_is_param_expr",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "boltons/funcutils.py::<lambda>",
+    "boltons/funcutils.py::FunctionBuilder.<lambda>",
+    "boltons/funcutils.py::FunctionBuilder.__init__",
+    "boltons/funcutils.py::FunctionBuilder.get_invocation_str",
+    "boltons/funcutils.py::FunctionBuilder.get_sig_str",
+    "boltons/funcutils.py::inspect_formatargspec",
+    "boltons/funcutils.py::inspect_formatargspec.<locals>.formatargandannotation",
+    "tests/test_funcutils_fb.py::test_get_invocation_sig_str"
+  ],
+  "pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[args0-None-None-None-a, b-(a, b)]",
+      "when": "setup",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[args0-None-None-None-a, b-(a, b)]",
+      "when": "call",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[args0-None-None-None-a, b-(a, b)]",
+      "when": "teardown",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[None-args-kwargs-None-*args, **kwargs-(*args, **kwargs)]",
+      "when": "setup",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[None-args-kwargs-None-*args, **kwargs-(*args, **kwargs)]",
+      "when": "call",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[None-args-kwargs-None-*args, **kwargs-(*args, **kwargs)]",
+      "when": "teardown",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[a-None-None-defaults2-a=a-(a)]",
+      "when": "setup",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[a-None-None-defaults2-a=a-(a)]",
+      "when": "call",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_funcutils_fb.py::test_get_invocation_sig_str[a-None-None-defaults2-a=a-(a)]",
+      "when": "teardown",
+      "outcome": "passed",
+      "wasxfail": null
+    }
+  ]
+}

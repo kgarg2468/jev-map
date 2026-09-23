@@ -1,0 +1,69 @@
+{
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Reversible.__subclasshook__",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "h11/_connection.py::_body_framing",
+    "h11/_events.py::Request.__init__",
+    "h11/_events.py::Response.__post_init__",
+    "h11/_events.py::_ResponseBase.__init__",
+    "h11/_headers.py::Headers.__getitem__",
+    "h11/_headers.py::Headers.__init__",
+    "h11/_headers.py::get_comma_header",
+    "h11/_headers.py::normalize_and_validate",
+    "h11/_util.py::bytesify",
+    "h11/_util.py::validate",
+    "h11/tests/test_connection.py::test__body_framing",
+    "h11/tests/test_connection.py::test__body_framing.<locals>.headers",
+    "h11/tests/test_connection.py::test__body_framing.<locals>.req",
+    "h11/tests/test_connection.py::test__body_framing.<locals>.resp"
+  ],
+  "pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "h11/tests/test_connection.py::test__body_framing",
+      "when": "setup",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test__body_framing",
+      "when": "call",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test__body_framing",
+      "when": "teardown",
+      "outcome": "passed",
+      "wasxfail": null
+    }
+  ]
+}

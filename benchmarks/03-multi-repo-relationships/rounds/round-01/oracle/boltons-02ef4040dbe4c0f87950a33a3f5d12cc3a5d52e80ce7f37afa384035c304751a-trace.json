@@ -1,0 +1,57 @@
+{
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "boltons/socketutils.py::BufferedSocket.__init__",
+    "boltons/socketutils.py::BufferedSocket.recv_until",
+    "tests/test_socketutils.py::test_basic_nonblocking"
+  ],
+  "pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "tests/test_socketutils.py::test_basic_nonblocking",
+      "when": "setup",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_socketutils.py::test_basic_nonblocking",
+      "when": "call",
+      "outcome": "passed",
+      "wasxfail": null
+    },
+    {
+      "nodeid": "tests/test_socketutils.py::test_basic_nonblocking",
+      "when": "teardown",
+      "outcome": "passed",
+      "wasxfail": null
+    }
+  ]
+}

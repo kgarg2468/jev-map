@@ -1,0 +1,2162 @@
+[
+  {
+    "accepted": true,
+    "function": "boltons/setutils.py::_ComplementSet.issubset",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "f52f17b4fb6203848fee4fb743a06378484d46cb98fc5ecfc8a55135ee1c8224",
+    "score": 0.86,
+    "test": "tests/test_setutils.py::test_complement_set",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/setutils.py::_ComplementSet.issubset",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "f52f17b4fb6203848fee4fb743a06378484d46cb98fc5ecfc8a55135ee1c8224",
+    "score": 0.7,
+    "test": "tests/test_tbutils_parsed_exc.py::test_parsed_exc_nosrcline",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/setutils.py::_ComplementSet.issubset",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "f52f17b4fb6203848fee4fb743a06378484d46cb98fc5ecfc8a55135ee1c8224",
+    "score": 0.08,
+    "test": "tests/test_urlutils.py::test_navigate",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::format_invocation",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "1c24f7adccd1f092a55bf2f56360acaf027882253521b85ae7cc6090a65b1a26",
+    "score": 0.05,
+    "test": "tests/test_dictutils.py::test_frozendict",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::format_invocation",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "1c24f7adccd1f092a55bf2f56360acaf027882253521b85ae7cc6090a65b1a26",
+    "score": 0.1,
+    "test": "tests/test_funcutils_fb_py3.py::test_wraps_inner_kwarg_only",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::format_invocation",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "1c24f7adccd1f092a55bf2f56360acaf027882253521b85ae7cc6090a65b1a26",
+    "score": 0.1,
+    "test": "tests/test_funcutils_fb.py::test_wraps_expected",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledStringIO.write",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "c97a31e4ee86b6c450d4265054d4e7ccaf4db0998b3382e8667914a64f8c9c14",
+    "score": 0.05,
+    "test": "tests/test_socketutils.py::test_socketutils_netstring",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledStringIO.write",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "c97a31e4ee86b6c450d4265054d4e7ccaf4db0998b3382e8667914a64f8c9c14",
+    "score": 0.06,
+    "test": "tests/test_socketutils.py::test_client_disconnecting",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledStringIO.write",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "c97a31e4ee86b6c450d4265054d4e7ccaf4db0998b3382e8667914a64f8c9c14",
+    "score": 0.07,
+    "test": "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+    "test_eligible": false
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.utcoffset",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "97a48fb72c0d5ec6c0580552d0f9b8a1f208d0b5e8596bf13429b8ede7dfb9f9",
+    "score": 0.22,
+    "test": "tests/test_timeutils.py::test_us_timezone_dst_fold",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.utcoffset",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "97a48fb72c0d5ec6c0580552d0f9b8a1f208d0b5e8596bf13429b8ede7dfb9f9",
+    "score": 0.04,
+    "test": "tests/test_iterutils.py::test_backoff_constant_factor",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.utcoffset",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "97a48fb72c0d5ec6c0580552d0f9b8a1f208d0b5e8596bf13429b8ede7dfb9f9",
+    "score": 0.04,
+    "test": "tests/test_iterutils.py::test_chunk_ranges",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/socketutils.py::BufferedSocket.settimeout",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "7499c3f9551eb82badcba4838e11b232daf7b1de211de3366cd948a760ffcb5f",
+    "score": 0.78,
+    "test": "tests/test_socketutils.py::test_socketutils_netstring",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/socketutils.py::BufferedSocket.settimeout",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "7499c3f9551eb82badcba4838e11b232daf7b1de211de3366cd948a760ffcb5f",
+    "score": 0.76,
+    "test": "tests/test_socketutils.py::test_timeout_setters_getters",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/socketutils.py::BufferedSocket.settimeout",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "7499c3f9551eb82badcba4838e11b232daf7b1de211de3366cd948a760ffcb5f",
+    "score": 0.71,
+    "test": "tests/test_socketutils.py::test_basic_nonblocking",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::FunctionBuilder.get_func",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "db1c1ed00e4f23925f1dfab007cbf10a3e5abfa43600898e4692e3e6e4e9ffbf",
+    "score": 0.51,
+    "test": "tests/test_funcutils_fb_py3.py::test_remove_kwonly_arg",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::FunctionBuilder.get_func",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "db1c1ed00e4f23925f1dfab007cbf10a3e5abfa43600898e4692e3e6e4e9ffbf",
+    "score": 0.23,
+    "test": "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::FunctionBuilder.get_func",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "db1c1ed00e4f23925f1dfab007cbf10a3e5abfa43600898e4692e3e6e4e9ffbf",
+    "score": 0.25,
+    "test": "tests/test_funcutils_fb.py::test_get_invocation_sig_str",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/urlutils.py::OrderedMultiDict.__iter__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "a6052da79aee73b7616ff29c5356949da46db558c8a8e4ee0562c98a5fb1073e",
+    "score": 0.21,
+    "test": "tests/test_dictutils.py::test_frozendict_api",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/urlutils.py::OrderedMultiDict.__iter__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "a6052da79aee73b7616ff29c5356949da46db558c8a8e4ee0562c98a5fb1073e",
+    "score": 0.32,
+    "test": "tests/test_dictutils.py::test_reversed",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/urlutils.py::OrderedMultiDict.__iter__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "a6052da79aee73b7616ff29c5356949da46db558c8a8e4ee0562c98a5fb1073e",
+    "score": 0.39,
+    "test": "tests/test_dictutils.py::test_addlist_iterator",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.__init__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "bad7ffa4d848eeec73dd01f878a45e415fcc827b034495ce63e436dc295b1e3e",
+    "score": 0.02,
+    "test": "tests/test_cacheutils.py::test_cachedmethod",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.__init__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "bad7ffa4d848eeec73dd01f878a45e415fcc827b034495ce63e436dc295b1e3e",
+    "score": 0.03,
+    "test": "tests/test_iterutils.py::test_backoff_constant_factor",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.__init__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "bad7ffa4d848eeec73dd01f878a45e415fcc827b034495ce63e436dc295b1e3e",
+    "score": 0.03,
+    "test": "tests/test_iterutils.py::test_chunk_ranges",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledIOBase.close",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "615417b6202876b2a8589befce4955cb20b50bf40f6848c5800f955c33f1b5a9",
+    "score": 0.15,
+    "test": "tests/test_socketutils.py::test_client_disconnecting",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledIOBase.close",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "615417b6202876b2a8589befce4955cb20b50bf40f6848c5800f955c33f1b5a9",
+    "score": 0.12,
+    "test": "tests/test_socketutils.py::test_socketutils_netstring",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledIOBase.close",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "615417b6202876b2a8589befce4955cb20b50bf40f6848c5800f955c33f1b5a9",
+    "score": 0.16,
+    "test": "tests/test_ioutils.py::BaseTestMixin.test_compare_unequal_instances",
+    "test_eligible": false
+  },
+  {
+    "accepted": false,
+    "function": "boltons/cacheutils.py::LRI._remove_from_ll",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "687d236f391feafa5e61988bb75156fa9dba77b74ad745ba7d8649356eecf0b2",
+    "score": 0.09,
+    "test": "tests/test_setutils.py::test_complement_set",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/cacheutils.py::LRI._remove_from_ll",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "687d236f391feafa5e61988bb75156fa9dba77b74ad745ba7d8649356eecf0b2",
+    "score": 0.21,
+    "test": "tests/test_setutils.py::test_iset_scalar_index_bounds",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/cacheutils.py::LRI._remove_from_ll",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "687d236f391feafa5e61988bb75156fa9dba77b74ad745ba7d8649356eecf0b2",
+    "score": 0.09,
+    "test": "tests/test_cacheutils.py::test_lri_cache_eviction",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::LocalTZInfo.dst",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "4c6fd76ff65f902e1ee729702b22c191e1a18f1566e5173d3aca59ddc6dfe1e3",
+    "score": 0.45,
+    "test": "tests/test_timeutils.py::test_us_timezone_dst_fold",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::LocalTZInfo.dst",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "4c6fd76ff65f902e1ee729702b22c191e1a18f1566e5173d3aca59ddc6dfe1e3",
+    "score": 0.06,
+    "test": "tests/test_iterutils.py::test_chunk_ranges",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::LocalTZInfo.dst",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "4c6fd76ff65f902e1ee729702b22c191e1a18f1566e5173d3aca59ddc6dfe1e3",
+    "score": 0.03,
+    "test": "tests/test_statsutils.py::test_stats_basic",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/setutils.py::IndexedSet.remove",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "cb053c0c183a7be5d5c20c31e6325c74dcbc221739e9a26beed6c532888adf34",
+    "score": 0.19,
+    "test": "tests/test_setutils.py::test_indexed_set_mutate",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/setutils.py::IndexedSet.remove",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "cb053c0c183a7be5d5c20c31e6325c74dcbc221739e9a26beed6c532888adf34",
+    "score": 0.21,
+    "test": "tests/test_setutils.py::test_iset_scalar_index_bounds",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/setutils.py::IndexedSet.remove",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "cb053c0c183a7be5d5c20c31e6325c74dcbc221739e9a26beed6c532888adf34",
+    "score": 0.19,
+    "test": "tests/test_setutils.py::test_iset_slice_after_removal",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/strutils.py::is_ascii",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "cb81dbed82b18549e99021563d2da8883d33c98c29ae05b4619d0ea346dbc602",
+    "score": 0.03,
+    "test": "tests/test_tbutils.py::test_exception_info",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/strutils.py::is_ascii",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "cb81dbed82b18549e99021563d2da8883d33c98c29ae05b4619d0ea346dbc602",
+    "score": 0.03,
+    "test": "tests/test_socketutils.py::test_client_disconnecting",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/strutils.py::is_ascii",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "cb81dbed82b18549e99021563d2da8883d33c98c29ae05b4619d0ea346dbc602",
+    "score": 0.02,
+    "test": "tests/test_funcutils_fb.py::test_wraps_expected",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "boltons/dictutils.py::ManyToMany.__repr__",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "825527ffcfced0f6bd1e31f78be3b840e7e9d82294aeab517dc924e7f2e660c4",
+    "score": 0.94,
+    "test": "tests/test_dictutils.py::test_many_to_many",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/dictutils.py::ManyToMany.__repr__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "825527ffcfced0f6bd1e31f78be3b840e7e9d82294aeab517dc924e7f2e660c4",
+    "score": 0.26,
+    "test": "tests/test_cacheutils.py::test_cachedmethod",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/dictutils.py::ManyToMany.__repr__",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "825527ffcfced0f6bd1e31f78be3b840e7e9d82294aeab517dc924e7f2e660c4",
+    "score": 0.09,
+    "test": "tests/test_cacheutils.py::test_min_id_map",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/fileutils.py::rotate_file",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "a685be803349d89b9b7ab8fbafef95907a6a15821061d49e9b3f872f7b717385",
+    "score": 0.02,
+    "test": "tests/test_dictutils.py::test_frozendict_api",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/fileutils.py::rotate_file",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "a685be803349d89b9b7ab8fbafef95907a6a15821061d49e9b3f872f7b717385",
+    "score": 0.04,
+    "test": "tests/test_setutils.py::test_complement_set",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/fileutils.py::rotate_file",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "a685be803349d89b9b7ab8fbafef95907a6a15821061d49e9b3f872f7b717385",
+    "score": 0.03,
+    "test": "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+    "test_eligible": false
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.utcoffset_hours",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "532510fc64f2f6ce7d6c61588b2fee9c19994be63f7404d82565f244af14e23f",
+    "score": 0.14,
+    "test": "tests/test_timeutils.py::test_us_timezone_dst_fold",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.utcoffset_hours",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "532510fc64f2f6ce7d6c61588b2fee9c19994be63f7404d82565f244af14e23f",
+    "score": 0.09,
+    "test": "tests/test_timeutils.py::test_relative_time_defaults_to_matching_timezone",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.utcoffset_hours",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "532510fc64f2f6ce7d6c61588b2fee9c19994be63f7404d82565f244af14e23f",
+    "score": 0.07,
+    "test": "tests/test_timeutils.py::test_daterange_datetime_hourly",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ecoutils.py::main",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "71372d4e69677646bd4bd1498551ed12b8d0cd6bef6ad982c66afa3db30ff8b3",
+    "score": 0.03,
+    "test": "tests/test_tbutils_parsed_exc.py::test_parsed_exc_truncated",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ecoutils.py::main",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "71372d4e69677646bd4bd1498551ed12b8d0cd6bef6ad982c66afa3db30ff8b3",
+    "score": 0.05,
+    "test": "tests/test_tbutils_parsed_exc.py::test_parsed_exc_with_anchor",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ecoutils.py::main",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "71372d4e69677646bd4bd1498551ed12b8d0cd6bef6ad982c66afa3db30ff8b3",
+    "score": 0.03,
+    "test": "tests/test_tbutils.py::test_contextual",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledIOBase.read",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "c2bdf173949690c19a3478a3f88642b49dbb4f9426b720726a4a73561c5ca3d7",
+    "score": 0.1,
+    "test": "tests/test_socketutils.py::test_socketutils_netstring",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledIOBase.read",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "c2bdf173949690c19a3478a3f88642b49dbb4f9426b720726a4a73561c5ca3d7",
+    "score": 0.34,
+    "test": "tests/test_ioutils.py::BaseTestMixin.test_compare_unequal_instances",
+    "test_eligible": false
+  },
+  {
+    "accepted": false,
+    "function": "boltons/ioutils.py::SpooledIOBase.read",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "c2bdf173949690c19a3478a3f88642b49dbb4f9426b720726a4a73561c5ca3d7",
+    "score": 0.21,
+    "test": "tests/test_ioutils.py::BaseTestMixin.test_instance_check",
+    "test_eligible": false
+  },
+  {
+    "accepted": false,
+    "function": "boltons/urlutils.py::OrderedMultiDict.viewitems",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "bac06761a11b162812fc19bf09f0649c9c4174572d50cfdb0019cf52ca632d72",
+    "score": 0.08,
+    "test": "tests/test_dictutils.py::test_reversed",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/urlutils.py::OrderedMultiDict.viewitems",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "bac06761a11b162812fc19bf09f0649c9c4174572d50cfdb0019cf52ca632d72",
+    "score": 0.25,
+    "test": "tests/test_dictutils.py::test_frozendict_api",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/urlutils.py::OrderedMultiDict.viewitems",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "bac06761a11b162812fc19bf09f0649c9c4174572d50cfdb0019cf52ca632d72",
+    "score": 0.16,
+    "test": "tests/test_setutils.py::test_complement_set",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/debugutils.py::pdb_on_signal",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "b6a0601d72db696603ea2aed4f30cce081f90388302c4474180ae81fb2e09955",
+    "score": 0.03,
+    "test": "tests/test_iterutils.py::TestRemap.test_namedtuple",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/debugutils.py::pdb_on_signal",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "b6a0601d72db696603ea2aed4f30cce081f90388302c4474180ae81fb2e09955",
+    "score": 0.03,
+    "test": "tests/test_setutils.py::test_complement_set",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/debugutils.py::pdb_on_signal",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "b6a0601d72db696603ea2aed4f30cce081f90388302c4474180ae81fb2e09955",
+    "score": 0.02,
+    "test": "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+    "test_eligible": false
+  },
+  {
+    "accepted": false,
+    "function": "boltons/statsutils.py::Stats._get_sorted_data",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "2fae6085250d8214e89e0bcf7d392b5c6caa601dbc76991c92d07eaca1656f59",
+    "score": 0.03,
+    "test": "tests/test_iterutils.py::TestRemap.test_namedtuple",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/statsutils.py::Stats._get_sorted_data",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "2fae6085250d8214e89e0bcf7d392b5c6caa601dbc76991c92d07eaca1656f59",
+    "score": 0.04,
+    "test": "tests/test_urlutils.py::test_netloc_slashes",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/statsutils.py::Stats._get_sorted_data",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "2fae6085250d8214e89e0bcf7d392b5c6caa601dbc76991c92d07eaca1656f59",
+    "score": 0.02,
+    "test": "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.tzname",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "289b057bef07853c905824a38d2b56ea7481f2aceed60907d7973cda1ec0cd10",
+    "score": 0.19,
+    "test": "tests/test_timeutils.py::test_us_timezone_dst_fold",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.tzname",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "289b057bef07853c905824a38d2b56ea7481f2aceed60907d7973cda1ec0cd10",
+    "score": 0.19,
+    "test": "tests/test_timeutils.py::test_us_timezone_fromutc_sets_fold",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/timeutils.py::ConstantTZInfo.tzname",
+    "observed": false,
+    "repository": "boltons",
+    "request_sha256": "289b057bef07853c905824a38d2b56ea7481f2aceed60907d7973cda1ec0cd10",
+    "score": 0.04,
+    "test": "tests/test_iterutils.py::test_backoff_constant_factor",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/socketutils.py::BufferedSocket.send",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "817a9784103afbc61ed6f1a232f6d89a3cace33045a4442a5bf68f3cba293ca7",
+    "score": 0.54,
+    "test": "tests/test_socketutils.py::test_socketutils_netstring",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/socketutils.py::BufferedSocket.send",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "817a9784103afbc61ed6f1a232f6d89a3cace33045a4442a5bf68f3cba293ca7",
+    "score": 0.5,
+    "test": "tests/test_socketutils.py::test_client_disconnecting",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/socketutils.py::BufferedSocket.send",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "817a9784103afbc61ed6f1a232f6d89a3cace33045a4442a5bf68f3cba293ca7",
+    "score": 0.38,
+    "test": "tests/test_socketutils.py::test_socketutils_netstring_timeout",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::FunctionBuilder.get_invocation_str",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "b0dd190d0c121e9dd1229f7e5778f88c05c7be83f5fa551ccc0c2d0399784c38",
+    "score": 0.4,
+    "test": "tests/test_funcutils_fb_py3.py::test_remove_kwonly_arg",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::FunctionBuilder.get_invocation_str",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "b0dd190d0c121e9dd1229f7e5778f88c05c7be83f5fa551ccc0c2d0399784c38",
+    "score": 0.65,
+    "test": "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "boltons/funcutils.py::FunctionBuilder.get_invocation_str",
+    "observed": true,
+    "repository": "boltons",
+    "request_sha256": "b0dd190d0c121e9dd1229f7e5778f88c05c7be83f5fa551ccc0c2d0399784c38",
+    "score": 0.71,
+    "test": "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg_with_varargs",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::BodyWriter.send_data",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "a8a0921146a333b6c2c97a68a3f506434d2b5252690f0be66c2f997af8f99c3e",
+    "score": 0.19,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::BodyWriter.send_data",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "a8a0921146a333b6c2c97a68a3f506434d2b5252690f0be66c2f997af8f99c3e",
+    "score": 0.12,
+    "test": "h11/tests/test_io.py::test__obsolete_line_fold_bytes",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::BodyWriter.send_data",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "a8a0921146a333b6c2c97a68a3f506434d2b5252690f0be66c2f997af8f99c3e",
+    "score": 0.09,
+    "test": "h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "f217df6ed3ad8ad46bc1bfd334b3e08434a9e67357d4955e7446f0c1048c16a1",
+    "score": 0.46,
+    "test": "h11/tests/test_connection.py::test_errors",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "f217df6ed3ad8ad46bc1bfd334b3e08434a9e67357d4955e7446f0c1048c16a1",
+    "score": 0.95,
+    "test": "h11/tests/test_util.py::test_LocalProtocolError",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "f217df6ed3ad8ad46bc1bfd334b3e08434a9e67357d4955e7446f0c1048c16a1",
+    "score": 0.96,
+    "test": "h11/tests/test_connection.py::test_close_simple",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_util.py::Sentinel.__new__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "6b6ec9a50e0728ec1b78d935b7b031fdad67845f23e9559f8e112a21a13017c3",
+    "score": 0.22,
+    "test": "h11/tests/test_connection.py::test__body_framing",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_util.py::Sentinel.__new__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "6b6ec9a50e0728ec1b78d935b7b031fdad67845f23e9559f8e112a21a13017c3",
+    "score": 0.86,
+    "test": "h11/tests/test_util.py::test_make_sentinel",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_util.py::Sentinel.__new__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "6b6ec9a50e0728ec1b78d935b7b031fdad67845f23e9559f8e112a21a13017c3",
+    "score": 0.77,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::write_any_response",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "4eab9468884041b7cc10940c982a3845c398c949401fa2b99e63dd6fbb5a43ef",
+    "score": 0.7,
+    "test": "h11/tests/test_connection.py::test_errors",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::write_any_response",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "4eab9468884041b7cc10940c982a3845c398c949401fa2b99e63dd6fbb5a43ef",
+    "score": 0.51,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::write_any_response",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "4eab9468884041b7cc10940c982a3845c398c949401fa2b99e63dd6fbb5a43ef",
+    "score": 0.46,
+    "test": "h11/tests/test_io.py::test_ChunkedReader",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ContentLengthReader.read_eof",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "ee5c92d547a887b4c1474c2da1a6bf45ef779a9f0ca7311e41acafbe22b96228",
+    "score": 0.77,
+    "test": "h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ContentLengthReader.read_eof",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "ee5c92d547a887b4c1474c2da1a6bf45ef779a9f0ca7311e41acafbe22b96228",
+    "score": 0.36,
+    "test": "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ContentLengthReader.read_eof",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "ee5c92d547a887b4c1474c2da1a6bf45ef779a9f0ca7311e41acafbe22b96228",
+    "score": 0.29,
+    "test": "h11/tests/test_connection.py::test_close_different_states",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "173001dd109bdb7c30b37be4ef932aef0c1bbf01135a94eca793cda861e82068",
+    "score": 0.52,
+    "test": "h11/tests/test_against_stdlib_http.py::test_h11_as_client",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "173001dd109bdb7c30b37be4ef932aef0c1bbf01135a94eca793cda861e82068",
+    "score": 0.9,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "173001dd109bdb7c30b37be4ef932aef0c1bbf01135a94eca793cda861e82068",
+    "score": 0.89,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_readers.py::ChunkedReader.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "c6af7abab648d947a3162f8bcc36750912a780c7c6223b9b937d80ca477f5206",
+    "score": 0.83,
+    "test": "h11/tests/test_io.py::test_ChunkedReader",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ChunkedReader.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "c6af7abab648d947a3162f8bcc36750912a780c7c6223b9b937d80ca477f5206",
+    "score": 0.5,
+    "test": "h11/tests/test_connection.py::test_protocol_switch",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ChunkedReader.__init__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "c6af7abab648d947a3162f8bcc36750912a780c7c6223b9b937d80ca477f5206",
+    "score": 0.26,
+    "test": "h11/tests/test_connection.py::test_pipelining",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_events.py::Data.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "b238a47643b56c6c46216eed8b1f27b47533d85c0da994425bee4fe5bda570f4",
+    "score": 0.81,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::Data.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "b238a47643b56c6c46216eed8b1f27b47533d85c0da994425bee4fe5bda570f4",
+    "score": 0.74,
+    "test": "h11/tests/test_connection.py::test_chunk_boundaries",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::Data.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "b238a47643b56c6c46216eed8b1f27b47533d85c0da994425bee4fe5bda570f4",
+    "score": 0.72,
+    "test": "h11/tests/test_connection.py::test_chunked",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::Headers.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "c3f24604553d622a4b43e229f73c01c2db0386dd857e5029283a34e7043e6fa1",
+    "score": 0.28,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::Headers.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "c3f24604553d622a4b43e229f73c01c2db0386dd857e5029283a34e7043e6fa1",
+    "score": 0.27,
+    "test": "h11/tests/test_connection.py::test__body_framing",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::Headers.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "c3f24604553d622a4b43e229f73c01c2db0386dd857e5029283a34e7043e6fa1",
+    "score": 0.28,
+    "test": "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::write_headers",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "8a7589ad99582193e77d51bc76a276916ae41d99f767d881a83665429d6a2193",
+    "score": 0.47,
+    "test": "h11/tests/test_io.py::test_readers_unusual",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::write_headers",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "8a7589ad99582193e77d51bc76a276916ae41d99f767d881a83665429d6a2193",
+    "score": 0.38,
+    "test": "h11/tests/test_connection.py::test_automagic_connection_close_handling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::write_headers",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "8a7589ad99582193e77d51bc76a276916ae41d99f767d881a83665429d6a2193",
+    "score": 0.34,
+    "test": "h11/tests/test_events.py::test_header_casing",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_connection.py::Connection.our_state",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "59b0a9ac2460a1f13666623ca35393fe734314c30f0e6c87864295bfb86eb137",
+    "score": 0.86,
+    "test": "h11/tests/test_connection.py::test_errors",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_connection.py::Connection.our_state",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "59b0a9ac2460a1f13666623ca35393fe734314c30f0e6c87864295bfb86eb137",
+    "score": 0.86,
+    "test": "h11/tests/test_connection.py::test_Connection_basics_and_content_length",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_connection.py::Connection.our_state",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "59b0a9ac2460a1f13666623ca35393fe734314c30f0e6c87864295bfb86eb137",
+    "score": 0.88,
+    "test": "h11/tests/test_connection.py::test_pipelining",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::Http10Writer.send_eom",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "3adcdb61a19a280bc84cb32626981b9585ee11fd6348d98f6906cfb5940eedaf",
+    "score": 0.23,
+    "test": "h11/tests/test_connection.py::test_errors",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::Http10Writer.send_eom",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "3adcdb61a19a280bc84cb32626981b9585ee11fd6348d98f6906cfb5940eedaf",
+    "score": 0.21,
+    "test": "h11/tests/test_connection.py::test_protocol_switch",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::Http10Writer.send_eom",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "3adcdb61a19a280bc84cb32626981b9585ee11fd6348d98f6906cfb5940eedaf",
+    "score": 0.21,
+    "test": "h11/tests/test_events.py::test_events",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::Http10Reader.read_eof",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "d8cc619dc7f3800da106fe55737ad91495db2c781ba9406f4171b1dd4dc8b8db",
+    "score": 0.7,
+    "test": "h11/tests/test_io.py::test_Http10Reader",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::Http10Reader.read_eof",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "d8cc619dc7f3800da106fe55737ad91495db2c781ba9406f4171b1dd4dc8b8db",
+    "score": 0.28,
+    "test": "h11/tests/test_connection.py::test_pipelining",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::Http10Reader.read_eof",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "d8cc619dc7f3800da106fe55737ad91495db2c781ba9406f4171b1dd4dc8b8db",
+    "score": 0.3,
+    "test": "h11/tests/test_against_stdlib_http.py::test_h11_as_client",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::BodyWriter.__call__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "2e6c017bc12e6d9ce6fd7560ef50b4d7efa851878fde5175063fac5164733da0",
+    "score": 0.21,
+    "test": "h11/tests/test_state.py::test_ConnectionState_switch_denied",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::BodyWriter.__call__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "2e6c017bc12e6d9ce6fd7560ef50b4d7efa851878fde5175063fac5164733da0",
+    "score": 0.3,
+    "test": "h11/tests/test_state.py::test_ConnectionState_double_protocol_switch",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_writers.py::BodyWriter.__call__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "2e6c017bc12e6d9ce6fd7560ef50b4d7efa851878fde5175063fac5164733da0",
+    "score": 0.34,
+    "test": "h11/tests/test_connection.py::test_pipelining",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "bef27d8b92a1789fd2a9d2b96cf239e6de4bdb50b0e5ea07899891172adaa245",
+    "score": 0.22,
+    "test": "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "bef27d8b92a1789fd2a9d2b96cf239e6de4bdb50b0e5ea07899891172adaa245",
+    "score": 0.74,
+    "test": "h11/tests/test_connection.py::test_early_detection_of_invalid_request",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "bef27d8b92a1789fd2a9d2b96cf239e6de4bdb50b0e5ea07899891172adaa245",
+    "score": 0.72,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ChunkedReader.read_eof",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "1c76bfe564ddb174156f7aaee15f1e82f68fed8a3d6bd272e26c9a4490b9469e",
+    "score": 0.28,
+    "test": "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ChunkedReader.read_eof",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "1c76bfe564ddb174156f7aaee15f1e82f68fed8a3d6bd272e26c9a4490b9469e",
+    "score": 0.71,
+    "test": "h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::ChunkedReader.read_eof",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "1c76bfe564ddb174156f7aaee15f1e82f68fed8a3d6bd272e26c9a4490b9469e",
+    "score": 0.73,
+    "test": "h11/tests/test_connection.py::test_close_different_states",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::Http10Reader.__call__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "0b0a9362b04f7c112ea397b8ef7b4fe42a72ee8387048d0593d40c9dc69dfa8b",
+    "score": 0.24,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::Http10Reader.__call__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "0b0a9362b04f7c112ea397b8ef7b4fe42a72ee8387048d0593d40c9dc69dfa8b",
+    "score": 0.37,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::Http10Reader.__call__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "0b0a9362b04f7c112ea397b8ef7b4fe42a72ee8387048d0593d40c9dc69dfa8b",
+    "score": 0.34,
+    "test": "h11/tests/test_connection.py::test_pipelining",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::normalize_and_validate",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "475a628e1a2f562d07650fcdf5870d9ea4d1a54f6aad7c99516e1a71688a5b63",
+    "score": 0.56,
+    "test": "h11/tests/test_connection.py::test_protocol_switch",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::normalize_and_validate",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "475a628e1a2f562d07650fcdf5870d9ea4d1a54f6aad7c99516e1a71688a5b63",
+    "score": 0.47,
+    "test": "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::normalize_and_validate",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "475a628e1a2f562d07650fcdf5870d9ea4d1a54f6aad7c99516e1a71688a5b63",
+    "score": 0.58,
+    "test": "h11/tests/test_headers.py::test_normalize_and_validate",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::Response.__post_init__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "019b7ad439b311e19162f9a96c0d18775242375f03e9eb0d0a37463e3be1d574",
+    "score": 0.1,
+    "test": "h11/tests/test_util.py::test_LocalProtocolError",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::Response.__post_init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "019b7ad439b311e19162f9a96c0d18775242375f03e9eb0d0a37463e3be1d574",
+    "score": 0.65,
+    "test": "h11/tests/test_connection.py::test_errors",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::Response.__post_init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "019b7ad439b311e19162f9a96c0d18775242375f03e9eb0d0a37463e3be1d574",
+    "score": 0.68,
+    "test": "h11/tests/test_connection.py::test_close_different_states",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::EndOfMessage.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "02c11819dbb1b386b46bc46ced880d9643555993217f2312ec4094983a65a8f1",
+    "score": 0.64,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::EndOfMessage.__init__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "02c11819dbb1b386b46bc46ced880d9643555993217f2312ec4094983a65a8f1",
+    "score": 0.36,
+    "test": "h11/tests/test_connection.py::test__body_framing",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_events.py::EndOfMessage.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "02c11819dbb1b386b46bc46ced880d9643555993217f2312ec4094983a65a8f1",
+    "score": 0.38,
+    "test": "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer._extract",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "de8837a50a599a56daf8d63ae2ecaad4deb3b2054cf312be64ec867a285d11d8",
+    "score": 0.45,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer._extract",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "de8837a50a599a56daf8d63ae2ecaad4deb3b2054cf312be64ec867a285d11d8",
+    "score": 0.36,
+    "test": "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_receivebuffer.py::ReceiveBuffer._extract",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "de8837a50a599a56daf8d63ae2ecaad4deb3b2054cf312be64ec867a285d11d8",
+    "score": 0.34,
+    "test": "h11/tests/test_connection.py::test_close_simple",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_headers.py::Headers.raw_items",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "6087496a64a2dc2b901ab2582829698302c12a060e1cbb65921787c84380c37f",
+    "score": 0.93,
+    "test": "h11/tests/test_events.py::test_header_casing",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::Headers.raw_items",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "6087496a64a2dc2b901ab2582829698302c12a060e1cbb65921787c84380c37f",
+    "score": 0.1,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_headers.py::Headers.raw_items",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "6087496a64a2dc2b901ab2582829698302c12a060e1cbb65921787c84380c37f",
+    "score": 0.11,
+    "test": "h11/tests/test_connection.py::test__body_framing",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "f65252d703bd705dffc8a5d9971989c42a92421da8309174f2956da1cb436a58",
+    "score": 0.22,
+    "test": "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "f65252d703bd705dffc8a5d9971989c42a92421da8309174f2956da1cb436a58",
+    "score": 0.22,
+    "test": "h11/tests/test_connection.py::test_sendfile",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "f65252d703bd705dffc8a5d9971989c42a92421da8309174f2956da1cb436a58",
+    "score": 0.19,
+    "test": "h11/tests/test_connection.py::test_protocol_switch",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_connection.py::Connection.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "b17b79814e93869f20535906d0bb430f68085e1959161cdf3025599548276f32",
+    "score": 0.87,
+    "test": "h11/tests/test_connection.py::test_errors",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_connection.py::Connection.__init__",
+    "observed": true,
+    "repository": "h11",
+    "request_sha256": "b17b79814e93869f20535906d0bb430f68085e1959161cdf3025599548276f32",
+    "score": 0.88,
+    "test": "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "h11/_connection.py::Connection.__init__",
+    "observed": false,
+    "repository": "h11",
+    "request_sha256": "b17b79814e93869f20535906d0bb430f68085e1959161cdf3025599548276f32",
+    "score": 0.87,
+    "test": "h11/tests/test_io.py::test_ChunkedReader",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__init__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a26db7544c2bca5851275e6729222bedda1fbcdc8a077c4505f710df1ea67952",
+    "score": 0.52,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__init__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a26db7544c2bca5851275e6729222bedda1fbcdc8a077c4505f710df1ea67952",
+    "score": 0.4,
+    "test": "testing/test_details.py::test_parse_hookimpl_override",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__init__",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "a26db7544c2bca5851275e6729222bedda1fbcdc8a077c4505f710df1ea67952",
+    "score": 0.42,
+    "test": "testing/test_hookcaller.py::test_hookimpl",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_result.py::Result.force_exception",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "9cd8a8d4cd309e498fa35f29399f85f23a1498b249efca23b9ccb7ae9fe09bdf",
+    "score": 0.92,
+    "test": "testing/test_multicall.py::test_hookwrapper_force_exception",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_result.py::Result.force_exception",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "9cd8a8d4cd309e498fa35f29399f85f23a1498b249efca23b9ccb7ae9fe09bdf",
+    "score": 0.13,
+    "test": "testing/test_invocations.py::test_firstresult_force_result",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_result.py::Result.force_exception",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "9cd8a8d4cd309e498fa35f29399f85f23a1498b249efca23b9ccb7ae9fe09bdf",
+    "score": 0.09,
+    "test": "testing/test_invocations.py::test_firstresult_force_result_hookwrapper",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.is_blocked",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "b87e5665ff8de17cbba7c984e9831156a97f2061ae58feaedca03621b72032ee",
+    "score": 0.04,
+    "test": "testing/test_invocations.py::test_only_kwargs",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.is_blocked",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "b87e5665ff8de17cbba7c984e9831156a97f2061ae58feaedca03621b72032ee",
+    "score": 0.91,
+    "test": "testing/test_pluginmanager.py::test_set_blocked",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.is_blocked",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "b87e5665ff8de17cbba7c984e9831156a97f2061ae58feaedca03621b72032ee",
+    "score": 0.91,
+    "test": "testing/test_hookcaller.py::test_hookrelay_registry",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::_SubsetHookCaller.__init__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "f412f1cb7642a92cd0ccbc6d384d15635814f13e1601baf6ed052935c3b26a3e",
+    "score": 0.76,
+    "test": "testing/test_pluginmanager.py::test_historic_with_subset_hook_caller",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::_SubsetHookCaller.__init__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "f412f1cb7642a92cd0ccbc6d384d15635814f13e1601baf6ed052935c3b26a3e",
+    "score": 0.75,
+    "test": "testing/test_pluginmanager.py::test_subset_hook_caller_with_specname",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::_SubsetHookCaller.__init__",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "f412f1cb7642a92cd0ccbc6d384d15635814f13e1601baf6ed052935c3b26a3e",
+    "score": 0.78,
+    "test": "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.list_name_plugin",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "9b489274b21966849b58a53d2a9b8e2d00d204d54eb070cf55c17d148eb573ec",
+    "score": 0.95,
+    "test": "testing/test_pluginmanager.py::test_pm",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.list_name_plugin",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "9b489274b21966849b58a53d2a9b8e2d00d204d54eb070cf55c17d148eb573ec",
+    "score": 0.2,
+    "test": "testing/test_pluginmanager.py::test_pm_name",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.list_name_plugin",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "9b489274b21966849b58a53d2a9b8e2d00d204d54eb070cf55c17d148eb573ec",
+    "score": 0.13,
+    "test": "testing/test_pluginmanager.py::test_set_blocked",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.get_plugins",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "7f72c5d295986641496d5e67f926efe28216204b7e833976ff6ce657c7c3bbe1",
+    "score": 0.93,
+    "test": "testing/test_pluginmanager.py::test_pm",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.get_plugins",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "7f72c5d295986641496d5e67f926efe28216204b7e833976ff6ce657c7c3bbe1",
+    "score": 0.9,
+    "test": "testing/test_pluginmanager.py::test_set_blocked",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.get_plugins",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "7f72c5d295986641496d5e67f926efe28216204b7e833976ff6ce657c7c3bbe1",
+    "score": 0.91,
+    "test": "testing/test_pluginmanager.py::test_pm_name",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.list_plugin_distinfo",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "7c15b4491909129b9a5b4838da8e5067a7fa915b0588db851ac5bbc9172cab6b",
+    "score": 0.93,
+    "test": "testing/test_pluginmanager.py::test_load_setuptools_instantiation",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.list_plugin_distinfo",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "7c15b4491909129b9a5b4838da8e5067a7fa915b0588db851ac5bbc9172cab6b",
+    "score": 0.64,
+    "test": "testing/test_details.py::test_dist_facade_project_name_and_delegation",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.list_plugin_distinfo",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "7c15b4491909129b9a5b4838da8e5067a7fa915b0588db851ac5bbc9172cab6b",
+    "score": 0.24,
+    "test": "testing/test_details.py::test_dist_facade_list_attributes",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::_get_marker_opts",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "50a140620c73de6133dc1bac4fcd742be89c09c2009cdc649068ebbc91f69b8d",
+    "score": 0.19,
+    "test": "testing/test_pluginmanager.py::test_add_tracefuncs",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::_get_marker_opts",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "50a140620c73de6133dc1bac4fcd742be89c09c2009cdc649068ebbc91f69b8d",
+    "score": 0.51,
+    "test": "testing/test_pluginmanager.py::test_register_ignores_unmarked_class_and_static_methods",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::_get_marker_opts",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "50a140620c73de6133dc1bac4fcd742be89c09c2009cdc649068ebbc91f69b8d",
+    "score": 0.49,
+    "test": "testing/test_pluginmanager.py::test_register_ignores_properties",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.is_historic",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "b3cc74fe1a26176f0c333ddb9b1b0572b29999a9a1e75b6c63d8c1e7174feefc",
+    "score": 0.36,
+    "test": "testing/test_pluginmanager.py::test_with_result_memorized",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.is_historic",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "b3cc74fe1a26176f0c333ddb9b1b0572b29999a9a1e75b6c63d8c1e7174feefc",
+    "score": 0.34,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.is_historic",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "b3cc74fe1a26176f0c333ddb9b1b0572b29999a9a1e75b6c63d8c1e7174feefc",
+    "score": 0.36,
+    "test": "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.unregister",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a56ae6e6eaadca01d2fbcac7bfa9897e2a4809cd6abe41c0bd0b0ca217ca0b07",
+    "score": 0.94,
+    "test": "testing/test_hookcaller.py::test_hookrelay_registry",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.unregister",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a56ae6e6eaadca01d2fbcac7bfa9897e2a4809cd6abe41c0bd0b0ca217ca0b07",
+    "score": 0.93,
+    "test": "testing/test_pluginmanager.py::test_unregister_plugin_with_multi_hookimpls",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.unregister",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "a56ae6e6eaadca01d2fbcac7bfa9897e2a4809cd6abe41c0bd0b0ca217ca0b07",
+    "score": 0.93,
+    "test": "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.get_canonical_name",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "da22298d51c548281cf9253cb970a0287e2c5ee875b8df2dfcb055854534e773",
+    "score": 0.12,
+    "test": "testing/test_hookcaller.py::test_hookrelay_registration_by_specname",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.get_canonical_name",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "da22298d51c548281cf9253cb970a0287e2c5ee875b8df2dfcb055854534e773",
+    "score": 0.13,
+    "test": "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.get_canonical_name",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "da22298d51c548281cf9253cb970a0287e2c5ee875b8df2dfcb055854534e773",
+    "score": 0.17,
+    "test": "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_hooks.py::HookCaller._remove_plugin",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "28a0da5d73229362520e6c0da251f4e7d31eacc462eeb046737b38ce162e2e9c",
+    "score": 0.95,
+    "test": "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller._remove_plugin",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "28a0da5d73229362520e6c0da251f4e7d31eacc462eeb046737b38ce162e2e9c",
+    "score": 0.59,
+    "test": "testing/test_pluginmanager.py::test_unregister_plugin_with_multi_hookimpls",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller._remove_plugin",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "28a0da5d73229362520e6c0da251f4e7d31eacc462eeb046737b38ce162e2e9c",
+    "score": 0.62,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::_static_hook_attr",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a013d49562a6a01a92d7265ab5b056b786ae0cacbe25a6cea5582e784d3c2ec7",
+    "score": 0.83,
+    "test": "testing/test_pluginmanager.py::test_register_ignores_raising_descriptors",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::_static_hook_attr",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a013d49562a6a01a92d7265ab5b056b786ae0cacbe25a6cea5582e784d3c2ec7",
+    "score": 0.82,
+    "test": "testing/test_pluginmanager.py::test_hookspec_lookup_ignores_properties",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::_static_hook_attr",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "a013d49562a6a01a92d7265ab5b056b786ae0cacbe25a6cea5582e784d3c2ec7",
+    "score": 0.78,
+    "test": "testing/test_pluginmanager.py::test_register_instance_attribute_function_is_not_bound",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.load_setuptools_entrypoints",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "bb40684cb317c934627a0344b5204057b2095b0e4c486ae1b20832e14aa09d0b",
+    "score": 0.95,
+    "test": "testing/test_pluginmanager.py::test_load_setuptools_instantiation",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.load_setuptools_entrypoints",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "bb40684cb317c934627a0344b5204057b2095b0e4c486ae1b20832e14aa09d0b",
+    "score": 0.37,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.load_setuptools_entrypoints",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "bb40684cb317c934627a0344b5204057b2095b0e4c486ae1b20832e14aa09d0b",
+    "score": 0.06,
+    "test": "testing/test_pluginmanager.py::test_set_blocked",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.has_plugin",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "6c08d46f8000556e46800eb0e389adc734da70d4bd2bd7663b915c5efff24a9f",
+    "score": 0.1,
+    "test": "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.has_plugin",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "6c08d46f8000556e46800eb0e389adc734da70d4bd2bd7663b915c5efff24a9f",
+    "score": 0.1,
+    "test": "testing/test_hookcaller.py::test_hookimpl",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.has_plugin",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "6c08d46f8000556e46800eb0e389adc734da70d4bd2bd7663b915c5efff24a9f",
+    "score": 0.08,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookImpl.__init__",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "73a003f33ae08769bfbcc1684cab99fb7a8e585ce5fcd1269519af8d76a99077",
+    "score": 0.56,
+    "test": "testing/test_helpers.py::test_varnames_hookspec_without_self",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookImpl.__init__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "73a003f33ae08769bfbcc1684cab99fb7a8e585ce5fcd1269519af8d76a99077",
+    "score": 0.64,
+    "test": "testing/test_details.py::test_parse_hookimpl_override",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookImpl.__init__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "73a003f33ae08769bfbcc1684cab99fb7a8e585ce5fcd1269519af8d76a99077",
+    "score": 0.74,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.has_spec",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "51e65ee60336c96cb1a9656aa4da656ed0706982ff7a5c95fa364ea1c3cbadee",
+    "score": 0.15,
+    "test": "testing/test_pluginmanager.py::test_with_result_memorized",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.has_spec",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "51e65ee60336c96cb1a9656aa4da656ed0706982ff7a5c95fa364ea1c3cbadee",
+    "score": 0.13,
+    "test": "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.has_spec",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "51e65ee60336c96cb1a9656aa4da656ed0706982ff7a5c95fa364ea1c3cbadee",
+    "score": 0.15,
+    "test": "testing/test_multicall.py::test_wrapper_stopiteration_passtrough",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__call__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "ffd532c6de8e341fbe6feb06a62b0004332f116485de56e2173c5eb4afe35311",
+    "score": 0.26,
+    "test": "testing/test_pluginmanager.py::test_with_result_memorized",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__call__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "ffd532c6de8e341fbe6feb06a62b0004332f116485de56e2173c5eb4afe35311",
+    "score": 0.52,
+    "test": "testing/test_details.py::test_not_all_arguments_are_provided_issues_a_warning",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__call__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "ffd532c6de8e341fbe6feb06a62b0004332f116485de56e2173c5eb4afe35311",
+    "score": 0.62,
+    "test": "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_callers.py::run_old_style_hookwrapper",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "c1fb9b010abf233a7ba7acec494be6e3a958eb2ef31fff8e9d363337d1519408",
+    "score": 0.16,
+    "test": "testing/test_multicall.py::test_wrapper_exception",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_callers.py::run_old_style_hookwrapper",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "c1fb9b010abf233a7ba7acec494be6e3a958eb2ef31fff8e9d363337d1519408",
+    "score": 0.16,
+    "test": "testing/test_multicall.py::test_hookwrapper_force_exception",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_callers.py::run_old_style_hookwrapper",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "c1fb9b010abf233a7ba7acec494be6e3a958eb2ef31fff8e9d363337d1519408",
+    "score": 0.16,
+    "test": "testing/test_multicall.py::test_unwind_inner_wrapper_teardown_exc",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_hooks.py::HookspecMarker.__call__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "0b8ecaa9771d0826d296fce6ddd7252a95127ae30737c8468473c8a452b6b33c",
+    "score": 0.84,
+    "test": "testing/test_pluginmanager.py::test_register_while_calling",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookspecMarker.__call__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "0b8ecaa9771d0826d296fce6ddd7252a95127ae30737c8468473c8a452b6b33c",
+    "score": 0.69,
+    "test": "testing/test_hookcaller.py::test_hookrelay_registration_by_specname_raises",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookspecMarker.__call__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "0b8ecaa9771d0826d296fce6ddd7252a95127ae30737c8468473c8a452b6b33c",
+    "score": 0.65,
+    "test": "testing/test_pluginmanager.py::test_with_result_memorized",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_hooks.py::HookCaller.__repr__",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "6e61d0215d9e77485c15d3f32534a43370e98135c791c90ba7c0f4d9f3c1e334",
+    "score": 0.9,
+    "test": "testing/test_hookcaller.py::test_hookrelay_registry",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__repr__",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "6e61d0215d9e77485c15d3f32534a43370e98135c791c90ba7c0f4d9f3c1e334",
+    "score": 0.67,
+    "test": "testing/test_pluginmanager.py::test_subset_hook_caller",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_hooks.py::HookCaller.__repr__",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "6e61d0215d9e77485c15d3f32534a43370e98135c791c90ba7c0f4d9f3c1e334",
+    "score": 0.42,
+    "test": "testing/test_details.py::test_repr",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_result.py::Result.excinfo",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "67730cb1d680fbec4bc312b0553aac3dba8f7f0379e068094012cd89e24af944",
+    "score": 0.87,
+    "test": "testing/test_multicall.py::test_hookwrapper_exception",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_result.py::Result.excinfo",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "67730cb1d680fbec4bc312b0553aac3dba8f7f0379e068094012cd89e24af944",
+    "score": 0.4,
+    "test": "testing/test_result.py::test_exceptions_traceback_doesnt_get_longer_and_longer",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_result.py::Result.excinfo",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "67730cb1d680fbec4bc312b0553aac3dba8f7f0379e068094012cd89e24af944",
+    "score": 0.52,
+    "test": "testing/test_multicall.py::test_hookwrapper_force_exception",
+    "test_eligible": true
+  },
+  {
+    "accepted": false,
+    "function": "src/pluggy/_manager.py::PluginManager.enable_tracing",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "beb73690506e47429229507a861c398926afcfe473b5311b85223c19e3348a6a",
+    "score": 0.2,
+    "test": "testing/test_pluginmanager.py::test_add_tracefuncs",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.enable_tracing",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "beb73690506e47429229507a861c398926afcfe473b5311b85223c19e3348a6a",
+    "score": 0.91,
+    "test": "testing/test_pluginmanager.py::test_hook_tracing",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_manager.py::PluginManager.enable_tracing",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "beb73690506e47429229507a861c398926afcfe473b5311b85223c19e3348a6a",
+    "score": 0.93,
+    "test": "testing/test_tracer.py::test_dbl_plugin_tracing",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_tracing.py::TagTracer.setwriter",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "afd2eeb49f2b6083ec43b37ef3aa729113ef3d2bc79c52ee45d897d2e46036e2",
+    "score": 0.83,
+    "test": "testing/test_tracer.py::test_indent",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_tracing.py::TagTracer.setwriter",
+    "observed": true,
+    "repository": "pluggy",
+    "request_sha256": "afd2eeb49f2b6083ec43b37ef3aa729113ef3d2bc79c52ee45d897d2e46036e2",
+    "score": 0.83,
+    "test": "testing/test_tracer.py::test_simple",
+    "test_eligible": true
+  },
+  {
+    "accepted": true,
+    "function": "src/pluggy/_tracing.py::TagTracer.setwriter",
+    "observed": false,
+    "repository": "pluggy",
+    "request_sha256": "afd2eeb49f2b6083ec43b37ef3aa729113ef3d2bc79c52ee45d897d2e46036e2",
+    "score": 0.85,
+    "test": "testing/test_tracer.py::test_readable_output_dictargs",
+    "test_eligible": true
+  }
+]

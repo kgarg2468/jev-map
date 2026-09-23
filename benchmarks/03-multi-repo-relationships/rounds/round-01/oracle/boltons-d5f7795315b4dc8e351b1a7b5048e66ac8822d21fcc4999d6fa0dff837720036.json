@@ -1,0 +1,14 @@
+{
+  "call_passed": false,
+  "observed": [],
+  "profile_pytest_exit": 4,
+  "reports": [],
+  "repository": "boltons",
+  "returncode": 4,
+  "selector": "tests/test_ioutils.py::BaseTestMixin::test_rollover_custom_directory",
+  "stderr_tail": "ERROR: not found: /tmp/jev-map-pilot-boltons/tests/test_ioutils.py::BaseTestMixin::test_rollover_custom_directory\n(no match in any of [<Module test_ioutils.py>])\n\n",
+  "stdout_tail": "\nno tests ran in 0.01s\n",
+  "test": "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+  "timed_out": false,
+  "wall_seconds": 0.23019174300134182
+}

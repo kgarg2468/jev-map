@@ -1,0 +1,121 @@
+{
+  "call_passed": true,
+  "observed": [
+    "<frozen _collections_abc>::MutableMapping.pop",
+    "<frozen _collections_abc>::Sequence.__contains__",
+    "<frozen _collections_abc>::Sequence.__iter__",
+    "<frozen _collections_abc>::_CallableGenericAlias.__new__",
+    "<frozen _collections_abc>::_is_param_expr",
+    "<frozen abc>::ABCMeta.__instancecheck__",
+    "<frozen abc>::ABCMeta.__subclasscheck__",
+    "<frozen codecs>::BufferedIncrementalDecoder.decode",
+    "<frozen codecs>::BufferedIncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalDecoder.reset",
+    "<frozen codecs>::IncrementalEncoder.reset",
+    "<frozen genericpath>::_splitext",
+    "<frozen genericpath>::exists",
+    "<frozen genericpath>::isdir",
+    "<frozen genericpath>::isfile",
+    "<frozen importlib._bootstrap>::_find_and_load",
+    "<frozen importlib._bootstrap>::_gcd_import",
+    "<frozen importlib._bootstrap>::_sanity_check",
+    "<frozen os>::_Environ.__delitem__",
+    "<frozen os>::_Environ.__getitem__",
+    "<frozen os>::_Environ.__setitem__",
+    "<frozen os>::_create_environ_mapping.<locals>.decode",
+    "<frozen os>::_create_environ_mapping.<locals>.encode",
+    "<frozen posixpath>::_get_sep",
+    "<frozen posixpath>::abspath",
+    "<frozen posixpath>::commonpath",
+    "<frozen posixpath>::join",
+    "<frozen posixpath>::splitdrive",
+    "<frozen posixpath>::splitext",
+    "<string>::<lambda>",
+    "<string>::__create_fn__.<locals>.__init__",
+    "h11/_connection.py::Connection.__init__",
+    "h11/_connection.py::Connection._extract_next_receive_event",
+    "h11/_connection.py::Connection._get_io_object",
+    "h11/_connection.py::Connection._process_error",
+    "h11/_connection.py::Connection._respond_to_state_changes",
+    "h11/_connection.py::Connection.next_event",
+    "h11/_connection.py::Connection.our_state",
+    "h11/_connection.py::Connection.receive_data",
+    "h11/_connection.py::Connection.their_state",
+    "h11/_readers.py::maybe_read_from_IDLE_client",
+    "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+    "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+    "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+    "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+    "h11/_state.py::ConnectionState.__init__",
+    "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+    "h11/_state.py::ConnectionState.process_error",
+    "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+    "h11/_util.py::ProtocolError.__init__",
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_request"
+  ],
+  "profile_pytest_exit": 0,
+  "reports": [
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x00]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x00]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x00]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[ ]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[ ]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[ ]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x16\\x03\\x01\\x00\\xa5]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "setup"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x16\\x03\\x01\\x00\\xa5]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "call"
+    },
+    {
+      "nodeid": "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x16\\x03\\x01\\x00\\xa5]",
+      "outcome": "passed",
+      "wasxfail": null,
+      "when": "teardown"
+    }
+  ],
+  "repository": "h11",
+  "returncode": 0,
+  "selector": "h11/tests/test_connection.py::test_early_detection_of_invalid_request",
+  "stderr_tail": "",
+  "stdout_tail": "...                                                                      [100%]\n3 passed in 0.22s\n",
+  "test": "h11/tests/test_connection.py::test_early_detection_of_invalid_request",
+  "timed_out": false,
+  "wall_seconds": 0.43235260795336217
+}
