@@ -5,11 +5,15 @@ import json
 import platform
 import statistics
 import subprocess
+import sys
 import time
 from pathlib import Path
 
 from jev_map.index import build
 from jev_map.store import related_tests
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from benchmarks.archive import staged_round
 
 
 def main():
@@ -18,8 +22,12 @@ def main():
     parser.add_argument("--source-url", required=True)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
-    if args.out.exists():
-        raise SystemExit("Choose a new round; existing results are immutable")
+    with staged_round(args.out) as output:
+        summary = run_round(args, output)
+    print(json.dumps(summary, indent=2))
+
+
+def run_round(args, output):
     root = args.repo.resolve(strict=True)
     commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
     status = subprocess.check_output(["git", "-C", str(root), "status", "--porcelain"], text=True)
@@ -42,10 +50,9 @@ def main():
                "serialized_map_bytes": len(json.dumps(data).encode()), "sample_queries": queries,
                "median_in_memory_query_seconds": statistics.median(q["seconds"] for q in queries) if queries else None,
                "limits": "Single local index run. Queries exclude snapshot validation and disk loading. Relationships are not execution-validated. No Jev calls or agent tasks."}
-    args.out.mkdir(parents=True)
-    (args.out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
-    (args.out / "source-hashes.json").write_text(json.dumps(data["files"], indent=2) + "\n")
-    print(json.dumps(summary, indent=2))
+    (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
+    (output / "source-hashes.json").write_text(json.dumps(data["files"], indent=2) + "\n")
+    return summary
 
 
 if __name__ == "__main__":

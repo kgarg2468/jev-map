@@ -15,6 +15,8 @@ from jev_map.provider import JevClient
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
+sys.path.insert(0, str(REPO))
+from benchmarks.archive import staged_round
 
 
 def main():
@@ -23,9 +25,14 @@ def main():
     parser.add_argument("--jev", action="store_true")
     parser.add_argument("--env-file", type=Path)
     args = parser.parse_args()
-    if args.out.exists():
-        raise SystemExit("Output already exists; choose a new round")
-    args.out.mkdir(parents=True)
+    with staged_round(args.out) as output:
+        summary = run_round(args, output)
+    print(json.dumps(summary, indent=2))
+    if not summary["structural_contract_passed"]:
+        raise SystemExit("Structural fixture regression; see archived results")
+
+
+def run_round(args, output):
     executed = subprocess.run([sys.executable, str(HERE / "oracle.py")], capture_output=True, text=True, check=True)
     oracle = json.loads(executed.stdout)
     truth = {(edge["function"], edge["test"]) for edge in oracle["relationships"]}
@@ -53,13 +60,11 @@ def main():
                    "implementation_sha256": digest({p.name: p.read_text() for p in sorted((REPO / "src/jev_map").glob("*.py"))}),
                    "limits": "Five original demonstration tests, not independent product-quality evidence. Execution is not assertion effectiveness."}
         for name, value in (("summary.json", summary), ("oracle.json", oracle), ("map.json", data)):
-            (args.out / name).write_text(json.dumps(value, indent=2) + "\n")
+            (output / name).write_text(json.dumps(value, indent=2) + "\n")
         receipts = root / ".jev-map/receipts"
         if receipts.exists():
-            shutil.copytree(receipts, args.out / "receipts")
-    print(json.dumps(summary, indent=2))
-    if not summary["structural_contract_passed"]:
-        raise SystemExit("Structural fixture regression; see archived results")
+            shutil.copytree(receipts, output / "receipts")
+    return summary
 
 
 if __name__ == "__main__":

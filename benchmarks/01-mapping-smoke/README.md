@@ -17,3 +17,9 @@ an instance-method gap; it is not proof of accuracy, speed, ROI, or agent improv
 
 Larger held-out repository evaluations are a separate next milestone. Do not mix
 these smoke rounds with the earlier private research results.
+
+New rounds are built in a temporary sibling and published only after every
+artifact is written. `completion.json` records checksums. Interrupted runs never
+appear at the final path. A complete archive can still describe a failed provider
+request or failed metric: consult its recorded outcomes. Rounds 1 and 2 predate
+this archive marker and are retained unchanged.
