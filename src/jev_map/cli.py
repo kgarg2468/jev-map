@@ -30,10 +30,20 @@ def main(argv=None) -> int:
     explain = commands.add_parser("explain-link")
     explain.add_argument("function")
     explain.add_argument("test")
+    serve = commands.add_parser("serve", help="Expose three tools over MCP stdio (optional dependency)")
+    serve.add_argument("--jev", action="store_true", help="Allow TypeSafe source uploads during refresh")
+    serve.add_argument("--max-calls", type=int, default=20, help="Maximum new Jev requests for the whole server session")
+    serve.add_argument("--env-file", type=Path)
+    serve.add_argument("--model", default=MODEL)
     args = parser.parse_args(argv)
     try:
         root = args.repo.resolve(strict=True)
-        if args.command == "refresh":
+        if args.command == "serve":
+            from .server import create_server
+            create_server(root, jev=args.jev, max_calls=args.max_calls,
+                          env_file=args.env_file, model=args.model).run(transport="stdio")
+            return 0
+        elif args.command == "refresh":
             data = build(root)
             if args.jev:
                 data = enrich(root, data, lambda payload: JevClient(env_file=args.env_file)(payload),

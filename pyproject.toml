@@ -11,6 +11,9 @@ requires-python = ">=3.11"
 license = "MIT"
 authors = [{name = "Krish Garg"}]
 
+[project.optional-dependencies]
+mcp = ["mcp>=1.12,<2"]
+
 [project.scripts]
 jev-map = "jev_map.cli:main"
 
