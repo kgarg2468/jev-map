@@ -45,6 +45,9 @@ def validate_map(data: object) -> None:
     require(isinstance(data.get("symbols"), dict))
     require(isinstance(data.get("links"), list))
     require(isinstance(data.get("diagnostics"), list))
+    if "enrichment" in data:
+        require(isinstance(data["enrichment"], dict))
+        require(isinstance(data["enrichment"].get("stats"), dict))
     for ident, symbol in data["symbols"].items():
         require(isinstance(symbol, dict))
         require(symbol.get("id") == ident)

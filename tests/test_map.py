@@ -82,7 +82,7 @@ class RepositoryTest(TemporaryRepository):
     def test_malformed_map_reports_json_error(self):
         data = self.fixture()
         save(self.root, data)
-        for malformed in ([], {"schema": 1}, {**data, "symbols": {"bad": []}},
+        for malformed in ([], {"schema": 1}, {**data, "symbols": {"bad": []}}, {**data, "enrichment": []},
                           {**data, "links": [{"id": "x"}]}):
             with self.subTest(malformed=type(malformed).__name__):
                 (self.root / ".jev-map/map.json").write_text(json.dumps(malformed))
