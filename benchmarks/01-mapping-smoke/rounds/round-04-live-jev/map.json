@@ -1,0 +1,387 @@
+{
+  "schema": 1,
+  "snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a",
+  "files": {
+    "test_text_ops.py": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+    "text_ops.py": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a"
+  },
+  "symbols": {
+    "test_text_ops.py::TextTests.test_normalize": {
+      "id": "test_text_ops.py::TextTests.test_normalize",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_normalize",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 7,
+      "end": 8,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_normalize(self):\n        self.assertEqual(normalize(\" HELLO \"), \"hello\")"
+    },
+    "test_text_ops.py::TextTests.test_slugify": {
+      "id": "test_text_ops.py::TextTests.test_slugify",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_slugify",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 10,
+      "end": 11,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_slugify(self):\n        self.assertEqual(slugify(\" Hello World \"), \"hello-world\")"
+    },
+    "test_text_ops.py::TextTests.test_port": {
+      "id": "test_text_ops.py::TextTests.test_port",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_port",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 13,
+      "end": 14,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_port(self):\n        self.assertEqual(parse_port(\"8080\"), 8080)"
+    },
+    "test_text_ops.py::TextTests.test_port_invalid": {
+      "id": "test_text_ops.py::TextTests.test_port_invalid",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_port_invalid",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 16,
+      "end": 18,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_port_invalid(self):\n        with self.assertRaises(ValueError):\n            parse_port(\"0\")"
+    },
+    "test_text_ops.py::TextTests.test_compact": {
+      "id": "test_text_ops.py::TextTests.test_compact",
+      "path": "test_text_ops.py",
+      "name": "TextTests.test_compact",
+      "module": "test_text_ops",
+      "kind": "test",
+      "start": 20,
+      "end": 22,
+      "file_sha256": "ffb80e8a2dfba9bda092e0498db695d51a312bc744a4aa22d77ea6b4246b7aaf",
+      "imports": "import unittest\nfrom text_ops import Cleaner, normalize, parse_port, slugify",
+      "text": "    def test_compact(self):\n        cleaner = Cleaner()\n        self.assertEqual(cleaner.compact(\"too   much space\"), \"too much space\")"
+    },
+    "text_ops.py::normalize": {
+      "id": "text_ops.py::normalize",
+      "path": "text_ops.py",
+      "name": "normalize",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 4,
+      "end": 5,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "def normalize(text):\n    return text.strip().lower()"
+    },
+    "text_ops.py::slugify": {
+      "id": "text_ops.py::slugify",
+      "path": "text_ops.py",
+      "name": "slugify",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 8,
+      "end": 9,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "def slugify(text):\n    return normalize(text).replace(\" \", \"-\")"
+    },
+    "text_ops.py::parse_port": {
+      "id": "text_ops.py::parse_port",
+      "path": "text_ops.py",
+      "name": "parse_port",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 12,
+      "end": 16,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "def parse_port(text):\n    port = int(text)\n    if not 1 <= port <= 65535:\n        raise ValueError(\"invalid port\")\n    return port"
+    },
+    "text_ops.py::Cleaner.compact": {
+      "id": "text_ops.py::Cleaner.compact",
+      "path": "text_ops.py",
+      "name": "Cleaner.compact",
+      "module": "text_ops",
+      "kind": "function",
+      "start": 20,
+      "end": 21,
+      "file_sha256": "4c0923cb8b0b63e44e6fb50d9623c2fce97a4167399a3ce9297db4fabb9d856a",
+      "imports": "",
+      "text": "    def compact(self, text):\n        return \" \".join(text.split())"
+    }
+  },
+  "calls": [
+    {
+      "source": "test_text_ops.py::TextTests.test_normalize",
+      "target": "text_ops.py::normalize",
+      "line": 8
+    },
+    {
+      "source": "test_text_ops.py::TextTests.test_slugify",
+      "target": "text_ops.py::slugify",
+      "line": 11
+    },
+    {
+      "source": "test_text_ops.py::TextTests.test_port",
+      "target": "text_ops.py::parse_port",
+      "line": 14
+    },
+    {
+      "source": "test_text_ops.py::TextTests.test_port_invalid",
+      "target": "text_ops.py::parse_port",
+      "line": 18
+    },
+    {
+      "source": "text_ops.py::slugify",
+      "target": "text_ops.py::normalize",
+      "line": 9
+    }
+  ],
+  "links": [
+    {
+      "id": "d987e1fe123049f1bc41abf4a36deafd7167484111b122af6a954a603da5d2ce",
+      "function": "text_ops.py::normalize",
+      "test": "test_text_ops.py::TextTests.test_normalize",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_normalize",
+        "text_ops.py::normalize"
+      ]
+    },
+    {
+      "id": "73a0e6024b79bc2d389eee5a0cc03921e157bc9f8924cbe1459728f14e051900",
+      "function": "text_ops.py::slugify",
+      "test": "test_text_ops.py::TextTests.test_slugify",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_slugify",
+        "text_ops.py::slugify"
+      ]
+    },
+    {
+      "id": "7b779c7d7c8f917e00bf7d99b376a13cad8eb0ef5197e0b35250da2b39b7f957",
+      "function": "text_ops.py::normalize",
+      "test": "test_text_ops.py::TextTests.test_slugify",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_slugify",
+        "text_ops.py::slugify",
+        "text_ops.py::normalize"
+      ]
+    },
+    {
+      "id": "dccfe941767b23621d8985061f6a7ca6cf728f650562fb11c180bb5eb193a2c8",
+      "function": "text_ops.py::parse_port",
+      "test": "test_text_ops.py::TextTests.test_port",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_port",
+        "text_ops.py::parse_port"
+      ]
+    },
+    {
+      "id": "7dcfca919547037a2f216df368a1a908fc6400c0c9ef4fbbaeebcbb4983e2a83",
+      "function": "text_ops.py::parse_port",
+      "test": "test_text_ops.py::TextTests.test_port_invalid",
+      "evidence": "structural",
+      "call_path": [
+        "test_text_ops.py::TextTests.test_port_invalid",
+        "text_ops.py::parse_port"
+      ]
+    },
+    {
+      "id": "b88f558287fee15ca746e3a330922dc15b1ce63798519cdc2c955f3ee929ff7a",
+      "function": "text_ops.py::Cleaner.compact",
+      "test": "test_text_ops.py::TextTests.test_compact",
+      "evidence": "inferred",
+      "score": 0.96,
+      "threshold": 0.8,
+      "model": "jev-1.13.0",
+      "request_sha256": "4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527",
+      "response_sha256": "66567808a60dd55ab9010c8151d2af64f35220782f1f783764ccb9106ed07ba4",
+      "receipt": "receipts/4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527.json",
+      "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+    }
+  ],
+  "diagnostics": [],
+  "enrichment": {
+    "model": "jev-1.13.0",
+    "threshold": 0.8,
+    "candidate_limit": 3,
+    "max_calls": 10,
+    "stats": {
+      "requests": 4,
+      "cache_hits": 0,
+      "errors": 0,
+      "skipped_budget": 0,
+      "skipped_oversized": 0,
+      "accepted": 1,
+      "known_input_tokens": 5491,
+      "unknown_usage_requests": 0
+    },
+    "decisions": [
+      {
+        "id": "b88f558287fee15ca746e3a330922dc15b1ce63798519cdc2c955f3ee929ff7a",
+        "function": "text_ops.py::Cleaner.compact",
+        "test": "test_text_ops.py::TextTests.test_compact",
+        "evidence": "inferred",
+        "score": 0.96,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527",
+        "response_sha256": "66567808a60dd55ab9010c8151d2af64f35220782f1f783764ccb9106ed07ba4",
+        "receipt": "receipts/4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "a57464851721191fd867e22058e7725fbd040fd31c96a60b6e74cc41d5c12d8e",
+        "function": "text_ops.py::Cleaner.compact",
+        "test": "test_text_ops.py::TextTests.test_normalize",
+        "evidence": "inferred",
+        "score": 0.06,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527",
+        "response_sha256": "66567808a60dd55ab9010c8151d2af64f35220782f1f783764ccb9106ed07ba4",
+        "receipt": "receipts/4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "244e363554cd91a4a8ccddaedc31e24515150511fe5c4b62dd3025c939012b72",
+        "function": "text_ops.py::Cleaner.compact",
+        "test": "test_text_ops.py::TextTests.test_port",
+        "evidence": "inferred",
+        "score": 0.03,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527",
+        "response_sha256": "66567808a60dd55ab9010c8151d2af64f35220782f1f783764ccb9106ed07ba4",
+        "receipt": "receipts/4002cd7bd7d3222dc9ea9a637151af27981659666cd010f2113602dea7c1a527.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "62caf5b0f2dc71948a350ab2f030a3a1c2fad1de88ae919d9e6caf0c92012500",
+        "function": "text_ops.py::normalize",
+        "test": "test_text_ops.py::TextTests.test_compact",
+        "evidence": "inferred",
+        "score": 0.1,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "96ef0d4a5fc82bc8bf3f9c8381f35dc6df3d9839d5141e7499e89a316a4041a8",
+        "response_sha256": "7b83315ff65a3a747b40176d77dfa315053edab11015621da9463845f4cfd3f9",
+        "receipt": "receipts/96ef0d4a5fc82bc8bf3f9c8381f35dc6df3d9839d5141e7499e89a316a4041a8.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "96b7af035ea0a0064eb42d1f0f97568ca888698b605ab9fef3b483f32f84dcbc",
+        "function": "text_ops.py::normalize",
+        "test": "test_text_ops.py::TextTests.test_port",
+        "evidence": "inferred",
+        "score": 0.11,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "96ef0d4a5fc82bc8bf3f9c8381f35dc6df3d9839d5141e7499e89a316a4041a8",
+        "response_sha256": "7b83315ff65a3a747b40176d77dfa315053edab11015621da9463845f4cfd3f9",
+        "receipt": "receipts/96ef0d4a5fc82bc8bf3f9c8381f35dc6df3d9839d5141e7499e89a316a4041a8.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "92a0c544237b6bc03fdbee2e58038d0728fe9200bf614d90ce528ec8019b0a59",
+        "function": "text_ops.py::normalize",
+        "test": "test_text_ops.py::TextTests.test_port_invalid",
+        "evidence": "inferred",
+        "score": 0.07,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "96ef0d4a5fc82bc8bf3f9c8381f35dc6df3d9839d5141e7499e89a316a4041a8",
+        "response_sha256": "7b83315ff65a3a747b40176d77dfa315053edab11015621da9463845f4cfd3f9",
+        "receipt": "receipts/96ef0d4a5fc82bc8bf3f9c8381f35dc6df3d9839d5141e7499e89a316a4041a8.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "688dcd7bab5d4973ad24c4873c9e70c36e3e93c6391f42fec842eab7264c3566",
+        "function": "text_ops.py::parse_port",
+        "test": "test_text_ops.py::TextTests.test_compact",
+        "evidence": "inferred",
+        "score": 0.07,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "5c6b8a644b70f8cf95acdd3b21afdd68367f6f33aa4e66ff800f5b118be825f1",
+        "response_sha256": "8caca28ce989c9b62a6c0dd966569da4dc33e0c4394b19591de19181d4951220",
+        "receipt": "receipts/5c6b8a644b70f8cf95acdd3b21afdd68367f6f33aa4e66ff800f5b118be825f1.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "6caf68334b055a41988a548a83efda8e2745e4f007337ef38869a6cb985c7bbb",
+        "function": "text_ops.py::parse_port",
+        "test": "test_text_ops.py::TextTests.test_normalize",
+        "evidence": "inferred",
+        "score": 0.06,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "5c6b8a644b70f8cf95acdd3b21afdd68367f6f33aa4e66ff800f5b118be825f1",
+        "response_sha256": "8caca28ce989c9b62a6c0dd966569da4dc33e0c4394b19591de19181d4951220",
+        "receipt": "receipts/5c6b8a644b70f8cf95acdd3b21afdd68367f6f33aa4e66ff800f5b118be825f1.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "edd5b9782ad616e79fe5b00123d39c572419bb696ea9023e63ca563732156955",
+        "function": "text_ops.py::parse_port",
+        "test": "test_text_ops.py::TextTests.test_slugify",
+        "evidence": "inferred",
+        "score": 0.05,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "5c6b8a644b70f8cf95acdd3b21afdd68367f6f33aa4e66ff800f5b118be825f1",
+        "response_sha256": "8caca28ce989c9b62a6c0dd966569da4dc33e0c4394b19591de19181d4951220",
+        "receipt": "receipts/5c6b8a644b70f8cf95acdd3b21afdd68367f6f33aa4e66ff800f5b118be825f1.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "4d227813196ac9bfb274f03742702477783d663f5060aa91b07f369b7db2257f",
+        "function": "text_ops.py::slugify",
+        "test": "test_text_ops.py::TextTests.test_normalize",
+        "evidence": "inferred",
+        "score": 0.08,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "199cfaa7ba5ee6ac0822e95bc654bdf321d6865496242b0c42d0419b8b2313ae",
+        "response_sha256": "41a6775d8ff635f163501b280bc8e5a60471e19614adcaa8a22ff869359d0b22",
+        "receipt": "receipts/199cfaa7ba5ee6ac0822e95bc654bdf321d6865496242b0c42d0419b8b2313ae.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "4853949d675652ed72c4b245e8ae302e31e4037fd8885b01906f96642ef4deed",
+        "function": "text_ops.py::slugify",
+        "test": "test_text_ops.py::TextTests.test_compact",
+        "evidence": "inferred",
+        "score": 0.05,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "199cfaa7ba5ee6ac0822e95bc654bdf321d6865496242b0c42d0419b8b2313ae",
+        "response_sha256": "41a6775d8ff635f163501b280bc8e5a60471e19614adcaa8a22ff869359d0b22",
+        "receipt": "receipts/199cfaa7ba5ee6ac0822e95bc654bdf321d6865496242b0c42d0419b8b2313ae.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      },
+      {
+        "id": "b7d3066cc48d800356ff19cd41bf28459c5abdd1e333bad4f57e27c353993686",
+        "function": "text_ops.py::slugify",
+        "test": "test_text_ops.py::TextTests.test_port",
+        "evidence": "inferred",
+        "score": 0.07,
+        "threshold": 0.8,
+        "model": "jev-1.13.0",
+        "request_sha256": "199cfaa7ba5ee6ac0822e95bc654bdf321d6865496242b0c42d0419b8b2313ae",
+        "response_sha256": "41a6775d8ff635f163501b280bc8e5a60471e19614adcaa8a22ff869359d0b22",
+        "receipt": "receipts/199cfaa7ba5ee6ac0822e95bc654bdf321d6865496242b0c42d0419b8b2313ae.json",
+        "source_snapshot": "2108ec54182605313f2b8fe3005d945b9b90076ca5a77ed0ecd053df5b20e47a"
+      }
+    ],
+    "note": "Scores are provider judgments, not calibrated correctness probabilities."
+  }
+}

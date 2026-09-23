@@ -1,0 +1,37 @@
+{
+  "rounds": [
+    "round-04-live-jev",
+    "round-05-live-jev-repeat"
+  ],
+  "model": "jev-1.13.0",
+  "identical_request_hashes": true,
+  "decisions_per_round": 12,
+  "identical_threshold_decisions": 12,
+  "identical_exact_scores": 4,
+  "maximum_absolute_score_delta": 0.03,
+  "accepted_per_round": 1,
+  "accepted_relationship": {
+    "function": "text_ops.py::Cleaner.compact",
+    "test": "test_text_ops.py::TextTests.test_compact",
+    "score_by_round": [
+      0.96,
+      0.96
+    ]
+  },
+  "calls": 8,
+  "successful_calls": 8,
+  "reported_input_tokens": 10982,
+  "recorded_api_wall_seconds": 3.35623305500485,
+  "structural_relationships": {
+    "predicted": 5,
+    "execution_confirmed": 5,
+    "missed_observed": 1
+  },
+  "jev_plus_structural_relationships": {
+    "predicted": 6,
+    "execution_confirmed": 6,
+    "unconfirmed": 0,
+    "missed_observed": 0
+  },
+  "limits": "Two repeats of one original five-test fixture. This is a live integration and repeatability check, not a population accuracy, ROI, or agent-performance result."
+}
