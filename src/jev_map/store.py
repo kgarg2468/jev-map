@@ -29,6 +29,9 @@ def write_json(path: Path, value: dict) -> None:
 
 
 def save(root: Path, data: dict) -> None:
+    hashes, _ = snapshot(root.resolve(strict=True))
+    if digest(hashes) != data["snapshot"]:
+        raise ValueError("Map is stale: repository Python files changed. Run jev-map refresh.")
     write_json(directory(root) / "map.json", data)
 
 

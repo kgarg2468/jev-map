@@ -7,6 +7,10 @@ MODULE = Path(__file__).resolve().parents[1] / "benchmarks/06-agent-navigation/f
 SPEC = importlib.util.spec_from_file_location("agent_navigation_freeze", MODULE)
 freeze = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(freeze)
+AUDIT = MODULE.with_name("audit_freeze.py")
+AUDIT_SPEC = importlib.util.spec_from_file_location("agent_navigation_audit", AUDIT)
+audit = importlib.util.module_from_spec(AUDIT_SPEC)
+AUDIT_SPEC.loader.exec_module(audit)
 
 
 class AgentNavigationFreezeTest(unittest.TestCase):
@@ -16,6 +20,8 @@ class AgentNavigationFreezeTest(unittest.TestCase):
         self.assertEqual(freeze.runnable_test_id("tests/test_x.py::TestX::test_y[value-1]"),
                          "tests/test_x.py::TestX::test_y")
         self.assertIsNone(freeze.runnable_test_id("tests/test_x.py"))
+        self.assertEqual(audit.runnable_test_id("tests/test_x.py::TestX[a::b]::test_y[c::d]"),
+                         "tests/test_x.py::TestX::test_y")
 
     def test_oracle_excludes_failed_and_unknown_cases(self):
         symbols = {"core.py::work": {"kind": "function"}}

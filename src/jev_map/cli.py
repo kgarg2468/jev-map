@@ -24,6 +24,13 @@ def main(argv=None) -> int:
     refresh.add_argument("--threshold", type=float, default=0.8)
     refresh.add_argument("--model", default=MODEL)
     refresh.add_argument("--env-file", type=Path, help="Read TYPESAFE_API_KEY from an explicit private env file")
+    target = commands.add_parser("enrich-symbol", help="Ask Jev about one function on a fresh saved map")
+    target.add_argument("symbol")
+    target.add_argument("--candidates", type=int, default=3)
+    target.add_argument("--threshold", type=float, default=0.8)
+    target.add_argument("--model", default=MODEL)
+    target.add_argument("--env-file", type=Path)
+    target.add_argument("--max-calls", type=int, default=1)
     commands.add_parser("symbols", help="List stable path::qualified_name identifiers")
     related = commands.add_parser("related-tests")
     related.add_argument("symbol")
@@ -56,7 +63,14 @@ def main(argv=None) -> int:
                 result["enrichment"] = data["enrichment"]["stats"]
         else:
             data = load(root)
-            if args.command == "symbols":
+            if args.command == "enrich-symbol":
+                data = enrich(root, data, lambda payload: JevClient(env_file=args.env_file)(payload),
+                              model=args.model, threshold=args.threshold,
+                              candidate_limit=args.candidates, max_calls=args.max_calls,
+                              symbol=args.symbol)
+                save(root, data)
+                result = related_tests(data, args.symbol)
+            elif args.command == "symbols":
                 result = [{k: symbol[k] for k in ("id", "kind", "start", "end")}
                           for symbol in data["symbols"].values()]
             elif args.command == "related-tests":
@@ -64,7 +78,7 @@ def main(argv=None) -> int:
             else:
                 result = explain_link(data, args.function, args.test)
         print(json.dumps(result, indent=2))
-        if args.command == "refresh" and result.get("enrichment", {}).get("errors", 0):
+        if args.command in {"refresh", "enrich-symbol"} and result.get("enrichment", {}).get("errors", 0):
             return 1
         return 0
     except (ValueError, OSError) as exc:
