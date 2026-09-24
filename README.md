@@ -35,11 +35,21 @@ Python files produce visible diagnostics. No link does not mean no relevant test
 
 ```sh
 tokenstash need TYPESAFE_API_KEY
+# Eager enrichment across the map:
 jev-map --repo /path/to/repo refresh --jev --env-file /path/to/private/.env.local --max-calls 20
+# Or one function at a time:
+jev-map --repo /path/to/repo refresh
+jev-map --repo /path/to/repo enrich-symbol 'src/pkg/core.py::normalize' --env-file /path/to/private/.env.local
 ```
 
 Omit `--env-file` if `TYPESAFE_API_KEY` is already in the environment.
 `--jev` explicitly sends selected source excerpts and imports to TypeSafe.
+`enrich-symbol` is the on-demand alternative: it sends at most one request for
+the named production function, preserves other functions' existing inferred
+links, and refuses a stale map. It also accepts `--max-calls 0` to replay a
+cached request without a key. Its returned enrichment counts describe this
+invocation; each link keeps its own model and receipt.
+
 The default refresh is completely local. Provider calls use a fixed HTTPS
 endpoint, a 30-second timeout, no redirects, and no automatic retry.
 
@@ -73,14 +83,16 @@ jev-map --repo /absolute/path/to/repo serve
 ```
 
 The server speaks Model Context Protocol (MCP) over standard input/output and
-exposes exactly `related_tests(symbol)`, `explain_link(function, test)`, and
-`refresh_map()`. Configure an MCP client with command `jev-map` and arguments
+exposes `related_tests(symbol)`, `explain_link(function, test)`, `refresh_map()`,
+and `enrich_symbol(symbol)`. Configure an MCP client with command `jev-map` and
+arguments
 `["--repo", "/absolute/path/to/repo", "serve"]`. The process stays bound to that
 repository; tools cannot choose another path or request an API key.
 
 Server startup with `serve --jev --max-calls 20 --env-file /private/.env.local`
 explicitly allows source uploads. The call limit applies across **all refreshes
-in that server session**. Read-only queries never call Jev. Refresh is serialized,
+and on-demand enrichments in that server session**. Read-only queries never call
+Jev. Refresh is serialized,
 and source changes invalidate queries until refreshed.
 
 ## Try the demonstration

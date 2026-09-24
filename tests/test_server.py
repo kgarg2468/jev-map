@@ -26,6 +26,37 @@ class ToolTest(TemporaryRepository):
         self.assertEqual(second["enrichment"]["requests"], 0)
         self.assertEqual(second["enrichment"]["skipped_budget"], 1)
 
+    def test_on_demand_shares_session_cap_and_requires_opt_in(self):
+        self.write("core.py", "class Cleaner:\n    def normalize(self, text):\n        return text.strip()\n")
+        self.write("test_core.py", "from core import Cleaner\ndef test_normalize():\n    assert Cleaner().normalize(' a ') == 'a'\n")
+        local = MapTools(self.root)
+        local.refresh_map()
+        with self.assertRaisesRegex(ValueError, "--jev"):
+            local.enrich_symbol("normalize")
+        remote = MapTools(self.root, jev=True, max_calls=1)
+        def reply(payload):
+            return {"answers": {key: {"noul": 0.9} for key in payload["questions"]}}
+        with patch("jev_map.server.JevClient", return_value=reply):
+            first = remote.enrich_symbol("normalize")
+            second = remote.enrich_symbol("normalize")
+        self.assertEqual(first["remaining_session_calls"], 0)
+        self.assertEqual(second["remaining_session_calls"], 0)
+        self.assertEqual(second["enrichment"]["cache_hits"], 1)
+
+    def test_on_demand_rejects_source_change_during_provider_call(self):
+        self.write("core.py", "class Cleaner:\n    def normalize(self, text):\n        return text.strip()\n")
+        self.write("test_core.py", "from core import Cleaner\ndef test_normalize():\n    assert Cleaner().normalize(' a ') == 'a'\n")
+        MapTools(self.root).refresh_map()
+        tools = MapTools(self.root, jev=True, max_calls=1)
+        original = (self.root / ".jev-map/map.json").read_text()
+        def reply(payload):
+            self.write("core.py", "class Cleaner:\n    def normalize(self, text):\n        return text.lstrip()\n")
+            return {"answers": {key: {"noul": 0.9} for key in payload["questions"]}}
+        with patch("jev_map.server.JevClient", return_value=reply):
+            with self.assertRaisesRegex(ValueError, "stale"):
+                tools.enrich_symbol("normalize")
+        self.assertEqual((self.root / ".jev-map/map.json").read_text(), original)
+
 
 @unittest.skipUnless(importlib.util.find_spec("mcp"), "optional MCP dependency not installed")
 class MCPIntegrationTest(unittest.IsolatedAsyncioTestCase):
@@ -43,7 +74,7 @@ class MCPIntegrationTest(unittest.IsolatedAsyncioTestCase):
                     async with ClientSession(read, write) as session:
                         await session.initialize()
                         listed = await session.list_tools()
-                        self.assertEqual({tool.name for tool in listed.tools}, {"related_tests", "explain_link", "refresh_map"})
+                        self.assertEqual({tool.name for tool in listed.tools}, {"related_tests", "explain_link", "refresh_map", "enrich_symbol"})
                         refresh = await session.call_tool("refresh_map", {})
                         self.assertFalse(refresh.isError)
                         linked = await session.call_tool("related_tests", {"symbol": "clean"})

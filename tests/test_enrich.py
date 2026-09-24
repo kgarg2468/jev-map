@@ -77,6 +77,25 @@ class EnrichmentTest(TemporaryRepository):
         result = enrich(self.root, self.fixture(), self.client)
         self.assertEqual(result["enrichment"]["stats"]["requests"], 1)
 
+    def test_on_demand_enrichment_preserves_other_functions(self):
+        self.write("core.py", "class Cleaner:\n    def normalize(self, text):\n        return text.strip()\n\nclass Encoder:\n    def encode(self, text):\n        return text.upper()\n")
+        self.write("test_core.py", "from core import Cleaner, Encoder\n\ndef test_normalize():\n    assert Cleaner().normalize(' a ') == 'a'\n\ndef test_encode():\n    assert Encoder().encode('a') == 'A'\n")
+        data = build(self.root)
+        data = enrich(self.root, data, self.client, symbol="normalize")
+        self.assertEqual(data["enrichment"]["stats"]["requests"], 1)
+        self.assertEqual({link["function"] for link in data["links"]}, {"core.py::Cleaner.normalize"})
+        data = enrich(self.root, data, self.client, symbol="encode")
+        self.assertEqual({link["function"] for link in data["links"]},
+                         {"core.py::Cleaner.normalize", "core.py::Encoder.encode"})
+        self.assertEqual(len(data["enrichment"]["decisions"]), 2)
+        data = enrich(self.root, data, self.client, symbol="normalize", threshold=0.95, max_calls=0)
+        self.assertEqual({link["function"] for link in data["links"]}, {"core.py::Encoder.encode"})
+        self.assertEqual(data["enrichment"]["stats"]["cache_hits"], 1)
+
+    def test_on_demand_rejects_test_symbol(self):
+        with self.assertRaisesRegex(ValueError, "production function"):
+            enrich(self.root, self.fixture(), self.client, symbol="test_normalize")
+
 
 if __name__ == "__main__":
     unittest.main()
