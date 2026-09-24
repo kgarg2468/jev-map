@@ -1,7 +1,8 @@
 # Round 01 held-out findings
 
-**Decision:** The frozen rule supports Jev as a selective test-finding utility
-added to a Graphify-style map on this sample. It supports neither replacing
+**Decision:** After a thread-coverage audit, the frozen rule supports Jev as a
+selective test-finding utility added to a Graphify-style map on this sample.
+It supports neither replacing
 Graphify nor a claim that a coding agent completes work faster or cheaper.
 
 The [protocol](PROTOCOL.md) and [source-only freeze](rounds/round-00-freeze)
@@ -77,3 +78,23 @@ rankings, candidate-pair scores, timing, and checksums. All 301 archived files
 passed the completion-manifest check, and the injected credential was not
 present in the archive. The next necessary test is whether a coding agent
 actually completes repository tasks faster or more reliably with these hints.
+
+## Thread-coverage review audit
+
+Greptile flagged that an execution profiler installed on newly created threads
+could miss calls in pre-existing workers or retain a callback after a test ends.
+Three Boltons tests and two h11 tests create worker threads. An exploratory
+runner-thread-only replay in [round 02](rounds/round-02-thread-audit) missed 29
+observed links from h11's server test. Treating all five threaded tests as
+unknown in [round 03](rounds/round-03-thread-unknown) lowered the first-test
+gain to 104 versus 97 and made the bootstrap lower bound zero, so the primary
+gate would **not** pass under that conservative policy. The edge-filter gate
+still passed.
+
+The final profiler records calls in workers created during a test and marks a
+case unknown if any worker already existed at its start or survived its end.
+Its [round 04 replay](rounds/round-04-thread-covered) found zero such ambiguous
+cases across the three suites and reproduced every original eligibility and
+sampled target-test label. Both frozen gates therefore retain their round 01
+values for these pinned runs. Future repositories with persistent workers must
+report those tests as unknown; round 03 shows why this boundary matters.

@@ -124,7 +124,9 @@ on 144 new functions found eight more correct first-test suggestions out of 134
 test-exercised targets than Graphify plus lexical fallback alone (105 versus 97).
 At the same 117-link output count, Jev found 102 execution-observed links versus
 77 for a cheap lexical ranker. The frozen decision gates passed on this sample;
-complete agent-task outcomes and dollar-cost ROI remain unmeasured.
+the [thread-coverage audit](benchmarks/05-heldout-toolbelt/FINDINGS.md#thread-coverage-review-audit)
+reproduced the result. Complete agent-task outcomes and dollar-cost ROI remain
+unmeasured.
 
 ## Development
 

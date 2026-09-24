@@ -36,3 +36,15 @@ uv run --extra benchmark python -m benchmarks.toolbelt_study \
   --env-file /path/to/private/.env.local \
   --out benchmarks/05-heldout-toolbelt/rounds/<new-round>
 ```
+
+The [thread-coverage review audit](FINDINGS.md#thread-coverage-review-audit)
+regrades the archived Jev responses after rerunning the three test suites with
+worker lifetime checks. It uses no Jev credential or new provider calls:
+
+```sh
+uv run --extra benchmark python -m benchmarks.thread_oracle_audit \
+  --repo boltons=/path/to/boltons \
+  --repo h11=/path/to/h11 \
+  --repo pluggy=/path/to/pluggy \
+  --out benchmarks/05-heldout-toolbelt/rounds/<new-audit-round>
+```

@@ -1,0 +1,3526 @@
+{
+  "cases": {
+    "h11/tests/test_against_stdlib_http.py::test_h11_as_client": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::Headers.__repr__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/test_against_stdlib_http.py::socket_server",
+        "h11/tests/test_against_stdlib_http.py::test_h11_as_client"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_against_stdlib_http.py::test_h11_as_server": {
+      "observed": [
+        "h11/tests/test_against_stdlib_http.py::socket_server",
+        "h11/tests/test_against_stdlib_http.py::test_h11_as_server"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_100_continue": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::Connection.they_are_waiting_for_100_continue",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::InformationalResponse.__post_init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_data",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_100_continue",
+        "h11/tests/test_connection.py::test_100_continue.<locals>.setup"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_408_request_timeout": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::Http10Reader.__call__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_408_request_timeout"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_Connection_basics_and_content_length": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::InformationalResponse.__post_init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_data",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_Connection_basics_and_content_length"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_HEAD_framing_headers": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/test_connection.py::test_HEAD_framing_headers",
+        "h11/tests/test_connection.py::test_HEAD_framing_headers.<locals>.setup"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test__body_framing": {
+      "observed": [
+        "h11/_connection.py::_body_framing",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_connection.py::test__body_framing",
+        "h11/tests/test_connection.py::test__body_framing.<locals>.headers",
+        "h11/tests/test_connection.py::test__body_framing.<locals>.req",
+        "h11/tests/test_connection.py::test__body_framing.<locals>.resp"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test__keep_alive": {
+      "observed": [
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_connection.py::test__keep_alive"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_automagic_connection_close_handling": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_automagic_connection_close_handling"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::Http10Writer.send_data",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/helpers.py::receive_and_get",
+        "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_chunk_boundaries": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_connection.py::test_chunk_boundaries"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_chunked": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_data",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_chunked"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_client_talking_to_http10_server": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::Http10Reader.__call__",
+        "h11/_readers.py::Http10Reader.read_eof",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/helpers.py::receive_and_get",
+        "h11/tests/test_connection.py::test_client_talking_to_http10_server"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_close_different_states": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::ContentLengthReader.read_eof",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_close_different_states"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_close_simple": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_close_simple",
+        "h11/tests/test_connection.py::test_close_simple.<locals>.setup"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_connection_drop": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_connection_drop"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_request[ ]": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_request"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x00]": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_request"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_request[\\x16\\x03\\x01\\x00\\xa5]": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_request"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_response[ ]": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_response"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_response[\\x00]": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_response"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_early_detection_of_invalid_response[\\x16\\x03\\x03\\x001]": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_response"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_empty_request": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_connection.py::test_empty_request"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_empty_response": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Request.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/test_connection.py::test_empty_response"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_errors": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_failed",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/helpers.py::receive_and_get",
+        "h11/tests/test_connection.py::test_errors",
+        "h11/tests/test_connection.py::test_errors.<locals>.conn"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_idle_receive_nothing": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/tests/test_connection.py::test_idle_receive_nothing"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.start_next_cycle",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_state.py::ConnectionState.start_next_cycle",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_pipelined_close": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.start_next_cycle",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.start_next_cycle",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_pipelined_close"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_pipelining": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.start_next_cycle",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::Connection.trailing_data",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.start_next_cycle",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_pipelining"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_protocol_switch": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.start_next_cycle",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::Connection.trailing_data",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::InformationalResponse.__post_init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_state.py::ConnectionState.start_next_cycle",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_data",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_protocol_switch",
+        "h11/tests/test_connection.py::test_protocol_switch.<locals>.setup"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_reuse_simple": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.start_next_cycle",
+        "h11/_connection.py::Connection.states",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.start_next_cycle",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/helpers.py::ConnectionPair.__init__",
+        "h11/tests/helpers.py::ConnectionPair.conns",
+        "h11/tests/helpers.py::ConnectionPair.send",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/test_connection.py::test_reuse_simple"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_sendfile": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_data",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_data",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/_writers.py::Http10Writer.send_data",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/helpers.py::receive_and_get",
+        "h11/tests/test_connection.py::test_sendfile",
+        "h11/tests/test_connection.py::test_sendfile.<locals>.SendfilePlaceholder",
+        "h11/tests/test_connection.py::test_sendfile.<locals>.SendfilePlaceholder.__len__",
+        "h11/tests/test_connection.py::test_sendfile.<locals>.setup"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_server_talking_to_http10_client": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._clean_up_response_headers_for_sending",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection._server_switch_event",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.send",
+        "h11/_connection.py::Connection.send_with_data_passthrough",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::expect_nothing",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::Http10Writer.send_data",
+        "h11/_writers.py::Http10Writer.send_eom",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/tests/helpers.py::get_all_events",
+        "h11/tests/helpers.py::receive_and_get",
+        "h11/tests/test_connection.py::test_server_talking_to_http10_client"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body": {
+      "observed": [
+        "h11/_connection.py::Connection.__init__",
+        "h11/_connection.py::Connection._extract_next_receive_event",
+        "h11/_connection.py::Connection._get_io_object",
+        "h11/_connection.py::Connection._process_error",
+        "h11/_connection.py::Connection._process_event",
+        "h11/_connection.py::Connection._respond_to_state_changes",
+        "h11/_connection.py::Connection.next_event",
+        "h11/_connection.py::Connection.our_state",
+        "h11/_connection.py::Connection.receive_data",
+        "h11/_connection.py::Connection.their_state",
+        "h11/_connection.py::_body_framing",
+        "h11/_connection.py::_keep_alive",
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::ChunkedReader.read_eof",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_readers.py::ContentLengthReader.read_eof",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_error",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_events.py::test_events": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::InformationalResponse.__post_init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_events.py::test_events"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_events.py::test_header_casing": {
+      "observed": [
+        "h11/_events.py::Request.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::Headers.raw_items",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_events.py::test_header_casing"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_events.py::test_intenum_status_code": {
+      "observed": [
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/tests/test_events.py::test_intenum_status_code"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_headers.py::test_get_set_comma_header": {
+      "observed": [
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_headers.py::set_comma_header",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_headers.py::test_get_set_comma_header"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_headers.py::test_has_100_continue": {
+      "observed": [
+        "h11/_events.py::Request.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::get_comma_header",
+        "h11/_headers.py::has_expect_100_continue",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_headers.py::test_has_100_continue"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_headers.py::test_normalize_and_validate": {
+      "observed": [
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_headers.py::test_normalize_and_validate"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_helpers.py::test_normalize_data_events": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/tests/helpers.py::normalize_data_events",
+        "h11/tests/test_helpers.py::test_normalize_data_events"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_ChunkedReader": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::ChunkedReader.__call__",
+        "h11/_readers.py::ChunkedReader.__init__",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/helpers.py::normalize_data_events",
+        "h11/tests/test_io.py::_run_reader",
+        "h11/tests/test_io.py::_run_reader_iter",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::t_body_reader",
+        "h11/tests/test_io.py::t_body_reader.<locals>.<genexpr>",
+        "h11/tests/test_io.py::test_ChunkedReader"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_ChunkedWriter": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ChunkedWriter.send_data",
+        "h11/_writers.py::ChunkedWriter.send_eom",
+        "h11/_writers.py::write_headers",
+        "h11/tests/test_io.py::dowrite",
+        "h11/tests/test_io.py::test_ChunkedWriter"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_ContentLengthReader": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_readers.py::ContentLengthReader.__call__",
+        "h11/_readers.py::ContentLengthReader.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/tests/helpers.py::normalize_data_events",
+        "h11/tests/test_io.py::_run_reader",
+        "h11/tests/test_io.py::_run_reader_iter",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::t_body_reader",
+        "h11/tests/test_io.py::t_body_reader.<locals>.<genexpr>",
+        "h11/tests/test_io.py::test_ContentLengthReader",
+        "h11/tests/test_io.py::test_ContentLengthReader.<locals>.<lambda>"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_ContentLengthWriter": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::ContentLengthWriter.__init__",
+        "h11/_writers.py::ContentLengthWriter.send_data",
+        "h11/_writers.py::ContentLengthWriter.send_eom",
+        "h11/tests/test_io.py::dowrite",
+        "h11/tests/test_io.py::test_ContentLengthWriter"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_Http10Reader": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_readers.py::Http10Reader.__call__",
+        "h11/_readers.py::Http10Reader.read_eof",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/tests/helpers.py::normalize_data_events",
+        "h11/tests/test_io.py::_run_reader",
+        "h11/tests/test_io.py::_run_reader_iter",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::t_body_reader",
+        "h11/tests/test_io.py::t_body_reader.<locals>.<genexpr>",
+        "h11/tests/test_io.py::test_Http10Reader"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_Http10Writer": {
+      "observed": [
+        "h11/_events.py::Data.__init__",
+        "h11/_events.py::EndOfMessage.__init__",
+        "h11/_headers.py::Headers.__bool__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::BodyWriter.__call__",
+        "h11/_writers.py::Http10Writer.send_data",
+        "h11/_writers.py::Http10Writer.send_eom",
+        "h11/tests/test_io.py::dowrite",
+        "h11/tests/test_io.py::test_Http10Writer"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test__obsolete_line_fold_bytes": {
+      "observed": [
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/tests/test_io.py::test__obsolete_line_fold_bytes"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_allow_some_garbage_in_cookies": {
+      "observed": [
+        "h11/_events.py::Request.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_allow_some_garbage_in_cookies",
+        "h11/tests/test_io.py::tr",
+        "h11/tests/test_io.py::tr.<locals>.check"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_host_comes_first": {
+      "observed": [
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::write_headers",
+        "h11/tests/test_io.py::dowrite",
+        "h11/tests/test_io.py::test_host_comes_first",
+        "h11/tests/test_io.py::tw"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_readers_simple": {
+      "observed": [
+        "h11/_events.py::InformationalResponse.__post_init__",
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_readers_simple",
+        "h11/tests/test_io.py::tr",
+        "h11/tests/test_io.py::tr.<locals>.check"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_readers_unusual": {
+      "observed": [
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__eq__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::Headers.__len__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.is_next_line_obviously_invalid_request_line",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_readers_unusual",
+        "h11/tests/test_io.py::tr",
+        "h11/tests/test_io.py::tr.<locals>.check"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_reject_garbage_after_request_line": {
+      "observed": [
+        "h11/_readers.py::maybe_read_from_SEND_RESPONSE_server",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_reject_garbage_after_request_line",
+        "h11/tests/test_io.py::tr"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_reject_garbage_after_response_line": {
+      "observed": [
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_reject_garbage_after_response_line",
+        "h11/tests/test_io.py::tr"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_reject_garbage_in_header_line": {
+      "observed": [
+        "h11/_readers.py::_decode_header_lines",
+        "h11/_readers.py::_obsolete_line_fold",
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_reject_garbage_in_header_line",
+        "h11/tests/test_io.py::tr"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_reject_non_vchar_in_path": {
+      "observed": [
+        "h11/_readers.py::maybe_read_from_IDLE_client",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_io.py::makebuf",
+        "h11/tests/test_io.py::test_reject_non_vchar_in_path",
+        "h11/tests/test_io.py::tr"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_writers_simple": {
+      "observed": [
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/test_io.py::dowrite",
+        "h11/tests/test_io.py::test_writers_simple",
+        "h11/tests/test_io.py::tw"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_io.py::test_writers_unusual": {
+      "observed": [
+        "h11/_events.py::Request.__init__",
+        "h11/_events.py::Response.__post_init__",
+        "h11/_events.py::_ResponseBase.__init__",
+        "h11/_headers.py::Headers.__getitem__",
+        "h11/_headers.py::Headers.__init__",
+        "h11/_headers.py::normalize_and_validate",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::bytesify",
+        "h11/_util.py::validate",
+        "h11/_writers.py::write_any_response",
+        "h11/_writers.py::write_headers",
+        "h11/_writers.py::write_request",
+        "h11/tests/test_io.py::dowrite",
+        "h11/tests/test_io.py::test_writers_unusual",
+        "h11/tests/test_io.py::tw"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_receivebuffer.py::test_receivebuffer": {
+      "observed": [
+        "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+        "h11/tests/test_receivebuffer.py::test_receivebuffer"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_crlf_delimiter]": {
+      "observed": [
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_lf_only_delimiter]": {
+      "observed": [
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter[with_mixed_crlf_and_lf]": {
+      "observed": [
+        "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__iadd__",
+        "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+        "h11/_receivebuffer.py::ReceiveBuffer._extract",
+        "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+        "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/tests/test_state.py::test_ConnectionState"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_double_protocol_switch": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/tests/test_state.py::test_ConnectionState_double_protocol_switch"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_inconsistent_protocol_switch": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_state.py::test_ConnectionState_inconsistent_protocol_switch"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_keep_alive": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/tests/test_state.py::test_ConnectionState_keep_alive"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_protocol_switch_accepted": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/tests/test_state.py::test_ConnectionState_protocol_switch_accepted"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_reuse": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+        "h11/_state.py::ConnectionState.start_next_cycle",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/tests/test_state.py::test_ConnectionState_reuse"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_ConnectionState_switch_denied": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_client_switch_proposal",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/tests/test_state.py::test_ConnectionState_switch_denied"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_state.py::test_server_request_is_illegal": {
+      "observed": [
+        "h11/_state.py::ConnectionState.__init__",
+        "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+        "h11/_state.py::ConnectionState.process_event",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/tests/test_state.py::test_server_request_is_illegal"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_util.py::test_LocalProtocolError": {
+      "observed": [
+        "h11/_util.py::LocalProtocolError._reraise_as_remote_protocol_error",
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_util.py::test_LocalProtocolError",
+        "h11/tests/test_util.py::test_LocalProtocolError.<locals>.thunk"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_util.py::test_ProtocolError": {
+      "observed": [
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/tests/test_util.py::test_ProtocolError"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_util.py::test_bytesify": {
+      "observed": [
+        "h11/_util.py::bytesify",
+        "h11/tests/test_util.py::test_bytesify"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_util.py::test_make_sentinel": {
+      "observed": [
+        "h11/_util.py::Sentinel.__new__",
+        "h11/_util.py::Sentinel.__repr__",
+        "h11/tests/test_util.py::test_make_sentinel",
+        "h11/tests/test_util.py::test_make_sentinel.<locals>.S",
+        "h11/tests/test_util.py::test_make_sentinel.<locals>.S2"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_util.py::test_validate": {
+      "observed": [
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_util.py::test_validate"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    },
+    "h11/tests/test_util.py::test_validate_formatting": {
+      "observed": [
+        "h11/_util.py::ProtocolError.__init__",
+        "h11/_util.py::validate",
+        "h11/tests/test_util.py::test_validate_formatting"
+      ],
+      "reports": [
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "setup"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "call"
+        },
+        {
+          "outcome": "passed",
+          "wasxfail": null,
+          "when": "teardown"
+        }
+      ]
+    }
+  },
+  "pytest_exit": 0
+}
