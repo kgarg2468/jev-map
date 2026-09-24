@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/extraction/boltons"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 40 non-code file(s) (40 docs, 0 papers, 0 images) \u2014 no LLM extraction\n[graphify extract] found 66 code, 0 docs, 0 papers, 0 images\n[graphify extract] 7 file(s) not classified (no supported extension or shebang), skipped: .coveragerc, .gitignore, LICENSE, Makefile, make.bat, setup.cfg (+1 more)\n[graphify extract] AST extraction on 66 code files...\n[graphify extract] wrote <round>/extraction/boltons/graphify-out/graph.json \u2014 2324 nodes, 3917 edges (no clustering)\n",
+  "wall_seconds": 1.8033996159210801
+}
