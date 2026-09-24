@@ -1,0 +1,2268 @@
+{
+  "config_sha256": "521a990d71f9c487b2f17b4f4e8eef695d51287c3b7b3ffb1b2479c1f5e65bb0",
+  "implementation_sha256": "2ed2df2a8303f2daddee15625ea61b177ab9ce11381cf66fab639475702d4a51",
+  "prior_freeze_sha256": "c6d00f5118c6ff372cd536b7473cd51eba025e9d3ec7594771ab8a601032cf85",
+  "protocol_sha256": "a50637a7bc3691d080e1ea71d8dfa376f361816f1857491beabe53f27d43edf1",
+  "repositories": [
+    {
+      "commit": "961dcff3f42e73b245aef65e377fe82763b257bb",
+      "file_hashes": {
+        "boltons/__init__.py": "ba0f4ee941c9a000b66251d4a39263a8ed009c2a3e0b77b8665c8aeff7ebe730",
+        "boltons/cacheutils.py": "77f6c35dc6332482c2f3f57b13059f3c1962641fbb7a6212aa7fd221c6d8aaad",
+        "boltons/debugutils.py": "e701ab82126836aa661f7e9272a9a8b339814ae602977b47213f0aebacfda283",
+        "boltons/deprutils.py": "d8f2c0fdce9d8276466127f093771e1a0a8844bcd1bd92e6880f30d2782e0151",
+        "boltons/dictutils.py": "6319c07cb68f18c2bfc01aa4393d0423463cf5d6357f229173d2d1e485e7b656",
+        "boltons/easterutils.py": "1bfc6e9e05606689ab4087b00585c183ff4fcc4eb4a423f9be153a0be6818d40",
+        "boltons/ecoutils.py": "ce3663d4e772fe871c17dcd0847717f8a610616a6b0141106564bedc5ab8a3b6",
+        "boltons/excutils.py": "6a2eddd26f46dbdceeda125bd20379d52ffc98a941fe867e3434d17b93119957",
+        "boltons/fileutils.py": "0c2025cf1e649eabd511a84303b491c19ea59cdcac2f958f9a90b7e39e0a8b0e",
+        "boltons/formatutils.py": "15c7963d5c97b11ec7a419e9e4aec7c20ca765bcf701306510c9c57c7eaeb1a4",
+        "boltons/funcutils.py": "f290815c9dbe5c4d73ade849935dfb2814411a89aeff89c7afef60c7b3aaba72",
+        "boltons/gcutils.py": "e82a32093560c14bb8298532681a3338d2ec6f48d20ccf2f1a4496dd67a17f97",
+        "boltons/ioutils.py": "36727e503a7483d1f91efc7cd837e502dc4b560e1bff5f7f9e66cda09421b6bc",
+        "boltons/iterutils.py": "7fb67f49dc1d895051549b523c2e21161e3c1f4e21590fa7fd09039386d08510",
+        "boltons/jsonutils.py": "46b92387597863e6a12d489a370220d03c2d70ebc795121f000d2b724b0fb50a",
+        "boltons/listutils.py": "5f45432e942b04040d3cc917f08a7a9fee7fc5339768591fa946ae0298ca882d",
+        "boltons/mathutils.py": "c4f32563bb0a9281d5b7a3770c661e5a3ae3c6c3ae2644f5ff0a608edce2d5e6",
+        "boltons/mboxutils.py": "426b5211f7b3ce6ee9d1c80d794b56d9544435865b48a016d1955cd0a1e0320d",
+        "boltons/namedutils.py": "0f5a4a0e196c7d918762928bfd9157c29d411a9d827ae7f45a53c43328887224",
+        "boltons/pathutils.py": "667a4bb46ed79f66af83b07fac419f3f91576c2e7ed404e11f28cd68b4645fbd",
+        "boltons/queueutils.py": "a60f04f5f27803429c7a79f3f51f9b286cba3bd997f122161f252c66ca0499bb",
+        "boltons/setutils.py": "d385936effa655abbd6bae772c08089e6c9ac8b266eff13105f4386fe1a58b43",
+        "boltons/socketutils.py": "b2d5da2d58dd3d05c14153a83f36da928fe6285a4a44850c2eab9877c1959adc",
+        "boltons/statsutils.py": "0c4d05a17b14244a880e5047c1823d1e1e522e6c5ee76c6b47f54d8bde791e68",
+        "boltons/strutils.py": "c5ecb7efd3b2e86f92545c18d8d72193f45a1bd1d0edaf3da65868aa0e8bcdda",
+        "boltons/tableutils.py": "0f01e27d91ab37d322db529f3e08873feefcea822fdbf760262093b3e01524ff",
+        "boltons/tbutils.py": "7cd7fb1b7ce1873c37ee3053bb59d8166b671cf667013bd27e2fdbc52ab03e29",
+        "boltons/timeutils.py": "27f8f2999b698a3e6064f24b1ff312ef86358592a503ad2c0c5b4fd265ff430c",
+        "boltons/typeutils.py": "4da2b26d71386ee9010dfb52104e461ecba486ba5544a8cf50d9e26cd34e9c09",
+        "boltons/urlutils.py": "0de5f96e627483f3de1dce10fc4e5f8d913a36c800166842cd55970d4ddd0812",
+        "docs/conf.py": "8a633a9176781b213eb2fa557205d4d4a2a63f415e38cf99a81181c5c9a40af7",
+        "misc/bench_omd.py": "86a29952b3dfc1002f3311166e35bea0090f7459dc02a40712332a033677700b",
+        "misc/linkify_changelog.py": "4abda6ffb41a90de9a4056aabf62e0225bb91431d6fa36429efbb431ffd5feba",
+        "misc/table_html_app.py": "f401a03dc79d9e3ed9328962bf0ad3aa768223a4455f45af275445656c5105cc",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/conftest.py": "91934bf3791e19404372fe5a9aeb4470c2f0bc3afb592eb2df2f6ffca1df1a2a",
+        "tests/test_cacheutils.py": "4c6727d9fd1c4ddd64bff09da4c79c6cfec1152ac3370f3e233fb92450361c5a",
+        "tests/test_debugutils_trace.py": "b4235e0cfbc84ae1dd0a423590a8901b6eaa46d41e8e1e342c2693887fa4ce55",
+        "tests/test_dictutils.py": "25fc6f2a8cdb0dbe33047f44f315d6f4a8a18e90dfe246efc66c282d9901993b",
+        "tests/test_ecoutils.py": "6be5be5abda19fdb8af07d98454659c2619f0e4afdfe4fe8606e61157b286ff7",
+        "tests/test_fileutils.py": "7eafa18f331092063a3a404b5fbf178a3f132ff12406271c8f29fbb2a4571975",
+        "tests/test_formatutils.py": "7dcee16a8e23f6a78311af4f7d91c5621a5988f00b92133cde258e5714441c7e",
+        "tests/test_funcutils.py": "d1ff81590f22afe49ef2752a16cc59a59eaa880e44aed182c9d8a5bf1035df4c",
+        "tests/test_funcutils_fb.py": "f2ef41088d5cbdd676cb33dfd005a45468230460a313045c26644f016d00b099",
+        "tests/test_funcutils_fb_py3.py": "3c9ba54104aa3804170aae3ac03f684641f48e29072714edf9600ce4e522a005",
+        "tests/test_gcutils.py": "af77f6b9954a8eab25359846fa7feb3af5089b1afced1dd21c02f58e4e213df9",
+        "tests/test_ioutils.py": "b6248a0d49a8610915acb1907d3c5f5e0540d281f23a51f7f9ccb8802c0491db",
+        "tests/test_iterutils.py": "53e87f22a9d57f742a295af65f69fd4c374bf40f917a6cd807e4c2f26a833263",
+        "tests/test_jsonutils.py": "33f31baee4be2552c8e2f9219d094025f66c632323d99d7dfed9c38c850a8b59",
+        "tests/test_listutils.py": "0ea3c4bc202e5b2d486b6ffd0eb1275661516b0c3a6be8d48e1256991d67c8f9",
+        "tests/test_mathutils.py": "4ebade6be193eec32db47e6f329816e335bf7d462acbe4874b4b811699a9df32",
+        "tests/test_namedutils.py": "c5cc34ea6a84a49aeefa9c5aff71e91278e3367d24176f30cc368a1c667a775e",
+        "tests/test_pathutils.py": "b86c0dc75f767c2a7525716ac4a47ae010c000f5575865e24f05ba96e10a5b7d",
+        "tests/test_queueutils.py": "e7140dcde4a96340ce29cfba5c26ee0a3a0e380b145d4e8b848a1970b374062c",
+        "tests/test_setutils.py": "645ec71bf7f955c4b9ed478e55b3aacd509dd35e0d78b33cb31ce30f26281613",
+        "tests/test_socketutils.py": "edfead38b00d1133b7cb33cd72cb411a3cfeb384137a206cd7db7e5d142b9cd5",
+        "tests/test_statsutils.py": "485c4ab9a8ead686878f2d2864b54978019778d8ccad8958666c23a2a1b31fb9",
+        "tests/test_statsutils_histogram.py": "9d91f83fe983c91823ffb61595bb6e91785ddbf36bb5385b99f62a75ae4c263a",
+        "tests/test_strutils.py": "f4927141e385c187ecd718044eb53327e0001e2d3d8b135dec8700dfde7d3e1d",
+        "tests/test_tableutils.py": "7b33dc0aad2fdc9d95703646e900ca421f011014aa177f117cde86b85de75394",
+        "tests/test_tbutils.py": "c1a9d5ef6303d55f51484517d7fa6b820adbd38e0777d474ccf5114b3feb5d3a",
+        "tests/test_tbutils_parsed_exc.py": "77f79a73c04b0d605ca2f50174a2ee432c301c69eeba6f8a70f43da0a0a43626",
+        "tests/test_timeutils.py": "1234f5343aeab73889559a6100c677a6d55f786155b6c01eaf0bc71a3144dedb",
+        "tests/test_typeutils.py": "e8b3f2187ff3dffc3151f33667e9baba6e33b72f134c0383968db649e0a19661",
+        "tests/test_urlutils.py": "d47fe8cb2f9352953e78678f25f0c1281620c601c008ab567491403fc3cd8d60"
+      },
+      "name": "boltons",
+      "snapshot_sha256": "e5c0af14b4aa2a72aae02a86de48ed7f5861a4a5801bf4132f6f2577f3796f47",
+      "targets": [
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_lri_cache_eviction",
+            "tests/test_cacheutils.py::test_lru_basic",
+            "tests/test_dictutils.py::test_pop_all"
+          ],
+          "function": "boltons/dictutils.py::OrderedMultiDict.pop",
+          "request_sha256": "a0a0767935e39bfa801b13ad2e6556d19d9416042610790494ef86d850f68768",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_fileutils.py::test_atomicsaver_pathlike",
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_nosrcline",
+            "tests/test_socketutils.py::test_multibyte_delim"
+          ],
+          "function": "boltons/fileutils.py::AtomicSaver.__init__",
+          "request_sha256": "a7ee828fbae3d72338cf8c91073f6e1ac999e70e60cbd9ed118385f20ceda9b2",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_funcutils_fb_py3.py::test_remove_kwonly_arg",
+            "tests/test_funcutils_fb_py3.py::test_wraps_inner_kwarg_only",
+            "tests/test_funcutils_fb.py::test_FunctionBuilder_add_arg"
+          ],
+          "function": "boltons/funcutils.py::update_wrapper",
+          "request_sha256": "86616a92c91cd73191d9eaa0ebc3aec93edebfdda173d0e14ed639f93ea49899",
+          "structural_tests": [
+            "tests/test_funcutils_fb_py3.py::test_update_wrapper_partial",
+            "tests/test_funcutils_fb_py3.py::test_wraps_uninspectable_target"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_iterutils.py::TestRemap.test_namedtuple",
+            "tests/test_dictutils.py::test_frozendict_api",
+            "tests/test_setutils.py::test_complement_set"
+          ],
+          "function": "boltons/iterutils.py::untyped_sorted",
+          "request_sha256": "1c69acace8dffa4ae81b258a94db96a646069810ccc1b666a7bedaf93fe33469",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_iterutils.py::test_seqguiderator",
+            "tests/test_iterutils.py::test_guiderator",
+            "tests/test_timeutils.py::test_daterange_with_same_start_stop"
+          ],
+          "function": "boltons/iterutils.py::SequentialGUIDerator.__next__",
+          "request_sha256": "64b6b23a1d9c94cb1fadf8a252da0db3a97b947b09fab6baa2aa8304aa89ca19",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_nosrcline",
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_with_anchor",
+            "tests/test_tbutils.py::test_contextual"
+          ],
+          "function": "boltons/tbutils.py::Callpoint.tb_frame_str",
+          "request_sha256": "6cb65cafec7c711d75cf88202ed9aa5a5300741dafe440601222b426f8026cc6",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_iterutils.py::TestRemap.test_namedtuple",
+            "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions",
+            "tests/test_socketutils.py::test_socketutils_netstring"
+          ],
+          "function": "boltons/iterutils.py::chunked_iter",
+          "request_sha256": "a43cca26b4aa21ee77fccaffd133087c83e2a6eb1fbc60bea0c9a04cd1b258d6",
+          "structural_tests": [
+            "tests/test_iterutils.py::test_chunked_bytes"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_dictutils.py::test_frozendict_api",
+            "tests/test_dictutils.py::test_frozendict",
+            "tests/test_dictutils.py::test_many_to_many"
+          ],
+          "function": "boltons/urlutils.py::OrderedMultiDict.update",
+          "request_sha256": "583212047c53c6b81cea951be062ae3b7a9a9a08bf9e7adb57aeb475f4b7ca11",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_jsonutils.py::test_jsonl_iterator",
+            "tests/test_jsonutils.py::test_jsonl_iterator_mid_last_line_seek_terminates",
+            "tests/test_jsonutils.py::test_jsonl_explicit_end_seek"
+          ],
+          "function": "boltons/jsonutils.py::JSONLIterator.__iter__",
+          "request_sha256": "5f72d85ec0d39c43e70c35f50e9e682709a49e5b2fda0196d05b226ef1846895",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_threshold_counter",
+            "tests/test_dictutils.py::test_frozendict_api",
+            "tests/test_cacheutils.py::test_threshold_counter_update_keyword_counts"
+          ],
+          "function": "boltons/cacheutils.py::ThresholdCounter.keys",
+          "request_sha256": "fe76ca611cc0e9679e1080ac1f2e3474cf6236bb19a399768057db3c12c6ebef",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_basic",
+            "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+            "tests/test_funcutils_fb_py3.py::test_wraps_inner_kwarg_only"
+          ],
+          "function": "boltons/iterutils.py::PathAccessError.__str__",
+          "request_sha256": "700304fc01dbe3a2979a71578d3b2a89e4119441772a31affe243b26911ff88d",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_listutils.py::test_barrel_list_pop_after_tail_drained",
+            "tests/test_listutils.py::test_barrellist_delete_across_multiple_barrels",
+            "tests/test_listutils.py::test_sort_barrel_list"
+          ],
+          "function": "boltons/listutils.py::BarrelList.__iter__",
+          "request_sha256": "47f5ffffeee7e06c351a566222f2b07ad2f1f1e6a2bc18ba481fca1a8e8f095b",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_threshold_counter",
+            "tests/test_cacheutils.py::test_threshold_counter_update_mapping_compaction",
+            "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions"
+          ],
+          "function": "boltons/cacheutils.py::ThresholdCounter.get_commonality",
+          "request_sha256": "424ce9688ce06af6b34588cdc93b89d8e1b805ea6b794a835beed41756a5b1ed",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions",
+            "tests/test_funcutils_fb_py3.py::test_wraps_inner_kwarg_only",
+            "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg"
+          ],
+          "function": "boltons/funcutils.py::noop",
+          "request_sha256": "a800fac356991bd92860d68390714a3185685c9a51773358a7ac91d29993275e",
+          "structural_tests": [
+            "tests/test_funcutils.py::test_noop"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_dictutils.py::test_frozendict_api",
+            "tests/test_iterutils.py::TestRemap.test_namedtuple",
+            "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions"
+          ],
+          "function": "boltons/iterutils.py::strip",
+          "request_sha256": "da6221a474d20c2ed7bb3640387d871a12b34f514452a1548b0de98840fdb371",
+          "structural_tests": [
+            "tests/test_iterutils.py::test_strip"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_socketutils.py::test_client_disconnecting",
+            "tests/test_socketutils.py::test_socketutils_netstring",
+            "tests/test_socketutils.py::test_buffers"
+          ],
+          "function": "boltons/socketutils.py::BufferedSocket.buffer",
+          "request_sha256": "9b819e674c630ddef1b4aaae2b21bda867382aab5465d1e825e634c51e2fbc97",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_funcutils_fb_py3.py::test_remove_kwonly_arg",
+            "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str",
+            "tests/test_dictutils.py::test_frozendict_api"
+          ],
+          "function": "boltons/funcutils.py::inspect_formatargspec",
+          "request_sha256": "f15cd8006b5320d0a72c6852eb01b6bffc19b1fc7e1cd4ea925782709691cdc9",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_ioutils.py::BaseTestMixin.test_compare_unequal_instances",
+            "tests/test_ioutils.py::BaseTestMixin.test_instance_check",
+            "tests/test_ioutils.py::TestSpooledBytesIO.test_len_no_rollover"
+          ],
+          "function": "boltons/ioutils.py::SpooledIOBase.__len__",
+          "request_sha256": "c2e0fd06b20a4e00158365f2fd3c039039a1a7f45443b9d8ed89876409e10e82",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+            "tests/test_socketutils.py::test_socketutils_netstring",
+            "tests/test_ioutils.py::BaseTestMixin.test_compare_unequal_instances"
+          ],
+          "function": "boltons/ioutils.py::SpooledIOBase.write",
+          "request_sha256": "635bd4a3ca2c89830052a53a19d358f3097fbb8f458210cbe4df88f0a041c0eb",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_dictutils.py::test_frozendict_api",
+            "tests/test_iterutils.py::TestRemap.test_namedtuple",
+            "tests/test_funcutils_fb_py3.py::test_remove_kwonly_arg"
+          ],
+          "function": "boltons/ecoutils.py::_args2sh",
+          "request_sha256": "5f135e7f2a975cd74cac5d9af0c82437d4eaf738f08a8a2f68a633a435b07c39",
+          "structural_tests": [
+            "tests/test_ecoutils.py::test_basic",
+            "tests/test_ecoutils.py::test_scrub",
+            "tests/test_ecoutils.py::test_scrub_does_not_read_the_cwd",
+            "tests/test_ecoutils.py::test_scrub_does_not_resolve_the_host"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions",
+            "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+            "tests/test_dictutils.py::test_frozendict_api"
+          ],
+          "function": "boltons/iterutils.py::rstrip",
+          "request_sha256": "276dcc3724e5ae7ed32af0559696b97cccd5b2383cfb7575aed2ef4bd716e084",
+          "structural_tests": [
+            "tests/test_iterutils.py::test_rstrip"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_tbutils.py::test_contextual",
+            "tests/test_tbutils.py::test_exception_info",
+            "tests/test_funcutils_fb.py::test_wraps_wrappers"
+          ],
+          "function": "boltons/tbutils.py::TracebackInfo.from_dict",
+          "request_sha256": "a3d5f62a2fc075351b5eb27dc10061f1f714e96eca2086e79479fe2595ff8426",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_queueutils.py::test_sorted_queue",
+            "tests/test_queueutils.py::test_heap_queue",
+            "tests/test_cacheutils.py::test_lru_dict_replacement"
+          ],
+          "function": "boltons/queueutils.py::SortedPriorityQueue._push_entry",
+          "request_sha256": "84e2019de98b35e350d59069db3a2a61c170fc8318979dde8a975be9bb421c92",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_ioutils.py::BaseTestMixin.test_closed_file_method_valueerrors",
+            "tests/test_socketutils.py::test_socketutils_netstring",
+            "tests/test_tbutils.py::test_exception_info"
+          ],
+          "function": "boltons/fileutils.py::DummyFile.tell",
+          "request_sha256": "2a6b83fecbd751b6fe40161ad5e4924286275cdf2c3fa0d31454367f28095761",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_setutils.py::test_iset_slice_agreement",
+            "tests/test_listutils.py::test_barrellist_slicing_matches_list",
+            "tests/test_listutils.py::test_barrellist_delete_across_multiple_barrels"
+          ],
+          "function": "boltons/listutils.py::BarrelList.iter_slice",
+          "request_sha256": "042c0951fd19237991e95b8c3c1d6d7554ca4dd8be429d6125d78e9fa68a6656",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_listutils.py::test_barrel_list",
+            "tests/test_listutils.py::test_barrel_list_insert_before_start_matches_list",
+            "tests/test_listutils.py::test_barrellist_delete_across_multiple_barrels"
+          ],
+          "function": "boltons/listutils.py::BarrelList._balance_list",
+          "request_sha256": "7923ea2d5de67ddbd1a4ab81c54bb2544a29e6dc07ca3b3cfbcb43b3bb52df08",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_ecoutils.py::test_scrub_does_not_resolve_the_host",
+            "tests/test_funcutils.py::test_once_thread_safety",
+            "tests/test_socketutils.py::test_socketutils_netstring"
+          ],
+          "function": "boltons/iterutils.py::GUIDerator.reseed",
+          "request_sha256": "aeee3c6d43fee6b44a0037e159419c6265db7672721794e6b3f0aa5702fd3af6",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_statsutils_histogram.py::test_check_sum",
+            "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions",
+            "tests/test_statsutils.py::test_stats_basic"
+          ],
+          "function": "boltons/statsutils.py::Stats._calc_mean",
+          "request_sha256": "97f26c325a6d0b536d88e56237c7d11291c312c0598ca2f90de6474c8e4d5d71",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_timeutils.py::test_daterange_years_step",
+            "tests/test_timeutils.py::test_us_timezone_dst_fold",
+            "tests/test_timeutils.py::test_daterange_step_does_not_advance"
+          ],
+          "function": "boltons/timeutils.py::LocalTZInfo.is_dst",
+          "request_sha256": "ea6a2c35f207aa457c54f12221efd7ba0eb40a36988d8d3a46f9cd85c1d671f8",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_cachedmethod_maintains_func_abstraction",
+            "tests/test_funcutils_fb.py::test_wraps_wrappers",
+            "tests/test_tableutils.py::test_table_obj"
+          ],
+          "function": "boltons/tableutils.py::InputType.__init__",
+          "request_sha256": "5a2f057406d6e5c7ede2bd311c14315f2d97595a30a8d5523aa92911d6a22bb8",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_fileutils.py::test_fileperms",
+            "tests/test_funcutils_fb.py::test_FunctionBuilder_add_arg",
+            "tests/test_funcutils_fb.py::test_FunctionBuilder_modify"
+          ],
+          "function": "boltons/fileutils.py::FilePerms.__int__",
+          "request_sha256": "ee74e7aa1711d199c16600edeb0c2f45228d536bb35a16ce1229cf52c0d8eb31",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_tbutils.py::test_contextual",
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_basic",
+            "tests/test_dictutils.py::test_frozendict_api"
+          ],
+          "function": "boltons/tbutils.py::_DeferredLine.__str__",
+          "request_sha256": "68f51f88bbc51f74b5175ddbfb3eeb44f6ccc700bdcab23f805eb1baf3af98e2",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_fileutils.py::test_fileperms",
+            "tests/test_setutils.py::test_complement_set",
+            "tests/test_cacheutils.py::test_cachedmethod"
+          ],
+          "function": "boltons/fileutils.py::FilePerms.__repr__",
+          "request_sha256": "e1e21da7b75002636ef221886f4027bcff521f1169daa44c39f57fd5d2722ebb",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_dictutils.py::test_frozendict_api",
+            "tests/test_cacheutils.py::test_cachedmethod_maintains_func_abstraction",
+            "tests/test_cacheutils.py::test_cachedmethod"
+          ],
+          "function": "boltons/cacheutils.py::CachedFunction.__init__",
+          "request_sha256": "ed329aeae5def68816ffb03b21d543630ee6a88988e604146782e7cb666e89c3",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_setutils.py::test_indexed_set_mutate",
+            "tests/test_setutils.py::test_iset_scalar_index_bounds",
+            "tests/test_setutils.py::test_iset_scalar_index_multiple_dead_intervals"
+          ],
+          "function": "boltons/setutils.py::IndexedSet.__len__",
+          "request_sha256": "a8ca2dfdd47773f5c52f2db4bd1ae57d132c4e10321706e58f4405dfeb505f77",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_threshold_counter",
+            "tests/test_cacheutils.py::test_threshold_counter_update_mapping_compaction",
+            "tests/test_cacheutils.py::test_threshold_counter_update_keyword_counts"
+          ],
+          "function": "boltons/cacheutils.py::ThresholdCounter.itervalues",
+          "request_sha256": "a9af52eb37185afc1faafb442fe01b710af60146400d54e9129ae1f915b0536c",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_iterutils.py::TestRemap.test_add_length",
+            "tests/test_iterutils.py::TestRemap.test_sort_all_lists",
+            "tests/test_iterutils.py::TestRemap.test_namedtuple"
+          ],
+          "function": "boltons/iterutils.py::default_exit",
+          "request_sha256": "f1b024e515a4659996fe4e387f24a0c3de13368fbc2533d479a986e2385cf7c2",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_ioutils.py::BaseTestMixin.test_closed_file_method_valueerrors",
+            "tests/test_socketutils.py::test_client_disconnecting",
+            "tests/test_tbutils.py::test_exception_info"
+          ],
+          "function": "boltons/fileutils.py::DummyFile.flush",
+          "request_sha256": "f52ac7a4bc4828c7c8b9ad231a927b4bd3a679edb515f9e7ecb40b34052516ed",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_strutils.py::test_human_readable_list",
+            "tests/test_funcutils.py::test_once_thread_safety",
+            "tests/test_mathutils.py::test_bits_len_bound"
+          ],
+          "function": "boltons/urlutils.py::unquote",
+          "request_sha256": "c0823b1155c1d0aa61be715bd755b5e4250b5b1aa749feefab312161ad215c7d",
+          "structural_tests": [
+            "tests/test_urlutils.py::test_parse_qsl_encoding"
+          ]
+        },
+        {
+          "candidates": [
+            "tests/test_socketutils.py::test_socketutils_netstring",
+            "tests/test_socketutils.py::test_client_disconnecting",
+            "tests/test_ioutils.py::BaseTestMixin.test_closed_file_method_valueerrors"
+          ],
+          "function": "boltons/ioutils.py::SpooledBytesIO.tell",
+          "request_sha256": "03c143e783de46642e57270d9b880c0a6449ecdf0242cba521cd6b02f063b93b",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_cachedmethod",
+            "tests/test_cacheutils.py::test_lru_dict_replacement",
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_basic"
+          ],
+          "function": "boltons/iterutils.py::PathAccessError.__repr__",
+          "request_sha256": "e977c9e08b449fdc1acbfc25c9c03aecc1eb307bd0f6b42665f04f02c91825e9",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_tbutils.py::test_contextual",
+            "tests/test_jsonutils.py::test_jsonl_iterator_mid_last_line_seek_terminates",
+            "tests/test_tbutils_parsed_exc.py::test_parsed_exc_basic"
+          ],
+          "function": "boltons/excutils.py::_DeferredLine.strip",
+          "request_sha256": "01b711505e2bf7b81372cce7c9c5cfe191b3715fe433c74c98e20e9bd6fc54ca",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_mathutils.py::test_bits_len_bound",
+            "tests/test_mathutils.py::test_empty_bits_conversions",
+            "tests/test_mathutils.py::test_bits"
+          ],
+          "function": "boltons/mathutils.py::Bits.as_bin",
+          "request_sha256": "c6ee9d3b89a5baccbd51a06d605b4d8f4d95cb5655233adc8e71cfd6223d2920",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_socketutils.py::test_client_disconnecting",
+            "tests/test_tbutils.py::test_exception_info",
+            "tests/test_funcutils_fb_py3.py::test_wraps_async"
+          ],
+          "function": "boltons/socketutils.py::BufferedSocket.shutdown",
+          "request_sha256": "eaf27b3779f1f9ac8b3929f48651f4355e8c85fbc78f860b81cc5af5bf178e45",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_threshold_counter_update_mapping_compaction",
+            "tests/test_cacheutils.py::test_threshold_counter",
+            "tests/test_cacheutils.py::test_threshold_counter_update_mapping_counts"
+          ],
+          "function": "boltons/cacheutils.py::ThresholdCounter.add",
+          "request_sha256": "71c6ee8174b42ba5c0c6450a9134a08f44f039a9654647aecf2ef2727efaaa3d",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_strutils.py::test_singularize_double_s",
+            "tests/test_mathutils.py::test_ceil_basic",
+            "tests/test_mathutils.py::test_ceil_sorted"
+          ],
+          "function": "boltons/strutils.py::_match_case",
+          "request_sha256": "46a723ea68a25cca4cd4e55af224bd335f57ea71a487718b9f285a8bfd269a47",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_cacheutils.py::test_lru_basic",
+            "tests/test_cacheutils.py::test_lri",
+            "tests/test_iterutils.py::TestRemap.test_add_length"
+          ],
+          "function": "boltons/cacheutils.py::LRI.setdefault",
+          "request_sha256": "2bce5951e2bdfb4121347c07c5570fb5c4937dcf8f8ce371d6be7204152919a3",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "tests/test_listutils.py::test_barrel_list",
+            "tests/test_mathutils.py::test_bits_len_bound",
+            "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg"
+          ],
+          "function": "boltons/mathutils.py::ceil",
+          "request_sha256": "e9075d4c51e596d93da0bbc199ddef17f7e64673978060aa96b906cb50d3cbd8",
+          "structural_tests": [
+            "tests/test_mathutils.py::test_ceil_basic",
+            "tests/test_mathutils.py::test_ceil_oor_lower",
+            "tests/test_mathutils.py::test_ceil_oor_upper",
+            "tests/test_mathutils.py::test_ceil_sorted"
+          ]
+        }
+      ],
+      "test_ids": [
+        "tests/test_cacheutils.py::test_cache_sizes_on_repeat_insertions",
+        "tests/test_cacheutils.py::test_cache_update_optional_source",
+        "tests/test_cacheutils.py::test_cached_dec",
+        "tests/test_cacheutils.py::test_cachedmethod",
+        "tests/test_cacheutils.py::test_cachedmethod_maintains_func_abstraction",
+        "tests/test_cacheutils.py::test_cachedproperty",
+        "tests/test_cacheutils.py::test_cachedproperty_maintains_func_abstraction",
+        "tests/test_cacheutils.py::test_callable_cached_dec",
+        "tests/test_cacheutils.py::test_lri",
+        "tests/test_cacheutils.py::test_lri_cache_eviction",
+        "tests/test_cacheutils.py::test_lru_add",
+        "tests/test_cacheutils.py::test_lru_basic",
+        "tests/test_cacheutils.py::test_lru_dict_replacement",
+        "tests/test_cacheutils.py::test_lru_with_dupes",
+        "tests/test_cacheutils.py::test_lru_with_dupes_2",
+        "tests/test_cacheutils.py::test_min_id_map",
+        "tests/test_cacheutils.py::test_threshold_counter",
+        "tests/test_cacheutils.py::test_threshold_counter_update_keyword_counts",
+        "tests/test_cacheutils.py::test_threshold_counter_update_mapping_compaction",
+        "tests/test_cacheutils.py::test_threshold_counter_update_mapping_counts",
+        "tests/test_cacheutils.py::test_unscoped_cached_dec",
+        "tests/test_debugutils_trace.py::test_trace_bytes",
+        "tests/test_debugutils_trace.py::test_trace_dict",
+        "tests/test_debugutils_trace.py::test_trace_exc",
+        "tests/test_debugutils_trace.py::test_trace_namedtuple",
+        "tests/test_debugutils_trace.py::test_trace_oldstyle",
+        "tests/test_debugutils_trace.py::test_trace_which",
+        "tests/test_dictutils.py::test_addlist",
+        "tests/test_dictutils.py::test_addlist_iterator",
+        "tests/test_dictutils.py::test_clear",
+        "tests/test_dictutils.py::test_copy",
+        "tests/test_dictutils.py::test_dict_init",
+        "tests/test_dictutils.py::test_eq",
+        "tests/test_dictutils.py::test_eq_with_dict",
+        "tests/test_dictutils.py::test_frozendict",
+        "tests/test_dictutils.py::test_frozendict_api",
+        "tests/test_dictutils.py::test_frozendict_ior",
+        "tests/test_dictutils.py::test_invert",
+        "tests/test_dictutils.py::test_ior",
+        "tests/test_dictutils.py::test_kv_consistency",
+        "tests/test_dictutils.py::test_many_to_many",
+        "tests/test_dictutils.py::test_multi_correctness",
+        "tests/test_dictutils.py::test_omd_copy_module",
+        "tests/test_dictutils.py::test_omd_pickle",
+        "tests/test_dictutils.py::test_one_to_one",
+        "tests/test_dictutils.py::test_pop",
+        "tests/test_dictutils.py::test_pop_all",
+        "tests/test_dictutils.py::test_poplast",
+        "tests/test_dictutils.py::test_reversed",
+        "tests/test_dictutils.py::test_setdefault",
+        "tests/test_dictutils.py::test_subdict",
+        "tests/test_dictutils.py::test_subdict_keep_type",
+        "tests/test_dictutils.py::test_todict",
+        "tests/test_dictutils.py::test_types",
+        "tests/test_dictutils.py::test_update",
+        "tests/test_dictutils.py::test_update_basic",
+        "tests/test_dictutils.py::test_update_extend",
+        "tests/test_ecoutils.py::test_basic",
+        "tests/test_ecoutils.py::test_scrub",
+        "tests/test_ecoutils.py::test_scrub_does_not_read_the_cwd",
+        "tests/test_ecoutils.py::test_scrub_does_not_resolve_the_host",
+        "tests/test_fileutils.py::test_atomicsaver_pathlike",
+        "tests/test_fileutils.py::test_fileperms",
+        "tests/test_fileutils.py::test_iter_find_files",
+        "tests/test_fileutils.py::test_iter_find_files_pathlike",
+        "tests/test_fileutils.py::test_rotate_file_full_rotation",
+        "tests/test_fileutils.py::test_rotate_file_full_rotation_no_ext",
+        "tests/test_fileutils.py::test_rotate_file_no_rotation",
+        "tests/test_fileutils.py::test_rotate_file_one_rotation",
+        "tests/test_formatutils.py::test_deferredvalue",
+        "tests/test_formatutils.py::test_get_fstr_args",
+        "tests/test_formatutils.py::test_pos_infer",
+        "tests/test_formatutils.py::test_split_fstr",
+        "tests/test_formatutils.py::test_tokenize_format_str",
+        "tests/test_funcutils.py::test_copy_function",
+        "tests/test_funcutils.py::test_format_invocation",
+        "tests/test_funcutils.py::test_noop",
+        "tests/test_funcutils.py::test_once_caches_result",
+        "tests/test_funcutils.py::test_once_executes_only_once",
+        "tests/test_funcutils.py::test_once_thread_safety",
+        "tests/test_funcutils.py::test_partials",
+        "tests/test_funcutils.py::test_total_ordering",
+        "tests/test_funcutils_fb.py::test_FunctionBuilder_add_arg",
+        "tests/test_funcutils_fb.py::test_FunctionBuilder_invalid_args",
+        "tests/test_funcutils_fb.py::test_FunctionBuilder_invalid_body",
+        "tests/test_funcutils_fb.py::test_FunctionBuilder_modify",
+        "tests/test_funcutils_fb.py::test_defaults_dict",
+        "tests/test_funcutils_fb.py::test_get_arg_names",
+        "tests/test_funcutils_fb.py::test_get_invocation_sig_str",
+        "tests/test_funcutils_fb.py::test_wraps_basic",
+        "tests/test_funcutils_fb.py::test_wraps_expected",
+        "tests/test_funcutils_fb.py::test_wraps_injected",
+        "tests/test_funcutils_fb.py::test_wraps_unknown_args",
+        "tests/test_funcutils_fb.py::test_wraps_update_dict",
+        "tests/test_funcutils_fb.py::test_wraps_wrappers",
+        "tests/test_funcutils_fb_py3.py::test_FunctionBuilder_add_arg_kwonly",
+        "tests/test_funcutils_fb_py3.py::test_copy_function_kw_defaults_py3",
+        "tests/test_funcutils_fb_py3.py::test_defaults_dict",
+        "tests/test_funcutils_fb_py3.py::test_get_arg_names",
+        "tests/test_funcutils_fb_py3.py::test_get_invocation_sig_str",
+        "tests/test_funcutils_fb_py3.py::test_remove_kwonly_arg",
+        "tests/test_funcutils_fb_py3.py::test_update_wrapper_partial",
+        "tests/test_funcutils_fb_py3.py::test_wraps_async",
+        "tests/test_funcutils_fb_py3.py::test_wraps_defaulted_arg_before_varargs",
+        "tests/test_funcutils_fb_py3.py::test_wraps_defaulted_arg_keyword_forwarding",
+        "tests/test_funcutils_fb_py3.py::test_wraps_hide_wrapped",
+        "tests/test_funcutils_fb_py3.py::test_wraps_inner_kwarg_only",
+        "tests/test_funcutils_fb_py3.py::test_wraps_posonly_defaulted_arg",
+        "tests/test_funcutils_fb_py3.py::test_wraps_py3",
+        "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg",
+        "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg_no_default",
+        "tests/test_funcutils_fb_py3.py::test_wraps_target_kwonly_arg_with_varargs",
+        "tests/test_funcutils_fb_py3.py::test_wraps_uninspectable_target",
+        "tests/test_ioutils.py::BaseTestMixin.test_buf_property",
+        "tests/test_ioutils.py::BaseTestMixin.test_closed_file_method_valueerrors",
+        "tests/test_ioutils.py::BaseTestMixin.test_closed_property",
+        "tests/test_ioutils.py::BaseTestMixin.test_compare_different_instances",
+        "tests/test_ioutils.py::BaseTestMixin.test_compare_err",
+        "tests/test_ioutils.py::BaseTestMixin.test_compare_unequal_instances",
+        "tests/test_ioutils.py::BaseTestMixin.test_getvalue_norollover",
+        "tests/test_ioutils.py::BaseTestMixin.test_getvalue_rollover",
+        "tests/test_ioutils.py::BaseTestMixin.test_instance_check",
+        "tests/test_ioutils.py::BaseTestMixin.test_io_error_negative_truncate",
+        "tests/test_ioutils.py::BaseTestMixin.test_isatty",
+        "tests/test_ioutils.py::BaseTestMixin.test_next",
+        "tests/test_ioutils.py::BaseTestMixin.test_pos_property",
+        "tests/test_ioutils.py::BaseTestMixin.test_readline",
+        "tests/test_ioutils.py::BaseTestMixin.test_readlines",
+        "tests/test_ioutils.py::BaseTestMixin.test_rollover_custom_directory",
+        "tests/test_ioutils.py::BaseTestMixin.test_set_softspace_attribute",
+        "tests/test_ioutils.py::BaseTestMixin.test_set_softspace_attribute_rolled",
+        "tests/test_ioutils.py::BaseTestMixin.test_truncate_noargs_norollover",
+        "tests/test_ioutils.py::BaseTestMixin.test_truncate_noargs_rollover",
+        "tests/test_ioutils.py::BaseTestMixin.test_truncate_with_args_norollover",
+        "tests/test_ioutils.py::BaseTestMixin.test_truncate_with_args_rollover",
+        "tests/test_ioutils.py::BaseTestMixin.test_truthy",
+        "tests/test_ioutils.py::BaseTestMixin.test_type_error_too_many_args",
+        "tests/test_ioutils.py::TestMultiFileReader.test_no_mixed_bytes_and_text",
+        "tests/test_ioutils.py::TestMultiFileReader.test_open",
+        "tests/test_ioutils.py::TestMultiFileReader.test_read_seek_bytes",
+        "tests/test_ioutils.py::TestMultiFileReader.test_read_seek_text",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_auto_rollover",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_compare_not_equal_instances",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_compare_two_equal_instances",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_flush_after_rollover",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_invalid_type",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_iter",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_len_no_rollover",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_len_rollover",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_use_as_context_mgr",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_writelines",
+        "tests/test_ioutils.py::TestSpooledBytesIO.test_zip_compat",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_auto_rollover",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_codepoints_all_enc",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_compare_not_equal_instances",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_compare_two_equal_instances",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_invalid_type",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_iter",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_len_no_rollover",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_len_rollover",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_codepoints_SEEK_CUR",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_codepoints_SEEK_END",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_codepoints_SEEK_SET",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_codepoints_large_SEEK_CUR",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_codepoints_large_SEEK_END",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_codepoints_large_SEEK_SET",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_seek_encoded",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_tell_codepoints",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_use_as_context_mgr",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_writelines",
+        "tests/test_ioutils.py::TestSpooledStringIO.test_x80_codepoint",
+        "tests/test_iterutils.py::TestFirst.test_default_value",
+        "tests/test_iterutils.py::TestFirst.test_empty_iterables",
+        "tests/test_iterutils.py::TestFirst.test_selection",
+        "tests/test_iterutils.py::TestGetPath.test_depth_one",
+        "tests/test_iterutils.py::TestGetPath.test_depth_two",
+        "tests/test_iterutils.py::TestRemap.test_add_length",
+        "tests/test_iterutils.py::TestRemap.test_basic_clone",
+        "tests/test_iterutils.py::TestRemap.test_basic_upper",
+        "tests/test_iterutils.py::TestRemap.test_collector_pattern",
+        "tests/test_iterutils.py::TestRemap.test_dict_to_omd",
+        "tests/test_iterutils.py::TestRemap.test_drop_nones",
+        "tests/test_iterutils.py::TestRemap.test_duperef",
+        "tests/test_iterutils.py::TestRemap.test_empty",
+        "tests/test_iterutils.py::TestRemap.test_item_drop",
+        "tests/test_iterutils.py::TestRemap.test_namedtuple",
+        "tests/test_iterutils.py::TestRemap.test_noncallables",
+        "tests/test_iterutils.py::TestRemap.test_path",
+        "tests/test_iterutils.py::TestRemap.test_prepop",
+        "tests/test_iterutils.py::TestRemap.test_remap_file",
+        "tests/test_iterutils.py::TestRemap.test_remap_set",
+        "tests/test_iterutils.py::TestRemap.test_reraise_visit",
+        "tests/test_iterutils.py::TestRemap.test_root_selfref",
+        "tests/test_iterutils.py::TestRemap.test_sort_all_lists",
+        "tests/test_iterutils.py::TestRemap.test_sub_selfref",
+        "tests/test_iterutils.py::TestRemap.test_unremappable",
+        "tests/test_iterutils.py::TestSplit.test_maxsplit_zero_returns_unsplit_values",
+        "tests/test_iterutils.py::test_backoff_basic",
+        "tests/test_iterutils.py::test_backoff_constant_factor",
+        "tests/test_iterutils.py::test_backoff_jitter",
+        "tests/test_iterutils.py::test_backoff_repeat",
+        "tests/test_iterutils.py::test_backoff_validation",
+        "tests/test_iterutils.py::test_backoff_zero_start",
+        "tests/test_iterutils.py::test_chunk_ranges",
+        "tests/test_iterutils.py::test_chunked_bytes",
+        "tests/test_iterutils.py::test_frange_inexact_boundary_counts",
+        "tests/test_iterutils.py::test_frange_xfrange_zero_step",
+        "tests/test_iterutils.py::test_guiderator",
+        "tests/test_iterutils.py::test_lstrip",
+        "tests/test_iterutils.py::test_pairwise_filled",
+        "tests/test_iterutils.py::test_partition_default",
+        "tests/test_iterutils.py::test_partition_multiple",
+        "tests/test_iterutils.py::test_research",
+        "tests/test_iterutils.py::test_research_custom_enter",
+        "tests/test_iterutils.py::test_rstrip",
+        "tests/test_iterutils.py::test_seqguiderator",
+        "tests/test_iterutils.py::test_strip",
+        "tests/test_iterutils.py::test_windowed_filled",
+        "tests/test_iterutils.py::test_xfrange_descending",
+        "tests/test_iterutils.py::test_xfrange_matches_frange",
+        "tests/test_iterutils.py::test_xfrange_wrong_direction",
+        "tests/test_jsonutils.py::test_jsonl_explicit_end_seek",
+        "tests/test_jsonutils.py::test_jsonl_iterator",
+        "tests/test_jsonutils.py::test_jsonl_iterator_mid_last_line_seek_terminates",
+        "tests/test_jsonutils.py::test_jsonl_iterator_rel_seek_negative",
+        "tests/test_jsonutils.py::test_jsonl_relative_seek_binary_matches_text",
+        "tests/test_jsonutils.py::test_reverse_iter_lines",
+        "tests/test_jsonutils.py::test_reverse_iter_lines_keeps_text_stream_attached",
+        "tests/test_jsonutils.py::test_reverse_iter_lines_uses_explicit_binary_encoding",
+        "tests/test_jsonutils.py::test_reverse_iter_lines_uses_file_encoding",
+        "tests/test_listutils.py::test_barrel_list",
+        "tests/test_listutils.py::test_barrel_list_delete_to_end",
+        "tests/test_listutils.py::test_barrel_list_getitem_past_end",
+        "tests/test_listutils.py::test_barrel_list_insert_at_end",
+        "tests/test_listutils.py::test_barrel_list_insert_before_start_matches_list",
+        "tests/test_listutils.py::test_barrel_list_matches_list",
+        "tests/test_listutils.py::test_barrel_list_pop_after_tail_drained",
+        "tests/test_listutils.py::test_barrellist_delete_across_multiple_barrels",
+        "tests/test_listutils.py::test_barrellist_slicing_matches_list",
+        "tests/test_listutils.py::test_sort_barrel_list",
+        "tests/test_listutils.py::test_splay_list",
+        "tests/test_mathutils.py::test_bits",
+        "tests/test_mathutils.py::test_bits_len_bound",
+        "tests/test_mathutils.py::test_ceil_basic",
+        "tests/test_mathutils.py::test_ceil_oor_lower",
+        "tests/test_mathutils.py::test_ceil_oor_upper",
+        "tests/test_mathutils.py::test_ceil_sorted",
+        "tests/test_mathutils.py::test_clamp_examples",
+        "tests/test_mathutils.py::test_clamp_transparent",
+        "tests/test_mathutils.py::test_empty_bits_conversions",
+        "tests/test_mathutils.py::test_empty_bits_rejects_non_hex_inputs",
+        "tests/test_mathutils.py::test_floor_basic",
+        "tests/test_mathutils.py::test_floor_oor_lower",
+        "tests/test_mathutils.py::test_floor_oor_upper",
+        "tests/test_mathutils.py::test_floor_sorted",
+        "tests/test_namedutils.py::test_empty_field_name_raises_value_error",
+        "tests/test_namedutils.py::test_empty_type_name_raises_value_error",
+        "tests/test_namedutils.py::test_invalid_character_still_raises_value_error",
+        "tests/test_namedutils.py::test_namedlist",
+        "tests/test_namedutils.py::test_namedlist_pickle",
+        "tests/test_namedutils.py::test_namedtuple_pickle",
+        "tests/test_pathutils.py::test_augpath",
+        "tests/test_pathutils.py::test_augpath_multidot",
+        "tests/test_pathutils.py::test_expandpath",
+        "tests/test_pathutils.py::test_shrinkuser",
+        "tests/test_queueutils.py::test_heap_queue",
+        "tests/test_queueutils.py::test_sorted_queue",
+        "tests/test_setutils.py::test_bulk_difference_update",
+        "tests/test_setutils.py::test_bulk_intersection_update",
+        "tests/test_setutils.py::test_complement_set",
+        "tests/test_setutils.py::test_indexed_set_basic",
+        "tests/test_setutils.py::test_indexed_set_mutate",
+        "tests/test_setutils.py::test_indexed_set_rsub",
+        "tests/test_setutils.py::test_indexed_set_update_multiple_iterables",
+        "tests/test_setutils.py::test_indexed_set_update_multiple_iterables_with_tuple_items",
+        "tests/test_setutils.py::test_iset_index_method",
+        "tests/test_setutils.py::test_iset_scalar_index_bounds",
+        "tests/test_setutils.py::test_iset_scalar_index_multiple_dead_intervals",
+        "tests/test_setutils.py::test_iset_slice_after_removal",
+        "tests/test_setutils.py::test_iset_slice_agreement",
+        "tests/test_setutils.py::test_small_difference_update_unchanged",
+        "tests/test_socketutils.py::test_basic_nonblocking",
+        "tests/test_socketutils.py::test_buffers",
+        "tests/test_socketutils.py::test_client_disconnecting",
+        "tests/test_socketutils.py::test_multibyte_delim",
+        "tests/test_socketutils.py::test_props",
+        "tests/test_socketutils.py::test_short_lines",
+        "tests/test_socketutils.py::test_simple_buffered_socket_passthroughs",
+        "tests/test_socketutils.py::test_socketutils_netstring",
+        "tests/test_socketutils.py::test_socketutils_netstring_timeout",
+        "tests/test_socketutils.py::test_split_delim",
+        "tests/test_socketutils.py::test_timeout_setters_getters",
+        "tests/test_statsutils.py::test_histogram_zero_interquartile_range",
+        "tests/test_statsutils.py::test_mode",
+        "tests/test_statsutils.py::test_pearson_type_covers_kappa_ge_zero",
+        "tests/test_statsutils.py::test_pearson_type_zero_denominator",
+        "tests/test_statsutils.py::test_stats_basic",
+        "tests/test_statsutils_histogram.py::test_check_sum",
+        "tests/test_statsutils_histogram.py::test_norm_regression",
+        "tests/test_strutils.py::TestMultiReplace.test_shortcut_function",
+        "tests/test_strutils.py::TestMultiReplace.test_simple_substitutions",
+        "tests/test_strutils.py::TestMultiReplace.test_sub_with_compiled_regex",
+        "tests/test_strutils.py::TestMultiReplace.test_sub_with_list",
+        "tests/test_strutils.py::TestMultiReplace.test_sub_with_regex",
+        "tests/test_strutils.py::TestMultiReplace.test_substitutions_in_word",
+        "tests/test_strutils.py::TestMultiReplace.test_substitutions_with_regex_chars",
+        "tests/test_strutils.py::test_args2cmd_sep",
+        "tests/test_strutils.py::test_args2sh_sep",
+        "tests/test_strutils.py::test_asciify",
+        "tests/test_strutils.py::test_bytes2human",
+        "tests/test_strutils.py::test_ellipsize",
+        "tests/test_strutils.py::test_format_int_list",
+        "tests/test_strutils.py::test_human_readable_list",
+        "tests/test_strutils.py::test_human_readable_list_type_annotations",
+        "tests/test_strutils.py::test_indent",
+        "tests/test_strutils.py::test_indent_unicode_line_endings",
+        "tests/test_strutils.py::test_is_uuid",
+        "tests/test_strutils.py::test_iter_splitlines_preserves_numbers_after_spaces",
+        "tests/test_strutils.py::test_iter_splitlines_unicode_line_endings",
+        "tests/test_strutils.py::test_multi_replace_empty_mapping",
+        "tests/test_strutils.py::test_parse_int_list",
+        "tests/test_strutils.py::test_pluralize_x",
+        "tests/test_strutils.py::test_roundzip",
+        "tests/test_strutils.py::test_singularize_double_s",
+        "tests/test_strutils.py::test_strip_ansi",
+        "tests/test_tableutils.py::test_table_dicts",
+        "tests/test_tableutils.py::test_table_lists",
+        "tests/test_tableutils.py::test_table_obj",
+        "tests/test_tableutils.py::test_to_text_empty_table",
+        "tests/test_tableutils.py::test_to_text_no_headers",
+        "tests/test_tableutils.py::test_to_text_none_headers",
+        "tests/test_tableutils.py::test_to_text_short_headers_padded",
+        "tests/test_tbutils.py::test_contextual",
+        "tests/test_tbutils.py::test_exception_info",
+        "tests/test_tbutils_parsed_exc.py::test_parsed_exc_basic",
+        "tests/test_tbutils_parsed_exc.py::test_parsed_exc_nosrcline",
+        "tests/test_tbutils_parsed_exc.py::test_parsed_exc_truncated",
+        "tests/test_tbutils_parsed_exc.py::test_parsed_exc_with_anchor",
+        "tests/test_tbutils_parsed_exc.py::test_parsed_exc_with_anchor_indented",
+        "tests/test_timeutils.py::test_daterange_datetime_hourly",
+        "tests/test_timeutils.py::test_daterange_infinite",
+        "tests/test_timeutils.py::test_daterange_step_does_not_advance",
+        "tests/test_timeutils.py::test_daterange_with_same_start_stop",
+        "tests/test_timeutils.py::test_daterange_wrong_direction",
+        "tests/test_timeutils.py::test_daterange_years",
+        "tests/test_timeutils.py::test_daterange_years_step",
+        "tests/test_timeutils.py::test_isoparse_basic",
+        "tests/test_timeutils.py::test_isoparse_fraction_overprecise",
+        "tests/test_timeutils.py::test_isoparse_fractional_seconds",
+        "tests/test_timeutils.py::test_relative_time_defaults_to_matching_timezone",
+        "tests/test_timeutils.py::test_us_timezone_dst_fold",
+        "tests/test_timeutils.py::test_us_timezone_fromutc_sets_fold",
+        "tests/test_typeutils.py::test_sentinel_copy",
+        "tests/test_typeutils.py::test_sentinel_falsiness",
+        "tests/test_typeutils.py::test_sentinel_pickle",
+        "tests/test_urlutils.py::test_basic",
+        "tests/test_urlutils.py::test_chained_navigate",
+        "tests/test_urlutils.py::test_equal",
+        "tests/test_urlutils.py::test_find_all_links",
+        "tests/test_urlutils.py::test_find_all_links_basic",
+        "tests/test_urlutils.py::test_identical_equal",
+        "tests/test_urlutils.py::test_idna",
+        "tests/test_urlutils.py::test_invalid_ipv6",
+        "tests/test_urlutils.py::test_invalid_port",
+        "tests/test_urlutils.py::test_iri_path",
+        "tests/test_urlutils.py::test_iri_query",
+        "tests/test_urlutils.py::test_mailto",
+        "tests/test_urlutils.py::test_navigate",
+        "tests/test_urlutils.py::test_netloc_slashes",
+        "tests/test_urlutils.py::test_normalize_with_case",
+        "tests/test_urlutils.py::test_not_equal",
+        "tests/test_urlutils.py::test_parse_equals_in_qp_value",
+        "tests/test_urlutils.py::test_parse_qsl_encoding",
+        "tests/test_urlutils.py::test_parse_url",
+        "tests/test_urlutils.py::test_password_without_username",
+        "tests/test_urlutils.py::test_query_param_dict_eq_with_dict",
+        "tests/test_urlutils.py::test_query_params",
+        "tests/test_urlutils.py::test_quoted_userinfo",
+        "tests/test_urlutils.py::test_regex",
+        "tests/test_urlutils.py::test_rel_navigate",
+        "tests/test_urlutils.py::test_roundtrip",
+        "tests/test_urlutils.py::test_self_normalize",
+        "tests/test_urlutils.py::test_str_repr",
+        "tests/test_urlutils.py::test_unicodey",
+        "tests/test_urlutils.py::test_url",
+        "tests/test_urlutils.py::test_url_copy",
+        "tests/test_urlutils.py::test_userinfo",
+        "tests/test_urlutils.py::test_utf8_url"
+      ]
+    },
+    {
+      "commit": "62c5068c971579d61fa1b55373390e12f25fd856",
+      "file_hashes": {
+        "bench/benchmarks/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bench/benchmarks/benchmarks.py": "8a04c779e3515feed9d6fc072d1a77d26dec4b78da5eec6da74795cfaee1dacb",
+        "docs/source/_examples/myclient.py": "ef768e9dba09e70138d301243be4ec8b7d0561e06e37e8830fc6524b21b75894",
+        "docs/source/conf.py": "1ad6422d3224d1e66fca16a06b270bb90848ec4951635e90e98430610e6e9e11",
+        "docs/source/make-state-diagrams.py": "a9ae658a1e674b33c183200b2134863df6dff6d4342e07c91c93d25ebc083c7e",
+        "examples/basic-client.py": "ccbf45375edb681686890b13036d63f132d7ccb89ae7cf49a95188afefa0fbfa",
+        "examples/trio-server.py": "4e36dc8e8741d224dc286de716f79586572eba2919b54d05a3c4c985be341d0e",
+        "fuzz/afl-server.py": "c752bff16c6970bbbf77caaacebf221dcbbdc9de8aa91d54cae1f192638d0df2",
+        "h11/__init__.py": "88ed4ace448ee36c99e9f7e0f953206f1fd9553586518d349d16045a7facde46",
+        "h11/_abnf.py": "c9b8b1af4c6cba99e403a18503232e6ee5c5e9373595bfe117cf743600ac7cd7",
+        "h11/_connection.py": "93d61155fea4a19a9bb6d056dfac5259a26959d6706bec50554f401c4a3d0ee2",
+        "h11/_events.py": "23deda5e86a5d56bbb7642f9e3c04034150290e21b7bec790a2a1803d201635e",
+        "h11/_headers.py": "3fb0fe9413711f074b64f2e29a6630acf1bef59923125bef25925d6408123fee",
+        "h11/_readers.py": "6b8472a4e454082dddd2afe4c4fb8120cee34c3f222ede57f754c7d05b1db8de",
+        "h11/_receivebuffer.py": "c6bb29b1db0d81617145f41c4d7c51f11add8d15d74cad08a39710616a49d56b",
+        "h11/_state.py": "ff92c6fc1191f0509c1507813c7f93307826ffe07e1147160a74287fff578c51",
+        "h11/_util.py": "2d69248d7c89685940cba2eddfdc3bdd44ad925153e68bdcbe8d13918ed162e9",
+        "h11/_version.py": "0aa4e191406d456db2a924b5047638f1b9c32fed300cab6fcd6b08673b5667fa",
+        "h11/_writers.py": "a052a6e8fb637877db8f844b5fb541eca0dcd60218e778171b7fc747d96d9930",
+        "h11/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "h11/tests/helpers.py": "6b51151bfa7bc54e3046c6b7b4c3d3471b9a2829ab7ada24f6cc575afa9f9900",
+        "h11/tests/test_against_stdlib_http.py": "7850fb255d4481f92f573efddd9cc9585d678514cb57a5e73e3199b21f69f55a",
+        "h11/tests/test_connection.py": "4c7f829daa7070330c739a36eeaba404ddf251fe04638cfb3a74c2b017093615",
+        "h11/tests/test_events.py": "117550bbcb266626fe2482d04388f62869adeef6c92aa29231fca78024c9011e",
+        "h11/tests/test_headers.py": "e66aa3a3fbad8b94825e95d9240e6b05b29ce12dc626ad612f45596b65e5cbe7",
+        "h11/tests/test_helpers.py": "7fd9082bcb4815b7b54e197d6f4f7a8b3f242786a1142fe00714a0c3322c854d",
+        "h11/tests/test_io.py": "3dc9f8ff1057766a0cdbb968e3a333645bc03c9dc89814c500f3eceda6a81835",
+        "h11/tests/test_receivebuffer.py": "de319b789337e8092a83fa4084f6fb5f3227d8d4ba4613e0f91ca0f04bbacad9",
+        "h11/tests/test_state.py": "aea965f56a85b093c4d334abb429fd2c7eb9f663cab0379767e0f05f095eb814",
+        "h11/tests/test_util.py": "54ee4be274857b8a60b52c0abafeaeffa9741fb51e8b317958ab874d6ade83bd",
+        "setup.py": "8120ebb8ba725a9413e97dc3e463cd4a59b2b239d461eed87faac8c5733ca56b"
+      },
+      "name": "h11",
+      "snapshot_sha256": "11b99c0e8467bc476aa72da5d0a0cd2b69c702d1617f622ae1396fc99d26b3dc",
+      "targets": [
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_io.py::test_ChunkedReader",
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure"
+          ],
+          "function": "h11/_writers.py::ChunkedWriter.send_data",
+          "request_sha256": "62078f4310e943428cc6d15e554a4fd7f36f4e02f45306d9b377567abcaa344d",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+            "h11/tests/test_against_stdlib_http.py::test_h11_as_client"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.__init__",
+          "request_sha256": "ea6327f7c99faf4908599fbf8e1f0c540b47b96f70b848a9c2c8fff012357414",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_state.py::test_ConnectionState_switch_denied",
+            "h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction",
+            "h11/tests/test_state.py::test_ConnectionState"
+          ],
+          "function": "h11/_state.py::ConnectionState.process_client_switch_proposal",
+          "request_sha256": "ac140d40a82f7198a5260aa339ca4c4b6fc2c936b871b8ff9b97054cd93b4d3b",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_close_simple",
+            "h11/tests/test_connection.py::test_errors"
+          ],
+          "function": "h11/_connection.py::Connection.trailing_data",
+          "request_sha256": "82e4726f112e46f1baa6894a470a19e84e27c708ab6e4da443dc4838b2e7803b",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test_readers_unusual",
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test__body_framing"
+          ],
+          "function": "h11/_readers.py::_obsolete_line_fold",
+          "request_sha256": "30f59a24ac7e1a1c009cfc3b39bb0853785fc947b8de2f5b5b22a37921687ebd",
+          "structural_tests": [
+            "h11/tests/test_io.py::test__obsolete_line_fold_bytes"
+          ]
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test__body_framing",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_io.py::test_ContentLengthReader"
+          ],
+          "function": "h11/_readers.py::ContentLengthReader.__init__",
+          "request_sha256": "f62c602333cf50182e7bea3e9371185aa0c0ab4c43244dadb85424b7af6894a5",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_errors"
+          ],
+          "function": "h11/_connection.py::Connection.next_event",
+          "request_sha256": "93b775e27299ae2704b5294df114a70f3c662e9e27f3eb4af5cf1e7308a7cd51",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test_Http10Writer",
+            "h11/tests/test_io.py::test_ChunkedWriter",
+            "h11/tests/test_io.py::test_ContentLengthWriter"
+          ],
+          "function": "h11/_writers.py::Http10Writer.send_data",
+          "request_sha256": "a92ac940d2c88f1a5dae65526cf7c04f8dc3ab5d5ab32ce4959bc77006a61be0",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_sendfile"
+          ],
+          "function": "h11/_connection.py::Connection.send_with_data_passthrough",
+          "request_sha256": "e21d061a425f1fdaaa686be0d353f1df3418e6d1ec2e21bbc9580b677387fe41",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_pipelining",
+            "h11/tests/test_state.py::test_ConnectionState",
+            "h11/tests/test_connection.py::test_errors"
+          ],
+          "function": "h11/_readers.py::expect_nothing",
+          "request_sha256": "ffa6e999575bb0c89433d93c439ad73c70c9f290f5a6149b76e87fcd0418dc80",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure"
+          ],
+          "function": "h11/_writers.py::ContentLengthWriter.send_eom",
+          "request_sha256": "3bcf2a05bfe57127c20dfe685897f94ed814e2d1045f3239f7a5dcc3c95b86ac",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_state.py::test_ConnectionState_reuse"
+          ],
+          "function": "h11/_connection.py::Connection._process_event",
+          "request_sha256": "c8da955667c25ce3e1877ce13557dc55f0b07e26c5622d8eb465fb54d1b11a96",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test_ChunkedReader",
+            "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response",
+            "h11/tests/test_io.py::test_readers_unusual"
+          ],
+          "function": "h11/_headers.py::get_comma_header",
+          "request_sha256": "fe3792ea97da1ab18f0322ba83987f1d538d86ae5998d75f630275c4b4b839f8",
+          "structural_tests": [
+            "h11/tests/test_connection.py::test__body_framing",
+            "h11/tests/test_connection.py::test__keep_alive",
+            "h11/tests/test_headers.py::test_get_set_comma_header",
+            "h11/tests/test_headers.py::test_has_100_continue"
+          ]
+        },
+        {
+          "candidates": [
+            "h11/tests/test_state.py::test_ConnectionState",
+            "h11/tests/test_state.py::test_ConnectionState_keep_alive",
+            "h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE"
+          ],
+          "function": "h11/_state.py::ConnectionState.process_keep_alive_disabled",
+          "request_sha256": "8b17e9ef89b6dee5f48a2693d8d0d6813b2679ecbaf27a97b28d4b7b6732e092",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+            "h11/tests/test_connection.py::test_sendfile"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_at_most",
+          "request_sha256": "1b5aa259424ee1873c79a97725b7851556d22dbe17c0e510fcb88f1206aebede",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response",
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_sendfile"
+          ],
+          "function": "h11/_headers.py::set_comma_header",
+          "request_sha256": "fef223be328da1214e666acc25a06da19425d3150be711c9382f29a09cb2c102",
+          "structural_tests": [
+            "h11/tests/test_headers.py::test_get_set_comma_header"
+          ]
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_io.py::test_ContentLengthWriter"
+          ],
+          "function": "h11/_writers.py::ContentLengthWriter.send_data",
+          "request_sha256": "f909e9e40798372a84d31f9ce82fb5fa75d6afeb24f82ef5f6063a419e8eed95",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_util.py::test_LocalProtocolError",
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_state.py::test_ConnectionState"
+          ],
+          "function": "h11/_state.py::ConnectionState._fire_event_triggered_transitions",
+          "request_sha256": "3baec519c4b884e24d5607bcf9bbeddd27ad440361d577ca3c39d283f8ec898b",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_state.py::test_ConnectionState",
+            "h11/tests/test_state.py::test_ConnectionState_switch_denied",
+            "h11/tests/test_connection.py::test_errors"
+          ],
+          "function": "h11/_state.py::ConnectionState.process_event",
+          "request_sha256": "ea122828e726ea99772ed86e3d7938e725e2965b6721002540ec1205dc45c13d",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_Connection_basics_and_content_length",
+            "h11/tests/test_state.py::test_ConnectionState_double_protocol_switch"
+          ],
+          "function": "h11/_connection.py::Connection._process_error",
+          "request_sha256": "9f9d8f877602485840d32322e6d389fa729a5ee63f50a5c0a070447b0bae131d",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction",
+            "h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE"
+          ],
+          "function": "h11/_state.py::ConnectionState.__init__",
+          "request_sha256": "80e7e616b3fdd9919b822a756ad99ba3932779a3c80a1841aef8b0245b09a699",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure"
+          ],
+          "function": "h11/_connection.py::Connection.start_next_cycle",
+          "request_sha256": "f47f1ffaf9dac113bd37743f934599b15456fe8d498e86c05e8514c33a1b475a",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_Connection_basics_and_content_length",
+            "h11/tests/test_connection.py::test_close_simple"
+          ],
+          "function": "h11/_connection.py::Connection.their_state",
+          "request_sha256": "ac9f8f39e5739087944b04f1a0bca2207b788aaa18678d640776ab93e1ddcf4e",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_util.py::test_LocalProtocolError",
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_protocol_switch"
+          ],
+          "function": "h11/_events.py::InformationalResponse.__post_init__",
+          "request_sha256": "6468a0718462a06f7aba3a874478ee5a71fdac47d4196053f24ffb4e5a4fed59",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_pipelining",
+            "h11/tests/test_connection.py::test_Connection_basics_and_content_length"
+          ],
+          "function": "h11/_connection.py::Connection.states",
+          "request_sha256": "7babc821b84dad99439146c4bf7a2442ccd5cb674512be9be3c7706099197a11",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction"
+          ],
+          "function": "h11/_state.py::ConnectionState._fire_state_triggered_transitions",
+          "request_sha256": "77cf2e9df719fe4bedb94ef7381696952245abdf87cabe287f8596e12d066c6c",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+            "h11/tests/test_connection.py::test_protocol_switch"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_lines",
+          "request_sha256": "b42a282b9c83b37517210c61258d92022b0fd9bcc20a762970d685f6888a3b84",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_util.py::test_LocalProtocolError",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_headers.py::test_normalize_and_validate"
+          ],
+          "function": "h11/_util.py::ProtocolError.__init__",
+          "request_sha256": "c79d402d6927ce740e53661023d7c9e57c96e76b1bac1863ee1ad2b57460a232",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_pipelining",
+            "h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE"
+          ],
+          "function": "h11/_connection.py::Connection.send_failed",
+          "request_sha256": "7e0670414b2bb1cc175ec4b7d2e266dceeb70fd002af5f21d4e3f52a37d1d931",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_server_talking_to_http10_client",
+            "h11/tests/test_events.py::test_events",
+            "h11/tests/test_events.py::test_header_casing"
+          ],
+          "function": "h11/_headers.py::has_expect_100_continue",
+          "request_sha256": "0788f5ce77bfad023a333f31db33ba016eebc7208322162ec31c7c829ed086e6",
+          "structural_tests": [
+            "h11/tests/test_headers.py::test_has_100_continue"
+          ]
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+            "h11/tests/test_connection.py::test_pipelining"
+          ],
+          "function": "h11/_connection.py::Connection._extract_next_receive_event",
+          "request_sha256": "aed55c9ef78dc09df4aa355a3b6a279322fb2369d101189a6a09cf1d7fa33dff",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure"
+          ],
+          "function": "h11/_readers.py::maybe_read_from_IDLE_client",
+          "request_sha256": "73024af2fa4bd926159cda95193c7f68ce04021d88b8b20bddac2c57e8bd0e27",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_connection.py::test__body_framing",
+            "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response"
+          ],
+          "function": "h11/_events.py::_ResponseBase.__init__",
+          "request_sha256": "b0286bd176026c2cbd9a6dfa4dd6a32718768a111237687bd6f6067beb1acda3",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_connection.py::test_Connection_basics_and_content_length"
+          ],
+          "function": "h11/_connection.py::Connection._respond_to_state_changes",
+          "request_sha256": "d23dfa9adf853f970f76a5bdddc010d0438b644ddf6a8350491487bdf026fe29",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test_ChunkedWriter",
+            "h11/tests/test_events.py::test_events",
+            "h11/tests/test_io.py::test_ContentLengthWriter"
+          ],
+          "function": "h11/_writers.py::ChunkedWriter.send_eom",
+          "request_sha256": "880a58a2a1464dd98a1cb1b9e57e6341195dbbdea5a67ad7cadb5c1acb884a0a",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_events.py::test_header_casing",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_connection.py::test__body_framing"
+          ],
+          "function": "h11/_headers.py::Headers.__len__",
+          "request_sha256": "277c44160f06d0dcd52348448e6fa25fc3795948e1b660d30b9d67e940ddf8e5",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test__obsolete_line_fold_bytes",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+            "h11/tests/test_io.py::test_readers_unusual"
+          ],
+          "function": "h11/_readers.py::_decode_header_lines",
+          "request_sha256": "c44e13f28fb5857791b7ec579173dd9d3ad92e02b508f63773c1038253f0aacf",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_against_stdlib_http.py::test_h11_as_client"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.__bool__",
+          "request_sha256": "02dcfdaa7f676f299d3ddb3d84d8bedc9d08ccbe54ff36e34a9da94dddad23b9",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_state.py::test_ConnectionState_switch_denied",
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_connection.py::test_errors"
+          ],
+          "function": "h11/_connection.py::Connection._server_switch_event",
+          "request_sha256": "147bafb8be5ebbb1af3344f5f98f2a85d81ce94bdbfc13e5c44b542efc8425f8",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test_ChunkedReader",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure"
+          ],
+          "function": "h11/_readers.py::ChunkedReader.__call__",
+          "request_sha256": "f8808e56475dd4a48bff5038a8f1a5d053e7d70285fa0c60c12225eef88cbf66",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_io.py::test_ContentLengthWriter",
+            "h11/tests/test_connection.py::test__body_framing",
+            "h11/tests/test_connection.py::test_sendfile"
+          ],
+          "function": "h11/_writers.py::ContentLengthWriter.__init__",
+          "request_sha256": "6419a52eb17539f10a507b43a24dde28ed092f4d06636746d9d0a4a89ddb8429",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_protocol_switch",
+            "h11/tests/test_state.py::test_ConnectionState_reuse"
+          ],
+          "function": "h11/_state.py::ConnectionState.start_next_cycle",
+          "request_sha256": "bc94189aa20c91c800d42a904707860b8beb7774fa9ae31b9d145540daf07a1f",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_against_stdlib_http.py::test_h11_as_client"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.__len__",
+          "request_sha256": "788f46753b7d0a0e2d2ef07a23fc6e6a9c53d6518e8535f5e48ac104b8cbbc64",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_events.py::test_events",
+            "h11/tests/test_io.py::test_ChunkedReader",
+            "h11/tests/test_connection.py::test_errors"
+          ],
+          "function": "h11/_events.py::Request.__init__",
+          "request_sha256": "b87aa9e0d15e0a055b7366ab041123e9f3e7f14d25eb5bd5678884bd08c75351",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.maybe_extract_next_line",
+          "request_sha256": "d3e1b716e3831a9e429a7fa6a825a54d0543d19f2f950450f32c6c5292ff6e97",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_against_stdlib_http.py::test_h11_as_client",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer"
+          ],
+          "function": "h11/_receivebuffer.py::ReceiveBuffer.__bytes__",
+          "request_sha256": "ab7d92026d28b327e66583db9ceb4335750b486cb43032997f1d92f16d2210a7",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_receivebuffer.py::test_receivebuffer",
+            "h11/tests/test_connection.py::test_pipelining",
+            "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter"
+          ],
+          "function": "h11/_readers.py::ContentLengthReader.__call__",
+          "request_sha256": "7e59fb4f48eafa5ed8ccfe071d785bf711451202d2bc1d5b8ca8807145483668",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "h11/tests/test_connection.py::test_errors",
+            "h11/tests/test_connection.py::test_sendfile",
+            "h11/tests/test_connection.py::test_pipelining"
+          ],
+          "function": "h11/_connection.py::Connection.send",
+          "request_sha256": "f3187e0cff5454073bc4525e4cf035008e8c5d842a2889f63c471dd16499b885",
+          "structural_tests": []
+        }
+      ],
+      "test_ids": [
+        "h11/tests/test_against_stdlib_http.py::test_h11_as_client",
+        "h11/tests/test_against_stdlib_http.py::test_h11_as_server",
+        "h11/tests/test_connection.py::test_100_continue",
+        "h11/tests/test_connection.py::test_408_request_timeout",
+        "h11/tests/test_connection.py::test_Connection_basics_and_content_length",
+        "h11/tests/test_connection.py::test_HEAD_framing_headers",
+        "h11/tests/test_connection.py::test__body_framing",
+        "h11/tests/test_connection.py::test__keep_alive",
+        "h11/tests/test_connection.py::test_automagic_connection_close_handling",
+        "h11/tests/test_connection.py::test_automatic_transfer_encoding_in_response",
+        "h11/tests/test_connection.py::test_chunk_boundaries",
+        "h11/tests/test_connection.py::test_chunked",
+        "h11/tests/test_connection.py::test_client_talking_to_http10_server",
+        "h11/tests/test_connection.py::test_close_different_states",
+        "h11/tests/test_connection.py::test_close_simple",
+        "h11/tests/test_connection.py::test_connection_drop",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_request",
+        "h11/tests/test_connection.py::test_early_detection_of_invalid_response",
+        "h11/tests/test_connection.py::test_empty_request",
+        "h11/tests/test_connection.py::test_empty_response",
+        "h11/tests/test_connection.py::test_errors",
+        "h11/tests/test_connection.py::test_idle_receive_nothing",
+        "h11/tests/test_connection.py::test_max_incomplete_event_size_countermeasure",
+        "h11/tests/test_connection.py::test_pipelined_close",
+        "h11/tests/test_connection.py::test_pipelining",
+        "h11/tests/test_connection.py::test_protocol_switch",
+        "h11/tests/test_connection.py::test_reuse_simple",
+        "h11/tests/test_connection.py::test_sendfile",
+        "h11/tests/test_connection.py::test_server_talking_to_http10_client",
+        "h11/tests/test_connection.py::test_special_exceptions_for_lost_connection_in_message_body",
+        "h11/tests/test_events.py::test_events",
+        "h11/tests/test_events.py::test_header_casing",
+        "h11/tests/test_events.py::test_intenum_status_code",
+        "h11/tests/test_headers.py::test_get_set_comma_header",
+        "h11/tests/test_headers.py::test_has_100_continue",
+        "h11/tests/test_headers.py::test_normalize_and_validate",
+        "h11/tests/test_helpers.py::test_normalize_data_events",
+        "h11/tests/test_io.py::test_ChunkedReader",
+        "h11/tests/test_io.py::test_ChunkedWriter",
+        "h11/tests/test_io.py::test_ContentLengthReader",
+        "h11/tests/test_io.py::test_ContentLengthWriter",
+        "h11/tests/test_io.py::test_Http10Reader",
+        "h11/tests/test_io.py::test_Http10Writer",
+        "h11/tests/test_io.py::test__obsolete_line_fold_bytes",
+        "h11/tests/test_io.py::test_allow_some_garbage_in_cookies",
+        "h11/tests/test_io.py::test_host_comes_first",
+        "h11/tests/test_io.py::test_readers_simple",
+        "h11/tests/test_io.py::test_readers_unusual",
+        "h11/tests/test_io.py::test_reject_garbage_after_request_line",
+        "h11/tests/test_io.py::test_reject_garbage_after_response_line",
+        "h11/tests/test_io.py::test_reject_garbage_in_header_line",
+        "h11/tests/test_io.py::test_reject_non_vchar_in_path",
+        "h11/tests/test_io.py::test_writers_simple",
+        "h11/tests/test_io.py::test_writers_unusual",
+        "h11/tests/test_receivebuffer.py::test_receivebuffer",
+        "h11/tests/test_receivebuffer.py::test_receivebuffer_for_invalid_delimiter",
+        "h11/tests/test_state.py::test_ConnectionState",
+        "h11/tests/test_state.py::test_ConnectionState_double_protocol_switch",
+        "h11/tests/test_state.py::test_ConnectionState_inconsistent_protocol_switch",
+        "h11/tests/test_state.py::test_ConnectionState_keep_alive",
+        "h11/tests/test_state.py::test_ConnectionState_keep_alive_in_DONE",
+        "h11/tests/test_state.py::test_ConnectionState_keepalive_protocol_switch_interaction",
+        "h11/tests/test_state.py::test_ConnectionState_protocol_switch_accepted",
+        "h11/tests/test_state.py::test_ConnectionState_reuse",
+        "h11/tests/test_state.py::test_ConnectionState_switch_denied",
+        "h11/tests/test_state.py::test_server_request_is_illegal",
+        "h11/tests/test_util.py::test_LocalProtocolError",
+        "h11/tests/test_util.py::test_ProtocolError",
+        "h11/tests/test_util.py::test_bytesify",
+        "h11/tests/test_util.py::test_make_sentinel",
+        "h11/tests/test_util.py::test_validate",
+        "h11/tests/test_util.py::test_validate_formatting"
+      ]
+    },
+    {
+      "commit": "87e45202858dbb725c2ea7d6472a11c1a2624518",
+      "file_hashes": {
+        "docs/conf.py": "bcedc3e3fc99a46ef967f3f55285de1fb81441ffb64fa2a0fb73f24729356ee3",
+        "docs/examples/eggsample-spam/eggsample_spam.py": "2d8f7477e2874a785a6bbc9f1884c4995f95ee6bc08368d969701bae4ac09e5a",
+        "docs/examples/eggsample-spam/setup.py": "a4965ad61d2e71a707394a922094a4929022f6b344c67bb5fec5d9ebbbc3cb2e",
+        "docs/examples/eggsample/eggsample/__init__.py": "0ebc89e9ed78be9e1a2f0085f3fe6e4e232b2b55908ec5bf907a8662c7cb0eed",
+        "docs/examples/eggsample/eggsample/hookspecs.py": "0704b9eff67565a202216848899d77a7d59aed4386c29e6b81585c8a9bb23f71",
+        "docs/examples/eggsample/eggsample/host.py": "db8bfc75ad5f68242dc8d97c98f9e2fce9da1f53a16e332ed538003f7afdc45d",
+        "docs/examples/eggsample/eggsample/lib.py": "5cc64d19e4730c9d20b7396380a832b54444bc34e6453bb9d930ef7d286555d0",
+        "docs/examples/eggsample/setup.py": "a87fb9c73c4159916b16647caa71abdd6dde0add76f0c4052c25a7cf925c6fc0",
+        "docs/examples/toy-example.py": "d2732359729271a50c6ce6504af1f73195d8439120265538d38b40b2761024d3",
+        "downstream/run_downstream.py": "33bde65e829e83b4fad9cdfd3b9683b18f7b61bc8a0c3a7d08b1b73efc247679",
+        "scripts/release.py": "5b351c5a80a67c99e003e2ec6562fa5c93567ec968e773a0859f90fda34248a4",
+        "scripts/towncrier-draft-to-file.py": "a6f6821cfaa039ccdf4cf0b440b3d628e6dbf83581c1d12e1172f68181f6a56b",
+        "src/pluggy/__init__.py": "f94737c0d72ae5af0bb2f2602a231b4e61adfab5567d16e4746141a4badd1465",
+        "src/pluggy/_callers.py": "bcc9618b647069ed52a04b318bbaa93e4daef96e1fad746beb122e7fd95b3846",
+        "src/pluggy/_compat.py": "64a136b0ff61ae478b1662e5b898838f38ebe1ead41bd513f98938d912a0c153",
+        "src/pluggy/_hooks.py": "31fceb45935ceddc310746ab144f13fb7d5dd768c392496dc67d805dced53466",
+        "src/pluggy/_manager.py": "b6a11dbc73e2c51b4adc7b7e73a7093126cc0f933fb0f04be7c27ce73664510e",
+        "src/pluggy/_result.py": "f2668b485954c9e3f74a995bc4710d9f0390d012ac48a889a266864151aa5d4c",
+        "src/pluggy/_tracing.py": "499081bfd619d3c5a3acd0a650379e3d727f4cdf1e6cd266cf398707f7b61683",
+        "src/pluggy/_warnings.py": "b5dd00bd90697da9ab8820b73aab0bc31321f92cc03237e399ce7c4f9bcfde5c",
+        "testing/benchmark.py": "9ab7596d77504eccf075ed526dc949b35d0f7a71debf0e34fb11367cc67b5d38",
+        "testing/conftest.py": "5ef97949398e572ec5dcc0f22e14fd485c23e3a8d7db1efa8a83bcf9c869a859",
+        "testing/test_details.py": "af3d110802d6007c752a11e6e0ec70523e14726e992d0e5568133e4740a5ce01",
+        "testing/test_helpers.py": "414810b7e72a9d0dbe32ca6239d72bf8b065cfeb4b1b9c7e7eb3247d2cab68b3",
+        "testing/test_hookcaller.py": "8d5eab213d8236b72179c2d3b035481ff66c894a530f05c1860e9d6850e7910c",
+        "testing/test_invocations.py": "5425af345f7f210b011e46f44e6fe58c2f82131895c1fdbf8eb2461945e48f16",
+        "testing/test_multicall.py": "0a17d5dc27ccd00baf2963584c1e06b453cf9151332d294773262953711e84d2",
+        "testing/test_pluginmanager.py": "4354439c581bc2948da2a06b697139691f34e8f86db7bec84f8f981f65e85992",
+        "testing/test_result.py": "4be53ed8a87b816f122a18d6ae1a1d07fccc3844cb3094d1f469a97e746b427a",
+        "testing/test_tracer.py": "2a79200bf46f9bf6a455f4939ea630be1b9b2e2e4f6499eba067c02d0e8ac192",
+        "testing/test_warnings.py": "1e83918457071b807ccfa7ed183901b56f5d9649e771aa82128031cc86f82fcb"
+      },
+      "name": "pluggy",
+      "snapshot_sha256": "b622206d9bc0d0b1597181a13d437e212d79e933e122c89a573f68ac19f94718",
+      "targets": [
+        {
+          "candidates": [
+            "testing/test_details.py::test_parse_hookimpl_override",
+            "testing/test_hookcaller.py::test_hookimpl",
+            "testing/test_hookcaller.py::test_adding_wrappers_complex"
+          ],
+          "function": "src/pluggy/_hooks.py::normalize_hookimpl_opts",
+          "request_sha256": "f95238acdb3a0f41bea60a0e0e75b9db193211af287657798464e30043d630ab",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_add_tracefuncs",
+            "testing/test_pluginmanager.py::test_unregister_plugin_with_multi_hookimpls",
+            "testing/test_pluginmanager.py::test_with_result_memorized"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.add_hookcall_monitoring",
+          "request_sha256": "51b75fb8ffcd480acb85a4e46e68fd24f4bed749b2cacb9e79a797dc7daa9a55",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_helpers.py::test_varnames_unresolvable_annotation",
+            "testing/test_hookcaller.py::test_hookrelay_registration_by_specname_raises",
+            "testing/test_helpers.py::test_varnames_decorator"
+          ],
+          "function": "src/pluggy/_manager.py::_formatdef",
+          "request_sha256": "67a4c8187e3f91e125f3eb4659fdabbe5bf6ba6afe868652e4ea4de40cc72226",
+          "structural_tests": [
+            "testing/test_helpers.py::test_formatdef"
+          ]
+        },
+        {
+          "candidates": [
+            "testing/test_multicall.py::test_wrapper_exception",
+            "testing/test_multicall.py::test_hookwrapper_force_exception",
+            "testing/test_result.py::test_exceptions_traceback_doesnt_get_longer_and_longer"
+          ],
+          "function": "src/pluggy/_result.py::Result.from_call",
+          "request_sha256": "8fc9226c535989bb9ceec9ed1e050a076140ddd9ce23b83015f75c58813de607",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_invocations.py::test_firstresult_force_result",
+            "testing/test_invocations.py::test_firstresult_force_result_hookwrapper",
+            "testing/test_result.py::test_exceptions_traceback_doesnt_get_longer_and_longer"
+          ],
+          "function": "src/pluggy/_result.py::Result.force_result",
+          "request_sha256": "bf4bd841b5976864f3b1e66e2d281b53350ef622b7cc69787db7321652c02a39",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_dist_facade_project_name_and_delegation",
+            "testing/test_details.py::test_dunder_getattr_missing_raises",
+            "testing/test_details.py::test_plugin_getattr_raises_errors"
+          ],
+          "function": "src/pluggy/__init__.py::__getattr__",
+          "request_sha256": "824ba0af77d1d8c96fde1486c597b45fa39dc7678bc674ef3237e209b71bdacd",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_warnings.py::test_teardown_raised_warning",
+            "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller",
+            "testing/test_helpers.py::test_varnames_hookspec_without_self"
+          ],
+          "function": "src/pluggy/_callers.py::_warn_teardown_exception",
+          "request_sha256": "16f03b42ce0c44274a5712267c18ad1254984d6044a8cb02cea31c69f31b68dd",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_tracer.py::test_setprocessor",
+            "testing/test_tracer.py::test_readable_output_dictargs",
+            "testing/test_tracer.py::test_indent"
+          ],
+          "function": "src/pluggy/_tracing.py::TagTracer._format_message",
+          "request_sha256": "1f2764859e60cf24071448971558b4eb955e3030e9bacad8848523094c3c865d",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_hookspec_lookup_ignores_properties",
+            "testing/test_pluginmanager.py::test_register_ignores_unmarked_class_and_static_methods",
+            "testing/test_hookcaller.py::test_remove_plugin_not_found_raises"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.parse_hookimpl_opts",
+          "request_sha256": "38f6b85bec1a12ef5972017b0dedfdc6b90bc08f51cc39137c47e0b70b3df553",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_dist_facade_project_name_and_delegation",
+            "testing/test_pluginmanager.py::test_load_setuptools_instantiation",
+            "testing/test_details.py::test_dist_facade_list_attributes"
+          ],
+          "function": "src/pluggy/_compat.py::DistFacade.project_name",
+          "request_sha256": "582505b4824d95bbf0ca6ab1954ecd8e852b37821d7834e170ed17dfc7d09f74",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_hookspec_lookup_ignores_properties",
+            "testing/test_pluginmanager.py::test_register_ignores_unmarked_class_and_static_methods",
+            "testing/test_helpers.py::test_varnames_hookspec_without_self"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.parse_hookspec_opts",
+          "request_sha256": "2b98d8d89c590f1406fbf09c1029b74518f5afdc05739f36660e94ccaa2ddc93",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_invocations.py::test_only_kwargs",
+            "testing/test_invocations.py::test_opt_in_args",
+            "testing/test_pluginmanager.py::test_load_setuptools_instantiation"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.get_plugin",
+          "request_sha256": "0acf0a88b635d0e2020af211d97d52cf46f3ac3c4e3766842076da649b585047",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_tracer.py::test_setprocessor",
+            "testing/test_tracer.py::test_indent",
+            "testing/test_tracer.py::test_simple"
+          ],
+          "function": "src/pluggy/_tracing.py::TagTracer.__init__",
+          "request_sha256": "78ffca1b9c3d534d51b0e0fd80672defac39e2b57537f437c48ef2b21fd31651",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_subset_hook_caller",
+            "testing/test_hookcaller.py::test_hookrelay_registry",
+            "testing/test_pluginmanager.py::test_historic_with_subset_hook_caller"
+          ],
+          "function": "src/pluggy/_hooks.py::_SubsetHookCaller.__repr__",
+          "request_sha256": "fe657c919a2a36916fa7ac575d6ab9f3e83edfd5923b334eb29d7ea7154cfacd",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_hookcaller.py::test_hookrelay_registry",
+            "testing/test_helpers.py::test_varnames_hookspec_without_self",
+            "testing/test_pluginmanager.py::test_register_ignores_non_callable_instance_attributes"
+          ],
+          "function": "src/pluggy/_hooks.py::HookRelay.__init__",
+          "request_sha256": "360d42f50bbd83a40418ef1767b142656498c8f4170d3eab90c7382a2fc4a5df",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_with_result_memorized",
+            "testing/test_invocations.py::test_firstresult_force_result",
+            "testing/test_invocations.py::test_firstresult_force_result_hookwrapper"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller._maybe_apply_history",
+          "request_sha256": "a8f091f22528f5512f798746934a16fa05a86e477be975c62d4f2a9fdb9314b4",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_tracer.py::test_setprocessor",
+            "testing/test_tracer.py::test_indent",
+            "testing/test_tracer.py::test_simple"
+          ],
+          "function": "src/pluggy/_tracing.py::TagTracerSub.__init__",
+          "request_sha256": "90f6187318510edb882c0be18285b91956638861cedb2d8563a32cffc8b52296",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+            "testing/test_details.py::test_plugin_getattr_raises_errors",
+            "testing/test_pluginmanager.py::test_historic_with_subset_hook_caller"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.subset_hook_caller",
+          "request_sha256": "cf01599e057fc250ae8594a810328878b9a41e70f26b32efb8f1519541da7fa8",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_register_while_calling",
+            "testing/test_pluginmanager.py::test_with_result_memorized",
+            "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_falsy_values_allowed_as_default"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.is_registered",
+          "request_sha256": "bd4ccdf96b8caa7d23fa4bf8217ddf9943366b5510a6c4a0a4185f49e4c5b149",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_invocations.py::test_wrappers_yield_never_fails",
+            "testing/test_details.py::test_warn_when_deprecated_args_specified",
+            "testing/test_pluginmanager.py::test_register_instance_attribute_bound_method"
+          ],
+          "function": "src/pluggy/_callers.py::_raise_wrapfail",
+          "request_sha256": "d3a4b68ce781720b473b54ed943f767272825d223a3dffc9ce9dd6f86512abf5",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+            "testing/test_invocations.py::test_only_kwargs",
+            "testing/test_invocations.py::test_argmismatch"
+          ],
+          "function": "src/pluggy/_manager.py::PluginValidationError.__init__",
+          "request_sha256": "9bee5abcae9eb59b1db9bc8d1e5c413a46801a630d435fabbb1710f5ea0d4330",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_load_setuptools_instantiation",
+            "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller",
+            "testing/test_pluginmanager.py::test_unregister_plugin_with_multi_hookimpls"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.list_plugin_distributions",
+          "request_sha256": "cd04f2209f279fd9b41cf3413efeaaa4ff30626fb08aedf6ed90d400082d3d99",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_register_while_calling",
+            "testing/test_details.py::test_parse_hookimpl_override",
+            "testing/test_hookcaller.py::test_adding_wrappers_complex"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller._add_hookimpl",
+          "request_sha256": "3ee05462e8ea0eb49eee908fee1c58d94dce0990880852cb90d524da7e0dde9c",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_result.py::test_exceptions_traceback_doesnt_get_longer_and_longer",
+            "testing/test_invocations.py::test_firstresult_returns_none",
+            "testing/test_pluginmanager.py::test_register_while_calling"
+          ],
+          "function": "src/pluggy/_result.py::Result.get_result",
+          "request_sha256": "1c3ce1b5742ca3437f003baf2cacf5b8a9c782a3eb19564ac719832cba1a4002",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_tracer.py::test_setprocessor",
+            "testing/test_tracer.py::test_readable_output_dictargs",
+            "testing/test_tracer.py::test_simple"
+          ],
+          "function": "src/pluggy/_tracing.py::TagTracer._processmessage",
+          "request_sha256": "436df873eed876f33ef6a8058ade8eb42680940d5e3b3b7bbdda9c2262b2a18e",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_unregister_plugin_with_multi_hookimpls",
+            "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+            "testing/test_hookcaller.py::test_hookrelay_registration_by_specname"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller.get_hookimpls",
+          "request_sha256": "4e1cc49e6735a03b28ae2f26db256024fb5e98a53b4dfa427a3cd9c99f077510",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_load_setuptools_instantiation",
+            "testing/test_details.py::test_dist_facade_project_name_and_delegation",
+            "testing/test_details.py::test_dist_facade_identity_equality_and_hash"
+          ],
+          "function": "src/pluggy/_compat.py::DistFacade.__init__",
+          "request_sha256": "e8e073b090debd10f91fe81a7085dec980fca1f6c659d942473f2fc5ce117a18",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_hookcaller.py::test_hookrelay_registration_by_specname_raises",
+            "testing/test_pluginmanager.py::test_register_while_calling",
+            "testing/test_helpers.py::test_varnames_unresolvable_annotation"
+          ],
+          "function": "src/pluggy/_hooks.py::HookimplMarker.__call__",
+          "request_sha256": "59adf6d34ccd8496f937efcc05fd4f7d4d9ca631e69bd21f4abd9646863b3a5c",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_tracer.py::test_setprocessor",
+            "testing/test_tracer.py::test_simple",
+            "testing/test_tracer.py::test_indent"
+          ],
+          "function": "src/pluggy/_tracing.py::TagTracer.setprocessor",
+          "request_sha256": "1f08e10f35c6e1a3835f9bc5c089cb28b0419fd76ee701ba352208a07cebffa1",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_multicall.py::test_hookwrapper_exception",
+            "testing/test_multicall.py::test_wrapper_exception",
+            "testing/test_multicall.py::test_hookwrapper_force_exception"
+          ],
+          "function": "src/pluggy/_result.py::Result.__init__",
+          "request_sha256": "d854f932580236579543da629074f4dbabe25189699b88caf8fc8919900006da",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_register_ignores_raising_descriptors",
+            "testing/test_pluginmanager.py::test_register_instance_attribute_bound_method",
+            "testing/test_pluginmanager.py::test_register_instance_attribute_function_is_not_bound"
+          ],
+          "function": "src/pluggy/_manager.py::_instance_dict",
+          "request_sha256": "e8725810982c0607222968d067074784846ed9acc0578e51c6aa2c16f0b37686",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_parse_hookimpl_override",
+            "testing/test_pluginmanager.py::test_register_while_calling",
+            "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.add_hookspecs",
+          "request_sha256": "1dca4dab47b51278f65cd48b070de65477252a52800f2038a90b7f06a8f20d65",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_hookcaller.py::test_hookrelay_registration_by_specname_raises",
+            "testing/test_pluginmanager.py::test_register_instance_attribute_function_is_not_bound",
+            "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates"
+          ],
+          "function": "src/pluggy/_hooks.py::varnames",
+          "request_sha256": "7d7e7c9fea1808c0035529269d30c14723fa61e67f8a683eb62ff91289ae3eab",
+          "structural_tests": [
+            "testing/test_helpers.py::test_varnames",
+            "testing/test_helpers.py::test_varnames_bound_method_from_module_function",
+            "testing/test_helpers.py::test_varnames_class",
+            "testing/test_helpers.py::test_varnames_classmethod",
+            "testing/test_helpers.py::test_varnames_decorator",
+            "testing/test_helpers.py::test_varnames_default",
+            "testing/test_helpers.py::test_varnames_hookspec_without_self",
+            "testing/test_helpers.py::test_varnames_keyword_only",
+            "testing/test_helpers.py::test_varnames_legacy_noself_no_warn_with_self",
+            "testing/test_helpers.py::test_varnames_legacy_noself_suppressed_for_timeout_hooks",
+            "testing/test_helpers.py::test_varnames_legacy_noself_warns",
+            "testing/test_helpers.py::test_varnames_no_legacy_noself_no_warn",
+            "testing/test_helpers.py::test_varnames_staticmethod",
+            "testing/test_helpers.py::test_varnames_unconventional_first_param_name",
+            "testing/test_helpers.py::test_varnames_unresolvable_annotation"
+          ]
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_set_blocked",
+            "testing/test_pluginmanager.py::test_unregister_blocked",
+            "testing/test_hookcaller.py::test_hookrelay_registry"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.set_blocked",
+          "request_sha256": "9d8fa67798cfc2372cc722807fe29ddb7dbfb90ca094d80c8925bc02f848b6b5",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_with_result_memorized",
+            "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_historic_replay",
+            "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller._apply_defaults",
+          "request_sha256": "79edd3b89c9d74de7957c3d57ce3abff3ea0a1273e45e61de15456d666f58ebd",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_with_result_memorized",
+            "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+            "testing/test_details.py::test_not_all_arguments_are_provided_issues_a_warning"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller.call_historic",
+          "request_sha256": "bae002ce854c2d37bca0999f9939a8055cc40af34d8d86435686d4b951e191bf",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_tracer.py::test_setprocessor",
+            "testing/test_tracer.py::test_indent",
+            "testing/test_tracer.py::test_simple"
+          ],
+          "function": "src/pluggy/_tracing.py::TagTracerSub.get",
+          "request_sha256": "776ce872d0403d84e8227e8edd6189858d4108a3b0e01ddb402278ab61a3079a",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_parse_hookimpl_override",
+            "testing/test_pluginmanager.py::test_hookspec_lookup_ignores_properties",
+            "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates"
+          ],
+          "function": "src/pluggy/_hooks.py::_SubsetHookCaller.spec",
+          "request_sha256": "ea1f107aba525663680bf475b4d454edcbc57145526414f1ad39e7d53cfdfbdf",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_historic_with_subset_hook_caller",
+            "testing/test_pluginmanager.py::test_subset_hook_caller_with_specname",
+            "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates"
+          ],
+          "function": "src/pluggy/_hooks.py::_SubsetHookCaller._hookimpls",
+          "request_sha256": "f6561c0e83f13b9fe8b894f95b17e363b7ac85242d98f144c4b573997ba41ab4",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_hookcaller.py::test_hook_conflict",
+            "testing/test_pluginmanager.py::test_register_while_calling",
+            "testing/test_pluginmanager.py::test_with_result_memorized"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller.set_specification",
+          "request_sha256": "4b25ec88cfb7a7f213627d09ea3e9dd36e0329aa48322ad94c47159e1811e76a",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_dist_facade_list_attributes",
+            "testing/test_details.py::test_dist_facade_identity_equality_and_hash",
+            "testing/test_details.py::test_dist_facade_project_name_and_delegation"
+          ],
+          "function": "src/pluggy/_compat.py::DistFacade.__getattr__",
+          "request_sha256": "15b716ceed6c76ad840b2e4d573f7b602745177874d0eb04e82670cfc92e5cd6",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_helpers.py::test_varnames_hookspec_without_self",
+            "testing/test_pluginmanager.py::test_register_ignores_unmarked_class_and_static_methods",
+            "testing/test_details.py::test_warn_when_deprecated_args_specified"
+          ],
+          "function": "src/pluggy/_hooks.py::HookSpec.__init__",
+          "request_sha256": "74690057d2888504847563ea1c00b535f7d17dc732220ae9c259f3df0f2d0192",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller",
+            "testing/test_details.py::test_not_all_arguments_are_provided_issues_a_warning",
+            "testing/test_helpers.py::test_varnames_hookspec_without_self"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller._verify_all_args_are_provided",
+          "request_sha256": "495250171ea73628c1afcf6536c66065c6b164035edae050884cce25ba720085",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+            "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+            "testing/test_pluginmanager.py::test_add_tracefuncs"
+          ],
+          "function": "src/pluggy/_manager.py::PluginManager.get_hookcallers",
+          "request_sha256": "ee73031323e1847f7fcbdbdccc5abd4d22db26ae50606234293b6ad6899f913c",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_multicall.py::test_hookwrapper_exception",
+            "testing/test_multicall.py::test_hookwrapper_force_exception",
+            "testing/test_multicall.py::test_wrapper_exception"
+          ],
+          "function": "src/pluggy/_result.py::Result.exception",
+          "request_sha256": "437938568ceca4732be7ad18f58065c12ad0218ab9605fa45dc2debab8c6435e",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_pluginmanager.py::test_register_while_calling",
+            "testing/test_details.py::test_parse_hookimpl_override",
+            "testing/test_details.py::test_plugin_getattr_raises_errors"
+          ],
+          "function": "src/pluggy/_hooks.py::HookspecMarker.__init__",
+          "request_sha256": "1be2af903fda0609587a70c4319b7b6f59afe363d80a805cd17aee7fe5d34b09",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_not_all_arguments_are_provided_issues_a_warning",
+            "testing/test_details.py::test_parse_hookimpl_override",
+            "testing/test_pluginmanager.py::test_with_result_memorized"
+          ],
+          "function": "src/pluggy/_hooks.py::HookCaller.call_extra",
+          "request_sha256": "63a584c1be6b621d1c9671d76841cd0081ffb70bf91605ff8f88a40a531afd01",
+          "structural_tests": []
+        },
+        {
+          "candidates": [
+            "testing/test_details.py::test_dist_facade_list_attributes",
+            "testing/test_details.py::test_dist_facade_project_name_and_delegation",
+            "testing/test_pluginmanager.py::test_load_setuptools_instantiation"
+          ],
+          "function": "src/pluggy/_compat.py::DistFacade.__dir__",
+          "request_sha256": "90d70fe3db3c1481bf75f9ea8354b9666961e441bb27113ac21fd637040ac8cb",
+          "structural_tests": []
+        }
+      ],
+      "test_ids": [
+        "testing/test_details.py::test_dist_facade_identity_equality_and_hash",
+        "testing/test_details.py::test_dist_facade_list_attributes",
+        "testing/test_details.py::test_dist_facade_project_name_and_delegation",
+        "testing/test_details.py::test_dunder_getattr_missing_raises",
+        "testing/test_details.py::test_dunder_version",
+        "testing/test_details.py::test_hook_nonspec_call",
+        "testing/test_details.py::test_hookimpl_disallow_invalid_combination",
+        "testing/test_details.py::test_not_all_arguments_are_provided_issues_a_warning",
+        "testing/test_details.py::test_not_all_arguments_warning_points_at_the_caller",
+        "testing/test_details.py::test_parse_hookimpl_override",
+        "testing/test_details.py::test_plugin_getattr_raises_errors",
+        "testing/test_details.py::test_repr",
+        "testing/test_details.py::test_warn_when_deprecated_args_specified",
+        "testing/test_details.py::test_warn_when_deprecated_specified",
+        "testing/test_details.py::test_wrapper_runtimeerror_passtrough",
+        "testing/test_helpers.py::test_formatdef",
+        "testing/test_helpers.py::test_varnames",
+        "testing/test_helpers.py::test_varnames_bound_method_from_module_function",
+        "testing/test_helpers.py::test_varnames_class",
+        "testing/test_helpers.py::test_varnames_classmethod",
+        "testing/test_helpers.py::test_varnames_decorator",
+        "testing/test_helpers.py::test_varnames_default",
+        "testing/test_helpers.py::test_varnames_hookspec_without_self",
+        "testing/test_helpers.py::test_varnames_keyword_only",
+        "testing/test_helpers.py::test_varnames_legacy_noself_no_warn_with_self",
+        "testing/test_helpers.py::test_varnames_legacy_noself_suppressed_for_timeout_hooks",
+        "testing/test_helpers.py::test_varnames_legacy_noself_warns",
+        "testing/test_helpers.py::test_varnames_no_legacy_noself_no_warn",
+        "testing/test_helpers.py::test_varnames_staticmethod",
+        "testing/test_helpers.py::test_varnames_unconventional_first_param_name",
+        "testing/test_helpers.py::test_varnames_unresolvable_annotation",
+        "testing/test_hookcaller.py::test_adding_nonwrappers",
+        "testing/test_hookcaller.py::test_adding_nonwrappers_tryfirst",
+        "testing/test_hookcaller.py::test_adding_nonwrappers_trylast",
+        "testing/test_hookcaller.py::test_adding_nonwrappers_trylast2",
+        "testing/test_hookcaller.py::test_adding_nonwrappers_trylast3",
+        "testing/test_hookcaller.py::test_adding_wrappers_complex",
+        "testing/test_hookcaller.py::test_adding_wrappers_ordering",
+        "testing/test_hookcaller.py::test_adding_wrappers_ordering_tryfirst",
+        "testing/test_hookcaller.py::test_call_extra_hook_order",
+        "testing/test_hookcaller.py::test_hook_conflict",
+        "testing/test_hookcaller.py::test_hookimpl",
+        "testing/test_hookcaller.py::test_hookrelay_registration_by_specname",
+        "testing/test_hookcaller.py::test_hookrelay_registration_by_specname_raises",
+        "testing/test_hookcaller.py::test_hookrelay_registry",
+        "testing/test_hookcaller.py::test_hookspec",
+        "testing/test_hookcaller.py::test_remove_plugin_not_found_raises",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_added_after_registration",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_basic",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_call_extra",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_does_not_override_hookimpl_default",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_falsy_values_allowed_as_default",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_historic_replay",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_new_call_argument_is_not_delivered_by_old_spec",
+        "testing/test_invocations.py::TestHookspecDefaultArgumentValue.test_old_spec_new_impl",
+        "testing/test_invocations.py::test_argmismatch",
+        "testing/test_invocations.py::test_call_order",
+        "testing/test_invocations.py::test_firstresult_definition",
+        "testing/test_invocations.py::test_firstresult_force_result",
+        "testing/test_invocations.py::test_firstresult_force_result_hookwrapper",
+        "testing/test_invocations.py::test_firstresult_no_plugin",
+        "testing/test_invocations.py::test_firstresult_returns_none",
+        "testing/test_invocations.py::test_no_hookspec",
+        "testing/test_invocations.py::test_non_wrapper_generator",
+        "testing/test_invocations.py::test_only_kwargs",
+        "testing/test_invocations.py::test_opt_in_args",
+        "testing/test_invocations.py::test_wrappers_yield_never_fails",
+        "testing/test_invocations.py::test_wrappers_yield_twice_fails",
+        "testing/test_multicall.py::test_call_none_is_no_result",
+        "testing/test_multicall.py::test_hookwrapper",
+        "testing/test_multicall.py::test_hookwrapper_exception",
+        "testing/test_multicall.py::test_hookwrapper_force_exception",
+        "testing/test_multicall.py::test_hookwrapper_not_yield",
+        "testing/test_multicall.py::test_hookwrapper_order",
+        "testing/test_multicall.py::test_hookwrapper_too_many_yield",
+        "testing/test_multicall.py::test_hookwrapper_two_yields",
+        "testing/test_multicall.py::test_hookwrapper_yield_not_executed",
+        "testing/test_multicall.py::test_keyword_args",
+        "testing/test_multicall.py::test_keyword_args_with_defaultargs",
+        "testing/test_multicall.py::test_suppress_inner_wrapper_teardown_exc",
+        "testing/test_multicall.py::test_tags_call_error",
+        "testing/test_multicall.py::test_unwind_inner_wrapper_teardown_exc",
+        "testing/test_multicall.py::test_wrapper",
+        "testing/test_multicall.py::test_wrapper_exception",
+        "testing/test_multicall.py::test_wrapper_exception_chaining",
+        "testing/test_multicall.py::test_wrapper_stopiteration_passtrough",
+        "testing/test_multicall.py::test_wrapper_too_many_yield",
+        "testing/test_multicall.py::test_wrapper_two_yields",
+        "testing/test_multicall.py::test_wrapper_yield_not_executed",
+        "testing/test_pluginmanager.py::test_add_hookspecs_nohooks",
+        "testing/test_pluginmanager.py::test_add_tracefuncs",
+        "testing/test_pluginmanager.py::test_call_extra",
+        "testing/test_pluginmanager.py::test_call_with_too_few_args",
+        "testing/test_pluginmanager.py::test_check_pending_nonspec_hook",
+        "testing/test_pluginmanager.py::test_check_pending_optionalhook",
+        "testing/test_pluginmanager.py::test_check_pending_skips_underscore",
+        "testing/test_pluginmanager.py::test_get_hookcallers",
+        "testing/test_pluginmanager.py::test_get_hookcallers_no_duplicates",
+        "testing/test_pluginmanager.py::test_get_hookimpls",
+        "testing/test_pluginmanager.py::test_has_plugin",
+        "testing/test_pluginmanager.py::test_historic_with_subset_hook_caller",
+        "testing/test_pluginmanager.py::test_hook_tracing",
+        "testing/test_pluginmanager.py::test_hookspec_lookup_ignores_properties",
+        "testing/test_pluginmanager.py::test_load_setuptools_instantiation",
+        "testing/test_pluginmanager.py::test_plugin_double_register",
+        "testing/test_pluginmanager.py::test_pm",
+        "testing/test_pluginmanager.py::test_pm_name",
+        "testing/test_pluginmanager.py::test_register",
+        "testing/test_pluginmanager.py::test_register_both_wrapper_and_hookwrapper",
+        "testing/test_pluginmanager.py::test_register_dynamic_attr",
+        "testing/test_pluginmanager.py::test_register_historic",
+        "testing/test_pluginmanager.py::test_register_historic_incompat_hookwrapper",
+        "testing/test_pluginmanager.py::test_register_historic_incompat_wrapper",
+        "testing/test_pluginmanager.py::test_register_hookimpl_above_classmethod",
+        "testing/test_pluginmanager.py::test_register_hookimpl_above_staticmethod",
+        "testing/test_pluginmanager.py::test_register_hookwrapper_not_a_generator_function",
+        "testing/test_pluginmanager.py::test_register_ignores_cached_property",
+        "testing/test_pluginmanager.py::test_register_ignores_non_callable_instance_attributes",
+        "testing/test_pluginmanager.py::test_register_ignores_properties",
+        "testing/test_pluginmanager.py::test_register_ignores_raising_descriptors",
+        "testing/test_pluginmanager.py::test_register_ignores_unmarked_class_and_static_methods",
+        "testing/test_pluginmanager.py::test_register_instance_attribute_bound_method",
+        "testing/test_pluginmanager.py::test_register_instance_attribute_function_is_not_bound",
+        "testing/test_pluginmanager.py::test_register_mismatch_arg",
+        "testing/test_pluginmanager.py::test_register_mismatch_method",
+        "testing/test_pluginmanager.py::test_register_module_level_bound_method",
+        "testing/test_pluginmanager.py::test_register_slot_attribute_function_is_not_bound",
+        "testing/test_pluginmanager.py::test_register_unknown_hooks",
+        "testing/test_pluginmanager.py::test_register_while_calling",
+        "testing/test_pluginmanager.py::test_set_blocked",
+        "testing/test_pluginmanager.py::test_subset_hook_caller",
+        "testing/test_pluginmanager.py::test_subset_hook_caller_with_specname",
+        "testing/test_pluginmanager.py::test_unregister_blocked",
+        "testing/test_pluginmanager.py::test_unregister_plugin_with_multi_hookimpls",
+        "testing/test_pluginmanager.py::test_with_callbacks_immediately_executed",
+        "testing/test_pluginmanager.py::test_with_result_memorized",
+        "testing/test_result.py::test_exceptions_traceback_doesnt_get_longer_and_longer",
+        "testing/test_tracer.py::test_dbl_plugin_tracing",
+        "testing/test_tracer.py::test_indent",
+        "testing/test_tracer.py::test_plugin_tracing",
+        "testing/test_tracer.py::test_readable_output_dictargs",
+        "testing/test_tracer.py::test_setprocessor",
+        "testing/test_tracer.py::test_simple",
+        "testing/test_warnings.py::test_hookspec_missing_self_warns",
+        "testing/test_warnings.py::test_hookspec_staticmethod_no_warning",
+        "testing/test_warnings.py::test_hookspec_with_self_no_warning",
+        "testing/test_warnings.py::test_teardown_raised_warning"
+      ]
+    }
+  ],
+  "schema": 1
+}
