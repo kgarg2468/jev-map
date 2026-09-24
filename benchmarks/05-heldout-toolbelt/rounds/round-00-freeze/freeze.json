@@ -1,8 +1,8 @@
 {
   "config_sha256": "521a990d71f9c487b2f17b4f4e8eef695d51287c3b7b3ffb1b2479c1f5e65bb0",
-  "implementation_sha256": "89a87982d85031ef326d1771c20053da51eded351af2e2c222cb2fc8c3f571d2",
+  "implementation_sha256": "2ed2df2a8303f2daddee15625ea61b177ab9ce11381cf66fab639475702d4a51",
   "prior_freeze_sha256": "c6d00f5118c6ff372cd536b7473cd51eba025e9d3ec7594771ab8a601032cf85",
-  "protocol_sha256": "2718341067cf4b4265126357b112827edd797c83b5802ba2bd9afb7b48e744a5",
+  "protocol_sha256": "a50637a7bc3691d080e1ea71d8dfa376f361816f1857491beabe53f27d43edf1",
   "repositories": [
     {
       "commit": "961dcff3f42e73b245aef65e377fe82763b257bb",

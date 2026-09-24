@@ -1,0 +1,10 @@
+{
+  "requests": 144,
+  "structural_targets": 14,
+  "targets": 144,
+  "tests": {
+    "boltons": 388,
+    "h11": 72,
+    "pluggy": 147
+  }
+}

@@ -24,7 +24,8 @@ for a broad generalization.
    48 per repository. Do not filter on structural, lexical, or Graphify links.
 2. Record repository commits and file hashes; selected function IDs; all parsed
    test IDs; structural test links; the up-to-three lexical candidates per target;
-   and exact Jev request hashes in `freeze.json`. Commit and publish the freeze
+   and exact Jev request hashes in `rounds/round-00-freeze/freeze.json` with a
+   checksum manifest. Commit and publish the freeze
    before provider calls or any new test-call profiling.
 3. Verify the frozen identities, run each full test suite as preflight, build
    Graphify `graphifyy==0.9.67` with `extract --code-only --no-cluster`, and

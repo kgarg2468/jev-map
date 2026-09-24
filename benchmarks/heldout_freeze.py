@@ -8,6 +8,7 @@ import json
 import subprocess
 from pathlib import Path
 
+from benchmarks.archive import staged_round
 from jev_map.enrich import make_request, proposals
 from jev_map.index import build, digest
 
@@ -55,7 +56,8 @@ def selected_functions(config: dict, repo: dict, data: dict, old_ids: set[str]) 
 
 def implementation_sha256() -> str:
     files = [PROJECT / "src/jev_map/index.py", PROJECT / "src/jev_map/enrich.py",
-             PROJECT / "src/jev_map/provider.py", Path(__file__)]
+             PROJECT / "src/jev_map/provider.py", PROJECT / "benchmarks/archive.py",
+             Path(__file__)]
     return digest({file.relative_to(PROJECT).as_posix(): file.read_text() for file in files})
 
 
@@ -95,7 +97,8 @@ def freeze(config: dict, roots: dict[str, Path]) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", action="append", required=True, help="name=/absolute/path")
-    parser.add_argument("--out", type=Path, default=HERE / "freeze.json")
+    parser.add_argument("--out", type=Path, default=HERE / "rounds/round-00-freeze",
+                        help="New, non-existing round directory")
     args = parser.parse_args()
     roots = {}
     for value in args.repo:
@@ -104,17 +107,16 @@ def main() -> None:
             parser.error("Use unique name=/absolute/path repository arguments")
         roots[name] = Path(path).resolve(strict=True)
     value = freeze(json.loads(CONFIG.read_text()), roots)
-    if args.out.exists():
-        raise FileExistsError(f"Refusing to replace frozen sample: {args.out}")
-    args.out.parent.mkdir(parents=True, exist_ok=True)
-    args.out.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
-    print(json.dumps({"targets": sum(len(repo["targets"]) for repo in value["repositories"]),
-                      "requests": sum(item["request_sha256"] is not None
-                                      for repo in value["repositories"] for item in repo["targets"]),
-                      "structural_targets": sum(bool(item["structural_tests"])
-                                                for repo in value["repositories"] for item in repo["targets"]),
-                      "tests": {repo["name"]: len(repo["test_ids"]) for repo in value["repositories"]}},
-                     indent=2, sort_keys=True))
+    summary = {"targets": sum(len(repo["targets"]) for repo in value["repositories"]),
+               "requests": sum(item["request_sha256"] is not None
+                               for repo in value["repositories"] for item in repo["targets"]),
+               "structural_targets": sum(bool(item["structural_tests"])
+                                         for repo in value["repositories"] for item in repo["targets"]),
+               "tests": {repo["name"]: len(repo["test_ids"]) for repo in value["repositories"]}}
+    with staged_round(args.out) as stage:
+        (stage / "freeze.json").write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
+        (stage / "summary.json").write_text(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+    print(json.dumps(summary, indent=2, sort_keys=True))
 
 
 if __name__ == "__main__":
