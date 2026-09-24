@@ -1,0 +1,257 @@
+{
+  "config_sha256": "282ed2fe767b84173d3832e59b9ed4e13eb118e477de3fe743127f49849ae6c4",
+  "freeze_code_sha256": "8629ef30dd6885dfe79b67c71010e0eba4995cd2fe12a410c1b8d2372cfb5534",
+  "protocol_sha256": "13dc2c5eb2b109c1f60c61a2df7cce619479fc807fb8ceab199796ca7d6088c8",
+  "repositories": [
+    {
+      "commit": "3c082c654c2804b9354e4b62dbd2994f1aac464d",
+      "file_hashes": {
+        "docs/conf.py": "f68affa8dfcf4a20d5fe872cfb0e19f9b284f8feda563dd8e8e23eafe75cd4eb",
+        "src/cachetools/__init__.py": "525ba807fed4af10744f068b5f9b81710903b6f73ee897469d3bf615847e2bd0",
+        "src/cachetools/_cached.py": "e4a75ee34a6d1b582ec8567080ca90eca9c330f0c8f878b7372a861dbc1e18f4",
+        "src/cachetools/_cachedmethod.py": "ad2e75ebb6d3131225f36ce63c6f281700e675aff79ce2d447f8e97132b4ecb4",
+        "src/cachetools/func.py": "87724e4fc82303fd5172cc9fd03c7aaf6a767c6c477f3cb74a245fc45ebf7816",
+        "src/cachetools/keys.py": "9550bd6914744c2fc6fd211dfb83cdae2d6206b1a1bfcf052d017cb23b39b49e",
+        "tests/__init__.py": "72d99005a5d409aa14990b42b54646b726a4f3ca7a091a6f4831ff7701293eb8",
+        "tests/test_cache.py": "dbdf81b02f344a0e62a5dcf2364be7e135e2511e765e93b43864aeb7aa3b115c",
+        "tests/test_cached.py": "27097d0df26efd2e6f72d03e5a8c9cdd7c4b5545ecee38aa439a78538c72fb0a",
+        "tests/test_cachedmethod.py": "d5b131d062ef613bbbcaaf107b4ab0a2f28f4bf505dd00964d2c46cf5ac757bf",
+        "tests/test_classmethod.py": "465e882cf15481277cef959eb5d4ec0072d61c342079cac05684da55fe543851",
+        "tests/test_fifo.py": "c6134627b4d9daab20e67b27fe2ff8d7e225116ae46d6a0e79b2c9b620d25941",
+        "tests/test_func.py": "668e212d3a49b5442578e1a77579bacd20bbd466a8ea4a18ac04969fa4e75827",
+        "tests/test_keys.py": "c6e39d6e781cb737159b43d725c4a0f00ce6f2885376fb6efd01c5d59e196064",
+        "tests/test_lfu.py": "11981704035d965ae733140734efb7cd30615ef492cfeeb464f63992db59b404",
+        "tests/test_lru.py": "dbfd53eb372f24571f70d739faeb6c4963f79c80ef18228f44b38b1112bf1a6c",
+        "tests/test_rr.py": "7f56f910027e0f38f10757a0b7feb3493ddea6a71ae0ffd3c24d85485803c373",
+        "tests/test_threading.py": "fd6bfb6b3d0b4c650a1786381ab4c33d04ff348cd5d1e91d8014239df111c165",
+        "tests/test_tlru.py": "461fd80337d3e4a7fba830b30765cce19666611f797568f18740e4f6eea98199",
+        "tests/test_ttl.py": "dad8f3e725176a39a487d23bd4a25930db05380ce0b452f73485506dbe5284d1"
+      },
+      "name": "cachetools",
+      "oracle_sha256": "23a31bfb3ea03d06c154ed8456859e1b4fbbd101498df2b8004598f3c87c6e2c",
+      "profiled_cases": 337,
+      "snapshot_sha256": "fb8a2664318320a871b85d73c243dd05c38792e1ac44708a252c0637eee15d7d",
+      "tasks": [
+        {
+          "function": "src/cachetools/__init__.py::Cache.maxsize",
+          "id": "cachetools-n-01",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/cachetools/__init__.py::TLRUCache.popitem",
+          "id": "cachetools-n-02",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/cachetools/keys.py::_HashedTuple.__radd__",
+          "id": "cachetools-n-03",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/cachetools/func.py::_cache",
+          "id": "cachetools-n-04",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/cachetools/__init__.py::Cache.__missing__",
+          "id": "cachetools-n-05",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/cachetools/__init__.py::_TimedCache.timer",
+          "id": "cachetools-n-06",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/cachetools/keys.py::hashkey",
+          "id": "cachetools-s-01",
+          "stratum": "structural_path"
+        },
+        {
+          "function": "src/cachetools/keys.py::typedkey",
+          "id": "cachetools-s-02",
+          "stratum": "structural_path"
+        }
+      ]
+    },
+    {
+      "commit": "3e58094d3bc414975aad9eadf343a32bdb3b89b3",
+      "file_hashes": {
+        "doc/source/conf.py": "9024f66fdda54fa518f2825280eb104771b5a25790db8f7ccdacc38a1c458fc1",
+        "tenacity/__init__.py": "94b0d4690fcfdc3f62c14d256ae365eae4a9ed55e856690faa94637bf0fb2289",
+        "tenacity/_utils.py": "6ecccb8012d314f5000d75a5a01a1e3257ab1a3d727a21b457e2c922fbe3e79e",
+        "tenacity/after.py": "7ba2aec841d36f880c998f6f2030695db2f4d9bd0ec858273a7b3443a3b429fa",
+        "tenacity/asyncio/__init__.py": "7ddf04467733f102a51dc1cfacb5333fd5b54d6f7733d56c7b95b9c5d0448e48",
+        "tenacity/asyncio/retry.py": "af1d7dc2e951639ad9981ca724b9e484a800d7546d0777edfc2787be6e27310a",
+        "tenacity/before.py": "7db2c269be3697181f9ed6267a5b58052d58f615fd18a61e02972cbb3dbcc32e",
+        "tenacity/before_sleep.py": "4679592140a66a2692b2e070ac0e9076c6cc6093effe073bada55497ac1e2f5f",
+        "tenacity/nap.py": "3cf785c410dd6d4cbf5de5be03e8e9b2a61ef4bb7709c230afe4eff95629be6c",
+        "tenacity/retry.py": "04b41b9a78df02c9143a0199ac5437656f680f42a644edde1b7bfad471925e77",
+        "tenacity/stop.py": "bd4b852e18e886fc271da51760c39fe49ff4174f916f07f3565c280f4f2d2c71",
+        "tenacity/tornadoweb.py": "84e90c180d40ed1e96b29c7607bef40b9f9e840f823c3e883a4d32c8efdfa91d",
+        "tenacity/wait.py": "fab8c53ae00dda64008a70c03654f22e059f3d697c3c8a6029513910fa7179fc",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_after.py": "082d08f27ffedae88e4ad1f294b832440b82fce7744b1f98886b8647bfe9e4b3",
+        "tests/test_asyncio.py": "d81e63c69f92a33868bac1e4393b7e30c14c11749ff8cc1c6e41c7ed8acfdb5c",
+        "tests/test_issue_478.py": "e210b722898a635d3f758fab25e7f9fa2fd6f0c6ef7b89a74320adea20a2ceba",
+        "tests/test_tenacity.py": "ae5041d359fe47cdce271bc6ffc9670bb534fac72b36b42828f5121e0596125d",
+        "tests/test_tornado.py": "2ba1ccfee8b8dc9ae89bf52a22d8f02a784696399d130fa7d7554aefd31e0762",
+        "tests/test_utils.py": "3032069682f3796aa2a66ea970de2f2901164422c9b67a557259bc82860ac856"
+      },
+      "name": "tenacity",
+      "oracle_sha256": "8aa3446a88911863c5d7bd38bff6c21be1de46d22d84feaca1e5bcb3ee15b8c9",
+      "profiled_cases": 184,
+      "snapshot_sha256": "ae36da9f67f1b3d8b221bc9bbf568fbcd578d1479e071cd2de21cc86876f8264",
+      "tasks": [
+        {
+          "function": "tenacity/__init__.py::_first_set",
+          "id": "tenacity-n-01",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "tenacity/__init__.py::AttemptManager.__exit__",
+          "id": "tenacity-n-02",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "tenacity/retry.py::retry_if_exception_message._check",
+          "id": "tenacity-n-03",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "tenacity/retry.py::retry_if_exception.__init__",
+          "id": "tenacity-n-04",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "tenacity/retry.py::retry_base.__or__",
+          "id": "tenacity-n-05",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "tenacity/wait.py::wait_none.__init__",
+          "id": "tenacity-n-06",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "tenacity/_utils.py::find_ordinal",
+          "id": "tenacity-s-01",
+          "stratum": "structural_path"
+        },
+        {
+          "function": "tenacity/__init__.py::Future.construct",
+          "id": "tenacity-s-02",
+          "stratum": "structural_path"
+        }
+      ]
+    },
+    {
+      "commit": "8f767776326faaed11e6c2974798787f6e19b343",
+      "file_hashes": {
+        "bench/test_benchmarks.py": "e1bfee1ff218942d4089285fb513d3456bde1f9fcb8b54f2de94db16514f2b33",
+        "docs/conf.py": "05e7f28d42e260e26830e2742127d060fa3dcc2ab80cb88fff232158b5e323e0",
+        "src/attr/__init__.py": "4fdf747231ee1acc387a5912d163595305e7cf73536a0954a23e12be98e323f8",
+        "src/attr/_cmp.py": "dcd9f54e3c659546225ff9c9a159c4917a0393484cd4360a8f90c4ec665ee22d",
+        "src/attr/_compat.py": "aa4df995064dde6f1177f98dd08ba0cc59b41b8ed197c51106a9e8b484b1ace8",
+        "src/attr/_config.py": "0499fe7dced578eaca08d0eb0a58c2b4293e8d63e39939496d8e5ec52ceafae6",
+        "src/attr/_funcs.py": "20b679523b45d3c7302da505140864241419808aff369931c918a4639e83c0a5",
+        "src/attr/_make.py": "8009324b26e77f13da6c1b2bf687eeee502d81afee1141b8f10cb07448195328",
+        "src/attr/_next_gen.py": "2b205638ab541785abe9c7b833c9a98d46cb0e4186b2ef103b8a099a90dd1d00",
+        "src/attr/_version_info.py": "c3847e1580b734afe43241945899583f87150251fd1d1682fae9b77dc8d89073",
+        "src/attr/converters.py": "be3ce4f8ee6feb27a881b13a734665690fe4c81cfe030089c648f428229a8ed7",
+        "src/attr/exceptions.py": "6f8bcc6e7a10dd5a7059986aad88bfb2c5d508af28d9ce074124b4f5c49433da",
+        "src/attr/filters.py": "64188a58ba774742df099b2aed7d75a67f565fc36c952db05cce23b272ce19cf",
+        "src/attr/setters.py": "b743c8e408df22520d21c2b3992ff7027896f8251e3fb9eabc17ba8aac38d1cf",
+        "src/attr/validators.py": "04df88cefdc8a7176b800c5d35df3bcae0a43d9c303362fc15b783cef53517c5",
+        "src/attrs/__init__.py": "3ea59419611e6cfc16be5521f2a3a69e030ec97e737fac48b7f38b88a06a2006",
+        "src/attrs/converters.py": "f244258eb5707d24d1bbc20dc0493c488d1e1abce659fb6c4fbaccd04ab2a213",
+        "src/attrs/exceptions.py": "0020829a0d7dfaf0c56833d8f6f165d7df523d709030dfdb10db380c02e3ce6b",
+        "src/attrs/filters.py": "54e50c66e83db8453a754b80d1d1758c89d42b43cbddf2e03f45414b977e0831",
+        "src/attrs/setters.py": "78bd5889d6105774f687dfd2608652651d4501c1c66f54ee093cb41342efd925",
+        "src/attrs/validators.py": "c5ccbac03e53b5391d086d5fe1759ba1c3d23b47da06393921f5497cfe92523d",
+        "tests/__init__.py": "5be230fa13a76b43315ce684e1e849c7104db7aa30af69f7d91144b4b665e2d3",
+        "tests/attr_import_star.py": "f90fdab39f0d15f71ae30daf64873ce0696138a6135fc40f344cdbde6087a436",
+        "tests/conftest.py": "925ff366a65330444b904532effbc6af1e8e3d32d717dc0ffef93a9d1b3642c8",
+        "tests/dataclass_transform_example.py": "29398ee3e836498d584aabf11589a6e3a694e41093b9a05f499461992e189fb5",
+        "tests/strategies.py": "b58d18e6ad23be69ad13f55c99ed6ec1fafe856e3b1d55940267806221bb0d40",
+        "tests/test_3rd_party.py": "82ffcfff1a44a7e14e5edb49bdb2ee32fefbb16a8084ff1d26c96ee7eb4f128e",
+        "tests/test_abc.py": "2ea0bd487c98c7a844d44a88b2da415565241dddcc8e35722791bf60e74310ec",
+        "tests/test_annotations.py": "d2ec51d825e182d320edb5e0ca59ccdfa07711508025cf495203b4d4227ae990",
+        "tests/test_cmp.py": "76651ab5477fecd5022760ed4f99a0341dded85d93fecdd6f22f6e009711bf0d",
+        "tests/test_compat.py": "c33cfae2bcb65ed2ffee061509d4caa1bdc5374e4e8383df337c65d131b16725",
+        "tests/test_config.py": "968a38cc8caa9837407d1a5b8d6c3d3cf01c47bc0cf9726c1a3a8116419e60d7",
+        "tests/test_converters.py": "ecd9f3004a18547fd1a8e0eba2319aaa59c9ff3fc379e3d147ffa27a8412fe17",
+        "tests/test_dunders.py": "ddb79f1818310027de83c1b6d260570a99c9846b06d1f4fe0d06e5cd8d0a92d4",
+        "tests/test_filters.py": "04cd3c53577f15fc01a1fa1333ed1dc2c2981d4b82f0eed5bdffd6513e5b6b4b",
+        "tests/test_forward_references.py": "ca3eb5b3dfbf46727cf3a16148a7cd86fb8b2626bec55757312b3c4f955c95ab",
+        "tests/test_funcs.py": "37c44543912a752a1ab2523cd431ad3f26250eae00fbb452b5ccf2f1cdfc47ae",
+        "tests/test_functional.py": "07774b2f233af3d994b0d4293f4d3d51395806e085e3e324e62a795926c076bd",
+        "tests/test_hooks.py": "7a557402fc72bdcd9890e682397e7def040320105a80b210e581db7b29b7ea0b",
+        "tests/test_import.py": "c85434216ffe541d93b1d064ee24a655af2a179820fd9f451efdc92a09a756b9",
+        "tests/test_init_subclass.py": "63c61d21576132d2b88378c90cbc77b9b41607bed5362ab90c6dff4fbb377c44",
+        "tests/test_make.py": "530eb721a0ba49ad9ec1263b6327df668a03927832d473d0a3f078308aa06988",
+        "tests/test_next_gen.py": "43fc68b75b530cabaf0de3ce8df4ef87d23bce0d63f8acfb561fffc2ddc6d4fe",
+        "tests/test_packaging.py": "e13f9905b5c8d3f8ec3c42b7e28ee22a256c308f7adec77b2fe60a451b6a0d96",
+        "tests/test_pattern_matching.py": "b812afdba0cd4832fc34a0b9b9edc19540b2da80609d9cb6b8fa17942b281617",
+        "tests/test_pyright.py": "ab5a68806e0bc76bf2408d65b5e324f0bf49ea587df27135dfb2eb35cb92f286",
+        "tests/test_setattr.py": "cf1d675f6b4aca6d40e78bfeb0dc67c7bb3b30328df4434de66744907de9d06f",
+        "tests/test_slots.py": "4966065569370f6a569166f0ea85bff25e1ca759b315d386fa9c6f5edd2ae83a",
+        "tests/test_utils.py": "3e570bef589393b51320d6cb269b781c2575e209ae26c47d28b7a671b17fe11c",
+        "tests/test_validators.py": "7c6f97e23bbf1443608c1bff91a2881849b43b52f4b0f255acfeb669ef4008a0",
+        "tests/test_version_info.py": "2e0276a89f5c83e789c1c08655aa0a4c44b44b35b9bfc6dddd042220d7a7d10a",
+        "tests/utils.py": "7a1684d6c4bd2b35fba4820c39b7f1146e9079c42ad4eea9407bb2be22031951",
+        "typing_tests/__init__.py": "5be230fa13a76b43315ce684e1e849c7104db7aa30af69f7d91144b4b665e2d3",
+        "typing_tests/baseline.py": "8d7615bc0bf3bdbcd7b35d346013d7ddb09c72ca84bb0811f3676dfb25f2beb9",
+        "typing_tests/mypy.py": "f9a10e2bfd8f1702e8ed308f617cadafd03a2b79c4688befb84a6f90e9765350",
+        "typing_tests/pyrefly.py": "72586f13afe06fc90fd486e9b154dee3f37b6aa05f5480db8e6383f72c6855f6"
+      },
+      "name": "attrs",
+      "oracle_sha256": "d2f167789017a171fb9660513ca6afc4ab2dc60f3578d9252f9a97f4a44d0d7a",
+      "profiled_cases": 1412,
+      "snapshot_sha256": "6cb3920f0d53ff3a3e8c51764cb217f5e6f9fa0e45be093295c3aa5b4f18b082",
+      "tasks": [
+        {
+          "function": "src/attr/validators.py::_MatchesReValidator.__call__",
+          "id": "attrs-n-01",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/attr/_make.py::_CountingAttr.validator",
+          "id": "attrs-n-02",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/attr/_make.py::_ClassBuilder.add_replace",
+          "id": "attrs-n-03",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/attr/_make.py::_setattr",
+          "id": "attrs-n-04",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/attr/setters.py::convert",
+          "id": "attrs-n-05",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/attr/_make.py::_ClassBuilder.add_order",
+          "id": "attrs-n-06",
+          "stratum": "no_structural_path"
+        },
+        {
+          "function": "src/attr/converters.py::to_bool",
+          "id": "attrs-s-01",
+          "stratum": "structural_path"
+        },
+        {
+          "function": "src/attr/_make.py::fields",
+          "id": "attrs-s-02",
+          "stratum": "structural_path"
+        }
+      ]
+    }
+  ],
+  "schema": 1
+}
