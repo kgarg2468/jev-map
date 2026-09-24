@@ -9,7 +9,7 @@ from pathlib import Path
 
 from .index import digest
 from .provider import MAX_REQUEST_BYTES, MODEL, ProviderError, validate_response
-from .store import directory, write_json
+from .store import directory, resolve, write_json
 
 QUESTION = (
     "Does test B actually exercise the specific implementation A, directly or through calls "
@@ -26,7 +26,7 @@ def tokens(text: str) -> set[str]:
             if len(word) > 2 and word not in STOP_WORDS}
 
 
-def proposals(data: dict, limit: int = 3) -> list[tuple[dict, list[dict]]]:
+def proposals(data: dict, limit: int = 3, symbol: str | None = None) -> list[tuple[dict, list[dict]]]:
     if not 1 <= limit <= 10:
         raise ValueError("Candidate limit must be between 1 and 10")
     symbols = data["symbols"]
@@ -37,8 +37,15 @@ def proposals(data: dict, limit: int = 3) -> list[tuple[dict, list[dict]]]:
         for word in words:
             counts[word] = counts.get(word, 0) + 1
     linked = {(link["function"], link["test"]) for link in data["links"] if link["evidence"] == "structural"}
+    if symbol is not None:
+        ident = resolve(data, symbol)
+        if symbols[ident]["kind"] == "test":
+            raise ValueError("Jev enrichment requires a production function")
+        functions = [symbols[ident]]
+    else:
+        functions = sorted(symbols.values(), key=lambda s: s["id"])
     results = []
-    for function in sorted(symbols.values(), key=lambda s: s["id"]):
+    for function in functions:
         if function["kind"] == "test":
             continue
         words = tokens(function["name"] + " " + function["text"])
@@ -72,22 +79,27 @@ def make_request(data: dict, function: dict, peers: list[dict], model: str) -> d
 
 
 def enrich(root: Path, data: dict, client, *, model=MODEL, threshold=0.8,
-           candidate_limit=3, max_calls=20) -> dict:
+           candidate_limit=3, max_calls=20, symbol: str | None = None) -> dict:
     import json
 
     if type(threshold) not in (int, float) or not math.isfinite(threshold) or not 0 <= threshold <= 1:
         raise ValueError("Threshold must be a finite number in [0, 1]")
     if type(max_calls) is not int or not 0 <= max_calls <= 1000:
         raise ValueError("max_calls must be an integer between 0 and 1000")
+    target = resolve(data, symbol) if symbol is not None else None
+    if target is not None and data["symbols"][target]["kind"] == "test":
+        raise ValueError("Jev enrichment requires a production function")
     cache = directory(root) / "receipts"
     if cache.is_symlink():
         raise ValueError("Refusing symlinked receipt storage")
     cache.mkdir(mode=0o700, exist_ok=True)
     stats = {"requests": 0, "cache_hits": 0, "errors": 0, "skipped_budget": 0,
              "skipped_oversized": 0, "accepted": 0, "known_input_tokens": 0, "unknown_usage_requests": 0}
-    data["links"] = [link for link in data["links"] if link["evidence"] != "inferred"]
-    decisions = []
-    for function, peers in proposals(data, candidate_limit):
+    data["links"] = [link for link in data["links"]
+                     if link["evidence"] != "inferred" or (target is not None and link["function"] != target)]
+    previous = data.get("enrichment", {}).get("decisions", [])
+    decisions = ([item for item in previous if item["function"] != target] if target is not None else [])
+    for function, peers in proposals(data, candidate_limit, target):
         request = make_request(data, function, peers, model)
         request_hash = digest(request)
         path = cache / f"{request_hash}.json"
@@ -151,6 +163,7 @@ def enrich(root: Path, data: dict, client, *, model=MODEL, threshold=0.8,
                 data["links"].append(link)
                 stats["accepted"] += 1
     data["enrichment"] = {"model": model, "threshold": threshold, "candidate_limit": candidate_limit,
-                          "max_calls": max_calls, "stats": stats, "decisions": decisions,
+                          "max_calls": max_calls, "scope": target or "all", "stats": stats,
+                          "decisions": decisions,
                           "note": "Scores are provider judgments, not calibrated correctness probabilities."}
     return data

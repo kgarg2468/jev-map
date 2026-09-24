@@ -44,6 +44,21 @@ class MapTools:
                     "enrichment": data.get("enrichment", {}).get("stats"),
                     "remaining_session_calls": self.remaining_calls if self.jev else 0}
 
+    def enrich_symbol(self, symbol: str) -> dict:
+        with self.lock:
+            if not self.jev:
+                raise ValueError("Start the server with --jev to allow source uploads")
+            data = load(self.root)
+            def request(payload):
+                self.remaining_calls -= 1
+                return JevClient(env_file=self.env_file)(payload)
+            data = enrich(self.root, data, request, model=self.model,
+                          max_calls=self.remaining_calls, symbol=symbol)
+            save(self.root, data)
+            result = related(data, symbol)
+            result["remaining_session_calls"] = self.remaining_calls
+            return result
+
 
 def create_server(root: Path, **options):
     try:
@@ -74,5 +89,11 @@ def create_server(root: Path, **options):
     def refresh_map() -> dict:
         """Refresh this repository. Jev requests require server startup opt-in and share a call cap."""
         return tools.refresh_map()
+
+    @server.tool(annotations=ToolAnnotations(readOnlyHint=False, destructiveHint=False,
+                                            openWorldHint=bool(options.get("jev", False))))
+    def enrich_symbol(symbol: str) -> dict:
+        """Ask Jev about one function on the fresh map; requires --jev and shares the call cap."""
+        return tools.enrich_symbol(symbol)
 
     return server

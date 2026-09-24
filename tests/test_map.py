@@ -127,6 +127,21 @@ class RepositoryTest(TemporaryRepository):
             self.assertEqual(run.returncode, 0, run.stderr)
             self.assertIsInstance(json.loads(run.stdout), dict)
 
+    def test_cli_on_demand_cache_only_and_staleness(self):
+        self.fixture()
+        command = [sys.executable, "-m", "jev_map", "--repo", str(self.root)]
+        refresh = subprocess.run([*command, "refresh"], capture_output=True, text=True)
+        self.assertEqual(refresh.returncode, 0, refresh.stderr)
+        result = subprocess.run([*command, "enrich-symbol", "normalize", "--max-calls", "0"],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(result.stdout)["enrichment"]["requests"], 0)
+        self.write("src/pkg/core.py", "def normalize(x):\n    return x\n")
+        stale = subprocess.run([*command, "enrich-symbol", "normalize", "--max-calls", "0"],
+                               capture_output=True, text=True)
+        self.assertEqual(stale.returncode, 2)
+        self.assertIn("stale", json.loads(stale.stderr)["error"])
+
 
 if __name__ == "__main__":
     unittest.main()
