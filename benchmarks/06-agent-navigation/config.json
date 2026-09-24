@@ -1,0 +1,15 @@
+{
+  "seed": "jev-agent-navigation-2026-09-24-v1",
+  "model": "jev-1.13.0",
+  "graphify_package": "graphifyy==0.9.67",
+  "agent_model": "gpt-6-sol",
+  "agent_effort": "medium",
+  "candidate_limit": 3,
+  "jev_threshold": 0.8,
+  "per_repository": {"no_structural_path": 6, "structural_path": 2},
+  "repositories": [
+    {"name": "cachetools", "url": "https://github.com/tkem/cachetools", "commit": "3c082c654c2804b9354e4b62dbd2994f1aac464d", "source_roots": ["src/cachetools"], "test_roots": ["tests"], "test_command": ".venv-bench/bin/python -m pytest -q"},
+    {"name": "tenacity", "url": "https://github.com/jd/tenacity", "commit": "3e58094d3bc414975aad9eadf343a32bdb3b89b3", "source_roots": ["tenacity"], "test_roots": ["tests"], "test_command": ".venv-bench/bin/python -m pytest -q"},
+    {"name": "attrs", "url": "https://github.com/python-attrs/attrs", "commit": "8f767776326faaed11e6c2974798787f6e19b343", "source_roots": ["src/attr", "src/attrs"], "test_roots": ["tests"], "test_command": ".venv-bench/bin/python -m pytest -q"}
+  ]
+}
