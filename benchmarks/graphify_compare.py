@@ -134,6 +134,7 @@ def graphify_environment(source: dict[str, str]) -> dict[str, str]:
                "SSL_CERT_FILE", "SSL_CERT_DIR", "UV_CACHE_DIR", "UV_PYTHON_INSTALL_DIR"}
     result = {key: value for key, value in source.items() if key in allowed}
     result["PYTHONNOUSERSITE"] = "1"
+    result["UV_OFFLINE"] = "1"
     return result
 
 

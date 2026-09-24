@@ -49,7 +49,8 @@ class GraphifyComparisonTests(unittest.TestCase):
         source = {"PATH": "/bin", "HOME": "/tmp/user", "TYPESAFE_API_KEY": "private",
                   "GITHUB_TOKEN": "private", "UV_INDEX_URL": "https://private@example.com"}
         self.assertEqual(graphify_environment(source),
-                         {"PATH": "/bin", "HOME": "/tmp/user", "PYTHONNOUSERSITE": "1"})
+                         {"PATH": "/bin", "HOME": "/tmp/user", "PYTHONNOUSERSITE": "1",
+                          "UV_OFFLINE": "1"})
 
     def test_portable_log_removes_checkout_and_staging_paths(self):
         value = "/tmp/input/repo/file.py -> /tmp/input/round/graphify-out/graph.json"
