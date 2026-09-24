@@ -43,6 +43,20 @@ class ToolTest(TemporaryRepository):
         self.assertEqual(second["remaining_session_calls"], 0)
         self.assertEqual(second["enrichment"]["cache_hits"], 1)
 
+    def test_on_demand_rejects_source_change_during_provider_call(self):
+        self.write("core.py", "class Cleaner:\n    def normalize(self, text):\n        return text.strip()\n")
+        self.write("test_core.py", "from core import Cleaner\ndef test_normalize():\n    assert Cleaner().normalize(' a ') == 'a'\n")
+        MapTools(self.root).refresh_map()
+        tools = MapTools(self.root, jev=True, max_calls=1)
+        original = (self.root / ".jev-map/map.json").read_text()
+        def reply(payload):
+            self.write("core.py", "class Cleaner:\n    def normalize(self, text):\n        return text.lstrip()\n")
+            return {"answers": {key: {"noul": 0.9} for key in payload["questions"]}}
+        with patch("jev_map.server.JevClient", return_value=reply):
+            with self.assertRaisesRegex(ValueError, "stale"):
+                tools.enrich_symbol("normalize")
+        self.assertEqual((self.root / ".jev-map/map.json").read_text(), original)
+
 
 @unittest.skipUnless(importlib.util.find_spec("mcp"), "optional MCP dependency not installed")
 class MCPIntegrationTest(unittest.IsolatedAsyncioTestCase):

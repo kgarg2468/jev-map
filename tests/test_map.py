@@ -41,6 +41,13 @@ class RepositoryTest(TemporaryRepository):
                 if (self.root / "new.py").exists():
                     (self.root / "new.py").unlink()
 
+    def test_save_rejects_source_change_after_build(self):
+        data = self.fixture()
+        self.write("src/pkg/core.py", "def normalize(x):\n    return x\n")
+        with self.assertRaisesRegex(ValueError, "stale"):
+            save(self.root, data)
+        self.assertFalse((self.root / ".jev-map/map.json").exists())
+
     def test_shadowed_import_does_not_create_link(self):
         self.fixture()
         self.write("tests/test_core.py", "from pkg.core import public as clean\n\ndef test_other(clean):\n    clean('a')\n\ndef test_local():\n    clean = lambda x: x\n    clean('a')\n")
