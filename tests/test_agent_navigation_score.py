@@ -1,6 +1,10 @@
 import importlib.util
+import json
+import tempfile
 import unittest
 from pathlib import Path
+
+from jev_map.index import digest
 
 
 MODULE = Path(__file__).resolve().parents[1] / "benchmarks/06-agent-navigation/score.py"
@@ -46,3 +50,24 @@ class AgentNavigationScoreTest(unittest.TestCase):
         self.assertAlmostEqual(estimate, 0.23)
         with self.assertRaisesRegex(ValueError, "Invalid"):
             score.list_price_cost({"input_tokens": 1, "cached_input_tokens": 2}, "gpt-5.6-luna")
+
+    def test_jev_cost_rejects_unrelated_or_missing_receipts(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            receipts = Path(temporary)
+
+            def write(target):
+                request = {"state": {"A": {"id": target}}}
+                response = {"usage": {"input_tokens": 25}}
+                request_hash = digest(request)
+                (receipts / f"{request_hash}.json").write_text(json.dumps({
+                    "request": request, "request_sha256": request_hash,
+                    "response": response, "response_sha256": digest(response),
+                    "status": "ok", "wall_seconds": 0.1}))
+
+            write("f")
+            self.assertEqual(score.checked_jev_receipts(receipts, {"f"}), (25, 0.1))
+            with self.assertRaisesRegex(ValueError, "do not match"):
+                score.checked_jev_receipts(receipts, {"f", "g"})
+            write("unrelated")
+            with self.assertRaisesRegex(ValueError, "Unexpected Jev receipt"):
+                score.checked_jev_receipts(receipts, {"f"})

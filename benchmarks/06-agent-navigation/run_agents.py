@@ -69,6 +69,13 @@ def tool_compliance(events: list[dict]) -> tuple[bool, bool, int]:
     return graphify_used, web_used, len(commands)
 
 
+def effective_input_hash(model: str, effort: str, prompt: str, graph: Path, timeout: int) -> str:
+    value = {"model": model, "effort": effort, "prompt": prompt,
+             "graph_sha256": hashlib.sha256(graph.read_bytes()).hexdigest(),
+             "timeout_seconds": timeout}
+    return hashlib.sha256(json.dumps(value, sort_keys=True).encode()).hexdigest()
+
+
 def environment() -> dict[str, str]:
     value = os.environ.copy()
     value.pop("PYTHONPATH", None)
@@ -84,9 +91,6 @@ def run_one(codex: Path, root: Path, task: dict, arm: str, graph: Path,
     ident = task["id"]
     slot = spool / ident / arm
     meta = slot / "meta.json"
-    if meta.exists():
-        return json.loads(meta.read_text())
-    slot.mkdir(parents=True, exist_ok=True)
     if arm == "jev":
         hint = json.loads((INPUTS / f"{ident}-jev-hint.json").read_text())
     elif arm == "cheap":
@@ -94,9 +98,16 @@ def run_one(codex: Path, root: Path, task: dict, arm: str, graph: Path,
     else:
         hint = {"target": task["function"], "links": []}
     prompt = prompt_for(task, graph, hint)
+    config = json.loads(CONFIG.read_text())
+    input_sha256 = effective_input_hash(config["agent_model"], config["agent_effort"], prompt, graph, timeout)
+    if meta.exists():
+        cached = json.loads(meta.read_text())
+        if cached.get("input_sha256") != input_sha256 or (slot / "prompt.txt").read_text() != prompt:
+            raise ValueError(f"Stale cached agent run for {ident} {arm}; use a new spool")
+        return cached
+    slot.mkdir(parents=True, exist_ok=True)
     (slot / "prompt.txt").write_text(prompt)
     answer_path = slot / "answer.txt"
-    config = json.loads(CONFIG.read_text())
     argv = [str(codex), "exec", "-m", config["agent_model"], "--sandbox", "danger-full-access",
             "--strict-config", "--disable", "browser_use", "--disable", "in_app_browser",
             "--skip-git-repo-check", "--ephemeral", "--json", "-C", str(root),
@@ -138,6 +149,7 @@ def run_one(codex: Path, root: Path, task: dict, arm: str, graph: Path,
     usage = [event.get("usage") for event in events if event.get("type") == "turn.completed"]
     row = {"task": ident, "arm": arm, "status": status, "wall_seconds": seconds,
            "usage": usage[-1] if usage else None, "answer": answer,
+           "input_sha256": input_sha256,
            "graphify_used": graphify_used, "web_used": web_used,
            "command_count": command_count}
     meta.write_text(json.dumps(row, indent=2, sort_keys=True) + "\n")

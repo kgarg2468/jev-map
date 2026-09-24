@@ -96,6 +96,15 @@ contains all agent prompts and event logs; [round 07](rounds/round-07-score/)
 contains raw call oracles and scores. Every round has a SHA-256 completion
 manifest.
 
+A [posthoc provenance audit](rounds/round-09-provenance-audit/audit.json) rebuilt
+each native Graphify graph from the pinned, clean checkout and found all three
+byte-identical to the archived inputs. It reconstructed the exact Jev request
+from each frozen target and source snapshot, matched all 24 canonical receipts
+and their accepted links, reconstructed all 72 agent prompts, and found 72
+distinct agent threads. A guarded rescore produced a byte-identical `score.json`.
+This audit preserved every earlier round; the runner now rejects stale cached
+slots, mismatched supplied Graphify graphs, and unrelated cost receipts.
+
 ## Limits and next gate
 
 The Graphify baseline already solved 95.8% of these test-selection tasks, so

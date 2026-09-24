@@ -11,6 +11,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from benchmarks.archive import staged_round
+from jev_map.index import digest
 
 HERE = Path(__file__).resolve().parent
 FREEZE = HERE / "rounds/round-01-freeze/freeze.json"
@@ -135,25 +136,45 @@ def list_price_cost(usage: dict, model: str) -> float:
             + output * price["output"]) / 1_000_000
 
 
+def checked_jev_receipts(receipt_dir: Path, expected_targets: set[str]) -> tuple[int, float]:
+    """Count only the exact canonical receipts for this frozen task set."""
+    tokens, wall = 0, 0.0
+    found = set()
+    for path in receipt_dir.glob("*.json"):
+        if len(path.stem) != 64:
+            continue  # Individual attempt logs have a timestamp suffix.
+        receipt = json.loads(path.read_text())
+        target = receipt["request"]["state"]["A"]["id"]
+        if (target not in expected_targets or target in found
+                or receipt.get("status") != "ok"
+                or receipt.get("request_sha256") != path.stem
+                or digest(receipt["request"]) != path.stem
+                or receipt.get("response_sha256") != digest(receipt["response"])):
+            raise ValueError(f"Unexpected Jev receipt: {path}")
+        found.add(target)
+        usage = receipt["response"].get("usage", {})
+        count = usage.get("input_tokens")
+        if type(count) is not int or count < 0:
+            raise ValueError("Missing Jev input token usage")
+        tokens += count
+        wall += receipt.get("wall_seconds", 0.0)
+    if found != expected_targets:
+        raise ValueError(f"Jev receipts do not match frozen targets: {receipt_dir}")
+    return tokens, wall
+
+
 def hint_costs() -> dict:
     jev_tokens = 0
     jev_provider_wall = 0.0
     refresh_wall = 0.0
-    for name in ("cachetools", "tenacity", "attrs"):
+    freeze = json.loads(FREEZE.read_text())
+    for entry in freeze["repositories"]:
+        name = entry["name"]
         refresh_wall += json.loads((INPUTS / f"{name}-refresh-time.json").read_text())["wall_seconds"]
-        receipts = INPUTS / name / "receipts"
-        for path in receipts.glob("*.json"):
-            if len(path.stem) != 64:
-                continue
-            receipt = json.loads(path.read_text())
-            if receipt.get("status") != "ok":
-                continue
-            usage = receipt["response"].get("usage", {})
-            tokens = usage.get("input_tokens")
-            if type(tokens) is not int or tokens < 0:
-                raise ValueError("Missing Jev input token usage")
-            jev_tokens += tokens
-            jev_provider_wall += receipt.get("wall_seconds", 0.0)
+        count, seconds = checked_jev_receipts(
+            INPUTS / name / "receipts", {task["function"] for task in entry["tasks"]})
+        jev_tokens += count
+        jev_provider_wall += seconds
     jev_runs = json.loads((INPUTS / "summary.json").read_text())["tasks"]
     cheap = json.loads((CHEAP / "summary.json").read_text())["tasks"]
     if any(item["usage"] is None for item in cheap):
