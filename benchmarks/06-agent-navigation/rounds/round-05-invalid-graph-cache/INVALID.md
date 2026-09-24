@@ -1,0 +1,1 @@
+Interrupted diagnostic wave. The agent command runner worked, but native Graphify query wrote a cache stamp beside the committed graph input. The wave is excluded from scoring so the archived input can be restored and agents rerun against identical temporary graph copies.

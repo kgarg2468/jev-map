@@ -1,0 +1,31 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query 'Which tests exercise src/cachetools/func.py::_cache?' --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "sed -n '1,240p' src/cachetools/func.py",
+      "rg -n 'cachetools\\.func|from cachetools\\.func|\\.cache_info\\(|\\.cache_clear\\(|@(?:cache|lru_cache|lfu_cache|mru_cache|ttl_cache|rr_cache)|_cache' tests",
+      "sed -n '1,180p' tests/test_func.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_func.py::LRUDecoratorTest::test_decorator tests/test_func.py::LRUDecoratorTest::test_decorator_user_function tests/test_func.py::LRUDecoratorTest::test_decorator_typed"
+    ],
+    "evidence": "All three passed. Each calls lru_cache, which directly calls src/cachetools/func.py::_cache. They cover the normal, direct-function, and typed branches.",
+    "tests": [
+      "tests/test_func.py::LRUDecoratorTest::test_decorator",
+      "tests/test_func.py::LRUDecoratorTest::test_decorator_user_function",
+      "tests/test_func.py::LRUDecoratorTest::test_decorator_typed"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 5,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-05",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 60032,
+    "input_tokens": 75704,
+    "output_tokens": 939,
+    "reasoning_output_tokens": 239
+  },
+  "wall_seconds": 29.261975928093307,
+  "web_used": false
+}

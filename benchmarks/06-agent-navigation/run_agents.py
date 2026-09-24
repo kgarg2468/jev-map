@@ -145,7 +145,7 @@ def run_one(codex: Path, root: Path, task: dict, arm: str, graph: Path,
 
 
 def run(codex: Path, roots: dict[str, Path], out: Path, spool: Path,
-        timeout: int, max_workers: int = 3) -> dict:
+        graph_workdir: Path, timeout: int, max_workers: int = 3) -> dict:
     freeze = json.loads(FREEZE.read_text())
     config = json.loads(CONFIG.read_text())
     if set(roots) != {entry["name"] for entry in freeze["repositories"]}:
@@ -159,10 +159,20 @@ def run(codex: Path, roots: dict[str, Path], out: Path, spool: Path,
             raise ValueError(f"{entry['name']} source differs from freeze")
         graph = (INPUTS / f"{entry['name']}-graph.json").resolve(strict=True)
         for task in entry["tasks"]:
-            jobs.append((root, task, graph))
+            working = {}
+            for arm in ARMS:
+                path = graph_workdir / task["id"] / arm / "graph.json"
+                path.parent.mkdir(parents=True, exist_ok=True)
+                if path.exists():
+                    if path.read_bytes() != graph.read_bytes():
+                        raise ValueError(f"{task['id']} working graph differs from archived input")
+                else:
+                    shutil.copyfile(graph, path)
+                working[arm] = path.resolve(strict=True)
+            jobs.append((root, task, working, graph))
     def run_task(job):
-        root, task, graph = job
-        return [run_one(codex, root, task, arm, graph, spool, timeout)
+        root, task, graphs, _ = job
+        return [run_one(codex, root, task, arm, graphs[arm], spool, timeout)
                 for arm in arm_order(config["seed"], task["id"])]
     grouped = {}
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -172,7 +182,12 @@ def run(codex: Path, roots: dict[str, Path], out: Path, spool: Path,
             grouped[ident] = future.result()
             print(f"{len(grouped)}/{len(jobs)} {ident}: "
                   + ", ".join(f"{row['arm']}={row['status']}" for row in grouped[ident]), flush=True)
-    rows = [row for _, task, _ in jobs for row in grouped[task["id"]]]
+    rows = [row for _, task, _, _ in jobs for row in grouped[task["id"]]]
+    for _, task, graphs, source_path in jobs:
+        source = source_path.read_bytes()
+        for path in graphs.values():
+            if path.read_bytes() != source:
+                raise ValueError(f"{task['id']} working graph was modified")
     for entry in freeze["repositories"]:
         root = roots[entry["name"]].resolve(strict=True)
         if build(root)["snapshot"] != entry["snapshot_sha256"]:
@@ -189,8 +204,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--codex", type=Path, default=Path("/home/kg/.local/opt/node/bin/codex"))
     parser.add_argument("--repo", action="append", required=True)
-    parser.add_argument("--out", type=Path, default=HERE / "rounds/round-05-agent-runs")
-    parser.add_argument("--spool", type=Path, default=Path("/tmp/jev-agent-runs-spool-v2"))
+    parser.add_argument("--out", type=Path, default=HERE / "rounds/round-06-agent-runs")
+    parser.add_argument("--spool", type=Path, default=Path("/tmp/jev-agent-runs-spool-v3"))
+    parser.add_argument("--graph-workdir", type=Path, default=Path("/tmp/jev-agent-working-graphs-v3"))
     parser.add_argument("--timeout", type=int, default=180)
     parser.add_argument("--max-workers", type=int, default=3)
     args = parser.parse_args()
@@ -200,7 +216,8 @@ def main() -> None:
         if not sep or name in roots:
             parser.error("Expected unique name=/absolute/path")
         roots[name] = Path(path)
-    run(args.codex, roots, args.out, args.spool, args.timeout, args.max_workers)
+    run(args.codex, roots, args.out, args.spool, args.graph_workdir,
+        args.timeout, args.max_workers)
 
 
 if __name__ == "__main__":

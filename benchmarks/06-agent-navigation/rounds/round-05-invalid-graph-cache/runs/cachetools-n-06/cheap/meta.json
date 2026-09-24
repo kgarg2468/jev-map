@@ -1,0 +1,38 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.__missing__?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "rg -n 'missing|KeyError|\\[\"?missing|\\[999|\\[42' tests/test_cache.py tests/__init__.py",
+      "sed -n '45,115p' src/cachetools/__init__.py",
+      "sed -n '1,240p' tests/test_cache.py",
+      "sed -n '30,245p' tests/__init__.py",
+      "rg -n 'class .*Test|CacheTestMixin|def test_' tests/test_cache.py tests/test_fifo.py tests/test_lru.py tests/test_lfu.py tests/test_rr.py tests/test_ttl.py tests/test_tlru.py",
+      "sed -n '240,460p' tests/__init__.py",
+      "rg -n -U 'assertRaises\\(KeyError\\)[^\\n]*\\n[^\\n]*\\[[^\\]]+\\]|cache\\[[^\\]]+\\]' tests/test_*.py | head -100",
+      ".venv-bench/bin/python - <<'PY'\nimport sys, pytest, cachetools\ncode = cachetools.Cache.__missing__.__code__\nclass Tracker:\n    @pytest.hookimpl(hookwrapper=True)\n    def pytest_runtest_call(self, item):\n        hits = 0\n        def profile(frame, event, arg):\n            nonlocal hits\n            if event == 'call' and frame.f_code is code:\n                hits += 1\n        sys.setprofile(profile)\n        yield\n        sys.setprofile(None)\n        if hits:\n            print(f'TARGET_HITS {item.nodeid} {hits}')\npytest.main(['-q', '-s', 'tests/test_cache.py', 'tests/test_cached.py', 'tests/test_cachedmethod.py', 'tests/test_func.py'], plugins=[Tracker()])\nPY",
+      "sed -n '225,310p' tests/test_cached.py",
+      "sed -n '90,165p' tests/test_cachedmethod.py",
+      "sed -n '490,560p' tests/test_cachedmethod.py"
+    ],
+    "evidence": "A runtime profile matched calls to the exact code object for Cache.__missing__: these tests entered it 2, 11, and 2 times respectively. All three passed. The shared CacheTestMixin.test_missing overrides __missing__, so it is not a match.",
+    "tests": [
+      "tests/test_cached.py::CacheWrapperTest::test_decorator",
+      "tests/test_cachedmethod.py::CacheMethodTest::test_nospace",
+      "tests/test_cached.py::CacheWrapperTest::test_decorator_info"
+    ]
+  },
+  "arm": "cheap",
+  "command_count": 12,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-06",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 127872,
+    "input_tokens": 157128,
+    "output_tokens": 1958,
+    "reasoning_output_tokens": 441
+  },
+  "wall_seconds": 49.512322720955126,
+  "web_used": false
+}
