@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import math
+import os
 import re
 import subprocess
 import time
@@ -127,6 +128,21 @@ def git(root: Path, *args: str) -> str:
     return subprocess.check_output(["git", "-C", str(root), *args], text=True, timeout=30).strip()
 
 
+def graphify_environment(source: dict[str, str]) -> dict[str, str]:
+    """Allow runtime basics while withholding provider and developer credentials."""
+    allowed = {"PATH", "HOME", "TMPDIR", "TEMP", "TMP", "LANG", "LC_ALL", "LC_CTYPE",
+               "SSL_CERT_FILE", "SSL_CERT_DIR", "UV_CACHE_DIR", "UV_PYTHON_INSTALL_DIR"}
+    result = {key: value for key, value in source.items() if key in allowed}
+    result["PYTHONNOUSERSITE"] = "1"
+    return result
+
+
+def portable_log(value: str, root: Path, stage: Path) -> str:
+    return (value.replace(str(stage), "<round>")
+            .replace(str(root), "<repo>")
+            .replace(str(PROJECT), "<project>"))
+
+
 def run(roots: dict[str, Path], output: Path) -> dict:
     config = json.loads(CONFIG.read_text())
     expected = {repo["name"] for repo in config["repositories"]}
@@ -139,9 +155,9 @@ def run(roots: dict[str, Path], output: Path) -> dict:
         if subprocess.run(["git", "-C", str(root), "diff", "--quiet", "HEAD", "--"],
                           timeout=30).returncode:
             raise ValueError(f'{repo["name"]} has tracked changes')
-        untracked = git(root, "ls-files", "--others", "--exclude-standard", "--", "*.py")
+        untracked = git(root, "ls-files", "--others", "--exclude-standard")
         if untracked:
-            raise ValueError(f'{repo["name"]} has untracked Python source')
+            raise ValueError(f'{repo["name"]} has untracked input')
     existing = json.loads(PAIRS.read_text())
     rows = [{key: row[key] for key in ("repository", "function", "test", "observed", "score")}
             for row in existing if row["test_eligible"]]
@@ -158,12 +174,15 @@ def run(roots: dict[str, Path], output: Path) -> dict:
                        str(root), "--code-only", "--no-cluster", "--max-workers", "2",
                        "--out", str(target)]
             started = time.perf_counter()
-            result = subprocess.run(command, text=True, capture_output=True, timeout=180)
+            result = subprocess.run(command, text=True, capture_output=True, timeout=180,
+                                    env=graphify_environment(os.environ))
             elapsed = time.perf_counter() - started
             write(stage / "logs" / f"{name}.json",
-                  {"command": [item.replace(str(root), "<repo>").replace(str(stage), "<round>")
+                  {"command": [portable_log(item, root, stage)
                                for item in command], "returncode": result.returncode,
-                   "stdout": result.stdout, "stderr": result.stderr, "wall_seconds": elapsed})
+                   "stdout": portable_log(result.stdout, root, stage),
+                   "stderr": portable_log(result.stderr, root, stage),
+                   "wall_seconds": elapsed})
             if result.returncode:
                 raise RuntimeError(f"Graphify failed on {name}: {result.stderr[-1000:]}")
             graph_path = target / "graphify-out/graph.json"

@@ -2,7 +2,10 @@
 
 import unittest
 
-from benchmarks.graphify_compare import call_path, graph_node, graphify_id, metrics, ranking
+from pathlib import Path
+
+from benchmarks.graphify_compare import (call_path, graph_node, graphify_environment,
+                                         graphify_id, metrics, portable_log, ranking)
 
 
 class GraphifyComparisonTests(unittest.TestCase):
@@ -41,6 +44,17 @@ class GraphifyComparisonTests(unittest.TestCase):
             "precision": 0.5, "recall_within_candidates": 0.5,
             "functions_with_observed_link": 1,
         })
+
+    def test_external_graphify_process_does_not_inherit_credentials(self):
+        source = {"PATH": "/bin", "HOME": "/tmp/user", "TYPESAFE_API_KEY": "private",
+                  "GITHUB_TOKEN": "private", "UV_INDEX_URL": "https://private@example.com"}
+        self.assertEqual(graphify_environment(source),
+                         {"PATH": "/bin", "HOME": "/tmp/user", "PYTHONNOUSERSITE": "1"})
+
+    def test_portable_log_removes_checkout_and_staging_paths(self):
+        value = "/tmp/input/repo/file.py -> /tmp/input/round/graphify-out/graph.json"
+        self.assertEqual(portable_log(value, Path("/tmp/input/repo"), Path("/tmp/input/round")),
+                         "<repo>/file.py -> <round>/graphify-out/graph.json")
 
 
 if __name__ == "__main__":

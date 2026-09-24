@@ -41,8 +41,13 @@ uv run --extra benchmark python -m benchmarks.graphify_compare \
   --out benchmarks/04-product-baselines/rounds/<new-round>
 ```
 
-The [round archive](rounds/round-01-retrospective) contains the full Graphify
-outputs, command logs and timings, pair-by-pair decisions with graph paths,
-summary, and SHA-256 completion manifest. The new prospective benchmark must
+The [validated round archive](rounds/round-02-validated) contains the full
+Graphify outputs, sanitized command logs and timings, pair-by-pair decisions
+with graph paths, summary, and SHA-256 completion manifest. It rejects
+untracked input and removes credentials from Graphify's process environment.
+The [initial exploratory round](rounds/round-01-retrospective) remains archived
+unchanged; both rounds produced the same graph hashes and accuracy counts.
+Raw Graphify graph files retain `extracted_sources` checkout paths as generated
+by the tool; scoring uses relative `source_file` paths. The new prospective benchmark must
 sample functions independently of these products, include structural links,
 and evaluate against all runnable tests before an adoption claim.
