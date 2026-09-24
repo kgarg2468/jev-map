@@ -1,0 +1,12 @@
+{
+  "target": "src/cachetools/keys.py::typedkey",
+  "links": [
+    {
+      "test": "tests/test_keys.py::CacheKeysTest.test_typedkey",
+      "evidence": "inferred",
+      "score": 0.9,
+      "receipt": "receipts/b0586791ac5f5fe9527612ed1b980d81026f632f9da176d811aca9406f6435e2.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

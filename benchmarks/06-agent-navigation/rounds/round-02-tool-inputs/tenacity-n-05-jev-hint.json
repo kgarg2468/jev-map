@@ -1,0 +1,24 @@
+{
+  "target": "tenacity/retry.py::retry_base.__or__",
+  "links": [
+    {
+      "test": "tests/test_tenacity.py::TestRetryConditions.test_retry_or_with_plain_function",
+      "evidence": "inferred",
+      "score": 0.93,
+      "receipt": "receipts/181abd1e99018aaa36fa566e0af36bb36637cab14611a3e6b9eca1533b722211.json"
+    },
+    {
+      "test": "tests/test_tenacity.py::TestRetryConditions.test_retry_or_coalesces",
+      "evidence": "inferred",
+      "score": 0.86,
+      "receipt": "receipts/181abd1e99018aaa36fa566e0af36bb36637cab14611a3e6b9eca1533b722211.json"
+    },
+    {
+      "test": "tests/test_asyncio.py::TestContextManager.test_retry_with_async_result_ror",
+      "evidence": "inferred",
+      "score": 0.84,
+      "receipt": "receipts/181abd1e99018aaa36fa566e0af36bb36637cab14611a3e6b9eca1533b722211.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

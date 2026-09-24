@@ -1,0 +1,5 @@
+{
+  "target": "src/cachetools/func.py::_UnboundTTLCache.maxsize",
+  "links": [],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

@@ -1,0 +1,11 @@
+{
+  "target": "src/attr/_make.py::_ClassBuilder.add_replace",
+  "links": [
+    {
+      "test": "tests/test_funcs.py::TestEvolve.test_change",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

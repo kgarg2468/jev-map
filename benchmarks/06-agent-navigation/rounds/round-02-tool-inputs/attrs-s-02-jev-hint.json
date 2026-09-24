@@ -1,0 +1,18 @@
+{
+  "target": "src/attr/_make.py::fields",
+  "links": [
+    {
+      "test": "tests/test_funcs.py::TestAsTuple.test_recurse_retain",
+      "evidence": "inferred",
+      "score": 0.84,
+      "receipt": "receipts/bdeae87cf24bd5455eafec584d819b9dd3c8133f911f2bba4dd0466ded2c9223.json"
+    },
+    {
+      "test": "tests/test_annotations.py::TestAnnotations.test_auto_attribs",
+      "evidence": "inferred",
+      "score": 0.84,
+      "receipt": "receipts/bdeae87cf24bd5455eafec584d819b9dd3c8133f911f2bba4dd0466ded2c9223.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

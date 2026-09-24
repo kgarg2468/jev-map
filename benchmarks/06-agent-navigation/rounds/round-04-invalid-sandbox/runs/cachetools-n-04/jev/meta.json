@@ -1,0 +1,25 @@
+{
+  "answer": {
+    "commands_run": [
+      "rg -n \"class _UnboundTTLCache|def maxsize|_UnboundTTLCache|maxsize\" src/cachetools/func.py tests",
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/func.py::_UnboundTTLCache.maxsize?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "rg --files tests",
+      "pwd"
+    ],
+    "evidence": "The unbounded TTL decorator creates _UnboundTTLCache. This test calls cache_info(), whose implementation reads cache.maxsize, so it is the strongest match. The local graph query and test commands could not execute because the sandbox failed to initialize (bwrap loopback error); the node ID is grounded in public repository source, not a local run.",
+    "tests": [
+      "tests/test_func.py::TTLDecoratorTest::test_decorator_unbound"
+    ]
+  },
+  "arm": "jev",
+  "status": "ok",
+  "task": "cachetools-n-04",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 195840,
+    "input_tokens": 222840,
+    "output_tokens": 1262,
+    "reasoning_output_tokens": 371
+  },
+  "wall_seconds": 48.504975117975846
+}

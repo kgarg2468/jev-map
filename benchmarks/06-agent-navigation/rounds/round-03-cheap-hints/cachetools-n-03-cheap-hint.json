@@ -1,0 +1,11 @@
+{
+  "target": "src/cachetools/keys.py::_HashedTuple.__radd__",
+  "links": [
+    {
+      "test": "tests/test_keys.py::CacheKeysTest.test_addkeys",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

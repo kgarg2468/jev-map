@@ -1,0 +1,5 @@
+{
+  "target": "tenacity/__init__.py::_first_set",
+  "links": [],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

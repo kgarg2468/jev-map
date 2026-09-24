@@ -1,0 +1,18 @@
+{
+  "target": "src/attr/_make.py::_CountingAttr.validator",
+  "links": [
+    {
+      "test": "tests/test_make.py::TestCountingAttr.test_validator_decorator",
+      "evidence": "inferred",
+      "score": 0.93,
+      "receipt": "receipts/a057f09a0b227e31a8b4b2c4f10b2dd98413674df1fd39de6f1c7bae4cc5ea98.json"
+    },
+    {
+      "test": "tests/test_make.py::TestCountingAttr.test_converter_decorator",
+      "evidence": "inferred",
+      "score": 0.8,
+      "receipt": "receipts/a057f09a0b227e31a8b4b2c4f10b2dd98413674df1fd39de6f1c7bae4cc5ea98.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

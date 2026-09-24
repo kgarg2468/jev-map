@@ -1,0 +1,16 @@
+{
+  "target": "src/attr/_make.py::_CountingAttr.validator",
+  "links": [
+    {
+      "test": "tests/test_make.py::TestCountingAttr.test_validator_decorator",
+      "evidence": "cheap_llm",
+      "score": 1
+    },
+    {
+      "test": "tests/test_make.py::TestCountingAttr.test_validator_decorator_single",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

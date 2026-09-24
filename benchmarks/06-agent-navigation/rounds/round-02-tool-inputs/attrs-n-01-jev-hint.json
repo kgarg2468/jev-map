@@ -1,0 +1,18 @@
+{
+  "target": "src/attr/validators.py::_MatchesReValidator.__call__",
+  "links": [
+    {
+      "test": "tests/test_setattr.py::TestSetAttr.test_validator",
+      "evidence": "inferred",
+      "score": 0.91,
+      "receipt": "receipts/f209ef886bc3f6c303d2b3ef30089fbc975816d8959ca94bea584f986ad5012a.json"
+    },
+    {
+      "test": "tests/test_validators.py::TestIsCallable.test_fail",
+      "evidence": "inferred",
+      "score": 0.83,
+      "receipt": "receipts/f209ef886bc3f6c303d2b3ef30089fbc975816d8959ca94bea584f986ad5012a.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

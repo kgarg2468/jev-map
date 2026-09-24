@@ -1,0 +1,5 @@
+{
+  "target": "tenacity/_utils.py::find_ordinal",
+  "links": [],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

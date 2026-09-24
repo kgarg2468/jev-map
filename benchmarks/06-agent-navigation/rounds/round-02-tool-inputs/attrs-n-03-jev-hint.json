@@ -1,0 +1,5 @@
+{
+  "target": "src/attr/_make.py::_ClassBuilder.add_replace",
+  "links": [],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

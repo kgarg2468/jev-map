@@ -1,0 +1,12 @@
+{
+  "target": "tenacity/retry.py::retry_if_exception_message._check",
+  "links": [
+    {
+      "test": "tests/test_tenacity.py::TestRetryConditions.test_retry_if_exception_message_empty_message",
+      "evidence": "inferred",
+      "score": 0.81,
+      "receipt": "receipts/a01d295bff570eecf0b1c98c13dbc4fe34668187ce982f98b64b0ea53ec24563.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

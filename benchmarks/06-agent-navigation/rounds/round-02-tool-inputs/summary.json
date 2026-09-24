@@ -1,0 +1,415 @@
+{
+  "graphify_package": "graphifyy==0.9.67",
+  "jev_model": "jev-1.13.0",
+  "product_commit": "14731fa",
+  "tasks": [
+    {
+      "accepted": 0,
+      "id": "cachetools-n-01",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 1,
+        "errors": 0,
+        "known_input_tokens": 0,
+        "requests": 0,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.10286339395679533
+    },
+    {
+      "accepted": 2,
+      "id": "cachetools-n-02",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 2,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2076,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.35774736397434026
+    },
+    {
+      "accepted": 0,
+      "id": "cachetools-n-03",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 1799,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.48933841299731284
+    },
+    {
+      "accepted": 0,
+      "id": "cachetools-n-04",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2141,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3715221229940653
+    },
+    {
+      "accepted": 0,
+      "id": "cachetools-n-05",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2752,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.2792005429510027
+    },
+    {
+      "accepted": 0,
+      "id": "cachetools-n-06",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2469,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.25804994895588607
+    },
+    {
+      "accepted": 1,
+      "id": "cachetools-s-01",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 1,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 1661,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.25980480504222214
+    },
+    {
+      "accepted": 1,
+      "id": "cachetools-s-02",
+      "repo": "cachetools",
+      "returncode": 0,
+      "usage": {
+        "accepted": 1,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2019,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3284308509901166
+    },
+    {
+      "accepted": 0,
+      "id": "tenacity-n-01",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 3190,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3487162599340081
+    },
+    {
+      "accepted": 0,
+      "id": "tenacity-n-02",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2526,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3404380609281361
+    },
+    {
+      "accepted": 1,
+      "id": "tenacity-n-03",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 1,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 3021,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.2927973280893639
+    },
+    {
+      "accepted": 0,
+      "id": "tenacity-n-04",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2887,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.6534405780257657
+    },
+    {
+      "accepted": 3,
+      "id": "tenacity-n-05",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 3,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2931,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.32723347598221153
+    },
+    {
+      "accepted": 0,
+      "id": "tenacity-n-06",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2165,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.26110751600936055
+    },
+    {
+      "accepted": 0,
+      "id": "tenacity-s-01",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2299,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.2928185180062428
+    },
+    {
+      "accepted": 0,
+      "id": "tenacity-s-02",
+      "repo": "tenacity",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 3576,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.35607955197338015
+    },
+    {
+      "accepted": 2,
+      "id": "attrs-n-01",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 2,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 3672,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3456681809620932
+    },
+    {
+      "accepted": 2,
+      "id": "attrs-n-02",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 2,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2826,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3738069769460708
+    },
+    {
+      "accepted": 0,
+      "id": "attrs-n-03",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2681,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.305761432973668
+    },
+    {
+      "accepted": 0,
+      "id": "attrs-n-04",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2827,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3188605399336666
+    },
+    {
+      "accepted": 0,
+      "id": "attrs-n-05",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 1906,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.5362438739975914
+    },
+    {
+      "accepted": 0,
+      "id": "attrs-n-06",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 3577,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.35747341392561793
+    },
+    {
+      "accepted": 0,
+      "id": "attrs-s-01",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 0,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 2545,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.3940594349987805
+    },
+    {
+      "accepted": 2,
+      "id": "attrs-s-02",
+      "repo": "attrs",
+      "returncode": 0,
+      "usage": {
+        "accepted": 2,
+        "cache_hits": 0,
+        "errors": 0,
+        "known_input_tokens": 3244,
+        "requests": 1,
+        "skipped_budget": 0,
+        "skipped_oversized": 0,
+        "unknown_usage_requests": 0
+      },
+      "wall_seconds": 0.36235622700769454
+    }
+  ]
+}
