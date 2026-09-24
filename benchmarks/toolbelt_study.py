@@ -147,12 +147,20 @@ def oracle_by_source_test(raw: dict, test_ids: list[str]) -> tuple[dict[str, dic
         call_passed = bool(cases) and all(any(
             report["when"] == "call" and report["outcome"] == "passed"
             for report in case.get("reports", [])) for case in cases)
+        threaded = any(case.get("threaded", False) for case in cases)
+        thread_unknown = any(case.get("thread_coverage_unknown", False) for case in cases)
+        eligible = call_passed and not thread_unknown
         observed = sorted({function for case in cases for function in case["observed"]})
-        aggregate[symbol] = {"eligible": call_passed, "variants": len(cases),
-                             "observed": observed if call_passed else [],
-                             "reason": None if call_passed else "uncollected_or_no_passing_call"}
+        aggregate[symbol] = {"eligible": eligible, "variants": len(cases),
+                             "threaded": threaded,
+                             "observed": observed if eligible else [],
+                             "reason": (None if eligible else "thread_coverage_unknown" if thread_unknown
+                                        else "uncollected_or_no_passing_call")}
     stats = {"source_tests": len(test_ids), "eligible": sum(row["eligible"] for row in aggregate.values()),
              "uncollected": sum(row["variants"] == 0 for row in aggregate.values()),
+             "threaded": sum(row["threaded"] for row in aggregate.values()),
+             "thread_coverage_unknown": sum(row["reason"] == "thread_coverage_unknown"
+                                            for row in aggregate.values()),
              "collected_but_ineligible": sum(row["variants"] > 0 and not row["eligible"]
                                          for row in aggregate.values()),
              "unrecognized_collected_cases": len(unrecognized),

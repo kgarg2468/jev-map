@@ -1,4 +1,9 @@
-"""Pytest plugin recording Python calls separately for each collected test case."""
+"""Record calls for each test, including workers that begin and end within it.
+
+Cases overlapping a pre-existing or surviving worker are marked unknown. A
+worker profiler may outlive its creator, so its calls are never reused as a
+label for another test case.
+"""
 
 from __future__ import annotations
 
@@ -33,14 +38,24 @@ def source_path(filename: str) -> str | None:
 @pytest.hookimpl(hookwrapper=True, tryfirst=True)
 def pytest_runtest_protocol(item, nextitem):
     observed: set[str] = set()
+    runner = threading.current_thread()
+    preexisting_worker = any(thread is not runner for thread in threading.enumerate())
+    threaded = False
+    thread_start_code = threading.Thread.start.__code__
 
     def profile(frame, event, arg):
+        nonlocal threaded
         if event != "call":
             return
+        if frame.f_code is thread_start_code:
+            threaded = True
         relative = source_path(frame.f_code.co_filename)
         if relative is not None:
             observed.add(f"{relative}::{frame.f_code.co_qualname}")
 
+    # The default profile covers workers created during this test. Pre-existing
+    # workers cannot be instrumented here; survivors may call code afterward.
+    # Both conditions make this case ineligible for an execution oracle.
     previous = sys.getprofile()
     previous_thread = threading.getprofile()
     sys.setprofile(profile)
@@ -50,7 +65,10 @@ def pytest_runtest_protocol(item, nextitem):
     finally:
         sys.setprofile(previous)
         threading.setprofile(previous_thread)
-        CASES[item.nodeid] = {"observed": sorted(observed)}
+        surviving_worker = any(thread is not runner for thread in threading.enumerate())
+        CASES[item.nodeid] = {"observed": sorted(observed),
+                              "threaded": threaded,
+                              "thread_coverage_unknown": preexisting_worker or surviving_worker}
 
 
 def pytest_runtest_logreport(report):

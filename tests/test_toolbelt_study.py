@@ -71,6 +71,55 @@ class ToolbeltStudyTests(unittest.TestCase):
         self.assertNotIn("text_ops.py::slugify", aggregate[tests[0]]["observed"])
         self.assertIn("text_ops.py::slugify", aggregate[tests[1]]["observed"])
 
+    def test_full_suite_plugin_marks_surviving_workers_unknown(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "target.py").write_text(
+                "def worker_only():\n    return 1\n\n"
+                "def runner_only():\n    return 2\n")
+            (root / "test_threads.py").write_text(
+                "from threading import Event, Thread\n"
+                "from target import worker_only, runner_only\n"
+                "go = Event()\nworker = None\n\n"
+                "def run_worker():\n    go.wait()\n    worker_only()\n\n"
+                "def test_start_worker():\n"
+                "    global worker\n"
+                "    worker = Thread(target=run_worker)\n"
+                "    worker.start()\n\n"
+                "def test_release_worker():\n"
+                "    go.set()\n"
+                "    worker.join(timeout=2)\n"
+                "    assert not worker.is_alive()\n"
+                "    assert runner_only() == 2\n\n"
+                "def test_joined_worker():\n"
+                "    joined = Thread(target=worker_only)\n"
+                "    joined.start()\n"
+                "    joined.join(timeout=2)\n"
+                "    assert not joined.is_alive()\n")
+            output = root / "calls.json"
+            environment = dict(os.environ)
+            environment.update(JEV_MAP_PROFILE_ROOT=str(root), JEV_MAP_PROFILE_OUTPUT=str(output))
+            environment["PYTHONPATH"] = os.pathsep.join((str(PROJECT / "benchmarks"), str(root)))
+            result = subprocess.run([sys.executable, "-m", "pytest", "-q",
+                                     "test_threads.py", "-p", "full_suite_profile"],
+                                    cwd=root, env=environment, capture_output=True,
+                                    text=True, timeout=30)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            cases = json.loads(output.read_text())["cases"]
+        for name in ("test_start_worker", "test_release_worker"):
+            self.assertNotIn("target.py::worker_only", cases[f"test_threads.py::{name}"]["observed"])
+        self.assertNotIn("target.py::runner_only", cases["test_threads.py::test_start_worker"]["observed"])
+        self.assertIn("target.py::runner_only", cases["test_threads.py::test_release_worker"]["observed"])
+        self.assertIn("target.py::worker_only", cases["test_threads.py::test_joined_worker"]["observed"])
+        aggregate, stats = oracle_by_source_test(raw={"cases": cases}, test_ids=list(cases))
+        self.assertEqual(stats["threaded"], 2)
+        self.assertEqual(stats["thread_coverage_unknown"], 2)
+        for name in ("test_start_worker", "test_release_worker"):
+            row = aggregate[f"test_threads.py::{name}"]
+            self.assertEqual(row["reason"], "thread_coverage_unknown")
+            self.assertFalse(row["eligible"])
+        self.assertTrue(aggregate["test_threads.py::test_joined_worker"]["eligible"])
+
     def test_paired_interval_preserves_function_clustering(self):
         rows = [{"repository": name, "observed_tests": ["test"],
                  "methods": {"base": [{"observed": False}],
