@@ -1,0 +1,341 @@
+{
+  "changed_eligibility": [],
+  "changed_positive_targets": [],
+  "changed_target_test_labels": [],
+  "edge_filter": {
+    "bootstrap": {
+      "lower_95": 0.11458333333333337,
+      "resamples": 10000,
+      "upper_95": 0.311484223514895
+    },
+    "frozen_gate_supported": true,
+    "jev": {
+      "emitted_eligible": 117,
+      "ineligible_selected": 0,
+      "not_observed": 15,
+      "observed": 102,
+      "observed_fraction": 0.8717948717948718
+    },
+    "lexical_equal_count": {
+      "emitted_eligible": 117,
+      "ineligible_selected": 0,
+      "not_observed": 40,
+      "observed": 77,
+      "observed_fraction": 0.6581196581196581
+    },
+    "precision_delta": 0.2136752136752137
+  },
+  "kind": "runner_thread_oracle_audit",
+  "methods": {
+    "graphify_jev_lexical": {
+      "hit_at_1": 0.7835820895522388,
+      "hit_at_1_count": 105,
+      "hit_at_3": 0.9402985074626866,
+      "hit_at_3_count": 126,
+      "ineligible_suggestions": 9,
+      "mean_reciprocal_rank": 0.8507462686567164,
+      "positive_targets": 134,
+      "suggestions_on_zero_observed_targets": 30,
+      "zero_observed_targets": 10
+    },
+    "graphify_lexical": {
+      "hit_at_1": 0.7238805970149254,
+      "hit_at_1_count": 97,
+      "hit_at_3": 0.9402985074626866,
+      "hit_at_3_count": 126,
+      "ineligible_suggestions": 9,
+      "mean_reciprocal_rank": 0.8171641791044776,
+      "positive_targets": 134,
+      "suggestions_on_zero_observed_targets": 30,
+      "zero_observed_targets": 10
+    },
+    "lexical_only": {
+      "hit_at_1": 0.6716417910447762,
+      "hit_at_1_count": 90,
+      "hit_at_3": 0.9104477611940298,
+      "hit_at_3_count": 122,
+      "ineligible_suggestions": 9,
+      "mean_reciprocal_rank": 0.7748756218905473,
+      "positive_targets": 134,
+      "suggestions_on_zero_observed_targets": 30,
+      "zero_observed_targets": 10
+    },
+    "structural_jev_lexical": {
+      "hit_at_1": 0.7985074626865671,
+      "hit_at_1_count": 107,
+      "hit_at_3": 0.9552238805970149,
+      "hit_at_3_count": 128,
+      "ineligible_suggestions": 9,
+      "mean_reciprocal_rank": 0.8644278606965173,
+      "positive_targets": 134,
+      "suggestions_on_zero_observed_targets": 30,
+      "zero_observed_targets": 10
+    },
+    "structural_lexical": {
+      "hit_at_1": 0.7388059701492538,
+      "hit_at_1_count": 99,
+      "hit_at_3": 0.9552238805970149,
+      "hit_at_3_count": 128,
+      "ineligible_suggestions": 9,
+      "mean_reciprocal_rank": 0.8308457711442786,
+      "positive_targets": 134,
+      "suggestions_on_zero_observed_targets": 30,
+      "zero_observed_targets": 10
+    }
+  },
+  "oracle": {
+    "boltons": {
+      "collected_but_ineligible": 0,
+      "eligible": 363,
+      "source_tests": 388,
+      "thread_coverage_unknown": 0,
+      "threaded": 3,
+      "uncollected": 25,
+      "unrecognized_collected_cases": 50,
+      "unrecognized_examples": [
+        "tests/test_gcutils.py::test_get_all",
+        "tests/test_gcutils.py::test_toggle_gc_postcollect",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_buf_property",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_closed_file_method_valueerrors",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_closed_property",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_compare_different_instances",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_compare_err",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_compare_unequal_instances",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_getvalue_norollover",
+        "tests/test_ioutils.py::TestSpooledBytesIO::test_getvalue_rollover"
+      ]
+    },
+    "h11": {
+      "collected_but_ineligible": 0,
+      "eligible": 72,
+      "source_tests": 72,
+      "thread_coverage_unknown": 0,
+      "threaded": 2,
+      "uncollected": 0,
+      "unrecognized_collected_cases": 0,
+      "unrecognized_examples": []
+    },
+    "pluggy": {
+      "collected_but_ineligible": 0,
+      "eligible": 147,
+      "source_tests": 147,
+      "thread_coverage_unknown": 0,
+      "threaded": 0,
+      "uncollected": 0,
+      "unrecognized_collected_cases": 0,
+      "unrecognized_examples": []
+    }
+  },
+  "original_completion_sha256": "b2fafe3d4660246c4bc25d9d6547ee5f4ee2e43801a577f9b102188ae7ac2e85",
+  "per_repository": {
+    "boltons": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.7368421052631579,
+        "hit_at_1_count": 28,
+        "hit_at_3": 0.8947368421052632,
+        "hit_at_3_count": 34,
+        "ineligible_suggestions": 9,
+        "mean_reciprocal_rank": 0.8026315789473685,
+        "positive_targets": 38,
+        "suggestions_on_zero_observed_targets": 30,
+        "zero_observed_targets": 10
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.7368421052631579,
+        "hit_at_1_count": 28,
+        "hit_at_3": 0.8947368421052632,
+        "hit_at_3_count": 34,
+        "ineligible_suggestions": 9,
+        "mean_reciprocal_rank": 0.7982456140350876,
+        "positive_targets": 38,
+        "suggestions_on_zero_observed_targets": 30,
+        "zero_observed_targets": 10
+      },
+      "lexical_only": {
+        "hit_at_1": 0.5789473684210527,
+        "hit_at_1_count": 22,
+        "hit_at_3": 0.7368421052631579,
+        "hit_at_3_count": 28,
+        "ineligible_suggestions": 9,
+        "mean_reciprocal_rank": 0.6403508771929824,
+        "positive_targets": 38,
+        "suggestions_on_zero_observed_targets": 30,
+        "zero_observed_targets": 10
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.7631578947368421,
+        "hit_at_1_count": 29,
+        "hit_at_3": 0.8947368421052632,
+        "hit_at_3_count": 34,
+        "ineligible_suggestions": 9,
+        "mean_reciprocal_rank": 0.8157894736842105,
+        "positive_targets": 38,
+        "suggestions_on_zero_observed_targets": 30,
+        "zero_observed_targets": 10
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.7631578947368421,
+        "hit_at_1_count": 29,
+        "hit_at_3": 0.8947368421052632,
+        "hit_at_3_count": 34,
+        "ineligible_suggestions": 9,
+        "mean_reciprocal_rank": 0.8114035087719298,
+        "positive_targets": 38,
+        "suggestions_on_zero_observed_targets": 30,
+        "zero_observed_targets": 10
+      }
+    },
+    "h11": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.7916666666666666,
+        "hit_at_1_count": 38,
+        "hit_at_3": 1.0,
+        "hit_at_3_count": 48,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8854166666666666,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.7083333333333334,
+        "hit_at_1_count": 34,
+        "hit_at_3": 1.0,
+        "hit_at_3_count": 48,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8402777777777778,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "lexical_only": {
+        "hit_at_1": 0.6875,
+        "hit_at_1_count": 33,
+        "hit_at_3": 1.0,
+        "hit_at_3_count": 48,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8298611111111112,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.7916666666666666,
+        "hit_at_1_count": 38,
+        "hit_at_3": 1.0,
+        "hit_at_3_count": 48,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8854166666666666,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.7083333333333334,
+        "hit_at_1_count": 34,
+        "hit_at_3": 1.0,
+        "hit_at_3_count": 48,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8402777777777778,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      }
+    },
+    "pluggy": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.8125,
+        "hit_at_1_count": 39,
+        "hit_at_3": 0.9166666666666666,
+        "hit_at_3_count": 44,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8541666666666666,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.7291666666666666,
+        "hit_at_1_count": 35,
+        "hit_at_3": 0.9166666666666666,
+        "hit_at_3_count": 44,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8090277777777778,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "lexical_only": {
+        "hit_at_1": 0.7291666666666666,
+        "hit_at_1_count": 35,
+        "hit_at_3": 0.9583333333333334,
+        "hit_at_3_count": 46,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8263888888888888,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.8333333333333334,
+        "hit_at_1_count": 40,
+        "hit_at_3": 0.9583333333333334,
+        "hit_at_3_count": 46,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8819444444444445,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.75,
+        "hit_at_1_count": 36,
+        "hit_at_3": 0.9583333333333334,
+        "hit_at_3_count": 46,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.8368055555555555,
+        "positive_targets": 48,
+        "suggestions_on_zero_observed_targets": 0,
+        "zero_observed_targets": 0
+      }
+    }
+  },
+  "primary": {
+    "bootstrap": {
+      "lower_95": 0.007462686567164179,
+      "resamples": 10000,
+      "upper_95": 0.11450381679389313
+    },
+    "delta": 0.059701492537313494,
+    "frozen_gate_supported": true,
+    "repositories_improved": 2
+  },
+  "profile_runs": {
+    "boltons": {
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "........................................................................ [ 13%]\n........................................................................ [ 27%]\n........................................................................ [ 41%]\n........................................................................ [ 55%]\n........................................................................ [ 69%]\n........................................................................ [ 83%]\n........................................................................ [ 97%]\n...............                                                          [100%]\n=============================== warnings summary ===============================\ntests/test_funcutils_fb_py3.py::test_wraps_async\n  /tmp/jev-map-product-compare/boltons/tests/test_funcutils_fb_py3.py:236: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    assert asyncio.iscoroutinefunction(f)\n\ntests/test_funcutils_fb_py3.py::test_wraps_async\n  /tmp/jev-map-product-compare/boltons/tests/test_funcutils_fb_py3.py:240: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead\n    assert asyncio.iscoroutinefunction(f2)\n\ntests/test_ioutils.py::TestMultiFileReader::test_open\n  /tmp/jev-map-product-compare/boltons/tests/test_ioutils.py:491: DeprecationWarning: codecs.open() is deprecated. Use open() instead.\n    utf8_file_str = codecs.open(CUR_FILE_PATH, encoding='utf8').read()\n\ntests/test_ioutils.py::TestMultiFileReader::test_open\n  /tmp/jev-map-product-compare/boltons/tests/test_ioutils.py:492: DeprecationWarning: codecs.open() is deprecated. Use open() instead.\n    f1, f2 = (codecs.open(CUR_FILE_PATH, encoding='utf8'),\n\ntests/test_ioutils.py::TestMultiFileReader::test_open\n  /tmp/jev-map-product-compare/boltons/tests/test_ioutils.py:493: DeprecationWarning: codecs.open() is deprecated. Use open() instead.\n    codecs.open(CUR_FILE_PATH, encoding='utf8'))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n519 passed, 5 warnings in 2.98s\n",
+      "timed_out": false,
+      "wall_seconds": 3.250649695051834
+    },
+    "h11": {
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "........................................................................ [ 92%]\n......                                                                   [100%]\n78 passed in 0.19s\n",
+      "timed_out": false,
+      "wall_seconds": 0.42947613005526364
+    },
+    "pluggy": {
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "........................................................................ [ 39%]\n........................................................................ [ 79%]\n.....................................                                    [100%]\n181 passed in 0.37s\n",
+      "timed_out": false,
+      "wall_seconds": 0.6495700380764902
+    }
+  },
+  "profiler_sha256": "1548040771e6608aa7f2e9d574c2465cd04fb89f5b49e60d1eecd2d6ae5b61a3",
+  "runner_thread_only": true,
+  "same_edge_filter": true,
+  "same_method_metrics": true,
+  "same_primary": true
+}

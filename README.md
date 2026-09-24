@@ -119,6 +119,15 @@ code-only directed call graph on the earlier selected sample. At equal output
 count, Jev found 34 observed links and a cheap lexical ranker found 32; this
 does not establish an accuracy or cost advantage over the cheap baseline.
 
+A [prospective Graphify + Jev toolbelt study](benchmarks/05-heldout-toolbelt/FINDINGS.md)
+on 144 new functions found eight more correct first-test suggestions out of 134
+test-exercised targets than Graphify plus lexical fallback alone (105 versus 97).
+At the same 117-link output count, Jev found 102 execution-observed links versus
+77 for a cheap lexical ranker. The frozen decision gates passed on this sample;
+the [thread-coverage audit](benchmarks/05-heldout-toolbelt/FINDINGS.md#thread-coverage-review-audit)
+reproduced the result. Complete agent-task outcomes and dollar-cost ROI remain
+unmeasured.
+
 ## Development
 
 ```sh

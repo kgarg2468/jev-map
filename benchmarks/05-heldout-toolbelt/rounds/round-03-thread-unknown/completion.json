@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "files": {
+    "audit.json": "a43eedeefd5838bf927ed5b6c086787a5967fdd5b909a4be03904b9b5d6b7308",
+    "oracle/boltons-aggregate.json": "08c1040629ed9148ee3d2f66ad88974c01bdd78d9fc23903ba29fd463557da04",
+    "oracle/boltons.json": "106540f08069ebc57a7b12d413e4dc8534e4d8151fb44f5bd35040c18ea1d4bd",
+    "oracle/h11-aggregate.json": "0932caafa7973d121636f524ab7043f1eb6c4e0770e9ef41800db271482641ca",
+    "oracle/h11.json": "171b11fa491661b6db442b8a39ab16f5fe35611c682ce87e115e19d6b6943967",
+    "oracle/pluggy-aggregate.json": "4442a50d9b21acddcfa2eb69ffd09fc4eacbf3ee0815c1a874ae5a3011cbc415",
+    "oracle/pluggy.json": "b0e78b158f9d71b915bdb063f753f0e245fb27cbdad9d8de340c87a54e381a17",
+    "regraded-candidate-pairs.json": "175545baace09ba205004e8c5191ee88a4ce67463ae2d75ca5675bd0954a5661",
+    "regraded-rankings.json": "fa009e6bd1dbc23c28af79c45dbafe7dfae4a5108d4941a6c934d382d46c9a99"
+  }
+}

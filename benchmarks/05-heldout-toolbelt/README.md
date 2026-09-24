@@ -19,5 +19,32 @@ cmp benchmarks/05-heldout-toolbelt/rounds/round-00-freeze/freeze.json \
   /tmp/jev-map-freeze-verify/freeze.json
 ```
 
-Live results will be published in a later, immutable round after this freeze
-is committed. Ordinary search and test execution remain required agent tools.
+The [live round](rounds/round-01-live) completed after the freeze was published.
+Read the [findings and decision](FINDINGS.md) before generalizing the result.
+Ordinary search and test execution remain required agent tools.
+
+To run another independent round, use a **new** output directory. Jev credentials
+must be supplied through tokenstash, and the runner never records them:
+
+```sh
+tokenstash need TYPESAFE_API_KEY
+uv tool install graphifyy==0.9.67
+uv run --extra benchmark python -m benchmarks.toolbelt_study \
+  --repo boltons=/path/to/boltons \
+  --repo h11=/path/to/h11 \
+  --repo pluggy=/path/to/pluggy \
+  --env-file /path/to/private/.env.local \
+  --out benchmarks/05-heldout-toolbelt/rounds/<new-round>
+```
+
+The [thread-coverage review audit](FINDINGS.md#thread-coverage-review-audit)
+regrades the archived Jev responses after rerunning the three test suites with
+worker lifetime checks. It uses no Jev credential or new provider calls:
+
+```sh
+uv run --extra benchmark python -m benchmarks.thread_oracle_audit \
+  --repo boltons=/path/to/boltons \
+  --repo h11=/path/to/h11 \
+  --repo pluggy=/path/to/pluggy \
+  --out benchmarks/05-heldout-toolbelt/rounds/<new-audit-round>
+```
