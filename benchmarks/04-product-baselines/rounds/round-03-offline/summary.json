@@ -1,0 +1,74 @@
+{
+  "eligible_pairs": 210,
+  "equal_output_budget": 39,
+  "extraction": {
+    "boltons": {
+      "edges": 3917,
+      "graph_sha256": "611b9db0ee42e45a29019bd8029f61d3e947570463d354ccc1a446ca5b3d1a31",
+      "input_tokens": 0,
+      "nodes": 2324,
+      "output_tokens": 0,
+      "wall_seconds": 1.8033996159210801
+    },
+    "h11": {
+      "edges": 1598,
+      "graph_sha256": "b0e5883b1de8800db07500b0a24b2752485120b7fe8574c6d30b8513c4f3199d",
+      "input_tokens": 0,
+      "nodes": 352,
+      "output_tokens": 0,
+      "wall_seconds": 0.8063086629845202
+    },
+    "pluggy": {
+      "edges": 1401,
+      "graph_sha256": "f0bae529a017d7375a3a82e061123329566133dfcbeb88286cb2d5e4179190c3",
+      "input_tokens": 0,
+      "nodes": 787,
+      "output_tokens": 0,
+      "wall_seconds": 0.8765636740718037
+    }
+  },
+  "graphify_mode": "extract --code-only --no-cluster --max-workers 2",
+  "graphify_package": "graphifyy==0.9.67",
+  "kind": "retrospective_exploration",
+  "limits": "Jev-selected, nonstructural candidates only; no fresh random holdout, complete-test recall, LLM baseline, agent outcome, or cost equivalence.",
+  "methods": {
+    "graphify_calls": {
+      "emitted": 1,
+      "false_positive": 0,
+      "functions_with_observed_link": 1,
+      "precision": 1.0,
+      "recall_within_candidates": 0.01020408163265306,
+      "true_positive": 1
+    },
+    "graphify_calls_and_indirect": {
+      "emitted": 4,
+      "false_positive": 0,
+      "functions_with_observed_link": 2,
+      "precision": 1.0,
+      "recall_within_candidates": 0.04081632653061224,
+      "true_positive": 4
+    },
+    "jev_accepted": {
+      "emitted": 39,
+      "false_positive": 5,
+      "functions_with_observed_link": 23,
+      "precision": 0.8717948717948718,
+      "recall_within_candidates": 0.3469387755102041,
+      "true_positive": 34
+    },
+    "lexical_at_equal_budget": {
+      "emitted": 39,
+      "false_positive": 7,
+      "functions_with_observed_link": 15,
+      "precision": 0.8205128205128205,
+      "recall_within_candidates": 0.32653061224489793,
+      "true_positive": 32
+    }
+  },
+  "node_mapping": {
+    "function_missing": 0,
+    "test_missing": 0
+  },
+  "observed_pairs": 98,
+  "sample_source_sha256": "e1733858abaf243f68244fdfb86a54a5bd04e25ad36f81849fd13de158efffe8"
+}

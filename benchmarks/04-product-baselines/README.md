@@ -30,7 +30,11 @@ with zero model tokens. Jev's gain over the cheap ranker at equal output count
 was only two observed links. This round does not establish lower cost, faster
 agent work, complete-test recall, or superiority over Graphify as a whole.
 
-Reproduce in a fresh output directory with checkouts at the exact commits in
+First provision the pinned Graphify package in the `uv` cache using your normal
+package-installation setup: `uv tool install graphifyy==0.9.67`. The benchmark
+then runs `uvx` offline with a small environment allowlist, so Graphify cannot
+inherit provider credentials and its run does not depend on proxy or package
+index settings. Reproduce in a fresh output directory with checkouts at the exact commits in
 [`repositories.json`](../03-multi-repo-relationships/repositories.json):
 
 ```sh
@@ -41,12 +45,13 @@ uv run --extra benchmark python -m benchmarks.graphify_compare \
   --out benchmarks/04-product-baselines/rounds/<new-round>
 ```
 
-The [validated round archive](rounds/round-02-validated) contains the full
+The [offline validated round archive](rounds/round-03-offline) contains the full
 Graphify outputs, sanitized command logs and timings, pair-by-pair decisions
 with graph paths, summary, and SHA-256 completion manifest. It rejects
 untracked input and removes credentials from Graphify's process environment.
-The [initial exploratory round](rounds/round-01-retrospective) remains archived
-unchanged; both rounds produced the same graph hashes and accuracy counts.
+The [initial exploratory round](rounds/round-01-retrospective) and
+[first validated round](rounds/round-02-validated) remain archived unchanged;
+all three rounds produced the same graph hashes and accuracy counts.
 Raw Graphify graph files retain `extracted_sources` checkout paths as generated
 by the tool; scoring uses relative `source_file` paths. The new prospective benchmark must
 sample functions independently of these products, include structural links,
