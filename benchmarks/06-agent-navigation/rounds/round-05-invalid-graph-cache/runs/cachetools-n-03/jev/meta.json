@@ -1,0 +1,31 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/keys.py::_HashedTuple.__radd__?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "rg -n '__radd__|_HashedTuple|hashkey|typedkey|methodkey|typedmethodkey' src tests",
+      "rg --files tests src/cachetools | head -80",
+      "sed -n '1,120p' tests/test_keys.py",
+      "sed -n '1,85p' src/cachetools/keys.py",
+      "rg -n '\\+.*key|key.*\\+|sum\\(|__radd__|addkeys' tests src/cachetools",
+      ".venv-bench/bin/python -c 'import sys, pytest; hits=[]; definer=\"src/cachetools/keys.py\"; tracer=lambda frame,event,arg: (hits.append((frame.f_code.co_filename,frame.f_code.co_name)) if event == \"call\" and frame.f_code.co_name == \"__radd__\" and frame.f_code.co_filename.endswith(definer) else None) or tracer; sys.settrace(tracer); result=pytest.main([\"-q\",\"tests/test_keys.py::CacheKeysTest::test_addkeys\"]); sys.settrace(None); print(\"__radd__ calls:\", len(hits)); sys.exit(result if hits else 1)'"
+    ],
+    "evidence": "The test evaluates (1, 2, 3) + key(4, 5, 6). A traced pytest run passed and recorded one call to src/cachetools/keys.py::_HashedTuple.__radd__.",
+    "tests": [
+      "tests/test_keys.py::CacheKeysTest::test_addkeys"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 7,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-03",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 55424,
+    "input_tokens": 66011,
+    "output_tokens": 1248,
+    "reasoning_output_tokens": 251
+  },
+  "wall_seconds": 29.90547872101888,
+  "web_used": false
+}

@@ -1,0 +1,33 @@
+{
+  "answer": {
+    "commands_run": [
+      "rg -n 'class Future|def construct|Future\\.construct|\\.construct\\(' tenacity tests",
+      "uvx --from graphifyy==0.9.67 graphify query 'Which tests exercise tenacity/__init__.py::Future.construct?' --graph /tmp/jev-agent-working-graphs-v3/tenacity-s-02/jev/graph.json",
+      "rg --files tests",
+      "sed -n '75,115p;445,475p;760,810p;815,855p' tests/test_tenacity.py",
+      "sed -n '560,590p' tenacity/__init__.py",
+      "rg -n '^class Test|^    def test_' tests/test_tenacity.py | sed -n '1,120p'",
+      ".venv-bench/bin/python -m pytest -q tests/test_tenacity.py::TestWaitConditions::test_wait_exception tests/test_tenacity.py::TestRetryConditions::test_retry_any tests/test_tenacity.py::TestRetryConditions::test_retry_all"
+    ],
+    "evidence": "All three tests directly call Future.construct and passed. Each exercises both its result and exception paths; test_wait_exception also constructs a result containing None. The Graphify query identified the target, and source inspection confirmed the calls.",
+    "tests": [
+      "tests/test_tenacity.py::TestWaitConditions::test_wait_exception",
+      "tests/test_tenacity.py::TestRetryConditions::test_retry_any",
+      "tests/test_tenacity.py::TestRetryConditions::test_retry_all"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 7,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-s-02",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 50816,
+    "input_tokens": 66818,
+    "output_tokens": 1027,
+    "reasoning_output_tokens": 142
+  },
+  "wall_seconds": 33.40228512592148,
+  "web_used": false
+}

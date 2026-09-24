@@ -1,0 +1,31 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/keys.py::hashkey?\" --graph /tmp/jev-agent-working-graphs-v3/cachetools-s-01/cheap/graph.json",
+      "rg -n 'hashkey|class .*Keys|def test_' src/cachetools/keys.py tests/test_keys.py",
+      "sed -n '1,220p' tests/test_keys.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_keys.py::CacheKeysTest::test_hashkey tests/test_keys.py::CacheKeysTest::test_addkeys tests/test_keys.py::CacheKeysTest::test_pickle",
+      ".venv-bench/bin/python -c 'import cachetools.keys; print(cachetools.keys.__file__); print(cachetools.keys.hashkey.__code__.co_firstlineno)'"
+    ],
+    "evidence": "All three tests call cachetools.keys.hashkey directly. The interpreter resolves it to src/cachetools/keys.py at line 37, and all three node IDs passed.",
+    "tests": [
+      "tests/test_keys.py::CacheKeysTest::test_hashkey",
+      "tests/test_keys.py::CacheKeysTest::test_addkeys",
+      "tests/test_keys.py::CacheKeysTest::test_pickle"
+    ]
+  },
+  "arm": "cheap",
+  "command_count": 5,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-s-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 30336,
+    "input_tokens": 45015,
+    "output_tokens": 684,
+    "reasoning_output_tokens": 69
+  },
+  "wall_seconds": 20.977126835961826,
+  "web_used": false
+}

@@ -1,0 +1,37 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise tenacity/retry.py::retry_if_exception.__init__?\" --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-04/jev/graph.json",
+      "rg -n 'retry_if_exception\\b|class Test.*Retry|def test_.*retry' tests/test_tenacity.py tests/test_asyncio.py tests/test_tornado.py",
+      "sed -n '75,125p' tenacity/retry.py",
+      "rg -n 'retry_if_exception\\(' tests",
+      "sed -n '415,550p' tests/test_asyncio.py",
+      "sed -n '1,125p' tenacity/asyncio/retry.py",
+      "sed -n '765,915p' tests/test_tenacity.py",
+      "sed -n '225,285p' tenacity/retry.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_asyncio.py::TestAsyncio::test_retry_with_async_result_or tests/test_tenacity.py::TestRetryConditions::test_retry_or_with_plain_function tests/test_tenacity.py::TestRetryConditions::test_retry_or_coalesces",
+      "rg -n '^class ' tests/test_asyncio.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_asyncio.py::TestContextManager::test_retry_with_async_result_or tests/test_tenacity.py::TestRetryConditions::test_retry_or_with_plain_function tests/test_tenacity.py::TestRetryConditions::test_retry_or_coalesces"
+    ],
+    "evidence": "All three node IDs passed. The first directly constructs the synchronous retry_if_exception. The other two construct retry_if_exception_type, whose constructor calls the target through super().__init__. The similarly named async class has a separate constructor.",
+    "tests": [
+      "tests/test_asyncio.py::TestContextManager::test_retry_with_async_result_or",
+      "tests/test_tenacity.py::TestRetryConditions::test_retry_or_with_plain_function",
+      "tests/test_tenacity.py::TestRetryConditions::test_retry_or_coalesces"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 11,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-n-04",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 116864,
+    "input_tokens": 131039,
+    "output_tokens": 1547,
+    "reasoning_output_tokens": 347
+  },
+  "wall_seconds": 43.466876500984654,
+  "web_used": false
+}

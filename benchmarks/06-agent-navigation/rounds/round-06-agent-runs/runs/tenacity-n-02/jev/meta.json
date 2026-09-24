@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise tenacity/__init__.py::AttemptManager.__exit__?\" --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-02/jev/graph.json",
+      "rg -n \"class AttemptManager|def __exit__|with .*\\.attempt|for attempt in|AttemptManager\" tenacity tests",
+      "sed -n '145,185p;1700,1750p;2110,2190p' tests/test_tenacity.py",
+      "sed -n '210,245p;495,520p' tenacity/__init__.py",
+      "sed -n '210,250p;295,340p;365,445p' tests/test_asyncio.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_tenacity.py::TestContextManager::test_context_manager_retry_one tests/test_tenacity.py::TestContextManager::test_context_manager_on_error tests/test_tenacity.py::TestContextManager::test_context_manager_retry_error"
+    ],
+    "evidence": "Each test uses `with attempt:` from `Retrying`, which invokes `AttemptManager.__exit__`. The first exercises both its exception and success paths; all three passed.",
+    "tests": [
+      "tests/test_tenacity.py::TestContextManager::test_context_manager_retry_one",
+      "tests/test_tenacity.py::TestContextManager::test_context_manager_on_error",
+      "tests/test_tenacity.py::TestContextManager::test_context_manager_retry_error"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 6,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-n-02",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 54016,
+    "input_tokens": 63887,
+    "output_tokens": 986,
+    "reasoning_output_tokens": 148
+  },
+  "wall_seconds": 30.29634337197058,
+  "web_used": false
+}

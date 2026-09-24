@@ -1,0 +1,5 @@
+{
+  "target": "src/cachetools/__init__.py::TLRUCache.popitem",
+  "links": [],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

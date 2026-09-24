@@ -1,0 +1,16 @@
+{
+  "target": "src/attr/validators.py::_MatchesReValidator.__call__",
+  "links": [
+    {
+      "test": "tests/test_setattr.py::TestSetAttr.test_validator",
+      "evidence": "cheap_llm",
+      "score": 1
+    },
+    {
+      "test": "tests/test_validators.py::TestNot_.test_composable_with_matches_re_fail",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

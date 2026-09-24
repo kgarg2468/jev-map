@@ -1,0 +1,16 @@
+{
+  "target": "src/attr/_make.py::fields",
+  "links": [
+    {
+      "test": "tests/test_funcs.py::TestAsTuple.test_recurse_retain",
+      "evidence": "cheap_llm",
+      "score": 0.95
+    },
+    {
+      "test": "tests/test_annotations.py::TestAnnotations.test_auto_attribs",
+      "evidence": "cheap_llm",
+      "score": 0.95
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

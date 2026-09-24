@@ -1,0 +1,11 @@
+{
+  "target": "src/attr/_make.py::_ClassBuilder.add_order",
+  "links": [
+    {
+      "test": "tests/test_make.py::TestClassBuilder.test_returns_self",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

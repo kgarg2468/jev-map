@@ -1,0 +1,5 @@
+{
+  "target": "src/cachetools/func.py::_cache",
+  "links": [],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

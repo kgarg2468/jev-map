@@ -1,0 +1,18 @@
+{
+  "target": "src/cachetools/__init__.py::TLRUCache.popitem",
+  "links": [
+    {
+      "test": "tests/__init__.py::CacheTestMixin.test_missing_getsizeof",
+      "evidence": "inferred",
+      "score": 0.8,
+      "receipt": "receipts/08d2e8aa48bf8d772ccf437a7370cf2fa5acbc54dfe9b42b259c42324eeacb5b.json"
+    },
+    {
+      "test": "tests/test_tlru.py::TLRUCacheTest.test_ttu_heap_cleanup",
+      "evidence": "inferred",
+      "score": 0.82,
+      "receipt": "receipts/08d2e8aa48bf8d772ccf437a7370cf2fa5acbc54dfe9b42b259c42324eeacb5b.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

@@ -1,0 +1,11 @@
+{
+  "target": "src/cachetools/func.py::_UnboundTTLCache.maxsize",
+  "links": [
+    {
+      "test": "tests/test_func.py::DecoratorTestMixin.test_decorator_unbound",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

@@ -1,0 +1,21 @@
+{
+  "target": "src/cachetools/__init__.py::Cache.maxsize",
+  "links": [
+    {
+      "test": "tests/__init__.py::CacheTestMixin.test_getsizeof_replace_grow",
+      "evidence": "cheap_llm",
+      "score": 1
+    },
+    {
+      "test": "tests/test_tlru.py::TLRUCacheTest.test_overwrite_existing_with_expired",
+      "evidence": "cheap_llm",
+      "score": 1
+    },
+    {
+      "test": "tests/test_tlru.py::TLRUCacheTest.test_ttu_heap_cleanup",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

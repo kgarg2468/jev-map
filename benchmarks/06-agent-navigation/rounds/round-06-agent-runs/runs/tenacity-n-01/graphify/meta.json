@@ -1,0 +1,32 @@
+{
+  "answer": {
+    "commands_run": [
+      "rg -n \"_first_set|class .*Test|def test_\" tenacity tests",
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise tenacity/__init__.py::_first_set?\" --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-01/graphify/graph.json",
+      "sed -n '180,195p;250,320p;675,770p' tenacity/__init__.py",
+      "sed -n '114,180p;1770,1815p;1540,1605p' tests/test_tenacity.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_tenacity.py::TestRetryingName::test_str_preserved_by_copy tests/test_tenacity.py::TestRetryingName::test_str_overridden_by_copy tests/test_tenacity.py::TestRetryWith::test_redefine_stop",
+      "rg -n -A20 \"def retry_with\" tenacity/__init__.py"
+    ],
+    "evidence": "The first two tests call Retrying.copy() directly. The third calls retry_with(), which calls copy(). BaseRetrying.copy() calls _first_set() for each copied option. All three node IDs passed.",
+    "tests": [
+      "tests/test_tenacity.py::TestRetryingName::test_str_preserved_by_copy",
+      "tests/test_tenacity.py::TestRetryingName::test_str_overridden_by_copy",
+      "tests/test_tenacity.py::TestRetryWith::test_redefine_stop"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 6,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-n-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 87168,
+    "input_tokens": 103085,
+    "output_tokens": 1120,
+    "reasoning_output_tokens": 250
+  },
+  "wall_seconds": 29.712066842941567,
+  "web_used": false
+}

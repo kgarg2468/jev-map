@@ -1,0 +1,26 @@
+{
+  "answer": {
+    "commands_run": [
+      "sed -n '1,240p' src/cachetools/keys.py",
+      "rg -n '__radd__|addkeys|_HashedTuple|hashkey|methodkey' tests src/cachetools",
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/keys.py::_HashedTuple.__radd__?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "pwd",
+      ".venv-bench/bin/python -m pytest -q tests/test_keys.py::CacheKeysTest::test_addkeys"
+    ],
+    "evidence": "The test evaluates (1, 2, 3) + key(4, 5, 6), which calls _HashedTuple.__radd__. The native Graphify query and pytest run were attempted, but the command sandbox failed before either could execute; this node ID is therefore supported by source inspection, not a completed local test run.",
+    "tests": [
+      "tests/test_keys.py::CacheKeysTest::test_addkeys"
+    ]
+  },
+  "arm": "cheap",
+  "status": "ok",
+  "task": "cachetools-n-03",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 156160,
+    "input_tokens": 172849,
+    "output_tokens": 1033,
+    "reasoning_output_tokens": 237
+  },
+  "wall_seconds": 43.394062689039856
+}

@@ -1,0 +1,27 @@
+{
+  "answer": {
+    "commands_run": [
+      "rg -n 'def maxsize|\\.maxsize|Cache\\(' src tests",
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.maxsize?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "pwd",
+      ".venv-bench/bin/python -m pytest -q tests/test_cache.py::CacheTest::test_defaults tests/test_cache.py::CacheTest::test_missing tests/test_cache.py::CacheTest::test_getsizeof_param"
+    ],
+    "evidence": "The upstream tests/test_cache.py defines CacheTest with Cache = cachetools.Cache. Its shared CacheTestMixin directly reads cache.maxsize in all three ranked tests. Local source inspection and pytest verification were unavailable because the command runner failed before starting each command: bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted.",
+    "tests": [
+      "tests/test_cache.py::CacheTest::test_defaults",
+      "tests/test_cache.py::CacheTest::test_missing",
+      "tests/test_cache.py::CacheTest::test_missing_getsizeof"
+    ]
+  },
+  "arm": "graphify",
+  "status": "ok",
+  "task": "cachetools-n-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 162688,
+    "input_tokens": 189716,
+    "output_tokens": 1291,
+    "reasoning_output_tokens": 365
+  },
+  "wall_seconds": 37.55622920405585
+}

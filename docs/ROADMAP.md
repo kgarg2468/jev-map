@@ -1,8 +1,8 @@
 # First usable slice
 
 Implemented: Python structural relationships; optional bounded Jev inference;
-exact-request receipts; conservative source freshness checks; three MCP tools;
-offline execution smoke benchmark; two repeated live Jev smoke rounds; and one
+exact-request receipts; conservative source freshness checks; four MCP tools;
+  offline execution smoke benchmark; two repeated live Jev smoke rounds; and one
 frozen three-repository execution study. The repository is MIT licensed, with
 provider access supplied separately by the operator.
 
@@ -11,10 +11,11 @@ provider access supplied separately by the operator.
 1. Measure fresh indexing, repeated refresh after realistic edits, disk usage,
    total query time, and actual provider usage. Current parsing rebuilds the full
    structural map and freshness checks hash all included Python files.
-2. Test whether agents find useful tests sooner with an optional map tool.
-   Preserve ordinary search and test fallbacks; report complete-task outcomes
-   separately from map accuracy. Do not revive default search reranking without
-   new supporting evidence.
+2. Test Jev on harder, frozen complete-agent bug-fix and PR-review tasks.
+   Preserve ordinary search and test fallbacks; score hidden-task success,
+   review precision, time, and compute cost. The first agent test-navigation
+   pilot found no benefit at near-ceiling baseline accuracy. Do not default
+   Jev hints or revive search reranking without new supporting evidence.
 
 The live mini-repository check is complete: two independent runs made eight
 successful calls and repeated every threshold decision. It remains a wiring and
@@ -28,11 +29,13 @@ using Jev as an exclusive test filter. See the
 
 The [held-out Graphify toolbelt comparison](../benchmarks/05-heldout-toolbelt/FINDINGS.md)
 found a positive first-test ranking gain and a larger exact-edge precision gain
-over equal-count cheap lexical selection on three pinned repositories. Next,
-measure complete coding-agent tasks with ordinary search and test execution
-available in both arms; report end-to-end task success, time, token usage, and
-false confidence from the inferred map. The current result does not justify a
-general product superiority or cost claim.
+over equal-count cheap lexical selection on three pinned repositories. The
+separate [24-task agent test-navigation study](../benchmarks/06-agent-navigation/FINDINGS.md)
+then let the same LLM agent use native Graphify, `rg`, and pytest in every arm.
+Graphify alone and Graphify plus Jev both found an executing first test on
+23/24 tasks; a cheap LLM hint arm found 24/24. Jev's much lower hint cost did
+not create a better completed-agent outcome. Full bug-fix/review task success
+and broad product superiority remain unmeasured.
 
 Potential extensions, each requiring its own evaluation: importing per-test
 execution evidence with source identity, framework-aware fixtures and dynamic

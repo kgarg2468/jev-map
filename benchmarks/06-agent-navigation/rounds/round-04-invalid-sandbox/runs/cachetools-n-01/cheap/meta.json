@@ -1,0 +1,28 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.maxsize?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "rg -n 'def maxsize|\\.maxsize|CacheTestMixin|test_getsizeof_replace_grow|test_overwrite_existing_with_expired|test_ttu_heap_cleanup' src/cachetools/__init__.py tests",
+      "rg --files | head -80",
+      "ls -l .venv-bench/bin/python /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "pwd"
+    ],
+    "evidence": "The upstream CacheTestMixin.test_defaults directly reads cache.maxsize, and these three test classes inherit that test. CacheTest uses Cache itself, so it ranks first. The repository command runner failed before any command or pytest test could start (bwrap loopback error), so the local checkout and execution remain unverified.",
+    "tests": [
+      "tests/test_cache.py::CacheTest::test_defaults",
+      "tests/test_lru.py::LRUCacheTest::test_defaults",
+      "tests/test_tlru.py::TLRUCacheTest::test_defaults"
+    ]
+  },
+  "arm": "cheap",
+  "status": "ok",
+  "task": "cachetools-n-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 196736,
+    "input_tokens": 227802,
+    "output_tokens": 1661,
+    "reasoning_output_tokens": 621
+  },
+  "wall_seconds": 50.29394298908301
+}

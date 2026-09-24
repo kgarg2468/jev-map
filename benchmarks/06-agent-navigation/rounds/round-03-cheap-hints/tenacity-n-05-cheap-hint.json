@@ -1,0 +1,21 @@
+{
+  "target": "tenacity/retry.py::retry_base.__or__",
+  "links": [
+    {
+      "test": "tests/test_tenacity.py::TestRetryConditions.test_retry_or_with_plain_function",
+      "evidence": "cheap_llm",
+      "score": 1
+    },
+    {
+      "test": "tests/test_tenacity.py::TestRetryConditions.test_retry_or_coalesces",
+      "evidence": "cheap_llm",
+      "score": 1
+    },
+    {
+      "test": "tests/test_asyncio.py::TestContextManager.test_retry_with_async_result_ror",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

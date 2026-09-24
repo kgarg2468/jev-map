@@ -1,0 +1,12 @@
+You are a coding agent investigating a function in this repository.
+
+Target implementation: src/cachetools/func.py::_UnboundTTLCache.maxsize
+
+Find up to three runnable pytest test node IDs, ranked by how likely they are to actually execute this exact implementation. The highest-ranked ID matters most. You may inspect source, use rg, query Graphify's native code-only graph at /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json, and run tests with the repository's .venv-bench/bin/python. Use at least one native Graphify `query` or `explain` command, for example:
+uvx --from graphifyy==0.9.67 graphify query "Which tests exercise src/cachetools/func.py::_UnboundTTLCache.maxsize?" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json
+
+You may use ordinary file and test commands to check evidence. Do not edit files. Do not inspect benchmark oracle files or other experiment arms. A graph path or optional hint is a lead, not proof of execution. Do not assume a missing link means a test is irrelevant.
+
+Optional extra relationship hint (JSON): {"links": [], "target": "src/cachetools/func.py::_UnboundTTLCache.maxsize"}
+
+Return ONLY one JSON object, with keys `tests` (array of zero to three exact runnable pytest node IDs), `evidence` (brief explanation), and `commands_run` (array of commands you actually ran). Do not include markdown. Parameter variants may be given without the bracket suffix if every listed variant exercises the target. If uncertain, return the best grounded options rather than invented IDs.

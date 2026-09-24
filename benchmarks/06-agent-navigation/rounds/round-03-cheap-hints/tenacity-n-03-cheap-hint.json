@@ -1,0 +1,11 @@
+{
+  "target": "tenacity/retry.py::retry_if_exception_message._check",
+  "links": [
+    {
+      "test": "tests/test_tenacity.py::TestRetryConditions.test_retry_if_exception_message_empty_message",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

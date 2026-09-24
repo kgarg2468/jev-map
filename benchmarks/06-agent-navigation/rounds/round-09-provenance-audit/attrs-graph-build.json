@@ -1,0 +1,8 @@
+{
+  "package": "graphifyy==0.9.67",
+  "source": "/tmp/jev-agent-repos/attrs",
+  "graph_sha256": "12f137e308c72b153760377a023ec120ad868aee732faf74e7700d061c8a1679",
+  "wall_seconds": 1.2395440789405257,
+  "stdout": "[graphify extract] scanning /tmp/jev-agent-repos/attrs\n[graphify extract] --code-only: skipping 60 non-code file(s) (45 docs, 0 papers, 15 images) \u2014 no LLM extraction\n[graphify extract] found 57 code, 0 docs, 0 papers, 0 images\n[graphify extract] 23 file(s) not classified (no supported extension or shebang), skipped: .gitattributes, .gitignore, .python-version-default, CITATION.cff, LICENSE, Makefile (+17 more)\n[graphify extract] AST extraction on 57 code files...\n[graphify extract] wrote /tmp/jev-graphify-check-x4jlvy1c/graphify-out/graphify-out/graph.json \u2014 2397 nodes, 3843 edges (no clustering)\n",
+  "stderr": ""
+}

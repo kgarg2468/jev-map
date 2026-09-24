@@ -1,0 +1,5 @@
+{
+  "status": "invalid",
+  "completed_arms": 8,
+  "reason": "local command runner failed before Graphify/test execution"
+}

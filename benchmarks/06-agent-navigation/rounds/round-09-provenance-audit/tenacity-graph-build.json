@@ -1,0 +1,8 @@
+{
+  "package": "graphifyy==0.9.67",
+  "source": "/tmp/jev-agent-repos/tenacity",
+  "graph_sha256": "565dc952572b5865a341b270247d4e310be75a4baef24c80e7e708175e369bdb",
+  "wall_seconds": 0.7661497340304777,
+  "stdout": "[graphify extract] scanning /tmp/jev-agent-repos/tenacity\n[graphify extract] --code-only: skipping 67 non-code file(s) (67 docs, 0 papers, 0 images) \u2014 no LLM extraction\n[graphify extract] found 21 code, 0 docs, 0 papers, 0 images\n[graphify extract] 4 file(s) not classified (no supported extension or shebang), skipped: .editorconfig, .gitignore, LICENSE, py.typed\n[graphify extract] AST extraction on 21 code files...\n[graphify extract] wrote /tmp/jev-graphify-check-z9mejsz3/graphify-out/graphify-out/graph.json \u2014 830 nodes, 1657 edges (no clustering)\n",
+  "stderr": ""
+}

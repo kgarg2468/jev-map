@@ -1,0 +1,33 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/func.py::_cache?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "sed -n '1,260p' src/cachetools/func.py",
+      "rg -n \"(_cache|cachetools\\.func|from cachetools import .*cached|@.*cache|lru_cache|ttl_cache|lfu_cache|fifo_cache|rr_cache)\" tests",
+      "sed -n '1,180p' tests/test_func.py",
+      "uvx --from graphifyy==0.9.67 graphify explain \"src/cachetools/func.py::_cache\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      ".venv-bench/bin/python -m pytest --collect-only -q tests/test_func.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_func.py::LRUDecoratorTest::test_decorator tests/test_func.py::LRUDecoratorTest::test_decorator_typed tests/test_func.py::LRUDecoratorTest::test_decorator_user_function"
+    ],
+    "evidence": "Graphify shows lru_cache calls the target _cache. Each selected test invokes lru_cache through LRUDecoratorTest; the tests cover normal, typed, and direct-function calls. All three node IDs were collected and passed.",
+    "tests": [
+      "tests/test_func.py::LRUDecoratorTest::test_decorator",
+      "tests/test_func.py::LRUDecoratorTest::test_decorator_typed",
+      "tests/test_func.py::LRUDecoratorTest::test_decorator_user_function"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 7,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-05",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 56320,
+    "input_tokens": 67172,
+    "output_tokens": 1120,
+    "reasoning_output_tokens": 130
+  },
+  "wall_seconds": 39.8877658220008,
+  "web_used": false
+}

@@ -1,0 +1,11 @@
+{
+  "target": "src/attr/setters.py::convert",
+  "links": [
+    {
+      "test": "tests/test_setattr.py::TestSetAttr.test_pipe",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

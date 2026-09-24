@@ -1,0 +1,12 @@
+{
+  "target": "src/cachetools/keys.py::hashkey",
+  "links": [
+    {
+      "test": "tests/test_keys.py::CacheKeysTest.test_addkeys",
+      "evidence": "inferred",
+      "score": 0.86,
+      "receipt": "receipts/de33d57978e08acd4b8325476bcba3ce58016e4a9e18a7950cafc366689a6c90.json"
+    }
+  ],
+  "warning": "Inferred links are fallible and incomplete; search and run tests."
+}

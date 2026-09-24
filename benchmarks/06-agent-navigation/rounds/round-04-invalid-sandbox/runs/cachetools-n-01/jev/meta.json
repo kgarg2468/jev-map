@@ -1,0 +1,28 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.maxsize?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "command -v graphify; command -v uvx; ls .venv-bench/bin/python",
+      "rg -n \"class Cache|def maxsize|\\.maxsize\\b|maxsize\\s*==|maxsize\\)\" src tests",
+      "rg --files tests | head -80",
+      "pwd"
+    ],
+    "evidence": "The upstream CacheTestMixin.test_defaults reads cache.maxsize, and these three test classes use that mixin. CacheTest uses Cache directly; LRUCacheTest and TTLCacheTest inherit Cache.maxsize. The local Graphify query, source inspection, and pytest verification could not run because the command sandbox failed with `bwrap: loopback: Failed RTM_NEWADDR: Operation not permitted`, so these IDs are grounded in upstream source but unverified against this checkout.",
+    "tests": [
+      "tests/test_cache.py::CacheTest::test_defaults",
+      "tests/test_lru.py::LRUCacheTest::test_defaults",
+      "tests/test_ttl.py::TTLCacheTest::test_defaults"
+    ]
+  },
+  "arm": "jev",
+  "status": "ok",
+  "task": "cachetools-n-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 232448,
+    "input_tokens": 263751,
+    "output_tokens": 1660,
+    "reasoning_output_tokens": 670
+  },
+  "wall_seconds": 54.929217642056756
+}

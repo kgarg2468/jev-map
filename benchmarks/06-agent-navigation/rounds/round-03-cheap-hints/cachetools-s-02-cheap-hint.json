@@ -1,0 +1,11 @@
+{
+  "target": "src/cachetools/keys.py::typedkey",
+  "links": [
+    {
+      "test": "tests/test_keys.py::CacheKeysTest.test_typedkey",
+      "evidence": "cheap_llm",
+      "score": 1
+    }
+  ],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

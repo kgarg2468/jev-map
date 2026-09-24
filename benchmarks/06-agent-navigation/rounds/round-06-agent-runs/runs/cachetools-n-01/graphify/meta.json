@@ -1,0 +1,35 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.maxsize?\" --graph /tmp/jev-agent-working-graphs-v3/cachetools-n-01/graphify/graph.json",
+      "rg -n \"maxsize|class Cache|def test_\" tests src/cachetools/__init__.py",
+      "rg --files tests",
+      "sed -n '1,75p' tests/test_cache.py",
+      "sed -n '28,70p' tests/__init__.py",
+      "sed -n '145,164p' src/cachetools/__init__.py",
+      ".venv-bench/bin/python -m pytest --collect-only -q tests/test_cache.py",
+      "sed -n '435,465p' tests/__init__.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_cache.py::CacheTest::test_defaults tests/test_cache.py::CacheTest::test_maxsize_zero tests/test_cache.py::CacheTest::test_missing"
+    ],
+    "evidence": "CacheTest uses cachetools.Cache. Each selected test reads cache.maxsize, which invokes the target property. All three node IDs were collected and passed.",
+    "tests": [
+      "tests/test_cache.py::CacheTest::test_defaults",
+      "tests/test_cache.py::CacheTest::test_maxsize_zero",
+      "tests/test_cache.py::CacheTest::test_missing"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 9,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 62080,
+    "input_tokens": 78822,
+    "output_tokens": 1157,
+    "reasoning_output_tokens": 277
+  },
+  "wall_seconds": 27.76347877003718,
+  "web_used": false
+}

@@ -1,0 +1,5 @@
+{
+  "target": "src/attr/_make.py::_setattr",
+  "links": [],
+  "warning": "LLM hints are fallible and incomplete; search and run tests."
+}

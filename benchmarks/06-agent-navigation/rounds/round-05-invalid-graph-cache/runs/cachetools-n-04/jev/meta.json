@@ -1,0 +1,35 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/func.py::_UnboundTTLCache.maxsize?\" --graph /home/kg/jev-map-agent-results/benchmarks/06-agent-navigation/rounds/round-02-tool-inputs/cachetools-graph.json",
+      "sed -n '1,150p' src/cachetools/func.py",
+      "rg -n 'maxsize|ttl_cache|_UnboundTTLCache' tests/test_func.py tests",
+      "rg -n '^class |^    def test_|^def test_' tests/test_func.py",
+      "sed -n '1,160p' tests/test_func.py",
+      "sed -n '35,110p' src/cachetools/__init__.py",
+      "sed -n '1,165p' src/cachetools/_cached.py",
+      "sed -n '450,520p' src/cachetools/__init__.py",
+      "rg -n 'def info|cache.maxsize|def maxsize' src/cachetools/__init__.py src/cachetools/_cached.py",
+      "./.venv-bench/bin/python -m pytest -q tests/test_func.py::TTLDecoratorTest::test_decorator_unbound",
+      "./.venv-bench/bin/python -c 'import sys, pytest; hits=[]; sys.setprofile(lambda frame, event, arg: hits.append((frame.f_code.co_filename, frame.f_code.co_firstlineno)) if event == \"call\" and frame.f_code.co_name == \"maxsize\" and frame.f_code.co_filename.endswith(\"/cachetools/func.py\") else None); rc=pytest.main([\"-q\", \"tests/test_func.py::TTLDecoratorTest::test_decorator_unbound\"]); sys.setprofile(None); print(\"target_maxsize_calls\", len(hits)); sys.exit(rc if hits else 1)'"
+    ],
+    "evidence": "The test creates a TTL cache with maxsize=None and calls cache_info() repeatedly. It passed, and a runtime profile recorded four calls to src/cachetools/func.py::_UnboundTTLCache.maxsize.",
+    "tests": [
+      "tests/test_func.py::TTLDecoratorTest::test_decorator_unbound"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 11,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-04",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 102400,
+    "input_tokens": 119078,
+    "output_tokens": 1503,
+    "reasoning_output_tokens": 242
+  },
+  "wall_seconds": 38.12763144308701,
+  "web_used": false
+}

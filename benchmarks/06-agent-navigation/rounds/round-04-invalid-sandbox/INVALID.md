@@ -1,0 +1,1 @@
+Invalid agent wave: Codex read-only sandbox could not start local commands (`bwrap: loopback: Failed RTM_NEWADDR`). Agents used web search instead of the pinned checkout and could not query Graphify or run tests. These outputs are excluded from all scoring. The wave was stopped after eight completed arms; partial slots are retained for audit.
