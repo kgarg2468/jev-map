@@ -1,0 +1,35 @@
+{
+  "historical_inputs_verified": true,
+  "repositories": [
+    {
+      "collect_command": ".venv-bench/bin/python -m pytest --collect-only -q",
+      "collected_cases": 337,
+      "missing_profiled_ids": [],
+      "name": "cachetools",
+      "profile_command": "JEV_MAP_PROFILE_ROOT=<repo> JEV_MAP_PROFILE_OUTPUT=<private oracle> PYTHONPATH=<jev-map>/benchmarks .venv-bench/bin/python -m pytest -q -p full_suite_profile",
+      "profiled_cases": 337,
+      "selection_unchanged": true,
+      "uncollected_profiled_ids": []
+    },
+    {
+      "collect_command": ".venv-bench/bin/python -m pytest --collect-only -q",
+      "collected_cases": 184,
+      "missing_profiled_ids": [],
+      "name": "tenacity",
+      "profile_command": "JEV_MAP_PROFILE_ROOT=<repo> JEV_MAP_PROFILE_OUTPUT=<private oracle> PYTHONPATH=<jev-map>/benchmarks .venv-bench/bin/python -m pytest -q -p full_suite_profile",
+      "profiled_cases": 184,
+      "selection_unchanged": true,
+      "uncollected_profiled_ids": []
+    },
+    {
+      "collect_command": ".venv-bench/bin/python -m pytest --collect-only -q",
+      "collected_cases": 1412,
+      "missing_profiled_ids": [],
+      "name": "attrs",
+      "profile_command": "JEV_MAP_PROFILE_ROOT=<repo> JEV_MAP_PROFILE_OUTPUT=<private oracle> PYTHONPATH=<jev-map>/benchmarks .venv-bench/bin/python -m pytest -q -p full_suite_profile",
+      "profiled_cases": 1412,
+      "selection_unchanged": true,
+      "uncollected_profiled_ids": []
+    }
+  ]
+}
