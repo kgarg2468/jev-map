@@ -1,0 +1,33 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/func.py::_UnboundTTLCache.maxsize?\" --graph /tmp/jev-agent-working-graphs-v3/cachetools-n-04/jev/graph.json",
+      "sed -n '1,180p' src/cachetools/func.py",
+      "rg -n \"maxsize|ttl_cache|ttlcache|TTLCache\" tests/test_func.py",
+      "sed -n '1,260p' tests/test_func.py",
+      "rg -n \"ttl_cache\\(|_UnboundTTLCache|cache\\.maxsize|\\.maxsize\" tests src/cachetools/_cached.py src/cachetools/__init__.py",
+      "rg -n \"def (cache_info|_condition_info|_locked_info|_unlocked_info)|maxsize\" src/cachetools/_cached.py",
+      "ls -l .venv-bench/bin/python",
+      "sed -n '1,165p' src/cachetools/_cached.py",
+      ".venv-bench/bin/python -c 'import sys, pytest; from cachetools.func import _UnboundTTLCache; target=_UnboundTTLCache.maxsize.fget.__code__; hits=[0]; sys.setprofile(lambda frame,event,arg: hits.__setitem__(0,hits[0]+1) if event==\"call\" and frame.f_code is target else None); status=pytest.main([\"-q\",\"tests/test_func.py::TTLDecoratorTest::test_decorator_unbound\"]); sys.setprofile(None); print(\"target_calls=\",hits[0]); raise SystemExit(status)'"
+    ],
+    "evidence": "This test creates a ttl_cache with maxsize=None and calls cache_info(). A profile run confirmed four calls to the exact _UnboundTTLCache.maxsize implementation; the test passed.",
+    "tests": [
+      "tests/test_func.py::TTLDecoratorTest::test_decorator_unbound"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 9,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-04",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 89856,
+    "input_tokens": 101377,
+    "output_tokens": 1307,
+    "reasoning_output_tokens": 278
+  },
+  "wall_seconds": 40.375489853089675,
+  "web_used": false
+}

@@ -38,3 +38,11 @@ class AgentNavigationScoreTest(unittest.TestCase):
             "tests/test_a.py::test_c": {**passed, "thread_coverage_unknown": True}}}
         self.assertEqual(score.observed_links(oracle),
                          {"core.py::work": {"tests/test_a.py::test_a"}})
+
+    def test_list_price_uses_cached_token_rate(self):
+        estimate = score.list_price_cost({"input_tokens": 1_000_000,
+                                          "cached_input_tokens": 500_000,
+                                          "output_tokens": 100_000}, "gpt-5.6-luna")
+        self.assertAlmostEqual(estimate, 0.23)
+        with self.assertRaisesRegex(ValueError, "Invalid"):
+            score.list_price_cost({"input_tokens": 1, "cached_input_tokens": 2}, "gpt-5.6-luna")

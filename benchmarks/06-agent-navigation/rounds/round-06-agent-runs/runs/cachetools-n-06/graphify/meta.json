@@ -1,0 +1,28 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.__missing__?\" --graph /tmp/jev-agent-working-graphs-v3/cachetools-n-06/graphify/graph.json",
+      ".venv-bench/bin/python -c 'import pytest; raise SystemExit(pytest.main([\"-q\", \"tests/test_cachedmethod.py::CacheMethodTest::test_nospace\", \"tests/test_ttl.py::TTLCacheTest::test_ttl_tuple_key\", \"tests/test_tlru.py::TLRUCacheTest::test_ttu_tuple_key\"]))'"
+    ],
+    "evidence": "A runtime profile recorded calls to Cache.__missing__ in all three tests: 11, 1, and 1 calls respectively. Each node ID also passed when run directly. The Graphify query supplied leads; the runtime profile confirmed execution of the exact implementation.",
+    "tests": [
+      "tests/test_cachedmethod.py::CacheMethodTest::test_nospace",
+      "tests/test_ttl.py::TTLCacheTest::test_ttl_tuple_key",
+      "tests/test_tlru.py::TLRUCacheTest::test_ttu_tuple_key"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 18,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-06",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 232192,
+    "input_tokens": 253753,
+    "output_tokens": 2619,
+    "reasoning_output_tokens": 904
+  },
+  "wall_seconds": 77.0451272049686,
+  "web_used": false
+}

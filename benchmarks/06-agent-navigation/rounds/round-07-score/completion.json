@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "files": {
+    "attrs-oracle.json": "d2f167789017a171fb9660513ca6afc4ab2dc60f3578d9252f9a97f4a44d0d7a",
+    "cachetools-oracle.json": "23a31bfb3ea03d06c154ed8456859e1b4fbbd101498df2b8004598f3c87c6e2c",
+    "score.json": "0541284ac488bfbc810c4da610adaab402fed99c368a374489cd9d7699f34aeb",
+    "tenacity-oracle.json": "8aa3446a88911863c5d7bd38bff6c21be1de46d22d84feaca1e5bcb3ee15b8c9"
+  }
+}

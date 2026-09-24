@@ -1,0 +1,47 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/__init__.py::Cache.__missing__?\" --graph /tmp/jev-agent-working-graphs-v3/cachetools-n-06/jev/graph.json",
+      "sed -n '45,170p' src/cachetools/__init__.py",
+      "rg -n '__missing__|class CacheTest|def test_.*(missing|getitem|pop|get|setdefault)' tests",
+      "sed -n '1,230p' tests/test_cache.py",
+      "sed -n '1,220p' tests/__init__.py",
+      "sed -n '220,460p' tests/__init__.py",
+      "rg -n 'assertRaises\\(KeyError\\)|assertRaisesRegex\\(KeyError|\\[[^]]+\\]' tests/test_cache.py tests/__init__.py | head -100",
+      "rg -n 'class .*Test|Cache = ' tests/test_*.py",
+      "rg -n -A 3 -B 2 'assertRaises\\(KeyError\\)|assertRaisesRegex\\(KeyError' tests",
+      "sed -n '475,500p' src/cachetools/__init__.py",
+      "sed -n '615,640p' src/cachetools/__init__.py",
+      "sed -n '175,210p' tests/test_ttl.py",
+      "sed -n '235,270p' tests/test_tlru.py",
+      "sed -n '1,45p' tests/test_ttl.py",
+      "sed -n '1,50p' tests/test_tlru.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_ttl.py::TTLCacheTest::test_ttl_tuple_key tests/test_tlru.py::TLRUCacheTest::test_ttu_tuple_key",
+      "sed -n '30,145p' tests/test_ttl.py",
+      "sed -n '30,145p' tests/test_tlru.py",
+      "sed -n '1,110p' tests/test_cached.py",
+      "sed -n '220,248p' tests/test_cached.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_cached.py::CacheWrapperTest::test_decorator tests/test_ttl.py::TTLCacheTest::test_ttl_tuple_key tests/test_tlru.py::TLRUCacheTest::test_ttu_tuple_key"
+    ],
+    "evidence": "The decorator test uses a Cache instance and calls the wrapper with uncached keys, reaching Cache.__getitem__ and then Cache.__missing__. The TTL and TLRU tests index expired keys; both implementations call the inherited Cache.__missing__. All three node IDs passed.",
+    "tests": [
+      "tests/test_cached.py::CacheWrapperTest::test_decorator",
+      "tests/test_ttl.py::TTLCacheTest::test_ttl_tuple_key",
+      "tests/test_tlru.py::TLRUCacheTest::test_ttu_tuple_key"
+    ]
+  },
+  "arm": "jev",
+  "command_count": 21,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-n-06",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 223232,
+    "input_tokens": 267586,
+    "output_tokens": 2063,
+    "reasoning_output_tokens": 292
+  },
+  "wall_seconds": 57.99815732904244,
+  "web_used": false
+}

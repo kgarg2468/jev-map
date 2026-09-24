@@ -1,0 +1,31 @@
+{
+  "answer": {
+    "commands_run": [
+      "rg -n \"class retry_if_exception_message|def _check|retry_if_exception_message\" tenacity/retry.py tests",
+      "sed -n '220,275p' tenacity/retry.py; sed -n '1410,1495p' tests/test_tenacity.py; sed -n '1240,1310p' tests/test_tenacity.py",
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise tenacity/retry.py::retry_if_exception_message._check?\" --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-03/graphify/graph.json",
+      "rg -n '^class ' tests/test_tenacity.py; sed -n '2350,2400p' tests/test_tenacity.py; sed -n '80,110p' tenacity/retry.py; .venv-bench/bin/python -m pytest --collect-only -q tests/test_tenacity.py -k 'test_retry_if_exception_message or test_retry_if_not_exception_message'",
+      "sed -n '945,1008p' tests/test_tenacity.py; .venv-bench/bin/python -m pytest -q tests/test_tenacity.py::TestDecoratorWrapper::test_retry_if_exception_message tests/test_tenacity.py::TestDecoratorWrapper::test_retry_if_exception_message_match tests/test_tenacity.py::TestRetryConditions::test_retry_if_exception_message_empty_message"
+    ],
+    "evidence": "The empty-message test calls the strategy on two failed retry states, directly exercising _check. The decorator tests retry on matching exception messages, exercising its equality and regex branches respectively. All three passed.",
+    "tests": [
+      "tests/test_tenacity.py::TestRetryConditions::test_retry_if_exception_message_empty_message",
+      "tests/test_tenacity.py::TestDecoratorWrapper::test_retry_if_exception_message",
+      "tests/test_tenacity.py::TestDecoratorWrapper::test_retry_if_exception_message_match"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 5,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-n-03",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 64128,
+    "input_tokens": 76869,
+    "output_tokens": 1065,
+    "reasoning_output_tokens": 95
+  },
+  "wall_seconds": 33.47400954691693,
+  "web_used": false
+}

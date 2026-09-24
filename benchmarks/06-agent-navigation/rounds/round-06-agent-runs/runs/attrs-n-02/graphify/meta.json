@@ -1,0 +1,37 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/attr/_make.py::_CountingAttr.validator?\" --graph /tmp/jev-agent-working-graphs-v3/attrs-n-02/graphify/graph.json",
+      "rg -n \"class _CountingAttr|def validator\\(|\\.validator\\(\" src/attr/_make.py tests",
+      "sed -n '2731,2895p' src/attr/_make.py",
+      "rg -n '(@[A-Za-z_][A-Za-z_0-9.]*\\.validator|\\.validator\\b|validator=)' tests/test_make.py tests/test_next_gen.py tests/test_dunders.py tests/test_annotations.py",
+      "sed -n '1760,1950p' tests/test_make.py",
+      "sed -n '1,165p' tests/test_make.py",
+      "sed -n '115,160p' tests/test_next_gen.py",
+      "sed -n '355,400p' tests/test_next_gen.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_make.py::TestCountingAttr::test_validator_decorator_single tests/test_make.py::TestCountingAttr::test_validator_decorator tests/test_next_gen.py::TestDefine::test_auto_attribs_detect_fields_and_annotations",
+      "rg -n '^class ' tests/test_next_gen.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_make.py::TestCountingAttr::test_validator_decorator_single tests/test_make.py::TestCountingAttr::test_validator_decorator tests/test_next_gen.py::TestNextGen::test_auto_attribs_detect_fields_and_annotations"
+    ],
+    "evidence": "The first two tests directly call _CountingAttr.validator through @a.validator and cover its unset and existing-validator branches. The third uses @y.validator in a class definition. All five collected cases passed.",
+    "tests": [
+      "tests/test_make.py::TestCountingAttr::test_validator_decorator_single",
+      "tests/test_make.py::TestCountingAttr::test_validator_decorator",
+      "tests/test_next_gen.py::TestNextGen::test_auto_attribs_detect_fields_and_annotations"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 11,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "attrs-n-02",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 111872,
+    "input_tokens": 124023,
+    "output_tokens": 1513,
+    "reasoning_output_tokens": 180
+  },
+  "wall_seconds": 40.086125868954696,
+  "web_used": false
+}

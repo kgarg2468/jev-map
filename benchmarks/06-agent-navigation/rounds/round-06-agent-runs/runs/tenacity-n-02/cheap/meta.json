@@ -1,0 +1,33 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise tenacity/__init__.py::AttemptManager.__exit__?\" --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-02/cheap/graph.json",
+      "rg -n \"class AttemptManager|def __exit__|AttemptManager|with attempt|with .*attempt\" tenacity tests",
+      "sed -n '150,182p;1700,1750p;2110,2185p' tests/test_tenacity.py",
+      "sed -n '210,245p;215,255p;295,345p;365,420p' tests/test_asyncio.py",
+      "sed -n '215,245p;490,520p' tenacity/__init__.py",
+      "uvx --from graphifyy==0.9.67 graphify query \"test functions with call relationships to AttemptManager.__exit__\" --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-02/cheap/graph.json --budget 5000",
+      ".venv-bench/bin/python - <<'PY'\nimport sys\nimport pytest\nfrom collections import Counter\n\nnodes = [\n    'tests/test_tenacity.py::TestContextManager::test_context_manager_retry_one',\n    'tests/test_tenacity.py::TestContextManager::test_context_manager_retry_error',\n    'tests/test_asyncio.py::TestContextManager::test_async_with_attempt_manager',\n]\nfor node in nodes:\n    calls = Counter()\n    def profile(frame, event, arg):\n        if event == 'call' and frame.f_code.co_name == '__exit__' and frame.f_code.co_filename.endswith('/tenacity/__init__.py') and frame.f_code.co_firstlineno == 224:\n            calls['target'] += 1\n    sys.setprofile(profile)\n    result = pytest.main(['-q', node])\n    sys.setprofile(None)\n    print(f'{node}: pytest_exit={result}, target_calls={calls[\"target\"]}')\nPY"
+    ],
+    "evidence": "All three node IDs passed. A Python profiler recorded calls to tenacity/__init__.py::AttemptManager.__exit__: 2, 2, and 3 respectively. The first test covers an exception followed by success; the third reaches the target through __aexit__.",
+    "tests": [
+      "tests/test_tenacity.py::TestContextManager::test_context_manager_retry_one",
+      "tests/test_tenacity.py::TestContextManager::test_context_manager_retry_error",
+      "tests/test_asyncio.py::TestContextManager::test_async_with_attempt_manager"
+    ]
+  },
+  "arm": "cheap",
+  "command_count": 7,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-n-02",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 64256,
+    "input_tokens": 78325,
+    "output_tokens": 2050,
+    "reasoning_output_tokens": 459
+  },
+  "wall_seconds": 45.48652106395457,
+  "web_used": false
+}

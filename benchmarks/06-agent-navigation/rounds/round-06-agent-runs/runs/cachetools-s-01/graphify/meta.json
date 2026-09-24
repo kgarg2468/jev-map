@@ -1,0 +1,33 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/cachetools/keys.py::hashkey?\" --graph /tmp/jev-agent-working-graphs-v3/cachetools-s-01/graphify/graph.json",
+      "rg -n 'hashkey|typedkey|methodkey' tests src/cachetools/keys.py",
+      "rg --files tests",
+      "sed -n '1,110p' tests/test_keys.py",
+      "sed -n '1,85p' src/cachetools/keys.py",
+      ".venv-bench/bin/python -m pytest --collect-only -q tests/test_keys.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_keys.py::CacheKeysTest::test_hashkey tests/test_keys.py::CacheKeysTest::test_methodkey tests/test_keys.py::CacheKeysTest::test_pickle"
+    ],
+    "evidence": "Graphify identified test_keys.py as related to hashkey. Source inspection confirms test_hashkey calls hashkey directly, test_methodkey reaches it through methodkey, and test_pickle calls it directly with and without keyword arguments. All three node IDs passed.",
+    "tests": [
+      "tests/test_keys.py::CacheKeysTest::test_hashkey",
+      "tests/test_keys.py::CacheKeysTest::test_methodkey",
+      "tests/test_keys.py::CacheKeysTest::test_pickle"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 7,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "cachetools-s-01",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 51840,
+    "input_tokens": 63912,
+    "output_tokens": 955,
+    "reasoning_output_tokens": 141
+  },
+  "wall_seconds": 28.84319844795391,
+  "web_used": false
+}

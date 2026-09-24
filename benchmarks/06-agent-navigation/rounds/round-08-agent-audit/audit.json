@@ -1,0 +1,388 @@
+{
+  "end_to_end_wall": {
+    "cheap": {
+      "mean_paired_difference_vs_graphify_seconds": 7.369375914660243,
+      "paired_bootstrap_95_seconds": [
+        2.8567931534392605,
+        12.016597985726548
+      ],
+      "total_seconds": 1073.4372902275063
+    },
+    "jev": {
+      "mean_paired_difference_vs_graphify_seconds": -0.2771363321080571,
+      "paired_bootstrap_95_seconds": [
+        -4.085603673001363,
+        3.453686211326082
+      ],
+      "total_seconds": 889.9209963050671
+    }
+  },
+  "independent_hit1": {
+    "cheap": 24,
+    "graphify": 23,
+    "jev": 23
+  },
+  "rows": [
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 28.798574678017758,
+        "graphify": 27.76347877003718,
+        "jev": 31.115169602271635
+      },
+      "task": "cachetools-n-01"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 33.10426049004309,
+        "graphify": 33.05796670005657,
+        "jev": 45.86435172735946
+      },
+      "task": "cachetools-n-02"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 43.29684923705645,
+        "graphify": 45.32205643400084,
+        "jev": 31.29998034244636
+      },
+      "task": "cachetools-n-03"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 44.43534674192779,
+        "graphify": 35.46034381794743,
+        "jev": 40.76805918646278
+      },
+      "task": "cachetools-n-04"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 32.811112339026295,
+        "graphify": 30.1822364309337,
+        "jev": 26.851283649390098
+      },
+      "task": "cachetools-n-05"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 70.86721853795461,
+        "graphify": 77.0451272049686,
+        "jev": 58.277254488377366
+      },
+      "task": "cachetools-n-06"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 26.350432380917482,
+        "graphify": 28.84319844795391,
+        "jev": 22.724183719430584
+      },
+      "task": "cachetools-s-01"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "cachetools",
+      "seconds": {
+        "cheap": 53.23708314297255,
+        "graphify": 30.788285944028758,
+        "jev": 43.39501329039922
+      },
+      "task": "cachetools-s-02"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 38.576459045056254,
+        "graphify": 29.712066842941567,
+        "jev": 48.314260152110364
+      },
+      "task": "tenacity-n-01"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 50.3292113810312,
+        "graphify": 36.06424425798468,
+        "jev": 30.656851640029345
+      },
+      "task": "tenacity-n-02"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 37.41690954507794,
+        "graphify": 33.47400954691693,
+        "jev": 38.08760402718326
+      },
+      "task": "tenacity-n-03"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 38.59337478305679,
+        "graphify": 60.86383642593864,
+        "jev": 44.14038728614105
+      },
+      "task": "tenacity-n-04"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 31.540798942092806,
+        "graphify": 26.95973297196906,
+        "jev": 30.154979479091708
+      },
+      "task": "tenacity-n-05"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 41.87682075391058,
+        "graphify": 33.240164041984826,
+        "jev": 35.25069915916538
+      },
+      "task": "tenacity-n-06"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 33.32564798393287,
+        "graphify": 27.214593837037683,
+        "jev": 33.64088130014716
+      },
+      "task": "tenacity-s-01"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "tenacity",
+      "seconds": {
+        "cheap": 36.92120448104106,
+        "graphify": 41.91027908306569,
+        "jev": 33.77843488502549
+      },
+      "task": "tenacity-s-02"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 39.81384860002436,
+        "graphify": 32.28046992397867,
+        "jev": 25.608900885097682
+      },
+      "task": "attrs-n-01"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 52.68577861902304,
+        "graphify": 40.086125868954696,
+        "jev": 45.41920341202058
+      },
+      "task": "attrs-n-02"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": false,
+        "jev": false
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 87.96397831803188,
+        "graphify": 42.993525421014056,
+        "jev": 28.69440718309488
+      },
+      "task": "attrs-n-03"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 61.24513544293586,
+        "graphify": 55.164255346986465,
+        "jev": 55.91191412915941
+      },
+      "task": "attrs-n-04"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 76.12284752400592,
+        "graphify": 39.449739622999914,
+        "jev": 38.41667292511556
+      },
+      "task": "attrs-n-05"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 39.11281361209694,
+        "graphify": 34.20156383397989,
+        "jev": 40.39423655613791
+      },
+      "task": "attrs-n-06"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 34.241866614087485,
+        "graphify": 19.90441491396632,
+        "jev": 30.01913812418934
+      },
+      "task": "attrs-s-01"
+    },
+    {
+      "hit1": {
+        "cheap": true,
+        "graphify": true,
+        "jev": true
+      },
+      "repo": "attrs",
+      "seconds": {
+        "cheap": 40.769717034185305,
+        "graphify": 34.59055258601438,
+        "jev": 31.137129155220464
+      },
+      "task": "attrs-s-02"
+    }
+  ],
+  "score_code_sha256": "2ea1bd89eb787248b3472f0bcdb20fdb3648febbe8c74a819d4e7ba6014fdac2",
+  "tasks": 24,
+  "tool_use_runs": {
+    "cheap": {
+      "forbidden": 0,
+      "graphify": 24,
+      "pytest": 24,
+      "rg": 24,
+      "web": 0
+    },
+    "graphify": {
+      "forbidden": 0,
+      "graphify": 24,
+      "pytest": 24,
+      "rg": 24,
+      "web": 0
+    },
+    "jev": {
+      "forbidden": 0,
+      "graphify": 24,
+      "pytest": 24,
+      "rg": 24,
+      "web": 0
+    }
+  }
+}

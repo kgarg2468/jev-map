@@ -120,8 +120,11 @@ confirmed addition in every repository. It still missed 64 observed candidates,
 so the map remains additive and cannot safely filter tests. See the
 [protocol, raw data, and findings](benchmarks/03-multi-repo-relationships/FINDINGS.md).
 
-The mapping study supports adding test relationships, but does not establish
-improved complete-agent performance. See the
+The mapping study supports adding test relationships. A newer
+[24-task native Graphify agent study](benchmarks/06-agent-navigation/FINDINGS.md)
+found no first-test improvement from an added Jev hint (23/24 correct in both
+arms), despite much cheaper hint generation than a low-effort LLM. This does
+not test full bug-fix or review quality. See the
 [next evaluation steps](docs/ROADMAP.md) and the separate
 [existing-repository indexing pilot](benchmarks/02-repository-index/README.md).
 
@@ -137,8 +140,9 @@ test-exercised targets than Graphify plus lexical fallback alone (105 versus 97)
 At the same 117-link output count, Jev found 102 execution-observed links versus
 77 for a cheap lexical ranker. The frozen decision gates passed on this sample;
 the [thread-coverage audit](benchmarks/05-heldout-toolbelt/FINDINGS.md#thread-coverage-review-audit)
-reproduced the result. Complete agent-task outcomes and dollar-cost ROI remain
-unmeasured.
+reproduced the result. That intermediate ranking gain did not produce an agent
+test-navigation gain in the separate 24-task study; full bug-fix/review ROI
+remains unmeasured.
 
 ## Development
 

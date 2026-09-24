@@ -1,0 +1,37 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/attr/_make.py::_ClassBuilder.add_order?\" --graph /tmp/jev-agent-working-graphs-v3/attrs-n-06/graphify/graph.json",
+      "rg -n 'def add_order|\\.add_order\\(|class Test.*Order|order=True|order=False' src/attr/_make.py tests/test_make.py tests/test_next_gen.py",
+      "sed -n '900,1035p' src/attr/_make.py",
+      "sed -n '2500,2650p' tests/test_make.py",
+      "sed -n '1140,1205p' src/attr/_make.py",
+      "sed -n '2090,2160p' tests/test_make.py",
+      "sed -n '1555,1600p' src/attr/_make.py",
+      "sed -n '50,100p' tests/test_next_gen.py",
+      "sed -n '2965,3025p' tests/test_make.py",
+      "rg -n '^class |^    def test_returns_self|^    def test_override_order' tests/test_make.py tests/test_next_gen.py",
+      ".venv-bench/bin/python -m pytest -q tests/test_make.py::TestClassBuilder::test_returns_self tests/test_next_gen.py::TestNextGen::test_no_order tests/test_make.py::TestMakeOrder::test_subclasses_cannot_be_compared"
+    ],
+    "evidence": "The first test calls _ClassBuilder.add_order() directly. The other two create ordered classes through decorators that call add_order() when ordering is enabled. All three node IDs passed.",
+    "tests": [
+      "tests/test_make.py::TestClassBuilder::test_returns_self",
+      "tests/test_make.py::TestMakeOrder::test_subclasses_cannot_be_compared",
+      "tests/test_next_gen.py::TestNextGen::test_no_order"
+    ]
+  },
+  "arm": "graphify",
+  "command_count": 11,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "attrs-n-06",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 93824,
+    "input_tokens": 106621,
+    "output_tokens": 1311,
+    "reasoning_output_tokens": 241
+  },
+  "wall_seconds": 34.20156383397989,
+  "web_used": false
+}

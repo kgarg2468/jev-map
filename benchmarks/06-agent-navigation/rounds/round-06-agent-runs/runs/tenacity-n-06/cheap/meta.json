@@ -1,0 +1,35 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query 'Which tests exercise tenacity/wait.py::wait_none.__init__?' --graph /tmp/jev-agent-working-graphs-v3/tenacity-n-06/cheap/graph.json",
+      "rg -n 'wait_none|class wait_none|def __init__' tenacity/wait.py tests",
+      "rg --files tests | head -80",
+      "sed -n '470,515p;1685,1790p' tests/test_tenacity.py",
+      "sed -n '55,82p' tenacity/wait.py",
+      "rg -n '^class |^    def test_' tests/test_tenacity.py | sed -n '1,135p'",
+      "sed -n '280,298p' tests/test_tenacity.py",
+      ".venv-bench/bin/python -m pytest --collect-only -q tests/test_tenacity.py::TestWaitConditions::test_wait_arbitrary_sum tests/test_tenacity.py::TestEnabled::test_enabled_false_iter_raises_original_exception tests/test_tenacity.py::TestEnabled::test_enabled_false_call_succeeds_on_first_attempt",
+      ".venv-bench/bin/python -m pytest -q tests/test_tenacity.py::TestWaitConditions::test_wait_arbitrary_sum tests/test_tenacity.py::TestEnabled::test_enabled_false_iter_raises_original_exception tests/test_tenacity.py::TestEnabled::test_enabled_false_call_succeeds_on_first_attempt"
+    ],
+    "evidence": "Each test directly constructs tenacity.wait_none(), which executes wait_none.__init__. The first also exercises the resulting wait strategy. All three passed.",
+    "tests": [
+      "tests/test_tenacity.py::TestWaitConditions::test_wait_arbitrary_sum",
+      "tests/test_tenacity.py::TestEnabled::test_enabled_false_iter_raises_original_exception",
+      "tests/test_tenacity.py::TestEnabled::test_enabled_false_call_succeeds_on_first_attempt"
+    ]
+  },
+  "arm": "cheap",
+  "command_count": 9,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "tenacity-n-06",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 59136,
+    "input_tokens": 85276,
+    "output_tokens": 1375,
+    "reasoning_output_tokens": 211
+  },
+  "wall_seconds": 36.241360661922954,
+  "web_used": false
+}

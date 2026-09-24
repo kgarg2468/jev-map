@@ -1,0 +1,36 @@
+{
+  "answer": {
+    "commands_run": [
+      "uvx --from graphifyy==0.9.67 graphify query \"Which tests exercise src/attr/_make.py::_ClassBuilder.add_order?\" --graph /tmp/jev-agent-working-graphs-v3/attrs-n-06/cheap/graph.json",
+      "rg -n \"def add_order|add_order\\(|class TestClassBuilder|test_returns_self\" src/attr/_make.py tests/test_make.py",
+      "sed -n '2049,2150p' tests/test_make.py",
+      "sed -n '1140,1195p' src/attr/_make.py",
+      "sed -n '2550,2650p' tests/test_make.py",
+      "rg -n \"def test_.*(order|comparison|cmp)|order=True|order=False\" tests/test_make.py | head -100",
+      "sed -n '1515,1555p;2860,2915p;2975,3035p' tests/test_make.py",
+      "sed -n '1560,1595p' src/attr/_make.py",
+      "rg -n \"def test_.*(ordering|order|comparison|cmp)|class Test\" tests/test_dunders.py | head -80",
+      ".venv-bench/bin/python -m pytest -q tests/test_make.py::TestClassBuilder::test_returns_self tests/test_make.py::TestMakeOrder::test_subclasses_cannot_be_compared tests/test_make.py::TestAutoDetect::test_override_order"
+    ],
+    "evidence": "The first test calls _ClassBuilder.add_order() directly. The other tests create ordered attrs classes, which reach add_order() through the class builder. All 18 selected test cases passed.",
+    "tests": [
+      "tests/test_make.py::TestClassBuilder::test_returns_self",
+      "tests/test_make.py::TestAutoDetect::test_override_order",
+      "tests/test_make.py::TestMakeOrder::test_subclasses_cannot_be_compared"
+    ]
+  },
+  "arm": "cheap",
+  "command_count": 10,
+  "graphify_used": true,
+  "status": "ok",
+  "task": "attrs-n-06",
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 68608,
+    "input_tokens": 81733,
+    "output_tokens": 1351,
+    "reasoning_output_tokens": 240
+  },
+  "wall_seconds": 35.063915337086655,
+  "web_used": false
+}
