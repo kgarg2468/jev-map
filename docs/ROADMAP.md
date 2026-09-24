@@ -26,6 +26,14 @@ candidates were rejected. This supports conservative additive edges and rejects
 using Jev as an exclusive test filter. See the
 [full findings](../benchmarks/03-multi-repo-relationships/FINDINGS.md).
 
+The [held-out Graphify toolbelt comparison](../benchmarks/05-heldout-toolbelt/FINDINGS.md)
+found a positive first-test ranking gain and a larger exact-edge precision gain
+over equal-count cheap lexical selection on three pinned repositories. Next,
+measure complete coding-agent tasks with ordinary search and test execution
+available in both arms; report end-to-end task success, time, token usage, and
+false confidence from the inferred map. The current result does not justify a
+general product superiority or cost claim.
+
 Potential extensions, each requiring its own evaluation: importing per-test
 execution evidence with source identity, framework-aware fixtures and dynamic
 dispatch, additional languages/source layouts, documentation/configuration links.

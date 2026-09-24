@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/graphify/h11"
+  ],
+  "returncode": 0,
+  "stderr": "  warning: 1 source file(s) produced zero nodes and are absent from the graph: pyproject.toml. A re-run will retry them (empties are no longer cached); if it persists, please report the file(s) (#1666).\n",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 20 non-code file(s) (18 docs, 0 papers, 2 images) \u2014 no LLM extraction\n[graphify extract] found 35 code, 0 docs, 0 papers, 0 images\n[graphify extract] 14 file(s) not classified (no supported extension or shebang), skipped: .coveragerc, .gitignore, .gitkeep, 1, 2, 3 (+8 more)\n[graphify extract] AST extraction on 35 code files...\n[graphify extract] wrote <round>/graphify/h11/graphify-out/graph.json \u2014 352 nodes, 1598 edges (no clustering)\n",
+  "wall_seconds": 0.9619230050593615
+}
