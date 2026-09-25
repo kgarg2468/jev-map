@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/graphify/graphify"
+  ],
+  "returncode": 0,
+  "stderr": "  warning: 7 .sql file(s) contributed nothing to the graph because a dependency is missing: tree_sitter_sql not installed. Install it with: pip install \"graphifyy[sql]\" (#1745)\n  warning: 1 .dm file(s) contributed nothing to the graph because a dependency is missing: tree-sitter-dm not installed. Install it with: pip install \"graphifyy[dm]\" (#1745)\n  warning: 1 .erl file(s) contributed nothing to the graph because a dependency is missing: tree-sitter-language-pack not installed. Install it with: pip install \"graphifyy[erlang]\" (#1745)\n  warning: 1 .lisp file(s) contributed nothing to the graph because a dependency is missing: tree-sitter-commonlisp not installed. Install it with: pip install \"graphifyy[commonlisp]\" (#1745)\n  warning: 1 .r file(s) contributed nothing to the graph because a dependency is missing: tree-sitter-language-pack not installed. Install it with: pip install \"graphifyy[r]\" (#1745)\n  warning: 1 .resource file(s) contributed nothing to the graph because a dependency is missing: robotframework not installed. Install it with: pip install \"graphifyy[robot]\" (#1745)\n  warning: 1 .robot file(s) contributed nothing to the graph because a dependency is missing: robotframework not installed. Install it with: pip install \"graphifyy[robot]\" (#1745)\n  warning: 1 .sol file(s) contributed nothing to the graph because a dependency is missing: tree-sitter-solidity not installed. Install it with: pip install \"graphifyy[solidity]\" (#1745)\n  warning: 1 .vb file(s) contributed nothing to the graph because a dependency is missing: tree-sitter-vb-dotnet not installed. Install it with: pip install \"graphifyy[vbnet]\" (#1745)\n  warning: 1 file(s) had syntax errors and may be partially extracted: tests/fixtures/sample.luau (first error at line 8, 4 symbol(s) extracted)\n",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 379 non-code file(s) (372 docs, 1 papers, 6 images) \u2014 no LLM extraction\n[graphify extract] found 535 code, 0 docs, 0 papers, 0 images\n[graphify extract] 11 file(s) not classified (no supported extension or shebang), skipped: .dockerignore, .gitattributes, .gitignore, .gitkeep, Dockerfile, LICENSE (+5 more)\n[graphify extract] AST extraction on 535 code files...\n  AST extraction: 100/535 uncached files (18%) [2 workers]\n  AST extraction: 200/535 uncached files (37%) [2 workers]\n  AST extraction: 300/535 uncached files (56%) [2 workers]\n  AST extraction: 400/535 uncached files (74%) [2 workers]\n  AST extraction: 500/535 uncached files (93%) [2 workers]\n  AST extraction: 535/535 uncached files (100%) [2 workers]\n[graphify extract] wrote <round>/graphify/graphify/graphify-out/graph.json \u2014 14355 nodes, 31974 edges (no clustering)\n",
+  "wall_seconds": 14.420142037095502
+}

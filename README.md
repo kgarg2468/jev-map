@@ -144,6 +144,11 @@ reproduced the result. That intermediate ranking gain did not produce an agent
 test-navigation gain in the separate 24-task study; full bug-fix/review ROI
 remains unmeasured.
 
+A [replication on Flask, FastAPI, yt-dlp, langchain-core, and Graphify](benchmarks/07-popular-repos/FINDINGS.md)
+did not reproduce the first-test gain (97 to 100 of 191). Tests confirmed 39 of
+Jev's 48 accepted links against 13 of 48 for an equal-budget lexical ranker, but
+seven oversized provider requests failed, so neither frozen gate is met.
+
 ## Development
 
 ```sh

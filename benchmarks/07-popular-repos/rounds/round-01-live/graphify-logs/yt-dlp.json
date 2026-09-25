@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/graphify/yt-dlp"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 64 non-code file(s) (63 docs, 0 papers, 1 images) \u2014 no LLM extraction\n[graphify extract] found 1138 code, 0 docs, 0 papers, 0 images\n[graphify extract] 28 file(s) not classified (no supported extension or shebang), skipped: .editorconfig, .gitattributes, .gitignore, CONTRIBUTORS, Dockerfile, LICENSE (+22 more)\n[graphify extract] 9 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): ca.crt, ca.key, client.crt, client.key, clientencrypted.key, clientwithencryptedkey.crt (+3 more)\n[graphify extract] AST extraction on 1138 code files...\n  AST extraction: 100/1138 uncached files (8%) [2 workers]\n  AST extraction: 200/1138 uncached files (17%) [2 workers]\n  AST extraction: 300/1138 uncached files (26%) [2 workers]\n  AST extraction: 400/1138 uncached files (35%) [2 workers]\n  AST extraction: 500/1138 uncached files (43%) [2 workers]\n  AST extraction: 600/1138 uncached files (52%) [2 workers]\n  AST extraction: 700/1138 uncached files (61%) [2 workers]\n  AST extraction: 800/1138 uncached files (70%) [2 workers]\n  AST extraction: 900/1138 uncached files (79%) [2 workers]\n  AST extraction: 1000/1138 uncached files (87%) [2 workers]\n  AST extraction: 1100/1138 uncached files (96%) [2 workers]\n  AST extraction: 1138/1138 uncached files (100%) [2 workers]\n[graphify extract] wrote <round>/graphify/yt-dlp/graphify-out/graph.json \u2014 11222 nodes, 38890 edges (no clustering)\n",
+  "wall_seconds": 17.672567398054525
+}

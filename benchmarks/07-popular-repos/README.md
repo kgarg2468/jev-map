@@ -4,6 +4,13 @@ Benchmark 05's frozen Graphify + Jev test-finding comparison, repeated on
 Flask, FastAPI, yt-dlp, LangChain (`libs/core`), and Graphify. See the
 [protocol](PROTOCOL.md) for scope, gates, and what a result can and cannot show.
 
+**Result:** neither frozen gate is met. Adding Jev moved the first-test hits from
+97 to 100 of 191. Tests confirmed 39 of Jev's 48 accepted links (81%), against
+13 of 48 (27%) for an equal-budget lexical ranker, but 7 of 240 provider requests
+failed on size, which fails the edge gate as frozen. See the
+[findings](FINDINGS.md), the [live round](rounds/round-01-live), and the
+[provenance record](rounds/round-03-provenance/provenance.json).
+
 ## Reproduce
 
 Clone each repository at the commit in [`repositories.json`](repositories.json)

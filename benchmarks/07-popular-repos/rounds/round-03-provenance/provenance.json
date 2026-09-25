@@ -1,0 +1,106 @@
+{
+  "changed_between_freeze_and_run": [
+    "benchmarks/07-popular-repos/popular_profile.py"
+  ],
+  "changed_since_run": [],
+  "files": {
+    "benchmarks/07-popular-repos/PROTOCOL.md": {
+      "current": "9ea092169dc4490f107bd6a57c3cbdea10e69ffab4bc3d0da2bd8077a42c2068",
+      "freeze": "9ea092169dc4490f107bd6a57c3cbdea10e69ffab4bc3d0da2bd8077a42c2068",
+      "run": "9ea092169dc4490f107bd6a57c3cbdea10e69ffab4bc3d0da2bd8077a42c2068"
+    },
+    "benchmarks/07-popular-repos/blockbuster_profiler_allow.py": {
+      "current": "93346a39b0fb6da90bdcec9897b73af49a385a614bf19f9246c0b28e8f320ce7",
+      "freeze": "93346a39b0fb6da90bdcec9897b73af49a385a614bf19f9246c0b28e8f320ce7",
+      "run": "93346a39b0fb6da90bdcec9897b73af49a385a614bf19f9246c0b28e8f320ce7"
+    },
+    "benchmarks/07-popular-repos/freeze.py": {
+      "current": "f7cea54939471e3c7c0e7746fa2a4f1f68817ef02b68cd4c56f63afd8691997f",
+      "freeze": "f7cea54939471e3c7c0e7746fa2a4f1f68817ef02b68cd4c56f63afd8691997f",
+      "run": "f7cea54939471e3c7c0e7746fa2a4f1f68817ef02b68cd4c56f63afd8691997f"
+    },
+    "benchmarks/07-popular-repos/popular_collect.py": {
+      "current": "cb6e9da102b8d8f521310e036749b4b5c34066b863df096f8656916608d558bd",
+      "freeze": "cb6e9da102b8d8f521310e036749b4b5c34066b863df096f8656916608d558bd",
+      "run": "cb6e9da102b8d8f521310e036749b4b5c34066b863df096f8656916608d558bd"
+    },
+    "benchmarks/07-popular-repos/popular_profile.py": {
+      "current": "9a4ab98ba4d593c0e6e0c45bd345a501613c4bea2a5448d2710f8db3752d3d77",
+      "freeze": "3d6b4b14899dbe03d96ebfa68cd584a543a587849cf4cf528151bcbcb49fc9b8",
+      "run": "9a4ab98ba4d593c0e6e0c45bd345a501613c4bea2a5448d2710f8db3752d3d77"
+    },
+    "benchmarks/07-popular-repos/repositories.json": {
+      "current": "5bbe8e66410c1f4d767a6bd87d3b01e28bb148d08bf3f42a73bbba81580db4cd",
+      "freeze": "5bbe8e66410c1f4d767a6bd87d3b01e28bb148d08bf3f42a73bbba81580db4cd",
+      "run": "5bbe8e66410c1f4d767a6bd87d3b01e28bb148d08bf3f42a73bbba81580db4cd"
+    },
+    "benchmarks/07-popular-repos/run.py": {
+      "current": "9a7c14c94ac7b24375c441951e8cd9f41060dfd36bb99d36932f70225de3f600",
+      "freeze": "9a7c14c94ac7b24375c441951e8cd9f41060dfd36bb99d36932f70225de3f600",
+      "run": "9a7c14c94ac7b24375c441951e8cd9f41060dfd36bb99d36932f70225de3f600"
+    },
+    "benchmarks/__init__.py": {
+      "current": "1cccd6ba246578f34bc94e30dd36d860b38cb17ac1b8c76416acd6b5070ead0f",
+      "freeze": "1cccd6ba246578f34bc94e30dd36d860b38cb17ac1b8c76416acd6b5070ead0f",
+      "run": "1cccd6ba246578f34bc94e30dd36d860b38cb17ac1b8c76416acd6b5070ead0f"
+    },
+    "benchmarks/archive.py": {
+      "current": "eb4130587e440e03e25a86005bcc49675fbc1c0821f4c67b76aabb92c3afd5a3",
+      "freeze": "eb4130587e440e03e25a86005bcc49675fbc1c0821f4c67b76aabb92c3afd5a3",
+      "run": "eb4130587e440e03e25a86005bcc49675fbc1c0821f4c67b76aabb92c3afd5a3"
+    },
+    "benchmarks/graphify_compare.py": {
+      "current": "1807dc6dad76aa744c56c18552428b3248c610ba0418b23827a09217237f63b3",
+      "freeze": "1807dc6dad76aa744c56c18552428b3248c610ba0418b23827a09217237f63b3",
+      "run": "1807dc6dad76aa744c56c18552428b3248c610ba0418b23827a09217237f63b3"
+    },
+    "benchmarks/heldout_freeze.py": {
+      "current": "d8b8d9148aa725cd36fe16124f9e6b470d84f3a4da009cb14b088386f7961447",
+      "freeze": "d8b8d9148aa725cd36fe16124f9e6b470d84f3a4da009cb14b088386f7961447",
+      "run": "d8b8d9148aa725cd36fe16124f9e6b470d84f3a4da009cb14b088386f7961447"
+    },
+    "benchmarks/toolbelt_study.py": {
+      "current": "5e262b002c254d4503cccf1027a4b3ecfeef3a8ad7428b42ebabfa3239ef92e3",
+      "freeze": "5e262b002c254d4503cccf1027a4b3ecfeef3a8ad7428b42ebabfa3239ef92e3",
+      "run": "5e262b002c254d4503cccf1027a4b3ecfeef3a8ad7428b42ebabfa3239ef92e3"
+    },
+    "src/jev_map/__init__.py": {
+      "current": "72a2b463d5214bb4715feeca0c15a17af87ea1aca1b9d3917a3ae043ef9b13ed",
+      "freeze": "72a2b463d5214bb4715feeca0c15a17af87ea1aca1b9d3917a3ae043ef9b13ed",
+      "run": "72a2b463d5214bb4715feeca0c15a17af87ea1aca1b9d3917a3ae043ef9b13ed"
+    },
+    "src/jev_map/enrich.py": {
+      "current": "9f38e54c2565f1914f95eae0d783c55549cc5ebe47fcfb6b90e17642a47fd001",
+      "freeze": "9f38e54c2565f1914f95eae0d783c55549cc5ebe47fcfb6b90e17642a47fd001",
+      "run": "9f38e54c2565f1914f95eae0d783c55549cc5ebe47fcfb6b90e17642a47fd001"
+    },
+    "src/jev_map/index.py": {
+      "current": "d2b8f8cf2037063894327bf130f03de5f2abc0b8fb0137a94ccf3ec4dddd31cc",
+      "freeze": "d2b8f8cf2037063894327bf130f03de5f2abc0b8fb0137a94ccf3ec4dddd31cc",
+      "run": "d2b8f8cf2037063894327bf130f03de5f2abc0b8fb0137a94ccf3ec4dddd31cc"
+    },
+    "src/jev_map/provider.py": {
+      "current": "fbddb54415415c7709c880964d028c9cd98b96be2f1b050192de2fedb708fe2b",
+      "freeze": "fbddb54415415c7709c880964d028c9cd98b96be2f1b050192de2fedb708fe2b",
+      "run": "fbddb54415415c7709c880964d028c9cd98b96be2f1b050192de2fedb708fe2b"
+    },
+    "src/jev_map/store.py": {
+      "current": "2bae59834d48ce1b8efeb4cefb71e9fc02ae3d66cc8a86d2e1a23d06b6fcb335",
+      "freeze": "2bae59834d48ce1b8efeb4cefb71e9fc02ae3d66cc8a86d2e1a23d06b6fcb335",
+      "run": "2bae59834d48ce1b8efeb4cefb71e9fc02ae3d66cc8a86d2e1a23d06b6fcb335"
+    }
+  },
+  "freeze_commit": "eecc0a001a411478c57a719f28553e646b203bc1",
+  "freeze_commit_time": "2026-09-25T06:26:07+00:00",
+  "live_frozen_sha256_matches": true,
+  "live_manifest": {
+    "files": 3508,
+    "mismatched": [],
+    "status": "complete",
+    "unlisted": []
+  },
+  "live_round": "round-01-live",
+  "note": "Supersedes round-02's file inventory, which omitted src/jev_map/store.py and src/jev_map/__init__.py (Greptile review on PR #14). The inventory is now derived by importing run.py, plus files the run reads or loads into pytest subprocesses. The live round was run from a clean checkout of 36e7852; popular_profile.py changed after the freeze, before any provider call or test-call label existed.",
+  "run_commit": "36e78520b354cf5a995fd80fe5d129f368d4a17d",
+  "run_commit_time": "2026-09-25T06:33:54+00:00"
+}

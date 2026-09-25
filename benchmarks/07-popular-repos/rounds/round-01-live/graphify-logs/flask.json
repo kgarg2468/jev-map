@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/graphify/flask"
+  ],
+  "returncode": 0,
+  "stderr": "  warning: 2 .sql file(s) contributed nothing to the graph because a dependency is missing: tree_sitter_sql not installed. Install it with: pip install \"graphifyy[sql]\" (#1745)\n",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 131 non-code file(s) (123 docs, 0 papers, 8 images) \u2014 no LLM extraction\n[graphify extract] found 92 code, 0 docs, 0 papers, 0 images\n[graphify extract] 12 file(s) not classified (no supported extension or shebang), skipped: .editorconfig, .flaskenv, .gitignore, Makefile, config.toml, make.bat (+6 more)\n[graphify extract] 1 file(s) skipped as potentially sensitive (rename or move if wrongly flagged): .env\n[graphify extract] AST extraction on 92 code files...\n[graphify extract] wrote <round>/graphify/flask/graphify-out/graph.json \u2014 2091 nodes, 3625 edges (no clustering)\n",
+  "wall_seconds": 6.30948408995755
+}
