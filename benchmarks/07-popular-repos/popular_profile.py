@@ -71,11 +71,16 @@ def pytest_runtest_protocol(item, nextitem):
         yield
     finally:
         sys.setprofile(previous)
-        threading.setprofile(previous_thread)
+        # Keep profiling threads started during the grace period, including
+        # children of the workers being joined.
         deadline = time.monotonic() + GRACE
-        for thread in threading.enumerate():
-            if thread is not runner and thread not in before:
-                thread.join(max(0.0, deadline - time.monotonic()))
+        while (remaining := deadline - time.monotonic()) > 0:
+            pending = [thread for thread in threading.enumerate()
+                       if thread is not runner and thread not in before and thread.is_alive()]
+            if not pending:
+                break
+            pending[0].join(remaining)
+        threading.setprofile(previous_thread)
         surviving_worker = any(thread is not runner and thread.is_alive()
                                for thread in threading.enumerate())
         CASES[item.nodeid] = {"observed": sorted(observed),
