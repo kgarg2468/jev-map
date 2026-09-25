@@ -9,7 +9,7 @@ Flask, FastAPI, yt-dlp, LangChain (`libs/core`), and Graphify. See the
 13 of 48 (27%) for an equal-budget lexical ranker, but 7 of 240 provider requests
 failed on size, which fails the edge gate as frozen. See the
 [findings](FINDINGS.md), the [live round](rounds/round-01-live), and the
-[provenance record](rounds/round-02-provenance/provenance.json).
+[provenance record](rounds/round-03-provenance/provenance.json).
 
 ## Reproduce
 

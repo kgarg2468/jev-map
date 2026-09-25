@@ -14,6 +14,7 @@ import argparse
 import hashlib
 import json
 import subprocess
+import sys
 from pathlib import Path
 
 from benchmarks.archive import staged_round
@@ -21,11 +22,22 @@ from benchmarks.archive import staged_round
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[1]
 STUDY = HERE.relative_to(PROJECT).as_posix()
-FILES = [f"{STUDY}/{name}" for name in ("PROTOCOL.md", "repositories.json", "freeze.py", "run.py",
-                                         "popular_profile.py", "popular_collect.py",
-                                         "blockbuster_profiler_allow.py")] + [
-    "benchmarks/toolbelt_study.py", "benchmarks/graphify_compare.py", "benchmarks/heldout_freeze.py",
-    "benchmarks/archive.py", "src/jev_map/index.py", "src/jev_map/enrich.py", "src/jev_map/provider.py"]
+# Files the live run reads directly or loads into pytest subprocesses.
+DECLARED = [f"{STUDY}/{name}" for name in ("PROTOCOL.md", "repositories.json", "freeze.py", "popular_profile.py",
+                                            "popular_collect.py", "blockbuster_profiler_allow.py")]
+
+
+def loaded_files() -> list[str]:
+    """Every project module imported by the runner, found by importing it."""
+    code = ("import importlib.util, sys; from pathlib import Path; root = Path(sys.argv[1]); "
+            "spec = importlib.util.spec_from_file_location('run07', sys.argv[2]); "
+            "module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module); "
+            "print('\\n'.join(sorted({Path(m.__file__).resolve().relative_to(root).as_posix() "
+            "for m in list(sys.modules.values()) if getattr(m, '__file__', None) "
+            "and Path(m.__file__).resolve().is_relative_to(root)})))")
+    output = subprocess.check_output([sys.executable, "-c", code, str(PROJECT), str(HERE / "run.py")],
+                                     text=True, timeout=120, cwd=PROJECT)
+    return [line for line in output.splitlines() if line] + [str(Path(STUDY) / "run.py")]
 
 
 def git(*args: str) -> str:
@@ -50,9 +62,10 @@ def manifest_ok(round_dir: Path) -> dict:
 
 
 def audit(freeze_commit: str, run_commit: str, live: Path) -> dict:
+    inventory = sorted(set(loaded_files()) | set(DECLARED))
     files = {path: {"freeze": blob_sha256(freeze_commit, path), "run": blob_sha256(run_commit, path),
                     "current": hashlib.sha256((PROJECT / path).read_bytes()).hexdigest()}
-             for path in FILES}
+             for path in inventory}
     frozen = HERE / "rounds/round-00-freeze/freeze.json"
     summary = json.loads((live / "summary.json").read_text())
     return {

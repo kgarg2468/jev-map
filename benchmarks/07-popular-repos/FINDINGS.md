@@ -84,8 +84,11 @@ likely in the provider's training data.
 ## Provenance
 
 The freeze checksum covered selection code but not the runner or profiler.
-[Round 02](rounds/round-02-provenance/provenance.json) records every runner and
-oracle file at the freeze commit and at the run commit. Only
+[Round 03](rounds/round-03-provenance/provenance.json) records all 17 project
+files the live run loaded, found by importing the runner, plus the files it
+reads or loads into pytest, at the freeze commit and at the run commit. It
+supersedes round 02, whose hand-written inventory missed `src/jev_map/store.py`
+and `src/jev_map/__init__.py`. Only
 `popular_profile.py` changed between them, to keep profiling workers started
 during the thread grace period, before any provider call or label existed.
 Nothing has changed since the run, and all 3,508 files in the live round match
