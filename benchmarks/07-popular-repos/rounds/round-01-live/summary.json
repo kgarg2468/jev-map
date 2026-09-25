@@ -1,0 +1,562 @@
+{
+  "candidate_pairs": 720,
+  "edge_filter": {
+    "bootstrap": {
+      "lower_95": 0.3695652173913044,
+      "resamples": 10000,
+      "upper_95": 0.7
+    },
+    "frozen_gate_supported": false,
+    "jev": {
+      "emitted_eligible": 48,
+      "ineligible_selected": 0,
+      "not_observed": 9,
+      "observed": 39,
+      "observed_fraction": 0.8125
+    },
+    "lexical_equal_count": {
+      "emitted_eligible": 48,
+      "ineligible_selected": 0,
+      "not_observed": 35,
+      "observed": 13,
+      "observed_fraction": 0.2708333333333333
+    },
+    "precision_delta": 0.5416666666666667
+  },
+  "frozen_sha256": "c821faf505d39d22b102fc3bf79bdc7e059af8f288dc128620d53fd01d9ba527",
+  "graphify": {
+    "fastapi": {
+      "edges": 18567,
+      "function_nodes_mapped": 48,
+      "input_tokens": 0,
+      "nodes": 8728,
+      "output_tokens": 0,
+      "sha256": "9b9e09822ccc9bad63eef18fba1f289e3756d2d4bc7f136e4c4ef4226ce54959",
+      "test_nodes_mapped": 2287,
+      "wall_seconds": 14.396760273026302
+    },
+    "flask": {
+      "edges": 3625,
+      "function_nodes_mapped": 48,
+      "input_tokens": 0,
+      "nodes": 2091,
+      "output_tokens": 0,
+      "sha256": "54ff40608fce8678f88360f1309cccc3e8ff8fce9f1e0bca9f03d0f120e2fa80",
+      "test_nodes_mapped": 373,
+      "wall_seconds": 6.30948408995755
+    },
+    "graphify": {
+      "edges": 31974,
+      "function_nodes_mapped": 48,
+      "input_tokens": 0,
+      "nodes": 14355,
+      "output_tokens": 0,
+      "sha256": "ea27e00f0b1bc5146f345408671f7eca5ea39f793ab508d7518b1160d85fb7a7",
+      "test_nodes_mapped": 5068,
+      "wall_seconds": 14.420142037095502
+    },
+    "langchain": {
+      "edges": 25986,
+      "function_nodes_mapped": 48,
+      "input_tokens": 0,
+      "nodes": 10117,
+      "output_tokens": 0,
+      "sha256": "b3b09deba6b2debb37e12b01795c3f7af0a1451b74b1cad243c868a389af45d8",
+      "test_nodes_mapped": 1880,
+      "wall_seconds": 8.90624076698441
+    },
+    "yt-dlp": {
+      "edges": 38890,
+      "function_nodes_mapped": 45,
+      "input_tokens": 0,
+      "nodes": 11222,
+      "output_tokens": 0,
+      "sha256": "2543142b3b89fe573dc70fa863087500ad6b8680ab10e8ed04b07bc21429889e",
+      "test_nodes_mapped": 771,
+      "wall_seconds": 17.672567398054525
+    }
+  },
+  "interpreters": {
+    "fastapi": "3.13.15",
+    "flask": "3.13.15",
+    "graphify": "3.13.15",
+    "langchain": "3.13.15",
+    "yt-dlp": "3.13.15"
+  },
+  "kind": "popular_repository_replication",
+  "known_input_tokens": 1490325,
+  "limits": "Execution observation is not assertion effectiveness. Offline test subsets as declared in repositories.json. No complete coding-agent outcomes or dollar cost.",
+  "local_index_wall_seconds": {
+    "fastapi": 1.3963940219255164,
+    "flask": 0.18538411508779973,
+    "graphify": 5.35887181898579,
+    "langchain": 2.718524163006805,
+    "yt-dlp": 4.80860655894503
+  },
+  "methods": {
+    "graphify_jev_lexical": {
+      "hit_at_1": 0.5235602094240838,
+      "hit_at_1_count": 100,
+      "hit_at_3": 0.6910994764397905,
+      "hit_at_3_count": 132,
+      "ineligible_suggestions": 69,
+      "mean_reciprocal_rank": 0.5924956369982548,
+      "positive_targets": 191,
+      "suggestions_on_zero_observed_targets": 147,
+      "zero_observed_targets": 49
+    },
+    "graphify_lexical": {
+      "hit_at_1": 0.5078534031413613,
+      "hit_at_1_count": 97,
+      "hit_at_3": 0.6910994764397905,
+      "hit_at_3_count": 132,
+      "ineligible_suggestions": 69,
+      "mean_reciprocal_rank": 0.5863874345549738,
+      "positive_targets": 191,
+      "suggestions_on_zero_observed_targets": 147,
+      "zero_observed_targets": 49
+    },
+    "lexical_only": {
+      "hit_at_1": 0.38219895287958117,
+      "hit_at_1_count": 73,
+      "hit_at_3": 0.6282722513089005,
+      "hit_at_3_count": 120,
+      "ineligible_suggestions": 81,
+      "mean_reciprocal_rank": 0.4886561954624782,
+      "positive_targets": 191,
+      "suggestions_on_zero_observed_targets": 147,
+      "zero_observed_targets": 49
+    },
+    "structural_jev_lexical": {
+      "hit_at_1": 0.5078534031413613,
+      "hit_at_1_count": 97,
+      "hit_at_3": 0.680628272251309,
+      "hit_at_3_count": 130,
+      "ineligible_suggestions": 74,
+      "mean_reciprocal_rank": 0.5794066317626527,
+      "positive_targets": 191,
+      "suggestions_on_zero_observed_targets": 147,
+      "zero_observed_targets": 49
+    },
+    "structural_lexical": {
+      "hit_at_1": 0.4816753926701571,
+      "hit_at_1_count": 92,
+      "hit_at_3": 0.680628272251309,
+      "hit_at_3_count": 130,
+      "ineligible_suggestions": 74,
+      "mean_reciprocal_rank": 0.5680628272251309,
+      "positive_targets": 191,
+      "suggestions_on_zero_observed_targets": 147,
+      "zero_observed_targets": 49
+    }
+  },
+  "oracle": {
+    "fastapi": {
+      "collected_but_ineligible": 82,
+      "eligible": 2185,
+      "source_tests": 2291,
+      "thread_coverage_unknown": 78,
+      "threaded": 1953,
+      "uncollected": 24,
+      "unrecognized_collected_cases": 7,
+      "unrecognized_examples": [
+        "tests/test_tutorial/test_async_tests/test_main_a.py::test_root[asyncio]",
+        "tests/test_tutorial/test_async_tests/test_main_a.py::test_root[trio]",
+        "tests/test_tutorial/test_testing/test_main_a.py::test_read_main",
+        "tests/test_tutorial/test_testing/test_tutorial001.py::test_read_main",
+        "tests/test_tutorial/test_testing/test_tutorial002.py::test_read_main",
+        "tests/test_tutorial/test_testing/test_tutorial002.py::test_websocket",
+        "tests/test_tutorial/test_testing/test_tutorial004.py::test_read_items"
+      ]
+    },
+    "flask": {
+      "collected_but_ineligible": 2,
+      "eligible": 370,
+      "source_tests": 373,
+      "thread_coverage_unknown": 2,
+      "threaded": 5,
+      "uncollected": 1,
+      "unrecognized_collected_cases": 0,
+      "unrecognized_examples": []
+    },
+    "graphify": {
+      "collected_but_ineligible": 119,
+      "eligible": 4942,
+      "source_tests": 5068,
+      "thread_coverage_unknown": 108,
+      "threaded": 220,
+      "uncollected": 7,
+      "unrecognized_collected_cases": 0,
+      "unrecognized_examples": []
+    },
+    "langchain": {
+      "collected_but_ineligible": 56,
+      "eligible": 1824,
+      "source_tests": 1880,
+      "thread_coverage_unknown": 45,
+      "threaded": 243,
+      "uncollected": 0,
+      "unrecognized_collected_cases": 71,
+      "unrecognized_examples": [
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_bulk_delete",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_delete_missing_content",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_delete_missing_docs",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_delete_no_args",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_delete_semantics",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_get_missing",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_get_with_missing_ids",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_upsert_documents_has_no_ids",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_upsert_no_ids",
+        "tests/unit_tests/indexing/test_in_memory_indexer.py::TestAsyncDocumentIndexerTestSuite::test_upsert_overwrites"
+      ]
+    },
+    "yt-dlp": {
+      "collected_but_ineligible": 178,
+      "eligible": 553,
+      "source_tests": 771,
+      "thread_coverage_unknown": 171,
+      "threaded": 94,
+      "uncollected": 40,
+      "unrecognized_collected_cases": 0,
+      "unrecognized_examples": []
+    }
+  },
+  "oracle_complete": true,
+  "per_repository": {
+    "fastapi": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.5116279069767442,
+        "hit_at_1_count": 22,
+        "hit_at_3": 0.7209302325581395,
+        "hit_at_3_count": 31,
+        "ineligible_suggestions": 11,
+        "mean_reciprocal_rank": 0.6046511627906976,
+        "positive_targets": 43,
+        "suggestions_on_zero_observed_targets": 15,
+        "zero_observed_targets": 5
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.5116279069767442,
+        "hit_at_1_count": 22,
+        "hit_at_3": 0.7209302325581395,
+        "hit_at_3_count": 31,
+        "ineligible_suggestions": 11,
+        "mean_reciprocal_rank": 0.6046511627906976,
+        "positive_targets": 43,
+        "suggestions_on_zero_observed_targets": 15,
+        "zero_observed_targets": 5
+      },
+      "lexical_only": {
+        "hit_at_1": 0.3953488372093023,
+        "hit_at_1_count": 17,
+        "hit_at_3": 0.627906976744186,
+        "hit_at_3_count": 27,
+        "ineligible_suggestions": 14,
+        "mean_reciprocal_rank": 0.5,
+        "positive_targets": 43,
+        "suggestions_on_zero_observed_targets": 15,
+        "zero_observed_targets": 5
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.4883720930232558,
+        "hit_at_1_count": 21,
+        "hit_at_3": 0.6511627906976745,
+        "hit_at_3_count": 28,
+        "ineligible_suggestions": 14,
+        "mean_reciprocal_rank": 0.562015503875969,
+        "positive_targets": 43,
+        "suggestions_on_zero_observed_targets": 15,
+        "zero_observed_targets": 5
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.46511627906976744,
+        "hit_at_1_count": 20,
+        "hit_at_3": 0.6511627906976745,
+        "hit_at_3_count": 28,
+        "ineligible_suggestions": 14,
+        "mean_reciprocal_rank": 0.5503875968992248,
+        "positive_targets": 43,
+        "suggestions_on_zero_observed_targets": 15,
+        "zero_observed_targets": 5
+      }
+    },
+    "flask": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.5652173913043478,
+        "hit_at_1_count": 26,
+        "hit_at_3": 0.8043478260869565,
+        "hit_at_3_count": 37,
+        "ineligible_suggestions": 1,
+        "mean_reciprocal_rank": 0.6594202898550724,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.5434782608695652,
+        "hit_at_1_count": 25,
+        "hit_at_3": 0.8043478260869565,
+        "hit_at_3_count": 37,
+        "ineligible_suggestions": 1,
+        "mean_reciprocal_rank": 0.6521739130434783,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "lexical_only": {
+        "hit_at_1": 0.5217391304347826,
+        "hit_at_1_count": 24,
+        "hit_at_3": 0.782608695652174,
+        "hit_at_3_count": 36,
+        "ineligible_suggestions": 1,
+        "mean_reciprocal_rank": 0.6304347826086957,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.5652173913043478,
+        "hit_at_1_count": 26,
+        "hit_at_3": 0.8043478260869565,
+        "hit_at_3_count": 37,
+        "ineligible_suggestions": 1,
+        "mean_reciprocal_rank": 0.6594202898550724,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.5434782608695652,
+        "hit_at_1_count": 25,
+        "hit_at_3": 0.8043478260869565,
+        "hit_at_3_count": 37,
+        "ineligible_suggestions": 1,
+        "mean_reciprocal_rank": 0.6521739130434783,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      }
+    },
+    "graphify": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.6521739130434783,
+        "hit_at_1_count": 30,
+        "hit_at_3": 0.6956521739130435,
+        "hit_at_3_count": 32,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.6702898550724637,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.6521739130434783,
+        "hit_at_1_count": 30,
+        "hit_at_3": 0.6956521739130435,
+        "hit_at_3_count": 32,
+        "ineligible_suggestions": 0,
+        "mean_reciprocal_rank": 0.6702898550724637,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "lexical_only": {
+        "hit_at_1": 0.30434782608695654,
+        "hit_at_1_count": 14,
+        "hit_at_3": 0.5869565217391305,
+        "hit_at_3_count": 27,
+        "ineligible_suggestions": 5,
+        "mean_reciprocal_rank": 0.427536231884058,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.6304347826086957,
+        "hit_at_1_count": 29,
+        "hit_at_3": 0.7391304347826086,
+        "hit_at_3_count": 34,
+        "ineligible_suggestions": 2,
+        "mean_reciprocal_rank": 0.677536231884058,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.6086956521739131,
+        "hit_at_1_count": 28,
+        "hit_at_3": 0.7391304347826086,
+        "hit_at_3_count": 34,
+        "ineligible_suggestions": 2,
+        "mean_reciprocal_rank": 0.6666666666666667,
+        "positive_targets": 46,
+        "suggestions_on_zero_observed_targets": 6,
+        "zero_observed_targets": 2
+      }
+    },
+    "langchain": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.38235294117647056,
+        "hit_at_1_count": 13,
+        "hit_at_3": 0.5588235294117647,
+        "hit_at_3_count": 19,
+        "ineligible_suggestions": 7,
+        "mean_reciprocal_rank": 0.45098039215686275,
+        "positive_targets": 34,
+        "suggestions_on_zero_observed_targets": 42,
+        "zero_observed_targets": 14
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.3235294117647059,
+        "hit_at_1_count": 11,
+        "hit_at_3": 0.5588235294117647,
+        "hit_at_3_count": 19,
+        "ineligible_suggestions": 7,
+        "mean_reciprocal_rank": 0.4264705882352941,
+        "positive_targets": 34,
+        "suggestions_on_zero_observed_targets": 42,
+        "zero_observed_targets": 14
+      },
+      "lexical_only": {
+        "hit_at_1": 0.3235294117647059,
+        "hit_at_1_count": 11,
+        "hit_at_3": 0.5588235294117647,
+        "hit_at_3_count": 19,
+        "ineligible_suggestions": 8,
+        "mean_reciprocal_rank": 0.4313725490196078,
+        "positive_targets": 34,
+        "suggestions_on_zero_observed_targets": 42,
+        "zero_observed_targets": 14
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.38235294117647056,
+        "hit_at_1_count": 13,
+        "hit_at_3": 0.5294117647058824,
+        "hit_at_3_count": 18,
+        "ineligible_suggestions": 7,
+        "mean_reciprocal_rank": 0.4411764705882353,
+        "positive_targets": 34,
+        "suggestions_on_zero_observed_targets": 42,
+        "zero_observed_targets": 14
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.3235294117647059,
+        "hit_at_1_count": 11,
+        "hit_at_3": 0.5294117647058824,
+        "hit_at_3_count": 18,
+        "ineligible_suggestions": 7,
+        "mean_reciprocal_rank": 0.41666666666666663,
+        "positive_targets": 34,
+        "suggestions_on_zero_observed_targets": 42,
+        "zero_observed_targets": 14
+      }
+    },
+    "yt-dlp": {
+      "graphify_jev_lexical": {
+        "hit_at_1": 0.4090909090909091,
+        "hit_at_1_count": 9,
+        "hit_at_3": 0.5909090909090909,
+        "hit_at_3_count": 13,
+        "ineligible_suggestions": 50,
+        "mean_reciprocal_rank": 0.4848484848484848,
+        "positive_targets": 22,
+        "suggestions_on_zero_observed_targets": 78,
+        "zero_observed_targets": 26
+      },
+      "graphify_lexical": {
+        "hit_at_1": 0.4090909090909091,
+        "hit_at_1_count": 9,
+        "hit_at_3": 0.5909090909090909,
+        "hit_at_3_count": 13,
+        "ineligible_suggestions": 50,
+        "mean_reciprocal_rank": 0.4848484848484848,
+        "positive_targets": 22,
+        "suggestions_on_zero_observed_targets": 78,
+        "zero_observed_targets": 26
+      },
+      "lexical_only": {
+        "hit_at_1": 0.3181818181818182,
+        "hit_at_1_count": 7,
+        "hit_at_3": 0.5,
+        "hit_at_3_count": 11,
+        "ineligible_suggestions": 53,
+        "mean_reciprocal_rank": 0.38636363636363635,
+        "positive_targets": 22,
+        "suggestions_on_zero_observed_targets": 78,
+        "zero_observed_targets": 26
+      },
+      "structural_jev_lexical": {
+        "hit_at_1": 0.36363636363636365,
+        "hit_at_1_count": 8,
+        "hit_at_3": 0.5909090909090909,
+        "hit_at_3_count": 13,
+        "ineligible_suggestions": 50,
+        "mean_reciprocal_rank": 0.45454545454545453,
+        "positive_targets": 22,
+        "suggestions_on_zero_observed_targets": 78,
+        "zero_observed_targets": 26
+      },
+      "structural_lexical": {
+        "hit_at_1": 0.36363636363636365,
+        "hit_at_1_count": 8,
+        "hit_at_3": 0.5909090909090909,
+        "hit_at_3_count": 13,
+        "ineligible_suggestions": 50,
+        "mean_reciprocal_rank": 0.45454545454545453,
+        "positive_targets": 22,
+        "suggestions_on_zero_observed_targets": 78,
+        "zero_observed_targets": 26
+      }
+    }
+  },
+  "primary": {
+    "bootstrap": {
+      "lower_95": 0.0,
+      "resamples": 10000,
+      "upper_95": 0.03571428571428571
+    },
+    "contrast": "graphify_jev_lexical - graphify_lexical hit_at_1",
+    "delta": 0.015706806282722474,
+    "frozen_gate_supported": false,
+    "repositories_improved": 2
+  },
+  "profile_runs": {
+    "fastapi": {
+      "complete": true,
+      "failed_files": [],
+      "files": 483,
+      "wall_seconds": 570.6767696309835
+    },
+    "flask": {
+      "complete": true,
+      "failed_files": [],
+      "files": 22,
+      "wall_seconds": 15.876112009980716
+    },
+    "graphify": {
+      "complete": true,
+      "failed_files": [],
+      "files": 300,
+      "wall_seconds": 500.2606985649327
+    },
+    "langchain": {
+      "complete": true,
+      "failed_files": [],
+      "files": 131,
+      "wall_seconds": 203.8291766360635
+    },
+    "yt-dlp": {
+      "complete": true,
+      "failed_files": [],
+      "files": 33,
+      "wall_seconds": 309.35527967102826
+    }
+  },
+  "provider_errors": 7,
+  "provider_requests": 240,
+  "provider_wall_seconds_sum": 55.948105163057335,
+  "repositories": 5,
+  "targets": 240,
+  "total_runner_wall_seconds": 1404.857394032064,
+  "unknown_usage_requests": 0
+}

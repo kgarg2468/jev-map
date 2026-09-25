@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/graphify/fastapi"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 1982 non-code file(s) (1739 docs, 0 papers, 243 images) \u2014 no LLM extraction\n[graphify extract] found 1148 code, 0 docs, 0 papers, 0 images\n[graphify extract] 9 file(s) not classified (no supported extension or shebang), skipped: .gitignore, .python-version, CITATION.cff, LICENSE, custom.css, py.typed (+3 more)\n[graphify extract] AST extraction on 1148 code files...\n  AST extraction: 100/1148 uncached files (8%) [2 workers]\n  AST extraction: 200/1148 uncached files (17%) [2 workers]\n  AST extraction: 300/1148 uncached files (26%) [2 workers]\n  AST extraction: 400/1148 uncached files (34%) [2 workers]\n  AST extraction: 500/1148 uncached files (43%) [2 workers]\n  AST extraction: 600/1148 uncached files (52%) [2 workers]\n  AST extraction: 700/1148 uncached files (60%) [2 workers]\n  AST extraction: 800/1148 uncached files (69%) [2 workers]\n  AST extraction: 900/1148 uncached files (78%) [2 workers]\n  AST extraction: 1000/1148 uncached files (87%) [2 workers]\n  AST extraction: 1100/1148 uncached files (95%) [2 workers]\n  AST extraction: 1148/1148 uncached files (100%) [2 workers]\n[graphify extract] wrote <round>/graphify/fastapi/graphify-out/graph.json \u2014 8728 nodes, 18567 edges (no clustering)\n",
+  "wall_seconds": 14.396760273026302
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "uvx",
+    "--from",
+    "graphifyy==0.9.67",
+    "graphify",
+    "extract",
+    "<repo>",
+    "--code-only",
+    "--no-cluster",
+    "--max-workers",
+    "2",
+    "--out",
+    "<round>/graphify/langchain"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "[graphify extract] scanning <repo>\n[graphify extract] --code-only: skipping 12 non-code file(s) (12 docs, 0 papers, 0 images) \u2014 no LLM extraction\n[graphify extract] found 372 code, 0 docs, 0 papers, 0 images\n[graphify extract] 6 file(s) not classified (no supported extension or shebang), skipped: LICENSE, Makefile, example-non-utf8.csv, example-utf8.csv, py.typed, uv.lock\n[graphify extract] AST extraction on 372 code files...\n  AST extraction: 100/372 uncached files (26%) [2 workers]\n  AST extraction: 200/372 uncached files (53%) [2 workers]\n  AST extraction: 300/372 uncached files (80%) [2 workers]\n  AST extraction: 372/372 uncached files (100%) [2 workers]\n[graphify extract] wrote <round>/graphify/langchain/graphify-out/graph.json \u2014 10117 nodes, 25986 edges (no clustering)\n",
+  "wall_seconds": 8.90624076698441
+}
