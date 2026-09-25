@@ -1,0 +1,117 @@
+{
+  "seed": "jev-map-popular-v1",
+  "model": "jev-1.13.0",
+  "graphify_package": "graphifyy==0.9.67",
+  "graphify_timeout_seconds": 1800,
+  "candidate_limit": 3,
+  "jev_threshold": 0.8,
+  "bootstrap_seed": "jev-map-popular-bootstrap-v1",
+  "bootstrap_resamples": 10000,
+  "functions_per_repository": 48,
+  "min_repositories_improved": 3,
+  "repositories": [
+    {
+      "name": "flask",
+      "url": "https://github.com/pallets/flask",
+      "commit": "d73fa1cdcbd8b1465c151db8924ba58b1dd14e35",
+      "subdirectory": null,
+      "install": "uv venv --python 3.13; uv pip install -e . plus the 'tests' dependency group exported from uv.lock",
+      "source_roots": ["src/flask"],
+      "source_excludes": [],
+      "pythonpath": [],
+      "test_paths": ["tests"],
+      "pytest_args": [],
+      "deselected": [],
+      "clean_paths": [],
+      "preflight_timeout_seconds": 600,
+      "profile_file_timeout_seconds": 600
+    },
+    {
+      "name": "fastapi",
+      "url": "https://github.com/fastapi/fastapi",
+      "commit": "50113da16fec53b66b80d75e80a89296de4fa5a5",
+      "subdirectory": null,
+      "install": "UV_PROJECT_ENVIRONMENT=<venv> uv sync --frozen --no-dev --group tests --extra all; uv pip install orjson ujson (as CI's deprecation job does)",
+      "source_roots": ["fastapi"],
+      "source_excludes": [],
+      "pythonpath": ["."],
+      "test_paths": ["tests"],
+      "pytest_args": [],
+      "deselected": [],
+      "clean_paths": ["log.txt", "coverage"],
+      "preflight_timeout_seconds": 1200,
+      "profile_file_timeout_seconds": 900
+    },
+    {
+      "name": "yt-dlp",
+      "url": "https://github.com/yt-dlp/yt-dlp",
+      "commit": "c7fb478d21e9e59524befbe23f7801bb267fb880",
+      "subdirectory": null,
+      "install": "uv venv --python 3.13; uv pip install -e '.[pin,pin-curl-cffi]' plus the 'test' dependency group",
+      "source_roots": ["yt_dlp"],
+      "source_excludes": ["yt_dlp/extractor"],
+      "pythonpath": [],
+      "test_paths": ["test"],
+      "pytest_args": [
+        "-m", "not download",
+        "--deselect", "test/test_websockets.py::TestWebsSocketRequestHandlerConformance::test_verify_cert[Websockets]",
+        "--deselect", "test/test_websockets.py::TestWebsSocketRequestHandlerConformance::test_mtls[client_cert0-Websockets]",
+        "--deselect", "test/test_websockets.py::TestWebsSocketRequestHandlerConformance::test_mtls[client_cert1-Websockets]",
+        "--deselect", "test/test_websockets.py::TestWebsSocketRequestHandlerConformance::test_mtls[client_cert2-Websockets]",
+        "--deselect", "test/test_websockets.py::TestWebsSocketRequestHandlerConformance::test_mtls[client_cert3-Websockets]"
+      ],
+      "deselected": [
+        "-m 'not download': upstream's own offline 'core' selection (devscripts/run_tests.py); download tests contact real sites.",
+        "Five websocket TLS conformance tests: the local server intermittently stalls the TLS 1.3 handshake and the test's retry misses the error, failing about 15-25% of isolated runs."
+      ],
+      "source_note": "Site extractors under yt_dlp/extractor are exercised by the excluded online download tests, so they are outside the sampling frame.",
+      "clean_paths": ["yt_dlp/extractor/lazy_extractors.py"],
+      "preflight_timeout_seconds": 1200,
+      "profile_file_timeout_seconds": 900
+    },
+    {
+      "name": "langchain",
+      "url": "https://github.com/langchain-ai/langchain",
+      "commit": "38cee0db98b11352210dee5e391fdc2dc3add974",
+      "subdirectory": "libs/core",
+      "install": "in libs/core: UV_PROJECT_ENVIRONMENT=<venv> uv sync --frozen --group test",
+      "source_roots": ["langchain_core"],
+      "source_excludes": [],
+      "pythonpath": ["."],
+      "test_paths": ["tests/unit_tests"],
+      "pytest_args": ["-p", "no:xdist", "--benchmark-disable", "--disable-socket", "--allow-unix-socket",
+                      "-p", "blockbuster_profiler_allow"],
+      "deselected": [],
+      "clean_paths": [],
+      "preflight_timeout_seconds": 900,
+      "profile_file_timeout_seconds": 900
+    },
+    {
+      "name": "graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "commit": "4c735618f3d56fd622c2049771584621c31ba9ff",
+      "subdirectory": null,
+      "install": "UV_PROJECT_ENVIRONMENT=<venv> uv sync --all-extras --frozen; a shallow clone also needs git fetch --depth 1 origin 47042beb05d1f6dd2186c0c499ae2840ce604ead for tests/test_skillgen.py",
+      "source_roots": ["graphify"],
+      "source_excludes": [],
+      "pythonpath": [],
+      "test_paths": ["tests"],
+      "pytest_args": [
+        "--tb=short",
+        "--deselect", "tests/test_security.py::test_validate_url_accepts_http",
+        "--deselect", "tests/test_security.py::test_validate_url_accepts_https",
+        "--deselect", "tests/test_security.py::test_safe_fetch_returns_bytes",
+        "--deselect", "tests/test_security.py::test_safe_fetch_raises_on_non_2xx",
+        "--deselect", "tests/test_security.py::test_safe_fetch_raises_on_size_exceeded",
+        "--deselect", "tests/test_security.py::test_safe_fetch_text_decodes_utf8",
+        "--deselect", "tests/test_security.py::test_safe_fetch_text_replaces_bad_bytes"
+      ],
+      "deselected": [
+        "Seven tests in tests/test_security.py resolve real hostnames (example.com, arxiv.org) and fail offline."
+      ],
+      "clean_paths": ["graphify-out", ".hypothesis", "build", "graphifyy.egg-info"],
+      "preflight_timeout_seconds": 1200,
+      "profile_file_timeout_seconds": 900
+    }
+  ]
+}

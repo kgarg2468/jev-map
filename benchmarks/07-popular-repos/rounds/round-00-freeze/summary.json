@@ -1,0 +1,19 @@
+{
+  "diagnostics": {
+    "fastapi": 0,
+    "flask": 0,
+    "graphify": 0,
+    "langchain": 0,
+    "yt-dlp": 0
+  },
+  "requests": 240,
+  "structural_targets": 54,
+  "targets": 240,
+  "tests": {
+    "fastapi": 2291,
+    "flask": 373,
+    "graphify": 5068,
+    "langchain": 1880,
+    "yt-dlp": 771
+  }
+}
